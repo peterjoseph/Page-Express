@@ -1,0 +1,104 @@
+/** Wordpress Customizer CSS **/
+#region_titles {font-weight:bold; color:#333; font-size:18px; text-align:center; line-height:40px; width:240px; height:40px; padding:10px; margin-top:15px; margin-bottom:5px; border:1px solid #CCC;}
+#grand_region_titles {font-weight:bold; color:#FFF; background-color:#333; font-size:18px; text-align:center; line-height:40px; width:240px; height:40px; padding:10px; border:1px solid #000;}
+#linespace {width:100%; border-bottom:1px solid #CCC; margin-top:15px; margin-bottom:15px; margin-left:auto; margin-right:auto;}
+input[type=range] {width:100%;}
+.customize-control select {min-width:100%;}
+
+.accordion-sub-container.control-panel-content {right:0;}
+#accordion-section-themes {display:none !important;}
+
+li#accordion-section-static_front_page > h3.accordion-section-title:before {
+    content: "\e69b";
+    font-family: 'themify';
+    padding: 3px;
+    top:17px;
+}
+
+li#accordion-panel-header_one > h3.accordion-section-title:before {
+    content: "\e6ec";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-header_two > h3.accordion-section-title:before {
+    content: "\e6ec";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-header_three > h3.accordion-section-title:before {
+    content: "\e6ec";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-upper_unibar > h3.accordion-section-title:before {
+    content: "\e713";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-content > h3.accordion-section-title:before {
+    content: "\e702";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-left_sidebar > h3.accordion-section-title:before {
+    content: "\e6f3";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-right_sidebar > h3.accordion-section-title:before {
+    content: "\e6f1";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-lower_unibar > h3.accordion-section-title:before {
+    content: "\e713";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-multibar > h3.accordion-section-title:before {
+    content: "\e711";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-footer > h3.accordion-section-title:before {
+    content: "\e6fc";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-section-global_background > h3.accordion-section-title:before {
+    content: "\e633";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-nav_menus > h3.accordion-section-title:before {
+    content: "\e6f6";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-widgets > h3.accordion-section-title:before {
+    content: "\e6eb";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+li#accordion-panel-globaloptions > h3.accordion-section-title:before {
+    content: "\e60f";
+    font-family: 'themify';
+    padding: 3px;
+}
+
+/** Post/Page Meta Box CSS **/
+#meta-box-title {font-weight:bold; border-bottom:1px solid #ccc;}
+#meta-box-content {padding-top:10px; padding-bottom:10px;}

@@ -1,0 +1,142 @@
+/*  
+Theme Name: Object
+Theme URI: www.objecttheme.com
+Version: 0.1
+Description: A multi-purpose and highly customizabe theme for wordpress
+Author: Peter Joseph
+Author URI: www.peterjoseph.net
+Tags: Theme, Framework, Object, Object Framework, Developers, Customizable
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.alignnone {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+}
+
+.alignleft {
+    max-width:100%;
+    height:auto;
+    float:left;
+    padding:5px;
+}
+
+.alignright {
+    max-width:100%;
+    height:auto;
+    float:right;
+    padding:5px;
+}
+
+.aligncenter {
+    max-width:100%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding:5px;
+}
+
+img.alignnone {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+}
+
+img.alignleft {
+    max-width:100%;
+    height:auto;
+    float:left;
+    padding:5px;
+}
+
+img.alignright {
+    max-width:100%;
+    height:auto;
+    float:right;
+    padding:5px;
+}
+
+img.aligncenter {
+    max-width:100%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding:5px;
+}
+
+.wp-caption {}
+.gallery {}
+.gallery-caption {}
+
+img.size-full {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+}
+img.size-large {
+    max-width:75%;
+    height:auto;
+    padding:5px;
+}
+img.size-medium {
+    max-width:50%;
+    height:auto;
+    padding:5px;
+}
+img.size-thumbnail {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+}
+
+blockquote {}
+code {}
+pre {}
+hr {}
+del {}
