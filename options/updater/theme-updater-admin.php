@@ -75,7 +75,7 @@ class Theme_Updater_Admin {
 
 		add_theme_page(
 			$strings['theme-license'],
-			$strings['theme-license'],
+			'OT License',
 			'manage_options',
 			$this->theme_slug . '-license',
 			array( $this, 'license_page' )
