@@ -16,7 +16,7 @@ $updater = new Theme_Updater_Admin(
 	),
 
 	$strings = array(
-		'theme-license' => __( 'Object License', 'theme-updater' ),
+		'theme-license' => __( 'Object Theme License', 'theme-updater' ),
 		'enter-key' => __( 'Enter your license key.', 'theme-updater' ),
 		'license-key' => __( 'License Key', 'theme-updater' ),
 		'license-action' => __( 'License Action', 'theme-updater' ),
@@ -33,9 +33,9 @@ $updater = new Theme_Updater_Admin(
 		'license-keys-do-not-match' => __( 'License keys do not match.', 'theme-updater' ),
 		'license-is-inactive' => __( 'License is inactive.', 'theme-updater' ),
 		'license-key-is-disabled' => __( 'License key is disabled.', 'theme-updater' ),
-		'site-is-inactive' => __( 'Licence server is inactive.', 'theme-updater' ),
+		'site-is-inactive' => __( '', 'theme-updater' ),
 		'license-status-unknown' => __( 'License status is unknown.', 'theme-updater' ),
-		'update-notice' => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'theme-updater' ),
+		'update-notice' => __( '', 'theme-updater' ),
 		'update-available' => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'theme-updater' )
 	)
 
