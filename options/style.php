@@ -752,7 +752,7 @@ post_content img {
 
 
 #single {
-    float:left;
+
 }
 
 #single_content {
@@ -762,18 +762,22 @@ post_content img {
 
 #single_content .title {
     font-family:<?php echo get_theme_mod('cw_single_typography_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-size:32px;
-    color: ;
-    text-align:center;
-    font-style: ;
-    font-weight: ;
-    text-transform: ;
-    letter-spacing: ;
-    word-spacing: ;
-    line-height: ;
-    padding: ;
-    background-color:;
-    background-image: url("");
+    font-size:<?php echo get_theme_mod('cw_single_typography_title_font_size','35') ?>px;
+    font-style:<?php echo get_theme_mod('cw_single_typography_title_font_style','normal') ?>;
+    text-align:<?php echo get_theme_mod('cw_single_typography_title_font_alignment','center') ?>;
+    font-weight:<?php echo get_theme_mod('cw_single_typography_title_font_weight','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_title_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+}
+
+#single_content .title a {
+    color:<?php echo get_theme_mod('cw_single_typography_title_font_color','#333') ?>;
+    text-decoration:none;
+}
+
+#single_content .title a:hover {
+    color:<?php echo get_theme_mod('cw_single_typography_title_font_color_hover','#444') ?>;
 }
 
 #single_content .entry {

@@ -868,21 +868,166 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
+		//Post & Page Font Size
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_size',
+			array(
+				'default' => '35',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_title_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Size',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
+		//Post & Page Font Color
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_title_font_color',
+				array(
+					'label' => 'Font Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_title_font_color',
+				)
+			)
+		);
+
+		//Post & Page Font Hover color
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_color_hover',
+			array(
+				'default' => '#444',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_title_font_color_hover',
+				array(
+					'label' => 'Font Hover Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_title_font_color_hover',
+				)
+			)
+		);
+
+		//Post & Page Font Alignment
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_alignment',
+			array(
+				'default' => 'center',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_title_font_alignment',
+			array(
+				'type' => 'select',
+				'label' => 'Font Alignment',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'center' => 'Center',
+					'left' => 'Left',
+					'right' => 'Right',
+				),
+			)
+		);
+
+		//Post & Page Font Style
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_style',
+			array(
+				'default' => 'normal',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_title_font_style',
+			array(
+				'type' => 'select',
+				'label' => 'Font Style',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'normal' => 'Normal',
+					'italic' => 'Italic',
+					'oblique' => 'Oblique',
+				),
+			)
+		);
+
+		//Post & Page Font Weight
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_weight',
+			array(
+				'default' => 'normal',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_title_font_weight',
+			array(
+				'type' => 'select',
+				'label' => 'Font Weight',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'normal' => 'Normal',
+					'bold' => 'Bold',
+					'light' => 'Light',
+				),
+			)
+		);
+
+		//Post & Page Font Transformation
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_transformation',
+			array(
+				'default' => 'none',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_title_font_transformation',
+			array(
+				'type' => 'select',
+				'label' => 'Font Transformation',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'none' => 'None',
+					'uppercase' => 'Uppercase',
+					'lowercase' => 'Lowercase',
+					'capitalize' => 'Capitalize',
+				),
+			)
+		);
 
 
-		//Todo: Build out font options
-		//Font Size
-		//Font Color
-		//Font Alignment
-		//Font Style (Normal / Italic)
-		//Font Weight (Normal / Bold)
-		//Font Transformation
-		//Letter Spacing
-		//Word Spacing
-		//Line Height (EM)
-		//Title Padding
-		//Title Background color
-		// Background image
-
+		//Post & Page Font Padding
+		$wp_customize->add_setting(
+			'cw_single_typography_title_font_padding',
+			array(
+				'default' => '5',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_title_font_padding', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 40,
+				'step'  => 1,
+			),
+		) );
 
 ?>
