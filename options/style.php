@@ -761,8 +761,19 @@ post_content img {
 }
 
 #single_content .title {
+    font-family:<?php echo get_theme_mod('cw_single_typography_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:32px;
+    color: ;
     text-align:center;
+    font-style: ;
+    font-weight: ;
+    text-transform: ;
+    letter-spacing: ;
+    word-spacing: ;
+    line-height: ;
+    padding: ;
+    background-color:;
+    background-image: url("");
 }
 
 #single_content .entry {

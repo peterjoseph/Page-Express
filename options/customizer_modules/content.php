@@ -812,7 +812,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 
 		$wp_customize->add_section('content_single_typography', array('title' => 'Post/Page Typography','panel' => 'content','priority' => 30,));
 
-		//Homepage Post Header Title
+		//Post & Page Header Title
 		$wp_customize->add_setting(
 			'cw_single_typography_title_title',
 			array(
@@ -829,10 +829,48 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		));
 
+		//Post & Page Font Family
+		$wp_customize->add_setting(
+			'cw_single_typography_title_fonts',
+			array(
+				'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_title_fonts',
+			array(
+				'type' => 'select',
+				'label' => 'Font Style',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+					'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+					'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+					'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+					'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+					'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+					'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+					'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+					'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+					'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+					'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+					'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+					'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+					'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+					'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+					'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+					'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+					'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+					'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				),
+			)
+		);
+
 
 
 		//Todo: Build out font options
-		//Typeface
 		//Font Size
 		//Font Color
 		//Font Alignment
@@ -843,7 +881,8 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		//Word Spacing
 		//Line Height (EM)
 		//Title Padding
-		//Title Background
+		//Title Background color
+		// Background image
 
 
 ?>
