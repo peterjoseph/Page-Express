@@ -734,7 +734,7 @@ if($pcolumn == 1) { ?>
     display:inline;
 }
 
-psingle_content img {
+post_content img {
     max-width:100%;
     height:auto;
 }
