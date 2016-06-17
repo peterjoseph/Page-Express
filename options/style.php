@@ -635,37 +635,36 @@ body {
 
 
 
-
 #post {
-    <?php 
-        $pcolumn = (get_theme_mod('post_page_column','1'));
-        if($pcolumn == 1) { ?>
-            width:100%;
-        <?php } else if($pcolumn == 2) { ?>
-            width:50%;
-        <?php } else if($pcolumn == 3) { ?>
-            width:33%;
-        <?php } else { ?>
-            width:25%;
-        <?php } ?>
+<?php
+$pcolumn = (get_theme_mod('homepage_column','1'));
+if($pcolumn == 1) { ?>
+    width:100%;
+<?php } else if($pcolumn == 2) { ?>
+    width:50%;
+<?php } else if($pcolumn == 3) { ?>
+    width:33%;
+<?php } else { ?>
+    width:25%;
+<?php } ?>
     float:left;
 }
 
 #post_content {
-    overflow: hidden; 
+    overflow: hidden;
     text-overflow: ellipsis;
-    margin:<?php echo get_theme_mod('post_page_spacing','5') ?>px;
-    padding:<?php echo get_theme_mod('post_page_spacing','5') ?>px;
+    margin:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
+    padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
 #post_content .title {
     font-size:32px;
     text-align:center;
-    padding:<?php echo get_theme_mod('post_page_spacing','5') ?>px;
+    padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
 #post_content .entry {
-    padding:<?php echo get_theme_mod('post_page_spacing','5') ?>px;
+    padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
 #post_content .entry h1{
@@ -673,17 +672,17 @@ body {
 }
 
 #post_content .entry h2{
-    font-size:1.2em; 
+    font-size:1.2em;
     color:#333333;
 }
 
-#post_content .entry h3{
-    font-size:1em; 
+#single_content .entry h3{
+    font-size:1em;
     color:#666666;
 }
 
 #post_content .entry h4{
-    font-size:.9em; 
+    font-size:.9em;
     color:#999999;
 }
 #post_content .entry h5{
@@ -692,7 +691,7 @@ body {
 }
 
 #post_content .entry h6{
-    font-size:.7em; 
+    font-size:.7em;
     color:#666600;
 }
 
@@ -713,21 +712,21 @@ body {
 
 #post_content .metadata {
     text-align:center;
-    padding:<?php echo get_theme_mod('post_page_spacing','5') ?>px;
+    padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
 .pauthor {
-    margin-right:5px; 
+    margin-right:5px;
     display:inline;
 }
 
 .ptime {
-    margin-right:5px; 
+    margin-right:5px;
     display:inline;
 }
 
 .pcomments {
-    margin-right:5px; 
+    margin-right:5px;
     display:inline;
 }
 
@@ -735,7 +734,107 @@ body {
     display:inline;
 }
 
-#post_content img {
+psingle_content img {
+    max-width:100%;
+    height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#single {
+    float:left;
+}
+
+#single_content {
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+#single_content .title {
+    font-size:32px;
+    text-align:center;
+}
+
+#single_content .entry {
+}
+
+#single_content .entry h1{
+    font-size:1.5em;
+}
+
+#single_content .entry h2{
+    font-size:1.2em; 
+    color:#333333;
+}
+
+#single_content .entry h3{
+    font-size:1em; 
+    color:#666666;
+}
+
+#single_content .entry h4{
+    font-size:.9em; 
+    color:#999999;
+}
+#single_content .entry h5{
+    font-size:.8em;
+    color:#CCCCCC;
+}
+
+#single_content .entry h6{
+    font-size:.7em; 
+    color:#666600;
+}
+
+#single_content .entry p{
+    font-weight:bold;
+    font-size:.8em;
+}
+
+#single_content .entry blockquote{
+    padding:5px;
+    border:1px solid #999999;
+    background-color:#DEDEDE;
+}
+
+#single_content .entry ul{
+    font-variant:small-caps;
+}
+
+#single_content .metadata {
+    text-align:center;
+}
+
+.sauthor {
+    margin-right:5px; 
+    display:inline;
+}
+
+.stime {
+    margin-right:5px; 
+    display:inline;
+}
+
+.scomments {
+    margin-right:5px; 
+    display:inline;
+}
+
+.scategories {
+    display:inline;
+}
+
+#single_content img {
     max-width:100%;
     height:auto;
 }

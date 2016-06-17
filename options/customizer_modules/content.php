@@ -53,7 +53,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         $wp_customize->add_section('content_wrapper_layout', array('title' => 'Wrapper Layout','panel' => 'content','priority' => 30,));
         
-                //Content Layout Title
+		//Content Layout Title
 		$wp_customize->add_setting(
 		    'cw_layout_title',
 		    array(
@@ -602,48 +602,48 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         //Post-Page Homepage Options Title
 		$wp_customize->add_setting(
-		    'post_page_grand_layout_title',
+		    'homepage_grand_layout_title',
 		    array(
 		        'default' => '',
 		    )
 		);
 		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
 			$wp_customize, 
-			'post_page_grand_layout_title', 
+			'homepage_grand_layout_title',
 			array(
 				'label'	=> __( 'Homepage Post Styling' ),
 				'section' => 'content_post_homepage_layout',
-				'settings' => 'post_page_grand_layout_title',
+				'settings' => 'homepage_grand_layout_title',
 			) 
 		));
 		
 		//Post-Page Homepage Layout Title
 		$wp_customize->add_setting(
-		    'post_page_layout_title',
+		    'homepage_layout_title',
 		    array(
 		        'default' => '',
 		    )
 		);
 		$wp_customize->add_control( new WP_Customize_Title_Area( 
 			$wp_customize, 
-			'post_page_layout_title', 
+			'homepage_layout_title',
 			array(
 				'label'	=> __( 'Layout Options' ),
 				'section' => 'content_post_homepage_layout',
-				'settings' => 'post_page_layout_title',
+				'settings' => 'homepage_layout_title',
 			) 
 		));
         
         
         //Post-Page Homepage Column Visibility
 		$wp_customize->add_setting(
-		    'post_page_column',
+		    'homepage_column',
 		    array(
 		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_column',
+		    'homepage_column',
 		    array(
 		        'type' => 'select',
 		        'label' => 'Post Style',
@@ -659,13 +659,13 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         //Post-Page Homepage Show Featured Image Visibility
 		$wp_customize->add_setting(
-		    'post_page_featured_image',
+		    'homepage_featured_image',
 		    array(
 		        'default' => 'below',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_featured_image',
+		    'homepage_featured_image',
 		    array(
 		        'type' => 'select',
 		        'label' => 'Featured Image',
@@ -680,13 +680,13 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         //Post-Page Homepage Show Meta Box
 		$wp_customize->add_setting(
-		    'post_page_meta_box',
+		    'homepage_meta_box',
 		    array(
 		        'default' => 'belowcontent',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_meta_box',
+		    'homepage_meta_box',
 		    array(
 		        'type' => 'select',
 		        'label' => 'Post Details',
@@ -701,80 +701,80 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         //Post-Page Homepage Meta Box Author visibility
 		$wp_customize->add_setting(
-			'post_page_meta_box_author',
+			'homepage_meta_box_author',
 		    array(
 		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_meta_box_author',
+		    'homepage_meta_box_author',
 		    array(
 		        'type' => 'checkbox',
 		        'label' => 'Show Author Name',
 				'section' => 'content_post_homepage_layout',
-		        'settings' => 'post_page_meta_box_author',
+		        'settings' => 'homepage_meta_box_author',
 		    )
 		);
         
         //Post-Page Homepage Meta Box Comments
 		$wp_customize->add_setting(
-			'post_page_meta_box_comments',
+			'homepage_meta_box_comments',
 		    array(
 		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_meta_box_comments',
+		    'homepage_meta_box_comments',
 		    array(
 		        'type' => 'checkbox',
 		        'label' => 'Show Comment Count',
 				'section' => 'content_post_homepage_layout',
-		        'settings' => 'post_page_meta_box_comments',
+		        'settings' => 'homepage_meta_box_comments',
 		    )
 		);
         
         //Post-Page Homepage Meta Box time
 		$wp_customize->add_setting(
-			'post_page_meta_box_time',
+			'homepage_meta_box_time',
 		    array(
 		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_meta_box_time',
+		    'homepage_meta_box_time',
 		    array(
 		        'type' => 'checkbox',
 		        'label' => 'Show Post Time & Date',
 				'section' => 'content_post_homepage_layout',
-		        'settings' => 'post_page_meta_box_time',
+		        'settings' => 'homepage_meta_box_time',
 		    )
 		);
         
         //Post-Page Homepage Meta Box Categories
 		$wp_customize->add_setting(
-			'post_page_meta_box_categories',
+			'homepage_meta_box_categories',
 		    array(
 		        'default' => '0',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_meta_box_categories',
+		    'homepage_meta_box_categories',
 		    array(
 		        'type' => 'checkbox',
 		        'label' => 'Show Post Categories',
 				'section' => 'content_post_homepage_layout',
-		        'settings' => 'post_page_meta_box_categories',
+		        'settings' => 'homepage_meta_box_categories',
 		    )
 		);
         
         //Post-Page Homepage Spacing
 		$wp_customize->add_setting(
-		    'post_page_spacing',
+		    'homepage_spacing',
 		    array(
 		        'default' => '5',
 		    )
 		);
-		$wp_customize->add_control( 'post_page_spacing', array(
+		$wp_customize->add_control( 'homepage_spacing', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'content_post_homepage_layout',
@@ -788,20 +788,62 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
         
         //Post-Page Enable Excerpts
 		$wp_customize->add_setting(
-			'post_page_enable_excerpts',
+			'homepage_enable_excerpts',
 		    array(
 		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control(
-		    'post_page_enable_excerpts',
+		    'homepage_enable_excerpts',
 		    array(
 		        'type' => 'checkbox',
 		        'label' => 'Enable Post Excerpts',
 				'section' => 'content_post_homepage_layout',
-		        'settings' => 'post_page_enable_excerpts',
+		        'settings' => 'homepage_enable_excerpts',
 		    )
 		);
-        
+
+
+
+
+		//Todo: Layout for Page and Posts (Include element visibility)
+
+
+
+		$wp_customize->add_section('content_single_typography', array('title' => 'Post/Page Typography','panel' => 'content','priority' => 30,));
+
+		//Homepage Post Header Title
+		$wp_customize->add_setting(
+			'cw_single_typography_title_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_typography_title_title',
+			array(
+				'label'	=> __( 'Title' ),
+				'section' => 'content_single_typography',
+				'settings' => 'cw_single_typography_title_title',
+			)
+		));
+
+
+
+		//Todo: Build out font options
+		//Typeface
+		//Font Size
+		//Font Color
+		//Font Alignment
+		//Font Style (Normal / Italic)
+		//Font Weight (Normal / Bold)
+		//Font Transformation
+		//Letter Spacing
+		//Word Spacing
+		//Line Height (EM)
+		//Title Padding
+		//Title Background
+
 
 ?>

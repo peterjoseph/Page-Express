@@ -7,8 +7,8 @@
                 
                 <?php 
                     include (get_template_directory().'/sidebar.php');
-                    $featured_image = get_theme_mod('post_page_featured_image','below');
-                    $metabox = get_theme_mod('post_page_meta_box','belowcontent');
+                    $featured_image = get_theme_mod('homepage_featured_image','below');
+                    $metabox = get_theme_mod('homepage_meta_box','belowcontent');
                 ?>
                 
                 <?php global $cwrapper; if($cwrapper == TRUE) { ?>
@@ -25,7 +25,7 @@
                                     <?php if($metabox == 'belowtitle') { include (get_template_directory().'/meta.php'); } ?>
                                     <?php if($featured_image == 'below') { the_post_thumbnail(); }; ?>
                                     <div class="entry">
-                                        <?php if(get_theme_mod('post_page_enable_excerpts','1') == TRUE) {
+                                        <?php if(get_theme_mod('homepage_enable_excerpts','1') == TRUE) {
                                                 the_excerpt();
                                             } else {
                                                 the_content();

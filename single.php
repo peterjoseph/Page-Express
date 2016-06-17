@@ -7,17 +7,17 @@
                 
                 <?php 
                     include (get_template_directory().'/sidebar.php');
-                    $featured_image = get_theme_mod('post_page_featured_image','below');
-                    $metabox = get_theme_mod('post_page_meta_box','belowcontent');
+                    $featured_image = get_theme_mod('homepage_featured_image','below');
+                    $metabox = get_theme_mod('homepage_meta_box','belowcontent');
                 ?>
                 
                 <?php global $cwrapper; if($cwrapper == TRUE) { ?>
-                    <div class="page">
+                    <div class="post">
                        
                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                        
-                            <div id="post">
-                                <div id="post_content">
+                            <div id="single">
+                                <div id="single_content">
                                     <?php if($featured_image == 'above') { the_post_thumbnail(); }; ?>
                                     <div class="title">
                                         <a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
