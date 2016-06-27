@@ -781,6 +781,20 @@ post_content img {
 }
 
 #single_content .entry {
+    font-family:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
+    line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_padding','0')?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
+}
+
+#single_content .entry a {
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color','#333') ?>;
+    text-decoration:none;
+}
+
+#single_content .entry a:hover {
+color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color_hover','#444') ?>;
 }
 
 #single_content .entry h1{

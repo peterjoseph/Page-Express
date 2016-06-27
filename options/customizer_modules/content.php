@@ -829,7 +829,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		));
 
-		//Post & Page Font Family
+		//Post & Page Header Font Family
 		$wp_customize->add_setting(
 			'cw_single_typography_title_fonts',
 			array(
@@ -868,7 +868,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Size
+		//Post & Page header Font Size
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_size',
 			array(
@@ -887,7 +887,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			),
 		) );
 
-		//Post & Page Font Color
+		//Post & Page Header Font Color
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_color',
 			array(
@@ -906,7 +906,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Hover color
+		//Post & Page Header Font Hover color
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_color_hover',
 			array(
@@ -925,7 +925,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Alignment
+		//Post & Page Header Font Alignment
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_alignment',
 			array(
@@ -946,7 +946,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Style
+		//Post & Page Header Font Style
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_style',
 			array(
@@ -967,7 +967,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Weight
+		//Post & Page Header Font Weight
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_weight',
 			array(
@@ -988,7 +988,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 
-		//Post & Page Font Transformation
+		//Post & Page Header Font Transformation
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_transformation',
 			array(
@@ -1011,7 +1011,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		);
 
 
-		//Post & Page Font Padding
+		//Post & Page Header Font Padding
 		$wp_customize->add_setting(
 			'cw_single_typography_title_font_padding',
 			array(
@@ -1019,6 +1019,159 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		);
 		$wp_customize->add_control( 'cw_single_typography_title_font_padding', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 40,
+				'step'  => 1,
+			),
+		) );
+
+
+
+		//Post & Page Entry and Paragraph Title
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_typography_entry_paragraph_title',
+			array(
+				'label'	=> __( 'Paragraphs' ),
+				'section' => 'content_single_typography',
+				'settings' => 'cw_single_typography_entry_paragraph_title',
+			)
+		));
+
+		//Post & Page Entry and Paragraph Font Family
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_fonts',
+			array(
+				'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_entry_paragraph_fonts',
+			array(
+				'type' => 'select',
+				'label' => 'Font Style',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+					'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+					'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+					'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+					'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+					'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+					'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+					'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+					'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+					'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+					'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+					'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+					'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+					'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+					'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+					'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+					'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+					'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+					'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				),
+			)
+		);
+
+		//Post & Page Entry and Paragraph Font Size
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_font_size',
+			array(
+				'default' => '14',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_entry_paragraph_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Size',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
+		//Post & Page Entry and Paragraph Font Color
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_font_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_entry_paragraph_font_color',
+				array(
+					'label' => 'Font Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_entry_paragraph_font_color',
+				)
+			)
+		);
+
+		//Post & Page Entry and Paragraph Font Link Color
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_font_link_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_entry_paragraph_font_link_color',
+				array(
+					'label' => 'Link Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_entry_paragraph_font_link_color',
+				)
+			)
+		);
+
+		//Post & Page Entry and Paragraph Font Hover color
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_font_link_color_hover',
+			array(
+				'default' => '#444',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_entry_paragraph_font_link_color_hover',
+				array(
+					'label' => 'Link Hover Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_entry_paragraph_font_link_color_hover',
+				)
+			)
+		);
+
+		//Post & Page Entry and Paragraph Font Padding
+		$wp_customize->add_setting(
+			'cw_single_typography_entry_paragraph_font_padding',
+			array(
+				'default' => '0',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_entry_paragraph_font_padding', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'content_single_typography',
