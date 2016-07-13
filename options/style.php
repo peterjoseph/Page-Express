@@ -768,7 +768,8 @@ post_content img {
     font-weight:<?php echo get_theme_mod('cw_single_typography_title_font_weight','normal') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_title_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+    padding-top:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+    padding-bottom:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
 }
 
 #single_content .title a {
@@ -790,7 +791,6 @@ post_content img {
 
 #single_content .entry a {
     color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color','#333') ?>;
-    text-decoration:none;
 }
 
 #single_content .entry a:hover {
@@ -803,7 +803,7 @@ post_content img {
     color:<?php echo get_theme_mod('cw_single_typography_h1_font_color','#333') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_h1_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h1_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h1_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h1_font_padding','0')?>px;
 }
 
 #single_content .entry h1 a{
@@ -817,7 +817,7 @@ post_content img {
     color:<?php echo get_theme_mod('cw_single_typography_h2_font_color','#333') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_h2_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h2_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h2_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h2_font_padding','0')?>px;
 }
 
 #single_content .entry h2 a{
@@ -831,7 +831,7 @@ post_content img {
     color:<?php echo get_theme_mod('cw_single_typography_h3_font_color','#333') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_h3_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h3_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h3_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h3_font_padding','0')?>px;
 }
 
 #single_content .entry h3 a{
@@ -844,7 +844,7 @@ post_content img {
     font-size:<?php echo get_theme_mod('cw_single_typography_h4_font_size','22') ?>px;
     color:<?php echo get_theme_mod('cw_single_typography_h4_font_color','#333') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h4_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h4_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h4_font_padding','0')?>px;
 }
 
 #single_content .entry h4 a{
@@ -858,7 +858,7 @@ post_content img {
     color:<?php echo get_theme_mod('cw_single_typography_h5_font_color','#333') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_h5_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h5_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h5_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h5_font_padding','0')?>px;
 }
 
 #single_content .entry h5 a{
@@ -872,7 +872,7 @@ post_content img {
     color:<?php echo get_theme_mod('cw_single_typography_h6_font_color','#333') ?>;
     text-transform:<?php echo get_theme_mod('cw_single_typography_h6_font_transformation','normal') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h6_font_size','30') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_h6_font_padding','5')?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h6_font_padding','0')?>px;
 }
 
 #single_content .entry h6 a{
@@ -882,13 +882,13 @@ post_content img {
 
 #single_content .entry p{
     line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + 8 ?>px;
-    padding:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_padding','0')?>px;
+    padding-top:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_padding','0')?>px;
+    padding-bottom:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_padding','0')?>px;
     color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
 }
 
 #single_content .entry p a {
     color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color','#333') ?>;
-    text-decoration:none;
 }
 
 #single_content .entry p a:hover {
@@ -899,30 +899,72 @@ post_content img {
 
 
 #single_content .entry blockquote{
-    padding:5px;
-    border:1px solid #999999;
-    background-color:#DEDEDE;
 }
 
 #single_content .entry ul{
-    font-variant:small-caps;
+
 }
 
 #single_content .entry li{
-font-variant:small-caps;
+
 }
 
-#single_content .entry b {
-font-variant:small-caps;
+#single_content .entry dl{
+
+}
+
+#single_content .entry dt{
+
+}
+
+#single_content .entry dd{
+
+}
+
+#single_content .entry pre {
+
+}
+
+#single_content .entry strong {
+    font-weight:bold;
+}
+
+#single_content .entry em {
+    font-style:italic;
 }
 
 #single_content .entry i{
-font-variant:small-caps;
+font-style:italic;
 }
+
+#single_content .entry cite{
+
+}
+
+#single_content .entry code{
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    background-color:#F3F3F3;
+    display:block;
+    margin:10px;
+    padding:10px;
+    border-left:5px solid #CCC;
+}
+
+
+
+
+
 
 #single_content .metadata {
     text-align:center;
 }
+
+
+
+
+
+
+
 
 
 
