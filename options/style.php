@@ -794,41 +794,109 @@ post_content img {
 }
 
 #single_content .entry a:hover {
-color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color_hover','#444') ?>;
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color_hover','#444') ?>;
 }
 
 #single_content .entry h1{
-    font-size:1.5em;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h1_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h1_font_size','35') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h1_font_color','#333') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h1_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h1_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h1_font_padding','5')?>px;
+}
+
+#single_content .entry h1 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h1_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h1_font_style','normal') ?>;
 }
 
 #single_content .entry h2{
-    font-size:1.2em; 
-    color:#333333;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h2_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h2_font_size','32') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h2_font_color','#333') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h2_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h2_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h2_font_padding','5')?>px;
+}
+
+#single_content .entry h2 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h2_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h2_font_style','normal') ?>;
 }
 
 #single_content .entry h3{
-    font-size:1em; 
-    color:#666666;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h3_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h3_font_size','28') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h3_font_color','#333') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h3_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h3_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h3_font_padding','5')?>px;
+}
+
+#single_content .entry h3 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h3_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h3_font_style','normal') ?>;
 }
 
 #single_content .entry h4{
-    font-size:.9em; 
-    color:#999999;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h4_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h4_font_size','22') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h4_font_color','#333') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h4_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h4_font_padding','5')?>px;
 }
+
+#single_content .entry h4 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h4_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h4_font_style','normal') ?>;
+}
+
 #single_content .entry h5{
-    font-size:.8em;
-    color:#CCCCCC;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h5_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h5_font_size','18') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h5_font_color','#333') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h5_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h5_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h5_font_padding','5')?>px;
+}
+
+#single_content .entry h5 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h5_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h5_font_style','normal') ?>;
 }
 
 #single_content .entry h6{
-    font-size:.7em; 
-    color:#666600;
+    font-family:<?php echo get_theme_mod('cw_single_typography_h6_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('cw_single_typography_h6_font_size','14') ?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_h6_font_color','#333') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h6_font_transformation','normal') ?>;
+    line-height:<?php echo get_theme_mod('cw_single_typography_h6_font_size','30') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_h6_font_padding','5')?>px;
+}
+
+#single_content .entry h6 a{
+    color:<?php echo get_theme_mod('cw_single_typography_h6_font_color','#333') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_h6_font_style','normal') ?>;
 }
 
 #single_content .entry p{
-    font-weight:bold;
-    font-size:.8em;
+    line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + 8 ?>px;
+    padding:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_padding','0')?>px;
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
 }
+
+#single_content .entry p a {
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color','#333') ?>;
+    text-decoration:none;
+}
+
+#single_content .entry p a:hover {
+    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_color_hover','#444') ?>;
+}
+
+
+
 
 #single_content .entry blockquote{
     padding:5px;
@@ -840,9 +908,27 @@ color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_link_c
     font-variant:small-caps;
 }
 
+#single_content .entry li{
+font-variant:small-caps;
+}
+
+#single_content .entry b {
+font-variant:small-caps;
+}
+
+#single_content .entry i{
+font-variant:small-caps;
+}
+
 #single_content .metadata {
     text-align:center;
 }
+
+
+
+
+
+
 
 .sauthor {
     margin-right:5px; 

@@ -803,13 +803,6 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		    )
 		);
 
-
-
-
-		//Todo: Layout for Page and Posts (Include element visibility)
-
-
-
 		$wp_customize->add_section('content_single_typography', array('title' => 'Post/Page Typography','panel' => 'content','priority' => 30,));
 
 		//Post & Page Header Title
@@ -1182,5 +1175,821 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 				'step'  => 1,
 			),
 		) );
+
+		//Post & Page H1 Title
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_typography_h1_title',
+			array(
+				'label'	=> __( 'H1' ),
+				'section' => 'content_single_typography',
+				'settings' => 'cw_single_typography_h1_title',
+			)
+		));
+
+		//Post & Page H1 Font Family
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_fonts',
+			array(
+				'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_h1_fonts',
+			array(
+				'type' => 'select',
+				'label' => 'Font Style',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+					'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+					'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+					'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+					'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+					'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+					'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+					'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+					'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+					'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+					'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+					'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+					'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+					'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+					'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+					'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+					'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+					'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+					'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				),
+			)
+		);
+
+		//Post & Page header Font Size
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_font_size',
+			array(
+				'default' => '35',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_h1_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Size',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 80,
+				'step'  => 2,
+			),
+		) );
+
+		//Post & Page H1 Font Color
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_font_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cw_single_typography_h1_font_color',
+				array(
+					'label' => 'Font Color',
+					'section' => 'content_single_typography',
+					'settings' => 'cw_single_typography_h1_font_color',
+				)
+			)
+		);
+
+		//Post & Page H1 Font Transformation
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_font_transformation',
+			array(
+				'default' => 'none',
+			)
+		);
+		$wp_customize->add_control(
+			'cw_single_typography_h1_font_transformation',
+			array(
+				'type' => 'select',
+				'label' => 'Font Transformation',
+				'section' => 'content_single_typography',
+				'choices' => array(
+					'none' => 'None',
+					'uppercase' => 'Uppercase',
+					'lowercase' => 'Lowercase',
+					'capitalize' => 'Capitalize',
+				),
+			)
+		);
+
+
+		//Post & Page H1 Font Padding
+		$wp_customize->add_setting(
+			'cw_single_typography_h1_font_padding',
+			array(
+				'default' => '0',
+			)
+		);
+		$wp_customize->add_control( 'cw_single_typography_h1_font_padding', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_single_typography',
+			'label'       => 'Font Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 40,
+				'step'  => 1,
+			),
+		) );
+
+        //Post & Page H2 Title
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Title_Area(
+            $wp_customize,
+            'cw_single_typography_h2_title',
+            array(
+                'label'	=> __( 'H2' ),
+                'section' => 'content_single_typography',
+                'settings' => 'cw_single_typography_h2_title',
+            )
+        ));
+
+        //Post & Page H2 Font Family
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_fonts',
+            array(
+                'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h2_fonts',
+            array(
+                'type' => 'select',
+                'label' => 'Font Style',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+                    '"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+                    'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+                    'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+                    '"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+                    '"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                    'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+                    '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+                    '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+                    'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+                    '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+                    '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+                    '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+                    'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+                    'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+                    '"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+                    'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+                    'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+                    'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+                ),
+            )
+        );
+
+        //Post & Page header Font Size
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_font_size',
+            array(
+                'default' => '32',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h2_font_size', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Size',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 80,
+                'step'  => 2,
+            ),
+        ) );
+
+        //Post & Page H2 Font Color
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_font_color',
+            array(
+                'default' => '#333',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'cw_single_typography_h2_font_color',
+                array(
+                    'label' => 'Font Color',
+                    'section' => 'content_single_typography',
+                    'settings' => 'cw_single_typography_h2_font_color',
+                )
+            )
+        );
+
+        //Post & Page H2 Font Transformation
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_font_transformation',
+            array(
+                'default' => 'none',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h2_font_transformation',
+            array(
+                'type' => 'select',
+                'label' => 'Font Transformation',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'none' => 'None',
+                    'uppercase' => 'Uppercase',
+                    'lowercase' => 'Lowercase',
+                    'capitalize' => 'Capitalize',
+                ),
+            )
+        );
+
+
+        //Post & Page H2 Font Padding
+        $wp_customize->add_setting(
+            'cw_single_typography_h2_font_padding',
+            array(
+                'default' => '0',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h2_font_padding', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Padding',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 40,
+                'step'  => 1,
+            ),
+        ) );
+
+        //Post & Page H3 Title
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Title_Area(
+            $wp_customize,
+            'cw_single_typography_h3_title',
+            array(
+                'label'	=> __( 'H3' ),
+                'section' => 'content_single_typography',
+                'settings' => 'cw_single_typography_h3_title',
+            )
+        ));
+
+        //Post & Page H3 Font Family
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_fonts',
+            array(
+                'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h3_fonts',
+            array(
+                'type' => 'select',
+                'label' => 'Font Style',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+                    '"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+                    'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+                    'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+                    '"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+                    '"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                    'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+                    '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+                    '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+                    'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+                    '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+                    '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+                    '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+                    'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+                    'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+                    '"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+                    'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+                    'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+                    'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+                ),
+            )
+        );
+
+        //Post & Page header Font Size
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_font_size',
+            array(
+                'default' => '28',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h3_font_size', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Size',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 80,
+                'step'  => 2,
+            ),
+        ) );
+
+        //Post & Page H3 Font Color
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_font_color',
+            array(
+                'default' => '#333',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'cw_single_typography_h3_font_color',
+                array(
+                    'label' => 'Font Color',
+                    'section' => 'content_single_typography',
+                    'settings' => 'cw_single_typography_h3_font_color',
+                )
+            )
+        );
+
+        //Post & Page H3 Font Transformation
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_font_transformation',
+            array(
+                'default' => 'none',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h3_font_transformation',
+            array(
+                'type' => 'select',
+                'label' => 'Font Transformation',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'none' => 'None',
+                    'uppercase' => 'Uppercase',
+                    'lowercase' => 'Lowercase',
+                    'capitalize' => 'Capitalize',
+                ),
+            )
+        );
+
+
+        //Post & Page H3 Font Padding
+        $wp_customize->add_setting(
+            'cw_single_typography_h3_font_padding',
+            array(
+                'default' => '0',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h3_font_padding', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Padding',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 40,
+                'step'  => 1,
+            ),
+        ) );
+
+        //Post & Page H4 Title
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Title_Area(
+            $wp_customize,
+            'cw_single_typography_h4_title',
+            array(
+                'label'	=> __( 'H4' ),
+                'section' => 'content_single_typography',
+                'settings' => 'cw_single_typography_h4_title',
+            )
+        ));
+
+        //Post & Page H4 Font Family
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_fonts',
+            array(
+                'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h4_fonts',
+            array(
+                'type' => 'select',
+                'label' => 'Font Style',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+                    '"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+                    'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+                    'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+                    '"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+                    '"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                    'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+                    '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+                    '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+                    'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+                    '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+                    '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+                    '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+                    'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+                    'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+                    '"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+                    'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+                    'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+                    'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+                ),
+            )
+        );
+
+        //Post & Page header Font Size
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_font_size',
+            array(
+                'default' => '22',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h4_font_size', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Size',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 80,
+                'step'  => 2,
+            ),
+        ) );
+
+        //Post & Page H4 Font Color
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_font_color',
+            array(
+                'default' => '#333',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'cw_single_typography_h4_font_color',
+                array(
+                    'label' => 'Font Color',
+                    'section' => 'content_single_typography',
+                    'settings' => 'cw_single_typography_h4_font_color',
+                )
+            )
+        );
+
+        //Post & Page H4 Font Transformation
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_font_transformation',
+            array(
+                'default' => 'none',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h4_font_transformation',
+            array(
+                'type' => 'select',
+                'label' => 'Font Transformation',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'none' => 'None',
+                    'uppercase' => 'Uppercase',
+                    'lowercase' => 'Lowercase',
+                    'capitalize' => 'Capitalize',
+                ),
+            )
+        );
+
+
+        //Post & Page H4 Font Padding
+        $wp_customize->add_setting(
+            'cw_single_typography_h4_font_padding',
+            array(
+                'default' => '0',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h4_font_padding', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Padding',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 40,
+                'step'  => 1,
+            ),
+        ) );
+
+        //Post & Page H5 Title
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Title_Area(
+            $wp_customize,
+            'cw_single_typography_h5_title',
+            array(
+                'label'	=> __( 'H5' ),
+                'section' => 'content_single_typography',
+                'settings' => 'cw_single_typography_h5_title',
+            )
+        ));
+
+        //Post & Page H5 Font Family
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_fonts',
+            array(
+                'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h5_fonts',
+            array(
+                'type' => 'select',
+                'label' => 'Font Style',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+                    '"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+                    'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+                    'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+                    '"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+                    '"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                    'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+                    '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+                    '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+                    'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+                    '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+                    '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+                    '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+                    'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+                    'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+                    '"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+                    'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+                    'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+                    'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+                ),
+            )
+        );
+
+        //Post & Page header Font Size
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_font_size',
+            array(
+                'default' => '18',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h5_font_size', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Size',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 80,
+                'step'  => 2,
+            ),
+        ) );
+
+        //Post & Page H5 Font Color
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_font_color',
+            array(
+                'default' => '#333',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'cw_single_typography_h5_font_color',
+                array(
+                    'label' => 'Font Color',
+                    'section' => 'content_single_typography',
+                    'settings' => 'cw_single_typography_h5_font_color',
+                )
+            )
+        );
+
+        //Post & Page H5 Font Transformation
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_font_transformation',
+            array(
+                'default' => 'none',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h5_font_transformation',
+            array(
+                'type' => 'select',
+                'label' => 'Font Transformation',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'none' => 'None',
+                    'uppercase' => 'Uppercase',
+                    'lowercase' => 'Lowercase',
+                    'capitalize' => 'Capitalize',
+                ),
+            )
+        );
+
+
+        //Post & Page H5 Font Padding
+        $wp_customize->add_setting(
+            'cw_single_typography_h5_font_padding',
+            array(
+                'default' => '0',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h5_font_padding', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Padding',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 40,
+                'step'  => 1,
+            ),
+        ) );
+
+        //Post & Page H6 Title
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Title_Area(
+            $wp_customize,
+            'cw_single_typography_h6_title',
+            array(
+                'label'	=> __( 'H6' ),
+                'section' => 'content_single_typography',
+                'settings' => 'cw_single_typography_h6_title',
+            )
+        ));
+
+        //Post & Page H6 Font Family
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_fonts',
+            array(
+                'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h6_fonts',
+            array(
+                'type' => 'select',
+                'label' => 'Font Style',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+                    '"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+                    'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+                    'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+                    'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+                    '"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+                    '"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                    'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+                    '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+                    '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+                    'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+                    '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+                    '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+                    '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+                    'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+                    'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+                    '"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+                    'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+                    'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+                    'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+                ),
+            )
+        );
+
+        //Post & Page header Font Size
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_font_size',
+            array(
+                'default' => '14',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h6_font_size', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Size',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 80,
+                'step'  => 2,
+            ),
+        ) );
+
+        //Post & Page H6 Font Color
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_font_color',
+            array(
+                'default' => '#333',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'cw_single_typography_h6_font_color',
+                array(
+                    'label' => 'Font Color',
+                    'section' => 'content_single_typography',
+                    'settings' => 'cw_single_typography_h6_font_color',
+                )
+            )
+        );
+
+        //Post & Page H6 Font Transformation
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_font_transformation',
+            array(
+                'default' => 'none',
+            )
+        );
+        $wp_customize->add_control(
+            'cw_single_typography_h6_font_transformation',
+            array(
+                'type' => 'select',
+                'label' => 'Font Transformation',
+                'section' => 'content_single_typography',
+                'choices' => array(
+                    'none' => 'None',
+                    'uppercase' => 'Uppercase',
+                    'lowercase' => 'Lowercase',
+                    'capitalize' => 'Capitalize',
+                ),
+            )
+        );
+
+
+        //Post & Page H6 Font Padding
+        $wp_customize->add_setting(
+            'cw_single_typography_h6_font_padding',
+            array(
+                'default' => '0',
+            )
+        );
+        $wp_customize->add_control( 'cw_single_typography_h6_font_padding', array(
+            'type'        => 'range',
+            'priority'    => 10,
+            'section'     => 'content_single_typography',
+            'label'       => 'Font Padding',
+            'input_attrs' => array(
+                'min'   => 0,
+                'max'   => 40,
+                'step'  => 1,
+            ),
+        ) );
 
 ?>
