@@ -898,16 +898,50 @@ post_content img {
 
 
 
+
+
 #single_content .entry blockquote{
+    font: 23px italic Georgia, serif;
+    padding: 18px;
+    padding-left: 65px;
+    background-color: #F3F3F3;
+    margin: 5px;
+    background-image: url(<?php echo get_bloginfo('template_directory') ?>/images/quote.png);
+    background-position: middle left;
+    background-repeat: no-repeat;
+}
+
+#single_content .entry blockquote cite {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+#single_content .entry blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+
+
+
+#single_content .entry li{
+    list-style:square;
 }
 
 #single_content .entry ul{
-
+    list-style:square;
 }
 
-#single_content .entry li{
-
+#single_content .entry ul li{
+    list-style:disc;
 }
+
+#single_content .entry ol { padding-left:35px; font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#bfe1f1;  }
+#single_content .entry ol li {}
+
+
+
+
 
 #single_content .entry dl{
 
@@ -921,9 +955,7 @@ post_content img {
 
 }
 
-#single_content .entry pre {
 
-}
 
 #single_content .entry strong {
     font-weight:bold;
@@ -937,10 +969,6 @@ post_content img {
 font-style:italic;
 }
 
-#single_content .entry cite{
-
-}
-
 #single_content .entry code{
     font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
     background-color:#F3F3F3;
@@ -950,6 +978,68 @@ font-style:italic;
     border-left:5px solid #CCC;
 }
 
+#single_content .entry pre {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    display:block;
+    margin:10px;
+    padding:10px;
+    border-left:5px solid #CCC;
+}
+
+#single_content .entry tt {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    display:block;
+    margin:10px;
+    padding:10px;
+    border-left:5px solid #CCC;
+}
+
+.wp-caption {
+margin-bottom: 1.5em;
+text-align: center;
+padding-top: 5px;
+}
+.wp-caption img {
+border: 0 none;
+padding: 0;
+margin: 0;
+}
+.wp-caption p.wp-caption-text {
+line-height: 1.5;
+font-size: 10px;
+margin: 0;
+}
+.wp-smiley {
+margin: 0 !important;
+max-height: 1em;
+}
+
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -958,19 +1048,6 @@ font-style:italic;
 #single_content .metadata {
     text-align:center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sauthor {
     margin-right:5px; 
@@ -996,6 +1073,9 @@ font-style:italic;
     height:auto;
 }
 
+#single_content img caption {
+
+}
 
 
 
