@@ -98,7 +98,7 @@
 			$wp_customize,
 			'g_form_button_styling_title',
 			array(
-				'label'	=> __( 'Button Styling' ),
+				'label'	=> __( 'Buttons' ),
 				'section' => 'g_forms',
 				'settings' => 'g_form_button_styling_title',
 			)
@@ -125,7 +125,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_typography_color',
 			array(
-				'default' => '#000',
+				'default' => '#FFF',
 			)
 		);
 		$wp_customize->add_control(
@@ -179,6 +179,25 @@
 			)
 		);
 
+		//Form Button Styling Typography Link Size
+		$wp_customize->add_setting(
+			'g_form_button_styling_typography_font_size',
+			array(
+				'default' => '14',
+			)
+		);
+		$wp_customize->add_control( 'g_form_button_styling_typography_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Font Size',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
 		//Form Button Styling Typography Link Weight
 		$wp_customize->add_setting(
 			'g_form_button_styling_typography_font_weight',
@@ -204,7 +223,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_typography_font_hover_color',
 			array(
-				'default' => '#317dbf',
+				'default' => '#FFF',
 			)
 		);
 		$wp_customize->add_control(
@@ -243,27 +262,6 @@
 			)
 		);
 
-		//Form Button Styling Typography Link Alignment
-		$wp_customize->add_setting(
-			'g_form_button_styling_typography_font_alignment',
-			array(
-				'default' => 'center',
-			)
-		);
-		$wp_customize->add_control(
-			'g_form_button_styling_typography_font_alignment',
-			array(
-				'type' => 'select',
-				'label' => 'Font Alignment',
-				'section' => 'g_forms',
-				'choices' => array(
-					'center' => 'Center',
-					'left' => 'Left',
-					'right' => 'Right',
-				),
-			)
-		);
-
 		//Form Button Styling Background Title
 		$wp_customize->add_setting(
 			'g_form_button_styling_background_title',
@@ -281,25 +279,11 @@
 			)
 		));
 
-		//Form Button Styling Background Visibility
-		$wp_customize->add_setting(
-			'g_form_button_styling_background_visible'
-		);
-		$wp_customize->add_control(
-			'g_form_button_styling_background_visible',
-			array(
-				'type' => 'checkbox',
-				'label' => 'Disable Background Visibility',
-				'section' => 'g_forms',
-				'settings' => 'g_form_button_styling_background_visible',
-			)
-		);
-
 		//Form Button Styling Background Color
 		$wp_customize->add_setting(
 			'g_form_button_styling_background_color',
 			array(
-				'default' => '#333',
+				'default' => '#4CAF50',
 			)
 		);
 		$wp_customize->add_control(
@@ -330,7 +314,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_background_hover_color',
 			array(
-				'default' => '#CCC',
+				'default' => '#4CAF50',
 			)
 		);
 		$wp_customize->add_control(
@@ -429,7 +413,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_borders_color',
 			array(
-				'default' => '#CCC',
+				'default' => '#398F3D',
 			)
 		);
 		$wp_customize->add_control(
@@ -482,7 +466,7 @@
 			'label'       => 'Top Border',
 			'input_attrs' => array(
 				'min'   => 0,
-				'max'   => 50,
+				'max'   => 30,
 				'step'  => 1,
 			),
 		) );
@@ -501,7 +485,7 @@
 			'label'       => 'Bottom Border',
 			'input_attrs' => array(
 				'min'   => 0,
-				'max'   => 50,
+				'max'   => 30,
 				'step'  => 1,
 			),
 		) );
@@ -520,7 +504,7 @@
 			'label'       => 'Left Border',
 			'input_attrs' => array(
 				'min'   => 0,
-				'max'   => 50,
+				'max'   => 30,
 				'step'  => 1,
 			),
 		) );
@@ -539,7 +523,7 @@
 			'label'       => 'Right Border',
 			'input_attrs' => array(
 				'min'   => 0,
-				'max'   => 50,
+				'max'   => 30,
 				'step'  => 1,
 			),
 		) );
@@ -584,7 +568,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_padding_top',
 			array(
-				'default' => '0',
+				'default' => '10',
 			)
 		);
 		$wp_customize->add_control( 'g_form_button_styling_padding_top', array(
@@ -593,8 +577,8 @@
 			'section'     => 'g_forms',
 			'label'       => 'Top Padding',
 			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
+				'min'   => 5,
+				'max'   => 60,
 				'step'  => 2,
 			),
 		) );
@@ -603,7 +587,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_padding_bottom',
 			array(
-				'default' => '0',
+				'default' => '10',
 			)
 		);
 		$wp_customize->add_control( 'g_form_button_styling_padding_bottom', array(
@@ -612,8 +596,8 @@
 			'section'     => 'g_forms',
 			'label'       => 'Bottom Padding',
 			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
+				'min'   => 5,
+				'max'   => 60,
 				'step'  => 2,
 			),
 		) );
@@ -622,7 +606,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_padding_left',
 			array(
-				'default' => '0',
+				'default' => '25',
 			)
 		);
 		$wp_customize->add_control( 'g_form_button_styling_padding_left', array(
@@ -631,8 +615,8 @@
 			'section'     => 'g_forms',
 			'label'       => 'Left padding',
 			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
+				'min'   => 5,
+				'max'   => 100,
 				'step'  => 2,
 			),
 		) );
@@ -641,7 +625,7 @@
 		$wp_customize->add_setting(
 			'g_form_button_styling_padding_right',
 			array(
-				'default' => '0',
+				'default' => '25',
 			)
 		);
 		$wp_customize->add_control( 'g_form_button_styling_padding_right', array(
@@ -650,8 +634,8 @@
 			'section'     => 'g_forms',
 			'label'       => 'Right Padding',
 			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
+				'min'   => 5,
+				'max'   => 100,
 				'step'  => 2,
 			),
 		) );

@@ -1727,13 +1727,31 @@ select {
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
     cursor: pointer;
+    color:<?php echo get_theme_mod('g_form_button_styling_typography_color','#FFF') ?>;
+    font-family:<?php echo get_theme_mod('g_form_button_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-weight:<?php echo get_theme_mod('g_form_button_styling_typography_font_weight','normal') ?>;
+    font-size:<?php echo get_theme_mod('g_form_button_styling_typography_font_size','14') ?>px;
+    text-decoration:<?php echo get_theme_mod('g_form_button_styling_typography_font_decoration','none') ?>;
+    background-color:<?php echo get_theme_mod('g_form_button_styling_background_color','#398F3D') ?>;
+    background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_image','none') ?>');
+    background-position:<?php echo get_theme_mod('g_form_button_styling_background_image_position','initial') ?>;
+    background-repeat:<?php echo get_theme_mod('g_form_button_styling_background_image_repeat','no-repeat') ?>;
+    border-top:<?php echo get_theme_mod('g_form_button_styling_borders_top','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
+    border-bottom:<?php echo get_theme_mod('g_form_button_styling_borders_bottom','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
+    border-left:<?php echo get_theme_mod('g_form_button_styling_borders_left','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
+    border-right:<?php echo get_theme_mod('g_form_button_styling_borders_right','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
+    border-radius:<?php echo get_theme_mod('g_form_button_styling_borders_radius','0') ?>px;
+    padding-top:<?php echo get_theme_mod('g_form_button_styling_padding_top','10') ?>px;
+    padding-bottom:<?php echo get_theme_mod('g_form_button_styling_padding_bottom','10') ?>px;
+    padding-left:<?php echo get_theme_mod('g_form_button_styling_padding_left','25') ?>px;
+    padding-right:<?php echo get_theme_mod('g_form_button_styling_padding_right','25') ?>px;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    color:<?php echo get_theme_mod('g_form_button_styling_typography_font_hover_color','#FFF') ?>;
+    background-color:<?php echo get_theme_mod('g_form_button_styling_background_hover_color','#4CAF50') ?>;
+    background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_hover_image','none') ?>');
 }
 
 input[type="file"] {
