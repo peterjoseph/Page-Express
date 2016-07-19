@@ -1655,11 +1655,6 @@ max-height: 1em;
 
 
 
-
-input {
-    width: 100%;
-}
-
 input[type=text] {
     border: 2px solid red;
     border-radius: 4px;
@@ -1667,6 +1662,10 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+input[type=text]:hover {
+background-color: lightblue;
 }
 
 input[type=text]:focus {
@@ -1677,11 +1676,19 @@ input[type=password] {
 
 }
 
+input[type=password]:hover {
+
+}
+
 input[type=password]:focus {
     background-color: lightblue;
 }
 
 input[type=number] {
+
+}
+
+input[type=number]:hover {
 
 }
 
@@ -1698,6 +1705,12 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+}
+
+textarea:hover {
+}
+
+textarea:focus {
 }
 
 select {
