@@ -1655,7 +1655,7 @@ max-height: 1em;
 
 
 
-input[type=text] {
+input[type=text], input[type=password], input[type=number], textarea {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_color','#333') ?>;
     font-family:<?php echo get_theme_mod('g_form_textinput_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-weight:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_weight','normal') ?>;
@@ -1676,119 +1676,14 @@ input[type=text] {
     padding-right:<?php echo get_theme_mod('g_form_textinput_styling_padding_right','10') ?>px;
 }
 
-input[type=text]:hover {
+input[type=text]:hover, input[type=password]:hover, input[type=number]:hover, textarea:hover  {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
     outline:none
 }
 
-input[type=text]:focus {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
-    outline:none
-}
-
-input[type=password] {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_color','#333') ?>;
-    font-family:<?php echo get_theme_mod('g_form_textinput_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-weight:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_weight','normal') ?>;
-    font-size:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_size','14') ?>px;
-    text-decoration:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_decoration','none') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_color','#FFF') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_image','none') ?>');
-    background-position:<?php echo get_theme_mod('g_form_textinput_styling_background_image_position','initial') ?>;
-    background-repeat:<?php echo get_theme_mod('g_form_textinput_styling_background_image_repeat','no-repeat') ?>;
-    border-top:<?php echo get_theme_mod('g_form_textinput_styling_borders_top','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-bottom:<?php echo get_theme_mod('g_form_textinput_styling_borders_bottom','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-left:<?php echo get_theme_mod('g_form_textinput_styling_borders_left','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-right:<?php echo get_theme_mod('g_form_textinput_styling_borders_right','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-radius:<?php echo get_theme_mod('g_form_textinput_styling_borders_radius','0') ?>px;
-    padding-top:<?php echo get_theme_mod('g_form_textinput_styling_padding_top','10') ?>px;
-    padding-bottom:<?php echo get_theme_mod('g_form_textinput_styling_padding_bottom','10') ?>px;
-    padding-left:<?php echo get_theme_mod('g_form_textinput_styling_padding_left','10') ?>px;
-    padding-right:<?php echo get_theme_mod('g_form_textinput_styling_padding_right','10') ?>px;
-}
-
-input[type=password]:hover {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
-    outline:none
-}
-
-input[type=password]:focus {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
-    outline:none
-}
-
-input[type=number] {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_color','#333') ?>;
-    font-family:<?php echo get_theme_mod('g_form_textinput_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-weight:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_weight','normal') ?>;
-    font-size:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_size','14') ?>px;
-    text-decoration:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_decoration','none') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_color','#FFF') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_image','none') ?>');
-    background-position:<?php echo get_theme_mod('g_form_textinput_styling_background_image_position','initial') ?>;
-    background-repeat:<?php echo get_theme_mod('g_form_textinput_styling_background_image_repeat','no-repeat') ?>;
-    border-top:<?php echo get_theme_mod('g_form_textinput_styling_borders_top','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-bottom:<?php echo get_theme_mod('g_form_textinput_styling_borders_bottom','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-left:<?php echo get_theme_mod('g_form_textinput_styling_borders_left','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-right:<?php echo get_theme_mod('g_form_textinput_styling_borders_right','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-radius:<?php echo get_theme_mod('g_form_textinput_styling_borders_radius','0') ?>px;
-    padding-top:<?php echo get_theme_mod('g_form_textinput_styling_padding_top','10') ?>px;
-    padding-bottom:<?php echo get_theme_mod('g_form_textinput_styling_padding_bottom','10') ?>px;
-    padding-left:<?php echo get_theme_mod('g_form_textinput_styling_padding_left','10') ?>px;
-    padding-right:<?php echo get_theme_mod('g_form_textinput_styling_padding_right','10') ?>px;
-}
-
-input[type=number]:hover {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
-    outline:none
-}
-
-input[type=number]:focus {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
-    outline:none
-}
-
-textarea {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_color','#333') ?>;
-    font-family:<?php echo get_theme_mod('g_form_textinput_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-weight:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_weight','normal') ?>;
-    font-size:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_size','14') ?>px;
-    text-decoration:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_decoration','none') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_color','#FFF') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_image','none') ?>');
-    background-position:<?php echo get_theme_mod('g_form_textinput_styling_background_image_position','initial') ?>;
-    background-repeat:<?php echo get_theme_mod('g_form_textinput_styling_background_image_repeat','no-repeat') ?>;
-    border-top:<?php echo get_theme_mod('g_form_textinput_styling_borders_top','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-bottom:<?php echo get_theme_mod('g_form_textinput_styling_borders_bottom','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-left:<?php echo get_theme_mod('g_form_textinput_styling_borders_left','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-right:<?php echo get_theme_mod('g_form_textinput_styling_borders_right','1') ?>px <?php echo get_theme_mod('g_form_textinput_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_textinput_styling_borders_color','#333') ?>;
-    border-radius:<?php echo get_theme_mod('g_form_textinput_styling_borders_radius','0') ?>px;
-    padding-top:<?php echo get_theme_mod('g_form_textinput_styling_padding_top','10') ?>px;
-    padding-bottom:<?php echo get_theme_mod('g_form_textinput_styling_padding_bottom','10') ?>px;
-    padding-left:<?php echo get_theme_mod('g_form_textinput_styling_padding_left','10') ?>px;
-    padding-right:<?php echo get_theme_mod('g_form_textinput_styling_padding_right','10') ?>px;
-}
-
-textarea:hover {
-    color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
-    background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
-    outline:none
-}
-
-textarea:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, textarea:focus  {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
