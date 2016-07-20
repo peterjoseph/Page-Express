@@ -1832,7 +1832,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
     outline:none
 }
 
-input[type=button]:focus, input[type=submit]:focus, input[type=reset]:focus {
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
     color:<?php echo get_theme_mod('g_form_button_styling_typography_font_focus_color','#FFF') ?>;
     background-color:<?php echo get_theme_mod('g_form_button_styling_background_focus_color','#4CAF50') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_focus_image','none') ?>');
