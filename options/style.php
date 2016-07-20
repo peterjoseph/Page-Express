@@ -1680,12 +1680,14 @@ input[type=text]:hover {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
+    outline:none
 }
 
 input[type=text]:focus {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
+    outline:none
 }
 
 input[type=password] {
@@ -1713,12 +1715,14 @@ input[type=password]:hover {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
+    outline:none
 }
 
 input[type=password]:focus {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
+    outline:none
 }
 
 input[type=number] {
@@ -1746,12 +1750,14 @@ input[type=number]:hover {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
+    outline:none
 }
 
 input[type=number]:focus {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
+    outline:none
 }
 
 textarea {
@@ -1779,12 +1785,14 @@ textarea:hover {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_hover_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_hover_color','#F3F3F3') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_hover_image','none') ?>');
+    outline:none
 }
 
 textarea:focus {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_font_focus_color','#333') ?>;
     background-color:<?php echo get_theme_mod('g_form_textinput_styling_background_focus_color','#F2F2F2') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_textinput_styling_background_focus_image','none') ?>');
+    outline:none
 }
 
 select {
@@ -1793,11 +1801,6 @@ select {
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
-}
-
-.opera input[type="password"], .webkit input[type="password"] {
-    font: large Verdana,sans-serif;
-    letter-spacing: 1px;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
@@ -1826,12 +1829,14 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
     color:<?php echo get_theme_mod('g_form_button_styling_typography_font_hover_color','#FFF') ?>;
     background-color:<?php echo get_theme_mod('g_form_button_styling_background_hover_color','#4CAF50') ?>;
     background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_hover_image','none') ?>');
+    outline:none
 }
 
 input[type=button]:focus, input[type=submit]:focus, input[type=reset]:focus {
-color:<?php echo get_theme_mod('g_form_button_styling_typography_font_focus_color','#FFF') ?>;
-background-color:<?php echo get_theme_mod('g_form_button_styling_background_focus_color','#4CAF50') ?>;
-background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_focus_image','none') ?>');
+    color:<?php echo get_theme_mod('g_form_button_styling_typography_font_focus_color','#FFF') ?>;
+    background-color:<?php echo get_theme_mod('g_form_button_styling_background_focus_color','#4CAF50') ?>;
+    background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_focus_image','none') ?>');
+    outline:none;
 }
 
 input[type="file"] {
