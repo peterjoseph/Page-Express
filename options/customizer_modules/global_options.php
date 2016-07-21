@@ -1293,5 +1293,443 @@
 			),
 		) );
 
+		//Form Select Box Styling Title
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_form_selectbox_styling_title',
+			array(
+				'label'	=> __( 'Select Boxs' ),
+				'section' => 'g_forms',
+				'settings' => 'g_form_selectbox_styling_title',
+			)
+		));
+
+		//Form Select Box Styling Typography Title
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'g_form_selectbox_styling_typography_title',
+			array(
+				'label'	=> __( 'Typography' ),
+				'section' => 'g_forms',
+				'settings' => 'g_form_selectbox_styling_typography_title',
+			)
+		));
+
+		//Form Select Box Styling Typography Font Color
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'g_form_selectbox_styling_typography_color',
+				array(
+					'label' => 'Font Color',
+					'section' => 'g_forms',
+					'settings' => 'g_form_selectbox_styling_typography_color',
+				)
+			)
+		);
+
+		//Form Select Box Styling Typography font
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_fonts',
+			array(
+				'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			)
+		);
+		$wp_customize->add_control(
+			'g_form_selectbox_styling_typography_fonts',
+			array(
+				'type' => 'select',
+				'label' => 'Font Style',
+				'section' => 'g_forms',
+				'choices' => array(
+					'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+					'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+					'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+					'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+					'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+					'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+					'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+					'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+					'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+					'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+					'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+					'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+					'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+					'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+					'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+					'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+					'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+					'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+					'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+					'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				),
+			)
+		);
+
+		//Form Select Box Styling Typography Font Size
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_font_size',
+			array(
+				'default' => '14',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_typography_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Font Size',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
+		//Form Select Box Styling Typography Font Weight
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_font_weight',
+			array(
+				'default' => 'normal',
+			)
+		);
+		$wp_customize->add_control(
+			'g_form_selectbox_styling_typography_font_weight',
+			array(
+				'type' => 'select',
+				'label' => 'Font Weight',
+				'section' => 'g_forms',
+				'choices' => array(
+					'normal' => 'Normal',
+					'bold' => 'Bold',
+					'light' => 'Light',
+				),
+			)
+		);
+
+		//Form Select Box Styling Typography Font Decoration
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_typography_font_decoration',
+			array(
+				'default' => 'none',
+			)
+		);
+		$wp_customize->add_control(
+			'g_form_selectbox_styling_typography_font_decoration',
+			array(
+				'type' => 'select',
+				'label' => 'Font Decoration',
+				'section' => 'g_forms',
+				'choices' => array(
+					'none' => 'none',
+					'underline' => 'underline',
+					'overline' => 'overline',
+					'line-through' => 'line-through',
+					'initial' => 'initial',
+					'inherit' => 'inherit',
+				),
+			)
+		);
+
+		//Form Select Box Styling Background Title
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_background_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'g_form_selectbox_styling_background_title',
+			array(
+				'label'	=> __( 'Background' ),
+				'section' => 'g_forms',
+				'settings' => 'g_form_selectbox_styling_background_title',
+			)
+		));
+
+		//Form Select Box Styling Background Color
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_background_color',
+			array(
+				'default' => '#F3F3F3',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'g_form_selectbox_styling_background_color',
+				array(
+					'label' => 'Background Color',
+					'section' => 'g_forms',
+				)
+			)
+		);
+
+		//Form Select Box Styling Borders Title
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'g_form_selectbox_styling_borders_title',
+			array(
+				'label'	=> __( 'Borders' ),
+				'section' => 'g_forms',
+				'settings' => 'g_form_selectbox_styling_borders_title',
+			)
+		));
+
+		//Form Select Box Styling Borders Color
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_color',
+			array(
+				'default' => '#333',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'g_form_selectbox_styling_borders_color',
+				array(
+					'label' => 'Border Color',
+					'section' => 'g_forms',
+					'settings' => 'g_form_selectbox_styling_borders_color',
+				)
+			)
+		);
+
+		//Form Select Box Styling Borders Style
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_style',
+			array(
+				'default' => 'solid',
+			)
+		);
+		$wp_customize->add_control(
+			'g_form_selectbox_styling_borders_style',
+			array(
+				'type' => 'select',
+				'label' => 'Border Style',
+				'section' => 'g_forms',
+				'choices' => array(
+					'dotted' => 'Dotted',
+					'dashed' => 'Dashed',
+					'solid' => 'Solid',
+					'double' => 'Double',
+					'groove' => 'Groove',
+				),
+			)
+		);
+
+
+		//Form Select Box Styling Borders Top
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_top',
+			array(
+				'default' => '1',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_borders_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Top Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 30,
+				'step'  => 1,
+			),
+		) );
+
+		//Form Select Box Styling Borders Bottom
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_bottom',
+			array(
+				'default' => '1',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_borders_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Bottom Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 30,
+				'step'  => 1,
+			),
+		) );
+
+		//Form Select Box Styling Borders Left
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_left',
+			array(
+				'default' => '1',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_borders_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Left Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 30,
+				'step'  => 1,
+			),
+		) );
+
+		//Form Select Box Styling Borders Right
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_right',
+			array(
+				'default' => '1',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_borders_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Right Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 30,
+				'step'  => 1,
+			),
+		) );
+
+		//Form Select Box Styling Borders Radius
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_borders_radius',
+			array(
+				'default' => '0',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_borders_radius', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Rounded Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+
+		//Form Select Box Styling Padding Title
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_padding_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'g_form_selectbox_styling_padding_title',
+			array(
+				'label'	=> __( 'Padding' ),
+				'section' => 'g_forms',
+				'settings' => 'g_form_selectbox_styling_padding_title',
+			)
+		));
+
+		//Form Select Box Styling Padding Top
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_padding_top',
+			array(
+				'default' => '10',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_padding_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Top Padding',
+			'input_attrs' => array(
+				'min'   => 5,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
+		//Form Select Box Styling Padding Bottom
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_padding_bottom',
+			array(
+				'default' => '10',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_padding_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Bottom Padding',
+			'input_attrs' => array(
+				'min'   => 5,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
+		//Form Select Box Styling Padding Left
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_padding_left',
+			array(
+				'default' => '50',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_padding_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Left padding',
+			'input_attrs' => array(
+				'min'   => 5,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
+
+		//Form Select Box Styling Padding Right
+		$wp_customize->add_setting(
+			'g_form_selectbox_styling_padding_right',
+			array(
+				'default' => '50',
+			)
+		);
+		$wp_customize->add_control( 'g_form_selectbox_styling_padding_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'g_forms',
+			'label'       => 'Right Padding',
+			'input_attrs' => array(
+				'min'   => 5,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
 
 ?>

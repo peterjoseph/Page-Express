@@ -1700,10 +1700,10 @@ input[type=button], input[type=submit], input[type=reset] {
     background-image:url('<?php echo get_theme_mod('g_form_button_styling_background_image','none') ?>');
     background-position:<?php echo get_theme_mod('g_form_button_styling_background_image_position','initial') ?>;
     background-repeat:<?php echo get_theme_mod('g_form_button_styling_background_image_repeat','no-repeat') ?>;
-    border-top:<?php echo get_theme_mod('g_form_button_styling_borders_top','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
-    border-bottom:<?php echo get_theme_mod('g_form_button_styling_borders_bottom','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
-    border-left:<?php echo get_theme_mod('g_form_button_styling_borders_left','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
-    border-right:<?php echo get_theme_mod('g_form_button_styling_borders_right','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#000') ?>;
+    border-top:<?php echo get_theme_mod('g_form_button_styling_borders_top','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#4CAF50') ?>;
+    border-bottom:<?php echo get_theme_mod('g_form_button_styling_borders_bottom','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#4CAF50') ?>;
+    border-left:<?php echo get_theme_mod('g_form_button_styling_borders_left','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#4CAF50') ?>;
+    border-right:<?php echo get_theme_mod('g_form_button_styling_borders_right','0') ?>px <?php echo get_theme_mod('g_form_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_form_button_styling_borders_color','#4CAF50') ?>;
     border-radius:<?php echo get_theme_mod('g_form_button_styling_borders_radius','0') ?>px;
     padding-top:<?php echo get_theme_mod('g_form_button_styling_padding_top','10') ?>px;
     padding-bottom:<?php echo get_theme_mod('g_form_button_styling_padding_bottom','10') ?>px;
@@ -1726,57 +1726,58 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
 }
 
 select {
-    width: 100%;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
+    color:<?php echo get_theme_mod('g_selectbox_button_styling_typography_color','#333') ?>;
+    font-family:<?php echo get_theme_mod('g_selectbox_button_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-weight:<?php echo get_theme_mod('g_selectbox_button_styling_typography_font_weight','normal') ?>;
+    font-size:<?php echo get_theme_mod('g_selectbox_button_styling_typography_font_size','14') ?>px;
+    text-decoration:<?php echo get_theme_mod('g_selectbox_button_styling_typography_font_decoration','none') ?>;
+    background-color:<?php echo get_theme_mod('g_selectbox_button_styling_background_color','#F3F3F3') ?>;
+    border-top:<?php echo get_theme_mod('g_selectbox_button_styling_borders_top','1') ?>px <?php echo get_theme_mod('g_selectbox_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_selectbox_button_styling_borders_color','#333') ?>;
+    border-bottom:<?php echo get_theme_mod('g_selectbox_button_styling_borders_bottom','1') ?>px <?php echo get_theme_mod('g_selectbox_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_selectbox_button_styling_borders_color','#333') ?>;
+    border-left:<?php echo get_theme_mod('g_selectbox_button_styling_borders_left','1') ?>px <?php echo get_theme_mod('g_selectbox_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_selectbox_button_styling_borders_color','#333') ?>;
+    border-right:<?php echo get_theme_mod('g_selectbox_button_styling_borders_right','1') ?>px <?php echo get_theme_mod('g_selectbox_button_styling_borders_style','solid') ?> <?php echo get_theme_mod('g_selectbox_button_styling_borders_color','#333') ?>;
+    border-radius:<?php echo get_theme_mod('g_selectbox_button_styling_borders_radius','0') ?>px;
+    padding-top:<?php echo get_theme_mod('g_selectbox_button_styling_padding_top','10') ?>px;
+    padding-bottom:<?php echo get_theme_mod('g_selectbox_button_styling_padding_bottom','10') ?>px;
+    padding-left:<?php echo get_theme_mod('g_selectbox_button_styling_padding_left','50') ?>px;
+    padding-right:<?php echo get_theme_mod('g_selectbox_button_styling_padding_right','50') ?>px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline:none;
+    background-image: url('<?php echo get_bloginfo('template_directory') ?>/images/dropdown_arrow.png');
+    background-repeat:no-repeat;
+    background-position: center right 10px;
 }
 
 input[type="file"] {
-    display: none;
-    display: inline-block;
+
 }
 
 input[type="file"] + label {
-    background: url('file.png') no-repeat;
-    display: block;
-    width: 200px;
-    height:50px;
+
 }
 
 input[type="radio"] {
-    display:none;
+
 }
 
 input[type="radio"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background:url(check_radio_sheet.png) left top no-repeat;
-    cursor:pointer;
+
 }
 
 input[type="radio"]:checked + label span {
-    background:url(check_radio_sheet.png) -19px top no-repeat;
+
 }
 
 input[type="checkbox"] {
-    display:none;
+
 }
 
 input[type="checkbox"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background:url(check_radio_sheet.png) left top no-repeat;
-    cursor:pointer;
+
 }
 
 input[type="checkbox"]:checked + label span {
-    background:url(check_radio_sheet.png) -19px top no-repeat;
+
 }
