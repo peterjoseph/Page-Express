@@ -1651,9 +1651,6 @@ max-height: 1em;
 	padding:2px;
   }
 
-
-
-
 input[type=text], input[type=password], input[type=number], textarea {
     color:<?php echo get_theme_mod('g_form_textinput_styling_typography_color','#333') ?>;
     font-family:<?php echo get_theme_mod('g_form_textinput_styling_typography_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
@@ -1748,36 +1745,4 @@ select {
     background-image: url('<?php echo get_bloginfo('template_directory') ?>/images/dropdown_arrow.png');
     background-repeat:no-repeat;
     background-position: center right 10px;
-}
-
-input[type="file"] {
-
-}
-
-input[type="file"] + label {
-
-}
-
-input[type="radio"] {
-
-}
-
-input[type="radio"] + label span {
-
-}
-
-input[type="radio"]:checked + label span {
-
-}
-
-input[type="checkbox"] {
-
-}
-
-input[type="checkbox"] + label span {
-
-}
-
-input[type="checkbox"]:checked + label span {
-
 }

@@ -19,6 +19,8 @@
                                 <?php the_content(); ?>
                            </div>
 
+                           <?php if ( comments_open() || '0' != get_comments_number() ) comments_template( '', true ); ?>
+
                        <?php endwhile; else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                        <?php endif; ?>

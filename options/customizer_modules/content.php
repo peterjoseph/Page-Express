@@ -1992,4 +1992,24 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
             ),
         ) );
 
+
+		$wp_customize->add_section('cw_single_comments', array('title' => 'Comments','panel' => 'content','priority' => 30,));
+
+		//Content Wrapper Margins Title
+		$wp_customize->add_setting(
+			'cw_single_comments_layout_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_layout_title',
+			array(
+				'label'	=> __( 'Layout' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_layout_title',
+			)
+		));
+
 ?>

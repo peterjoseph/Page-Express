@@ -1304,7 +1304,7 @@
 			$wp_customize,
 			'g_form_selectbox_styling_title',
 			array(
-				'label'	=> __( 'Select Boxs' ),
+				'label'	=> __( 'Select Boxes' ),
 				'section' => 'g_forms',
 				'settings' => 'g_form_selectbox_styling_title',
 			)
