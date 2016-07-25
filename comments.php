@@ -1,6 +1,6 @@
 <div id="comments">
     <?php if ( post_password_required() ) : ?>
-        <p class="nopassword">
+        <p class="comments_nopassword">
             <?php _e( 'This post is password protected.', 'objecttheme' ); ?>
         </p>
     <?php return; endif; ?>

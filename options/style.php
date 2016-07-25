@@ -1089,6 +1089,70 @@ max-height: 1em;
 
 
 
+#comments {
+}
+
+#comments .comments_title {
+}
+
+#comments .comments_list {
+}
+
+#comments .comments_navigation {
+}
+
+#comments .comments_navigation .nav-previous {
+}
+
+#comments .comments_navigation .nav-next {
+}
+
+#comments .comments-wrapper-heading {
+}
+
+#comments #commentform {
+}
+
+#comments #comment-form .commentform-element {
+}
+
+#comments #comment-form .commentform-element .hide {
+}
+
+#comments #comment-form .commentform-element .input-fields {
+}
+
+#comments #comment-form .commentform-element #comment {
+}
+
+#comments #comment-form #submit-comment {
+}
+
+#comments .comments_nopassword {
+}
+
+#comments .comments_empty {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #luni {
      width:<?php echo get_theme_mod('lower_unibar_width','100%') ?>;
      min-height:30px;
