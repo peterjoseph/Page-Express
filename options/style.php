@@ -1104,6 +1104,8 @@ max-height: 1em;
 }
 
 #comments .comment-respond {
+    margin:20px auto 20px auto;
+    max-width:500px;
 }
 
 #comments .comment-respond label {
