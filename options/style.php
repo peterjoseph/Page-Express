@@ -1092,7 +1092,7 @@ max-height: 1em;
 #comments {
     margin:20px auto 20px auto;
     max-width:800px;
-    padding:30px;
+    padding:10px;
     background-color:#F3F3F3;
     border-radius:3px;
 }
@@ -1105,7 +1105,7 @@ max-height: 1em;
 
 #comments .comment-respond {
     margin:20px auto 20px auto;
-    max-width:500px;
+    max-width:600px;
 }
 
 #comments .comment-respond label {
@@ -1120,6 +1120,9 @@ max-height: 1em;
 
 #comments .comment-respond .comment-form-comment textarea {
     width:100%;
+    height:100%;
+    overflow:scroll;
+    max-height:350px;
     max-width:500px;
 }
 
