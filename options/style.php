@@ -1090,6 +1090,11 @@ max-height: 1em;
 
 
 #comments {
+    margin:20px auto 20px auto;
+    max-width:800px;
+    padding:30px;
+    background-color:#F3F3F3;
+    border-radius:3px;
 }
 
 #comments .comments_title {
@@ -1098,34 +1103,53 @@ max-height: 1em;
 #comments .comments_list {
 }
 
-#comments .comments_navigation {
+#comments .comment-respond {
 }
 
-#comments .comments_navigation .nav-previous {
+#comments .comment-respond label {
+    display:block;
 }
 
-#comments .comments_navigation .nav-next {
+#comments .comment-notes {display:none}
+
+#comments .comment-respond .comment-form-comment {
+    padding:10px 0px 10px 0px;
 }
 
-#comments .comments-wrapper-heading {
+#comments .comment-respond .comment-form-comment textarea {
+    width:100%;
+    max-width:500px;
 }
 
-#comments #commentform {
+#comments .comment-respond .comment-form-author {
+    padding:10px 0px 10px 0px;
 }
 
-#comments #comment-form .commentform-element {
+#comments .comment-respond .comment-form-author input[type=text] {
+    width:100%;
+    max-width:400px;
 }
 
-#comments #comment-form .commentform-element .hide {
+#comments .comment-respond .comment-form-email {
+    padding:10px 0px 10px 0px;
 }
 
-#comments #comment-form .commentform-element .input-fields {
+#comments .comment-respond .comment-form-email input[type=text] {
+    width:100%;
+    max-width:400px;
 }
 
-#comments #comment-form .commentform-element #comment {
+#comments .comment-respond .comment-form-url {
+    padding:10px 0px 10px 0px;
 }
 
-#comments #comment-form #submit-comment {
+#comments .comment-respond .comment-form-url input[type=text] {
+    width:100%;
+    max-width:400px;
+}
+
+#comments .comment-respond .form-submit {
+    padding:10px 0px 10px 0px;
 }
 
 #comments .comments_nopassword {
