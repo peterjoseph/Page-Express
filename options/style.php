@@ -936,7 +936,7 @@ post_content img {
     list-style:disc;
 }
 
-#single_content .entry ol { padding-left:35px; font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#bfe1f1;  }
+#single_content .entry ol {}
 #single_content .entry ol li {}
 
 
@@ -1097,11 +1097,52 @@ max-height: 1em;
     border-radius:3px;
 }
 
-#comments .comments_title {
+#comments h4.comments_title {
+    padding:15px;
 }
 
 #comments .comments_list {
+margin:10px 10px 10px 10px;
+list-style:none;
 }
+
+#comments .comments_list .comment-body {
+padding:10px;
+margin:10px;
+background-color:#CCC;
+}
+
+#comments .comments_list .children {
+    padding-left:10px;
+    margin-left:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #comments .comment-respond {
     margin:20px auto 20px auto;
@@ -1116,6 +1157,12 @@ max-height: 1em;
 
 #comments .comment-respond .comment-form-comment {
     padding:10px 0px 10px 0px;
+}
+
+#comments .comment-reply-title small a {
+    font-size:14px;
+text-decoration:none;
+padding:5px;
 }
 
 #comments .comment-respond .comment-form-comment textarea {
@@ -1158,18 +1205,11 @@ max-height: 1em;
 }
 
 #comments .comments_nopassword {
+    padding:20px;
 }
 
 #comments .comments_empty {
 }
-
-
-
-
-
-
-
-
 
 
 

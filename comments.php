@@ -6,12 +6,12 @@
     <?php return; endif; ?>
 
     <?php if ( have_comments() ) : ?>
-        <h3 class="comments_title">
+        <h4 class="comments_title">
             <?php
-                printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'objecttheme' ),
-                number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
+                printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'objecttheme' ),
+                number_format_i18n( get_comments_number() ) );
             ?>
-        </h3>
+        </h4>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <div class="comments_navigation">
@@ -20,9 +20,9 @@
             </div>
         <?php endif; ?>
 
-        <ol class="comments_list">
+        <div class="comments_list">
             <?php wp_list_comments( $args, $comments ); ?>
-        </ol>
+        </div>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <div class="comments_navigation">
