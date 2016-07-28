@@ -2062,7 +2062,10 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 
 		//Comment Area Background Visibility
 		$wp_customize->add_setting(
-			'cw_single_comments_backgrounds_comment_area_background_visibility'
+			'cw_single_comments_backgrounds_comment_area_background_visibility',
+			array(
+				'default' => 'true',
+			)
 		);
 		$wp_customize->add_control(
 		    'cw_single_comments_backgrounds_comment_area_background_visibility',
@@ -2078,7 +2081,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_comment_area_background_color',
 		    array(
-		        'default' => '#FFF',
+		        'default' => '#F3F3F3',
 		    )
 		);
 		$wp_customize->add_control(
@@ -2140,7 +2143,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_comment_area_background_image_repeat',
 		    array(
-		        'default' => 'no-repeat',
+		        'default' => 'repeat',
 		    )
 		);
 		$wp_customize->add_control(
@@ -2290,7 +2293,47 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			)
 		));
 		
-
+		//Comments Area Border Color
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_color',
+		    array(
+		        'default' => '#CCC',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'cw_single_comments_border_comment_area_color',
+		        array(
+		            'label' => 'Border Color',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_border_comment_area_color',
+		        )
+		    )
+		);
+		
+		//Comments Area Border Style
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_border_style',
+		    array(
+		        'default' => 'solid',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_border_comment_area_border_style',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Border Style',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'dotted' => 'Dotted',
+					'dashed' => 'Dashed',
+					'solid' => 'Solid',
+					'double' => 'Double',
+					'groove' => 'Groove',
+		        ),
+		    )
+		);
 
 		//Comments Area Border Top
 		$wp_customize->add_setting(
@@ -2463,7 +2506,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_top',
 		    array(
-		        'default' => '0',
+		        'default' => '20',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_top', array(
@@ -2472,7 +2515,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			'section'     => 'cw_single_comments',
 			'label'       => 'Top Padding',
 			'input_attrs' => array(
-				'min'   => 0,
+				'min'   => 5,
 				'max'   => 50,
 				'step'  => 2,
 			),
@@ -2482,7 +2525,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_bottom',
 		    array(
-		        'default' => '0',
+		        'default' => '20',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_bottom', array(
@@ -2491,7 +2534,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			'section'     => 'cw_single_comments',
 			'label'       => 'Bottom Padding',
 			'input_attrs' => array(
-				'min'   => 0,
+				'min'   => 5,
 				'max'   => 50,
 				'step'  => 2,
 			),
@@ -2501,7 +2544,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_left',
 		    array(
-		        'default' => '0',
+		        'default' => '20',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_left', array(
@@ -2510,7 +2553,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			'section'     => 'cw_single_comments',
 			'label'       => 'Left padding',
 			'input_attrs' => array(
-				'min'   => 0,
+				'min'   => 5,
 				'max'   => 50,
 				'step'  => 2,
 			),
@@ -2520,7 +2563,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_right',
 		    array(
-		        'default' => '0',
+		        'default' => '20',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_right', array(
@@ -2529,7 +2572,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			'section'     => 'cw_single_comments',
 			'label'       => 'Right Padding',
 			'input_attrs' => array(
-				'min'   => 0,
+				'min'   => 5,
 				'max'   => 50,
 				'step'  => 2,
 			),
@@ -2551,6 +2594,48 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 				'settings' => 'cw_single_comments_all_comments_borders_title',
 			)
 		));
+
+		//Individual Comment Border Color
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_color',
+		    array(
+		        'default' => '#CCC',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'cw_single_comments_border_individual_comment_color',
+		        array(
+		            'label' => 'Border Color',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_border_individual_comment_color',
+		        )
+		    )
+		);
+		
+		//Individual Comment Border Style
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_style',
+		    array(
+		        'default' => 'solid',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_border_individual_comment_style',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Border Style',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'dotted' => 'Dotted',
+					'dashed' => 'Dashed',
+					'solid' => 'Solid',
+					'double' => 'Double',
+					'groove' => 'Groove',
+		        ),
+		    )
+		);
 
 		//Individual Comment Border Top
 		$wp_customize->add_setting(
@@ -2575,7 +2660,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_bottom',
 		    array(
-		        'default' => '0',
+		        'default' => '1',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_bottom', array(
@@ -2594,7 +2679,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_left',
 		    array(
-		        'default' => '0',
+		        'default' => '3',
 		    )
 		);
 		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_left', array(
@@ -2699,7 +2784,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_top_level_comment_background_color',
 		    array(
-		        'default' => '#FFF',
+		        'default' => '#F0F0F0',
 		    )
 		);
 		$wp_customize->add_control(
@@ -2761,7 +2846,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_top_level_comments_background_image_repeat',
 		    array(
-		        'default' => 'no-repeat',
+		        'default' => 'repeat',
 		    )
 		);
 		$wp_customize->add_control(
@@ -2853,7 +2938,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_responding_comments_background_color',
 		    array(
-		        'default' => '#FFF',
+		        'default' => '#F0F0F0',
 		    )
 		);
 		$wp_customize->add_control(
@@ -2915,7 +3000,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_responding_comments_background_image_repeat',
 		    array(
-		        'default' => 'no-repeat',
+		        'default' => 'repeat',
 		    )
 		);
 		$wp_customize->add_control(
