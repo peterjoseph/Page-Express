@@ -2368,6 +2368,25 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			),
 		) );
 
+		//Comments Area Border Radius
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_radius',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_comment_area_radius', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Border Radius',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 20,
+				'step'  => 1,
+			),
+		) );
+
 		//Comments All Comments Title
 		$wp_customize->add_setting(
 		    'cw_single_comments_all_comments_grand_layout_title',
@@ -2605,6 +2624,25 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+
+		//Individual Comment Border Radius
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_radius',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_radius', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Border Radius',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 20,
 				'step'  => 1,
 			),
 		) );
