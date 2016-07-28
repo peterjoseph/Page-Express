@@ -1995,21 +1995,926 @@ $wp_customize->add_panel('content', array('title' => __( 'Content' ), 'priority'
 
 		$wp_customize->add_section('cw_single_comments', array('title' => 'Comments','panel' => 'content','priority' => 30,));
 
-		//Content Wrapper Margins Title
+		//Comments Comment Area Title
 		$wp_customize->add_setting(
-			'cw_single_comments_layout_title',
+		    'cw_single_comments_comment_area_grand_layout_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_single_comments_comment_area_grand_layout_title',
+			array(
+				'label'	=> __( 'Comments Area' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_comment_area_grand_layout_title',
+			) 
+		));
+
+		//Comments Area Layout Title
+		$wp_customize->add_setting(
+			'cw_single_comments_comment_area_layout_title',
 			array(
 				'default' => '',
 			)
 		);
 		$wp_customize->add_control( new WP_Customize_Title_Area(
 			$wp_customize,
-			'cw_single_comments_layout_title',
+			'cw_single_comments_comment_area_layout_title',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'cw_single_comments',
-				'settings' => 'cw_single_comments_layout_title',
+				'settings' => 'cw_single_comments_comment_area_layout_title',
 			)
 		));
 
+		//Comments Header Visibility
+		$wp_customize->add_setting(
+			'cw_single_comments_layout_comments_header_visibility'
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_layout_comments_header_visibility',
+		    array(
+		        'type' => 'checkbox',
+		        'label' => 'Disable Comment Header',
+				'section' => 'cw_single_comments',
+		        'settings' => 'cw_single_comments_layout_comments_header_visibility',
+		    )
+		);
+
+		//Comments Backgrounds Title
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_backgrounds_title',
+			array(
+				'label'	=> __( 'Background' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_backgrounds_title',
+			)
+		));
+
+		//Comment Area Background Visibility
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_comment_area_background_visibility'
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_comment_area_background_visibility',
+		    array(
+		        'type' => 'checkbox',
+		        'label' => 'Disable Background Visibility',
+				'section' => 'cw_single_comments',
+		        'settings' => 'cw_single_comments_backgrounds_comment_area_background_visibility',
+		    )
+		);
+
+		//Comment Area Background Color
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_comment_area_background_color',
+		    array(
+		        'default' => '#FFF',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_comment_area_background_color',
+		        array(
+		            'label' => 'Background Color',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_comment_area_background_color',
+		        )
+		    )
+		);
+		
+		//Comment Area Background Image
+		$wp_customize->add_setting( 'cw_single_comments_backgrounds_comment_area_background_image' );
+		$wp_customize->add_control(
+		    new WP_Customize_Image_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_comment_area_background_image',
+		        array(
+		            'label' => 'Background Image',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_comment_area_background_image'
+		        )
+		    )
+		);
+
+
+		//Background Image position
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_comment_area_background_image_position',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_comment_area_background_image_position',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Position',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Initial',
+		            'left top' => 'Top Left',
+		            'left center' => 'Center Left',
+		            'left bottom' => 'Bottom Left',
+		            'right top' => 'Top Right',
+					'right center' => 'Center Right',
+					'right bottom' => 'Bottom Right',
+					'center top' => 'Top Center',
+					'center center' => 'Center Center',
+					'center bottom' => 'Bottom Center',
+		        ),
+		    )
+		);
+		
+		//Background Image repeat
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_comment_area_background_image_repeat',
+		    array(
+		        'default' => 'no-repeat',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_comment_area_background_image_repeat',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Repetition',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'no-repeat' => 'No Repeat',
+		            'repeat' => 'Repeat',
+		            'repeat-x' => 'Repeat X',
+		            'repeat-y' => 'Repeat Y',
+					'initial' => 'Initial',
+		        ),
+		    )
+		);
+		
+		//Background Image Type
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_comment_area_background_image_type',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_comment_area_background_image_type',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Type',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Repeat the background image',
+		            'contain' => 'Stretch the image in the browser',
+					'cover' => 'Scale the image (Some content may be cut off)',
+		        ),
+		    )
+		);
+
+		//Comments Padding Title
+		$wp_customize->add_setting(
+			'cw_single_comments_padding_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_padding_title',
+			array(
+				'label'	=> __( 'Padding' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_padding_title',
+			)
+		));
+
+		//Comments Area Padding Top
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_comment_area_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_comment_area_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Top Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Comments Area Padding Bottom
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_comment_area_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_comment_area_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Bottom Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Comments Area Padding Left
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_comment_area_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_comment_area_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Left padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Comments Area Padding Right
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_comment_area_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_comment_area_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Right Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+
+		//Comments Borders Title
+		$wp_customize->add_setting(
+			'cw_single_comments_borders_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_borders_title',
+			array(
+				'label'	=> __( 'Borders' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_borders_title',
+			)
+		));
+		
+
+
+		//Comments Area Border Top
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_comment_area_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Top Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Comments Area Border Bottom
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_comment_area_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Bottom Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Comments Area Border Left
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_comment_area_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Left border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Comments Area Border Right
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_comment_area_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_comment_area_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Right Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+
+		//Comments All Comments Title
+		$wp_customize->add_setting(
+		    'cw_single_comments_all_comments_grand_layout_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_single_comments_all_comments_grand_layout_title',
+			array(
+				'label'	=> __( 'All Comments' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_all_comments_grand_layout_title',
+			) 
+		));
+
+
+		//All Comments Layout Title
+		$wp_customize->add_setting(
+			'cw_single_comments_all_comments_layout_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_all_comments_layout_title',
+			array(
+				'label'	=> __( 'Layout' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_all_comments_layout_title',
+			)
+		));
+
+		//Avatar Position
+		$wp_customize->add_setting(
+		    'cw_single_comments_layout_avatar_visibility',
+		    array(
+		        'default' => 'left',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_layout_avatar_visibility',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Avatar Position',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'left' => 'Left',
+		            'right' => 'Right',
+		        ),
+		    )
+		);
+
+		//All Comments Padding Title
+		$wp_customize->add_setting(
+			'cw_single_comments_all_comments_padding_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_all_comments_padding_title',
+			array(
+				'label'	=> __( 'Padding' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_all_comments_padding_title',
+			)
+		));
+
+		//Individual Comment Padding Top
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_individual_comment_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Top Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Individual Comment Padding Bottom
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_individual_comment_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Bottom Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Individual Comment Padding Left
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_individual_comment_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Left padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Individual Comment Padding Right
+		$wp_customize->add_setting(
+		    'cw_single_comments_padding_individual_comment_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_padding_individual_comment_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Right Padding',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+
+		//All Comments Borders Title
+		$wp_customize->add_setting(
+			'cw_single_comments_all_comments_borders_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_all_comments_borders_title',
+			array(
+				'label'	=> __( 'Borders' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_all_comments_borders_title',
+			)
+		));
+
+		//Individual Comment Border Top
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Top Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Individual Comment Border Bottom
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Bottom Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Individual Comment Border Left
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Left border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Individual Comment Border Right
+		$wp_customize->add_setting(
+		    'cw_single_comments_border_individual_comment_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'cw_single_comments_border_individual_comment_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'cw_single_comments',
+			'label'       => 'Right Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+
+		//Comments Top Level Title
+		$wp_customize->add_setting(
+		    'cw_single_comments_top_level_comments_grand_layout_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_single_comments_top_level_comments_grand_layout_title',
+			array(
+				'label'	=> __( 'Top Level Comments' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_top_level_comments_grand_layout_title',
+			) 
+		));
+
+		//Top Level Comment Backgrounds Title
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_top_level_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_backgrounds_top_level_title',
+			array(
+				'label'	=> __( 'Background' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_backgrounds_top_level_title',
+			)
+		));
+
+		//Top Level Comment Background Visibility
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_top_level_comment_background_visibility'
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_top_level_comment_background_visibility',
+		    array(
+		        'type' => 'checkbox',
+		        'label' => 'Disable Background Visibility',
+				'section' => 'cw_single_comments',
+		        'settings' => 'cw_single_comments_backgrounds_top_level_comment_background_visibility',
+		    )
+		);
+
+		//Top Level Comment Background Color
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_top_level_comment_background_color',
+		    array(
+		        'default' => '#FFF',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_top_level_comment_background_color',
+		        array(
+		            'label' => 'Background Color',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_top_level_comment_background_color',
+		        )
+		    )
+		);
+		
+		//Top Level Comment Background Image
+		$wp_customize->add_setting( 'cw_single_comments_backgrounds_top_level_comment_background_image' );
+		$wp_customize->add_control(
+		    new WP_Customize_Image_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_top_level_comment_background_image',
+		        array(
+		            'label' => 'Background Image',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_top_level_comment_background_image'
+		        )
+		    )
+		);
+
+
+		//Top Level Comments Background Image position
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_position',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_position',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Position',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Initial',
+		            'left top' => 'Top Left',
+		            'left center' => 'Center Left',
+		            'left bottom' => 'Bottom Left',
+		            'right top' => 'Top Right',
+					'right center' => 'Center Right',
+					'right bottom' => 'Bottom Right',
+					'center top' => 'Top Center',
+					'center center' => 'Center Center',
+					'center bottom' => 'Bottom Center',
+		        ),
+		    )
+		);
+		
+		//Background Image repeat
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_repeat',
+		    array(
+		        'default' => 'no-repeat',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_repeat',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Repetition',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'no-repeat' => 'No Repeat',
+		            'repeat' => 'Repeat',
+		            'repeat-x' => 'Repeat X',
+		            'repeat-y' => 'Repeat Y',
+					'initial' => 'Initial',
+		        ),
+		    )
+		);
+		
+		//Background Image Type
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_type',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_top_level_comments_background_image_type',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Type',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Repeat the background image',
+		            'contain' => 'Stretch the image in the browser',
+					'cover' => 'Scale the image (Some content may be cut off)',
+		        ),
+		    )
+		);
+
+		//Comments Responding Title
+		$wp_customize->add_setting(
+		    'cw_single_comments_responding_comments_grand_layout_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_single_comments_responding_comments_grand_layout_title',
+			array(
+				'label'	=> __( 'Responding Comments' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_responding_comments_grand_layout_title',
+			) 
+		));
+
+		//Responding Comments Backgrounds Title
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_responding_comments_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_single_comments_backgrounds_responding_comments_title',
+			array(
+				'label'	=> __( 'Background' ),
+				'section' => 'cw_single_comments',
+				'settings' => 'cw_single_comments_backgrounds_responding_comments_title',
+			)
+		));
+
+		//Responding Comments Background Visibility
+		$wp_customize->add_setting(
+			'cw_single_comments_backgrounds_responding_comments_background_visibility'
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_responding_comments_background_visibility',
+		    array(
+		        'type' => 'checkbox',
+		        'label' => 'Disable Background Visibility',
+				'section' => 'cw_single_comments',
+		        'settings' => 'cw_single_comments_backgrounds_responding_comments_background_visibility',
+		    )
+		);
+
+		//Responding Comments Background Color
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_responding_comments_background_color',
+		    array(
+		        'default' => '#FFF',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_responding_comments_background_color',
+		        array(
+		            'label' => 'Background Color',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_responding_comments_background_color',
+		        )
+		    )
+		);
+		
+		//Responding Comments Background Image
+		$wp_customize->add_setting( 'cw_single_comments_backgrounds_responding_comments_background_image' );
+		$wp_customize->add_control(
+		    new WP_Customize_Image_Control(
+		        $wp_customize,
+		        'cw_single_comments_backgrounds_responding_comments_background_image',
+		        array(
+		            'label' => 'Background Image',
+		            'section' => 'cw_single_comments',
+		            'settings' => 'cw_single_comments_backgrounds_responding_comments_background_image'
+		        )
+		    )
+		);
+
+
+		//Responding Comments Background Image position
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_position',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_position',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Position',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Initial',
+		            'left top' => 'Top Left',
+		            'left center' => 'Center Left',
+		            'left bottom' => 'Bottom Left',
+		            'right top' => 'Top Right',
+					'right center' => 'Center Right',
+					'right bottom' => 'Bottom Right',
+					'center top' => 'Top Center',
+					'center center' => 'Center Center',
+					'center bottom' => 'Bottom Center',
+		        ),
+		    )
+		);
+		
+		//Background Image repeat
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_repeat',
+		    array(
+		        'default' => 'no-repeat',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_repeat',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Repetition',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'no-repeat' => 'No Repeat',
+		            'repeat' => 'Repeat',
+		            'repeat-x' => 'Repeat X',
+		            'repeat-y' => 'Repeat Y',
+					'initial' => 'Initial',
+		        ),
+		    )
+		);
+		
+		//Background Image Type
+		$wp_customize->add_setting(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_type',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_single_comments_backgrounds_responding_comments_background_image_type',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Type',
+		        'section' => 'cw_single_comments',
+		        'choices' => array(
+					'initial' => 'Repeat the background image',
+		            'contain' => 'Stretch the image in the browser',
+					'cover' => 'Scale the image (Some content may be cut off)',
+		        ),
+		    )
+		);
+		
 ?>
