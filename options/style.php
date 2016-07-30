@@ -1195,6 +1195,9 @@ div.comments_list li {
     height:100%;
     max-height:350px;
     max-width:500px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #comments .comment-respond .comment-form-author {
@@ -1204,6 +1207,9 @@ div.comments_list li {
 #comments .comment-respond .comment-form-author input[type=text] {
     width:100%;
     max-width:400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #comments .comment-respond .comment-form-email {
@@ -1213,6 +1219,9 @@ div.comments_list li {
 #comments .comment-respond .comment-form-email input[type=text] {
     width:100%;
     max-width:400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #comments .comment-respond .comment-form-url {
@@ -1222,6 +1231,9 @@ div.comments_list li {
 #comments .comment-respond .comment-form-url input[type=text] {
     width:100%;
     max-width:400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #comments .comment-respond .form-submit {
