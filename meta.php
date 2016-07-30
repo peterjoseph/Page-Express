@@ -1,8 +1,8 @@
 <?php
-    $author = get_theme_mod('homepage_meta_box_author','1');
-    $comments = get_theme_mod('homepage_meta_box_comments','1');
-    $categories = get_theme_mod('homepage_meta_box_categories','0');
-    $time = get_theme_mod('homepage_meta_box_time','1');
+    $author = get_theme_mod('content_meta_box_author','1');
+    $comments = get_theme_mod('content_meta_box_comments','1');
+    $categories = get_theme_mod('content_meta_box_categories','0');
+    $time = get_theme_mod('content_meta_box_time','1');
 ?>
 
 <div class="metadata">
