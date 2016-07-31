@@ -20,5 +20,11 @@
     
     /** LOAD META PANELS IN POST & PAGES **/
     require_once ( get_template_directory() . '/options/meta.php' );
-    
+
+    /** STRIP EXCERPT OF SHORTCODES **/
+    function clean_excerpt( $text ) {
+        $text = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', $text);
+        return $text;
+    }
+    add_filter( 'the_excerpt', 'clean_excerpt' );
  ?>
