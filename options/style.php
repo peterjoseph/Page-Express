@@ -491,6 +491,16 @@ div.comments_list li {
     overflow:auto
 }
 
+  #uuni ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #uuni ol {
+        list-style: none;
+        margin:0px;
+    }
+
 #uuni_content {
      width:<?php echo get_theme_mod('upper_unibar_content_width','100%') ?>;
      height:auto;
@@ -794,6 +804,16 @@ div.comments_list li {
 	   padding:<?php echo get_theme_mod('ls_layout_padding','0') ?>px; 
 }
 
+  #left_sidebar_wrapper ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #left_sidebar_wrapper ol {
+        list-style: none;
+        margin:0px;
+    }
+
 .left_sidebar_content {
     <?php if(!get_theme_mod('left_sidebar_background_visible')) { ?>
     background-color:<?php echo get_theme_mod('left_sidebar_background_color','#F4F4F4') ?>;
@@ -939,6 +959,16 @@ div.comments_list li {
 #right_sidebar_wrapper {
     padding:<?php echo get_theme_mod('right_sidebar_layout_padding','0') ?>px;
 }
+
+  #right_sidebar_wrapper ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #right_sidebar_wrapper ol {
+        list-style: none;
+        margin:0px;
+    }
 
 .right_sidebar_content {
     <?php if(!get_theme_mod('right_sidebar_background_visible')) { ?>
@@ -1179,6 +1209,16 @@ if($pcolumn == 1) { ?>
     overflow:auto
 }
 
+  #luni ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #luni ol {
+        list-style: none;
+        margin:0px;
+    }
+
 #luni_content {
      width:<?php echo get_theme_mod('lower_unibar_content_width','100%') ?>;
      height:auto;
@@ -1394,6 +1434,16 @@ if($pcolumn == 1) { ?>
     margin-bottom:<?php echo get_theme_mod('lower_multibar_margin_bottom','0') ?>px;
 }
 
+  #lmulti ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #lmulti ol {
+        list-style: none;
+        margin:0px;
+    }
+
 #lmulti_content {
     width:<?php echo get_theme_mod('lower_multibar_content_width','1000px') ?>;
     height:auto;
@@ -1590,6 +1640,16 @@ if($pcolumn == 1) { ?>
     background-position:<?php echo get_theme_mod('footer_background_image_position','initial') ?>;
     background-repeat:<?php echo get_theme_mod('footer_background_image_repeat','no-repeat') ?>;
   }
+
+  #footer ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    #footer ol {
+        list-style: none;
+        margin:0px;
+    }
   
   #footer_content {
     width:<?php echo get_theme_mod('footer_width','1000px') ?>;
