@@ -826,7 +826,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 			),
 		) );
 
-		$wp_customize->add_section('content_single_typography', array('title' => 'Post/Page Typography','panel' => 'content','priority' => 30,));
+		$wp_customize->add_section('content_single_typography', array('title' => 'Typography','panel' => 'content','priority' => 30,));
 
 		//Post & Page Header Title
 		$wp_customize->add_setting(
