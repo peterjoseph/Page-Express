@@ -1135,9 +1135,21 @@ if($pcolumn == 1) { ?>
 }
 
 #post_content .title {
-    font-size:32px;
-    text-align:center;
-    padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
+    font-size:<?php echo get_theme_mod('homepage_title_font_size','28') ?>px;
+    line-height:<?php echo get_theme_mod('homepage_title_font_size','28') + 8 ?>px;
+
+    font-weight:<?php echo get_theme_mod('cw_single_typography_title_font_weight','normal') ?>;
+    font-family:<?php echo get_theme_mod('cw_single_typography_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    font-style:<?php echo get_theme_mod('cw_single_typography_title_font_style','normal') ?>;
+    text-align:<?php echo get_theme_mod('cw_single_typography_title_font_alignment','center') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
+    padding-top:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+    padding-bottom:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+}
+
+#post_content .title a {
+    color:<?php echo get_theme_mod('cw_single_typography_title_font_color','#333') ?>;
+    text-decoration:none;
 }
 
 #post_content .entry {

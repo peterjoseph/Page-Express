@@ -39,46 +39,6 @@
 		$wp_customize->add_section('lu_structure', array('title' => 'Lower Uni-Bar','panel' => 'structure','priority' => 30,));
 		$wp_customize->add_section('lm_structure', array('title' => 'Multi-Bar','panel' => 'structure','priority' => 30,));
 		$wp_customize->add_section('f_structure', array('title' => 'Footer','panel' => 'structure','priority' => 30,));
-		
-        /*
-            Layout:
-            
-            Post Styling:
-            Post Background
-            Title Background
-            Title Padding (Margins + Padding)
-            Title Borders
-            Content Background
-            Content Padding (Margins + Padding)
-            Content Borders
-            Meta Background
-            Meta Padding (Margins + Padding)
-            Meta Borders
-            
-            Fonts:
-            Post Title Font Size
-            Post Title Font Color
-            Post Title Text Align
-            Content Font Size
-            Content Font Align
-            etc
-        */
-        
-	    /* Global Variables
-            Background Image
-            Background Color
-            Sitewide border	
-            Import/Export
-            Google Advertising ID
-            Advertising Option
-            Custom Javascript
-            Global Font Styling
-            Ajax special navigation
-	    */
-	
-	    /* Mobile Options
-	        Display widget 1 in header
-	    */
 
 };
 

@@ -787,6 +787,25 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		    )
 		);
 
+		//Post-Page Homepage Title Font Size
+		$wp_customize->add_setting(
+		    'homepage_title_font_size',
+		    array(
+		        'default' => '28',
+		    )
+		);
+		$wp_customize->add_control( 'homepage_title_font_size', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'content_post_homepage_layout',
+			'label'       => 'Post Spacing',
+			'input_attrs' => array(
+				'min'   => 8,
+				'max'   => 60,
+				'step'  => 2,
+			),
+		) );
+
 
         $wp_customize->add_section('content_single_layout', array('title' => 'Post/Page Layout','panel' => 'content','priority' => 30,));        
         
