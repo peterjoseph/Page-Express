@@ -64,21 +64,63 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 			) 
 		));
 		
-		//Upper Uni-bar Width
+		//Upper Uni-Bar Width % or px
 		$wp_customize->add_setting(
-		    'upper_unibar_width',
+		    'upper_unibar_width_option',
 		    array(
-		        'default' => '100%',
+		        'default' => 'fluid',
 		    )
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_width',
+		    'upper_unibar_width_option',
 		    array(
-		        'label' => 'Uni-Bar Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Uni-Bar Width (Fixed or Flexible)',
 		        'section' => 'upper_unibar_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Upper Uni-Bar Width Fixed
+		$wp_customize->add_setting(
+		    'upper_unibar_width_fixed',
+		    array(
+		        'default' => '1100',
+		    )
+		);
+		$wp_customize->add_control( 'upper_unibar_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'upper_unibar_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Upper Uni-Bar Width Fluid
+		$wp_customize->add_setting(
+		    'upper_unibar_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'upper_unibar_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'upper_unibar_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
 		
 		//Upper Uni-bar Alignment
 		$wp_customize->add_setting(
@@ -101,21 +143,63 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		    )
 		);
 		
-		//Upper Uni-bar Content Width
+		//Upper Uni-Bar Content Width % or px
 		$wp_customize->add_setting(
-		    'upper_unibar_content_width',
+		    'upper_unibar_content_width_option',
 		    array(
-		        'default' => '100%',
+		        'default' => 'fluid',
 		    )
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_content_width',
+		    'upper_unibar_content_width_option',
 		    array(
-		        'label' => 'Content Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Content Width (Fixed or Flexible)',
 		        'section' => 'upper_unibar_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Upper Uni-Bar Content Width Fixed
+		$wp_customize->add_setting(
+		    'upper_unibar_content_width_fixed',
+		    array(
+		        'default' => '1000',
+		    )
+		);
+		$wp_customize->add_control( 'upper_unibar_content_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'upper_unibar_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Upper Uni-Bar Content Width Fluid
+		$wp_customize->add_setting(
+		    'upper_unibar_content_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'upper_unibar_content_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'upper_unibar_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
 		
 		//Upper Uni-bar Content Alignment
 		$wp_customize->add_setting(

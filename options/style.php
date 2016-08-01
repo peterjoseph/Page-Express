@@ -459,7 +459,11 @@ div.comments_list li {
 }
 
 #uuni {
-     width:<?php echo get_theme_mod('upper_unibar_width','100%') ?>;
+    <?php if(get_theme_mod('upper_unibar_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('upper_unibar_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('upper_unibar_width_fluid','100') ?>%;
+    <?php } ?>
      min-height:30px;
 	 <?php 
      $luposition = get_theme_mod('upper_unibar_alignment','center');
@@ -502,7 +506,16 @@ div.comments_list li {
     }
 
 #uuni_content {
-     width:<?php echo get_theme_mod('upper_unibar_content_width','100%') ?>;
+    <?php if(get_theme_mod('upper_unibar_content_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('upper_unibar_content_width_fixed','1000')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('upper_unibar_content_width_fluid','100') ?>%;
+    <?php } ?>
+    <?php if(get_theme_mod('upper_unibar_width_option','fluid') == 'fixed') { ?>
+        max-width:<?php echo (get_theme_mod('upper_unibar_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        max-width:<?php echo get_theme_mod('upper_unibar_width_fluid','100') ?>%;
+    <?php } ?>
      height:auto;
 	 <?php 
      $luposition = get_theme_mod('upper_unibar_content_alignment','center');
@@ -1189,7 +1202,11 @@ if($pcolumn == 1) { ?>
 }
 
 #luni {
-     width:<?php echo get_theme_mod('lower_unibar_width','100%') ?>;
+    <?php if(get_theme_mod('lower_unibar_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('lower_unibar_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('lower_unibar_width_fluid','100') ?>%;
+    <?php } ?>
      min-height:30px;
 	 <?php 
      $luposition = get_theme_mod('lower_unibar_alignment','center');
@@ -1232,7 +1249,16 @@ if($pcolumn == 1) { ?>
     }
 
 #luni_content {
-     width:<?php echo get_theme_mod('lower_unibar_content_width','100%') ?>;
+    <?php if(get_theme_mod('lower_unibar_content_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('lower_unibar_content_width_fixed','1000')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('lower_unibar_content_width_fluid','100') ?>%;
+    <?php } ?>
+    <?php if(get_theme_mod('lower_unibar_width_option','fluid') == 'fixed') { ?>
+        max-width:<?php echo (get_theme_mod('lower_unibar_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        max-width:<?php echo get_theme_mod('lower_unibar_width_fluid','100') ?>%;
+    <?php } ?>
      height:auto;
 	 <?php 
      $luposition = get_theme_mod('lower_unibar_content_alignment','center');
