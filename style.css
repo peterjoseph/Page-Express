@@ -112,10 +112,6 @@ img.aligncenter {
     display:block;
 }
 
-.wp-caption {}
-.gallery {}
-.gallery-caption {}
-
 img.size-full {
     max-width:100%;
     height:auto;
@@ -136,9 +132,3 @@ img.size-thumbnail {
     height:auto;
     padding:5px;
 }
-
-blockquote {}
-code {}
-pre {}
-hr {}
-del {}

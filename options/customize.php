@@ -10,9 +10,6 @@
         function customizer_stylesheet() {
                     wp_register_style( 'customizer-css', get_template_directory_uri() . '/options/styles/styles.css', NULL, NULL, 'all' );
                     wp_enqueue_style( 'customizer-css' );
-                    
-                    wp_register_style( 'font-css', get_template_directory_uri() . '/options/fonts/themify-icons.css', NULL, NULL, 'all' );
-                    wp_enqueue_style( 'font-css' );
                 }
         add_action( 'customize_controls_print_styles', 'customizer_stylesheet' );
         

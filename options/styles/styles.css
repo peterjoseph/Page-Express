@@ -7,96 +7,96 @@ input[type=range] {width:100%;}
 
 .accordion-sub-container.control-panel-content {right:0;}
 #accordion-section-themes {display:none !important;}
+.accordion-section-title {font-weight:400;}
 
 li#accordion-section-static_front_page > h3.accordion-section-title:before {
-    content: "\e69b";
-    font-family: 'themify';
-    padding: 3px;
-    top:17px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-header_one > h3.accordion-section-title:before {
-    content: "\e6ec";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/header1.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-header_two > h3.accordion-section-title:before {
-    content: "\e6ec";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/header2.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-header_three > h3.accordion-section-title:before {
-    content: "\e6ec";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/header3.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-upper_unibar > h3.accordion-section-title:before {
-    content: "\e713";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/upperunibar.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-content > h3.accordion-section-title:before {
-    content: "\e702";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-left_sidebar > h3.accordion-section-title:before {
-    content: "\e6f3";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/leftsidebar.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-right_sidebar > h3.accordion-section-title:before {
-    content: "\e6f1";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/rightsidebar.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-lower_unibar > h3.accordion-section-title:before {
-    content: "\e713";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/lowerunibar.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-multibar > h3.accordion-section-title:before {
-    content: "\e711";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/multibar.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-footer > h3.accordion-section-title:before {
-    content: "\e6fc";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/footer.png);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-section-global_background > h3.accordion-section-title:before {
-    content: "\e633";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-nav_menus > h3.accordion-section-title:before {
-    content: "\e6f6";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-widgets > h3.accordion-section-title:before {
-    content: "\e6eb";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 li#accordion-panel-globaloptions > h3.accordion-section-title:before {
-    content: "\e60f";
-    font-family: 'themify';
-    padding: 3px;
+    content: url(../images/icons/#);
+    padding-right:5px;
+    vertical-align:middle;
 }
 
 /** Post/Page Meta Box CSS **/
