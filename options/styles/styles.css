@@ -10,7 +10,7 @@ input[type=range] {width:100%;}
 .accordion-section-title {font-weight:400;}
 
 li#accordion-section-static_front_page > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/homepage.png);
     padding-right:5px;
     vertical-align:middle;
 }
@@ -40,7 +40,7 @@ li#accordion-panel-upper_unibar > h3.accordion-section-title:before {
 }
 
 li#accordion-panel-content > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/content.png);
     padding-right:5px;
     vertical-align:middle;
 }
@@ -76,25 +76,25 @@ li#accordion-panel-footer > h3.accordion-section-title:before {
 }
 
 li#accordion-section-global_background > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/background.png);
     padding-right:5px;
     vertical-align:middle;
 }
 
 li#accordion-panel-nav_menus > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/menus.png);
     padding-right:5px;
     vertical-align:middle;
 }
 
 li#accordion-panel-widgets > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/widgets.png);
     padding-right:5px;
     vertical-align:middle;
 }
 
 li#accordion-panel-globaloptions > h3.accordion-section-title:before {
-    content: url(../images/icons/#);
+    content: url(../images/icons/advanced.png);
     padding-right:5px;
     vertical-align:middle;
 }
