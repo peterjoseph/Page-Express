@@ -52,21 +52,63 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
         /** FOOTER Layout **/
         $wp_customize->add_section('footer_layout', array('title' => 'Layout & Design','panel' => 'footer','priority' => 30,));
 		
-        //Footer Background Area Width
+        //Footer Background Area Width % or px
 		$wp_customize->add_setting(
-		    'footer_background_width',
+		    'footer_background_width_option',
 		    array(
-		        'default' => '100%',
+		        'default' => 'fluid',
 		    )
 		);
 		$wp_customize->add_control(
-		    'footer_background_width',
+		    'footer_background_width_option',
 		    array(
-		        'label' => 'Footer Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Footer Width (Fixed or Flexible)',
 		        'section' => 'footer_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Footer Background Area Width Fixed
+		$wp_customize->add_setting(
+		    'footer_background_width_fixed',
+		    array(
+		        'default' => '1100',
+		    )
+		);
+		$wp_customize->add_control( 'footer_background_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'footer_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Footer Background Area Width Fluid
+		$wp_customize->add_setting(
+		    'footer_background_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'footer_background_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'footer_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
         
         //Footer Alignment
 		$wp_customize->add_setting(
@@ -106,21 +148,63 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		));
 		
         
-        //Footer Content Width
+        //Footer Content Area Width % or px
 		$wp_customize->add_setting(
-		    'footer_width',
+		    'footer_content_area_width_option',
 		    array(
-		        'default' => '1000px',
+		        'default' => 'fixed',
 		    )
 		);
 		$wp_customize->add_control(
-		    'footer_width',
+		    'footer_content_area_width_option',
 		    array(
-		        'label' => 'Footer Content Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Footer Content Width (Fixed or Flexible)',
 		        'section' => 'footer_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Footer Content Area Width Fixed
+		$wp_customize->add_setting(
+		    'footer_content_area_width_fixed',
+		    array(
+		        'default' => '1000',
+		    )
+		);
+		$wp_customize->add_control( 'footer_content_area_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'footer_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Footer Content Area Width Fluid
+		$wp_customize->add_setting(
+		    'footer_content_area_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'footer_content_area_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'footer_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
         
         //Footer Content Alignment
 		$wp_customize->add_setting(

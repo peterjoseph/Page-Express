@@ -63,21 +63,63 @@ $wp_customize->add_panel('multibar', array('title' => __( 'Multi-bar' ), 'priori
 			) 
 		));
 		
-		//Lower Multi-bar Width
+		//Lower Multibar Width % or px
 		$wp_customize->add_setting(
-		    'lower_multibar_width',
+		    'lower_multibar_width_option',
 		    array(
-		        'default' => '100%',
+		        'default' => 'fluid',
 		    )
 		);
 		$wp_customize->add_control(
-		    'lower_multibar_width',
+		    'lower_multibar_width_option',
 		    array(
-		        'label' => 'Multi-Bar Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Multibar Content Width (Fixed or Flexible)',
 		        'section' => 'multibar_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Lower Multibar Width Fixed
+		$wp_customize->add_setting(
+		    'lower_multibar_width_fixed',
+		    array(
+		        'default' => '1100',
+		    )
+		);
+		$wp_customize->add_control( 'lower_multibar_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'multibar_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Lower Multibar Width Fluid
+		$wp_customize->add_setting(
+		    'lower_multibar_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'lower_multibar_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'multibar_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
 		
 		//Lower Multi-bar Alignment
 		$wp_customize->add_setting(
@@ -100,21 +142,63 @@ $wp_customize->add_panel('multibar', array('title' => __( 'Multi-bar' ), 'priori
 		    )
 		);
 		
-		//Lower Multi-bar Content Width
+		//Lower Multibar Content Width % or px
 		$wp_customize->add_setting(
-		    'lower_multibar_content_width',
+		    'lower_multibar_content_width_option',
 		    array(
-		        'default' => '1000px',
+		        'default' => 'fixed',
 		    )
 		);
 		$wp_customize->add_control(
-		    'lower_multibar_content_width',
+		    'lower_multibar_content_width_option',
 		    array(
-		        'label' => 'Content Width (% or px)',
+		        'type' => 'select',
+		        'label' => 'Multibar Content Width (Fixed or Flexible)',
 		        'section' => 'multibar_layout',
-		        'type' => 'text',
+		        'choices' => array(
+					'fixed' => 'Fixed',
+		            'fluid' => 'Fluid',
+		        ),
 		    )
 		);
+        
+        //Lower Multibar Content Width Fixed
+		$wp_customize->add_setting(
+		    'lower_multibar_content_width_fixed',
+		    array(
+		        'default' => '1100',
+		    )
+		);
+		$wp_customize->add_control( 'lower_multibar_content_width_fixed', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'multibar_layout',
+			'label'       => 'Width [Fixed]',
+			'input_attrs' => array(
+				'min'   => 800,
+				'max'   => 1400,
+				'step'  => 2,
+			),
+		) );
+        
+        //Lower Multibar Content Width Fluid
+		$wp_customize->add_setting(
+		    'lower_multibar_content_width_fluid',
+		    array(
+		        'default' => '100',
+		    )
+		);
+		$wp_customize->add_control( 'lower_multibar_content_width_fluid', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'multibar_layout',
+			'label'       => 'Width [Fluid]',
+			'input_attrs' => array(
+				'min'   => 50,
+				'max'   => 100,
+				'step'  => 2,
+			),
+		) );
 		
 		//Lower Multi-bar Content Alignment
 		$wp_customize->add_setting(
