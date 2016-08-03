@@ -56,8 +56,8 @@ if ( $paged >= 2 || $page >= 2 )
 
 <?php global $uunibar; if($uunibar == TRUE) { ?>
 	
-	<div id="uuni">
-		<div id="uuni_content">
+	<div id="upper_unibar">
+		<div id="upper_unibar_content">
 			<?php if ( is_active_sidebar( 'uub' ) ) : ?>
 				<?php dynamic_sidebar( 'uub' ); ?>
 			<?php endif; ?>

@@ -1,7 +1,7 @@
 <?php global $lunibar; if($lunibar == TRUE) { ?>
 	
-	<div id="luni">
-		<div id="luni_content">
+	<div id="lower_unibar">
+		<div id="lower_unibar_content">
 			<?php if ( is_active_sidebar( 'lub' ) ) : ?>
 				<?php dynamic_sidebar( 'lub' ); ?>
 			<?php endif; ?>
@@ -12,18 +12,18 @@
 
 
 <?php global $multibar; if($multibar == TRUE) { ?>
-	<div id="lmulti">
-		<div id="lmulti_content">
-			<div id="lmulti_p">
-				<div id="lmulti_p_w">
+	<div id="lower_multibar">
+		<div id="lower_multibar_content">
+			<div id="lower_multibar_container">
+				<div id="lower_multibar_widget">
 					<?php if ( is_active_sidebar( 'lmp1' ) ) : ?>
 							<?php dynamic_sidebar( 'lmp1' ); ?>
 					<?php endif; ?>
 				</div>
 			</div>
 			<?php $pcount = get_theme_mod('lower_multibar_panel_count','three'); if($pcount != 'one') { ?>
-			<div id="lmulti_p">
-				<div id="lmulti_p_w">
+			<div id="lower_multibar_container">
+				<div id="lower_multibar_widget">
 					<?php if ( is_active_sidebar( 'lmp2' ) ) : ?>
 							<?php dynamic_sidebar( 'lmp2' ); ?>
 					<?php endif; ?>
@@ -31,8 +31,8 @@
 			</div>
 			<?php } ?>
 			<?php if($pcount != 'two' && $pcount != 'one') { ?>
-			<div id="lmulti_p">
-				<div id="lmulti_p_w">
+			<div id="lower_multibar_container">
+				<div id="lower_multibar_widget">
 					<?php if ( is_active_sidebar( 'lmp3' ) ) : ?>
 							<?php dynamic_sidebar( 'lmp3' ); ?>
 					<?php endif; ?>
@@ -40,8 +40,8 @@
 			</div>
 			<?php } ?>
 			<?php if($pcount != 'three' && $pcount != 'two' && $pcount != 'one') { ?>
-			<div id="lmulti_p">
-				<div id="lmulti_p_w">
+			<div id="lower_multibar_container">
+				<div id="lower_multibar_widget">
 					<?php if ( is_active_sidebar( 'lmp4' ) ) : ?>
 							<?php dynamic_sidebar( 'lmp4' ); ?>
 					<?php endif; ?>

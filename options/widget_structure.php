@@ -8,18 +8,18 @@ function widget_areas() {
 	register_sidebar( array(
 		'name'          => 'Upper Uni-Bar',
 		'id'            => 'uub',
-		'before_widget' => '<div class="uunic">',
+		'before_widget' => '<div class="upper_unibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="uunih">',
+		'before_title' => '<div class="upper_unibar_widget_header">',
 		'after_title' => '</div>',
 	) );
 	
 	register_sidebar( array(
 		'name'          => 'Lower Uni-Bar',
 		'id'            => 'lub',
-		'before_widget' => '<div class="lunic">',
+		'before_widget' => '<div class="lower_unibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="lunih">',
+		'before_title' => '<div class="lower_unibar_widget_header">',
 		'after_title' => '</div>',
 	) );
     
@@ -44,36 +44,36 @@ function widget_areas() {
 	register_sidebar( array(
 		'name'          => 'Multi-Bar Panel 1',
 		'id'            => 'lmp1',
-		'before_widget' => '<div class="lmcpc">',
+		'before_widget' => '<div class="lower_multibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="lmcph">',
+		'before_title' => '<div class="lower_multibar_widget_header">',
 		'after_title' => '</div>',
 	) );
 	
 	register_sidebar( array(
 		'name'          => 'Multi-Bar Panel 2',
 		'id'            => 'lmp2',
-		'before_widget' => '<div class="lmcpc">',
+		'before_widget' => '<div class="lower_multibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="lmcph">',
+		'before_title' => '<div class="lower_multibar_widget_header">',
 		'after_title' => '</div>',
 	) );
 	
 	register_sidebar( array(
 		'name'          => 'Multi-Bar Panel 3',
 		'id'            => 'lmp3',
-		'before_widget' => '<div class="lmcpc">',
+		'before_widget' => '<div class="lower_multibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="lmcph">',
+		'before_title' => '<div class="lower_multibar_widget_header">',
 		'after_title' => '</div>',
 	) );
 	
 	register_sidebar( array(
 		'name'          => 'Multi-Bar Panel 4',
 		'id'            => 'lmp4',
-		'before_widget' => '<div class="lmcpc">',
+		'before_widget' => '<div class="lower_multibar_widget_content">',
 		'after_widget'  => '</div>',
-		'before_title' => '<div class="lmcph">',
+		'before_title' => '<div class="lower_multibar_widget_header">',
 		'after_title' => '</div>',
 	) );
 
