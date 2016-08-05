@@ -1024,6 +1024,26 @@ div.comments_list li {
     font-weight:<?php echo get_theme_mod('right_sidebar_widgets_content_link_weight','normal') ?>;
 }
 
+.right_sidebar_widget li {
+    list-style-type: <?php echo get_theme_mod('right_sidebar_widgets_content_lists_icon','none') ?>;
+    border-top:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_top','0') ?>px <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_color','#CCC') ?>;
+    border-bottom:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_bottom','0') ?>px <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_color','#CCC') ?>;
+    border-left:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_left','0') ?>px <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_color','#CCC') ?>;
+    border-right:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_right','0') ?>px <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_color','#CCC') ?>;
+    border-radius:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_border_radius','0') ?>px;
+    padding-top:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_top','0') ?>px;
+    padding-bottom:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_bottom','0') ?>px;
+    margin-top:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_top','0') ?>px;
+    margin-bottom:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_top','0') ?>px;
+    padding-left:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_left','0') ?>px;
+    padding-right:<?php echo get_theme_mod('right_sidebar_widgets_content_lists_padding_right','0') ?>px;
+    
+}
+
+.right_sidebar_widget ul, .right_sidebar_widget ol {
+    margin: 0 0 0 1.3333em;
+}
+
 .right_sidebar_widget_title {
       <?php if(get_theme_mod('right_sidebar_widgets_header_visibility')) { ?>display:none;<?php } ?>
       color:<?php echo get_theme_mod('right_sidebar_widgets_title_text_color','#FFF') ?>;
