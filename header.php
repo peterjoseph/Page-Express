@@ -25,7 +25,7 @@ if ( $paged >= 2 || $page >= 2 )
 
 <?php
     function eqcss_load() {
-    wp_enqueue_script( 'eqcss', get_template_directory_uri() . '/scripts/EQCSS.min.js', array() );
+        wp_enqueue_script( 'eqcss', get_template_directory_uri() . '/scripts/EQCSS.min.js', array() );
     }
     add_action( 'wp_enqueue_scripts', 'eqcss_load' );
 ?>

@@ -1,4 +1,5 @@
 body {
+    height:100%;
     font-family:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
     line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
@@ -768,6 +769,7 @@ div.comments_list li {
     <? }  else { ?>
         margin-right:<?php echo get_theme_mod('right_sidebar_width_fluid','30') ?>%;
     <?php } ?>
+    height:auto;
 }
 
 .ct.ls.rs .left_sidebar {
