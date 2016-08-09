@@ -675,7 +675,7 @@ div.comments_list li {
 		font-family:<?php echo get_theme_mod('upper_unibar_horizontal_menu_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
 		font-weight:<?php echo get_theme_mod('upper_unibar_horizontal_menu_font_weight','normal') ?>;
 		text-decoration:<?php echo get_theme_mod('upper_unibar_horizontal_menu_link_decoration','none') ?>;
-		height:<?php echo (get_theme_mod('upper_unibar_horizontal_menu_height') + get_theme_mod('upper_unibar_widgets_font_size')) ?>px; 
+		height:<?php echo (get_theme_mod('upper_unibar_horizontal_menu_height','20') + get_theme_mod('upper_unibar_widgets_font_size','12')) ?>px; 
         line-height:<?php echo (get_theme_mod('upper_unibar_horizontal_menu_height','20') + get_theme_mod('upper_unibar_widgets_font_size','12')) ?>px;  
 		padding-left:<?php echo get_theme_mod('upper_unibar_horizontal_menu_width','10') ?>px;
 		padding-right:<?php echo get_theme_mod('upper_unibar_horizontal_menu_width','10') ?>px;
@@ -684,9 +684,9 @@ div.comments_list li {
   
   #upper_unibar_content ul.menu li a:hover {
 	<?php if(get_theme_mod('upper_unibar_menu_type') == 'vertical') { ?>
-    	<?php if(get_theme_mod('upper_unibar_vertical_menu_link_hover_color')) { ?>color:<?php echo get_theme_mod('upper_unibar_vertical_menu_link_hover_color') ?>;<?php } ?>
+    	color:<?php echo get_theme_mod('upper_unibar_vertical_menu_link_hover_color','#317dbf') ?>;
 	<?php } else { ?>	
-  		<?php if(get_theme_mod('upper_unibar_horizontal_menu_link_hover_color')) { ?>color:<?php echo get_theme_mod('upper_unibar_horizontal_menu_link_hover_color') ?>;<?php } ?>
+  		color:<?php echo get_theme_mod('upper_unibar_horizontal_menu_link_hover_color') ?>;
 	<?php } ?>
   }
   

@@ -614,7 +614,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
         
         $wp_customize->add_section('upper_unibar_margins', array('title' => 'Margins','panel' => 'upper_unibar','priority' => 30,));
         
-        //Lower-Multibar Margins Title
+        //Upper Uni-bar Margins Title
 		$wp_customize->add_setting(
 		    'upper_unibar_margins_title',
 		    array(
@@ -808,7 +808,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_link_color',
 		    array(
-		        'default' => '#000',
+		        'default' => '#FFF',
 		    )
 		);
 		$wp_customize->add_control(
