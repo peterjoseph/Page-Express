@@ -1453,7 +1453,7 @@ if($pcolumn == 1) { ?>
 		font-family:<?php echo get_theme_mod('lower_unibar_horizontal_menu_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
 		font-weight:<?php echo get_theme_mod('lower_unibar_horizontal_menu_font_weight','normal') ?>;
 		text-decoration:<?php echo get_theme_mod('lower_unibar_horizontal_menu_link_decoration','none') ?>;
-		height:<?php echo (get_theme_mod('lower_unibar_horizontal_menu_height') + get_theme_mod('lower_unibar_widgets_font_size')) ?>px; 
+		height:<?php echo (get_theme_mod('lower_unibar_horizontal_menu_height','20') + get_theme_mod('lower_unibar_widgets_font_size','12')) ?>px; 
         line-height:<?php echo (get_theme_mod('lower_unibar_horizontal_menu_height','20') + get_theme_mod('lower_unibar_widgets_font_size','12')) ?>px;  
 		padding-left:<?php echo get_theme_mod('lower_unibar_horizontal_menu_width','10') ?>px;
 		padding-right:<?php echo get_theme_mod('lower_unibar_horizontal_menu_width','10') ?>px;
