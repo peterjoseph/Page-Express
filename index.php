@@ -16,8 +16,8 @@
                        
                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                        
-                            <div id="homepage">
-                                <div id="homepage_content">
+                            <div id="post" class="id-<?php the_ID(); ?>">
+                                <div id="post_content">
                                     <?php if($featured_image == 'above') { the_post_thumbnail(); }; ?>
                                     <div class="title">
                                         <a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
