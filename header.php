@@ -24,6 +24,10 @@ if ( $paged >= 2 || $page >= 2 )
 <?php } ?>
 
 <?php
+    function layout_load() {
+        wp_enqueue_script( 'layoutjs', get_template_directory_uri() . '/scripts/layout.js', array() );
+    }
+    add_action( 'wp_enqueue_scripts', 'layout_load' );
     function eqcss_load() {
         wp_enqueue_script( 'eqcss', get_template_directory_uri() . '/scripts/EQCSS.min.js', array() );
     }
