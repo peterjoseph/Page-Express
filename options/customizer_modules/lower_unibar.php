@@ -3013,4 +3013,293 @@ $wp_customize->add_panel('lower_unibar', array('title' => __( 'Lower Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
+
+		$wp_customize->add_section('lower_unibar_list_styling', array('title' => 'List Styling','panel' => 'lower_unibar','priority' => 30,));
+
+		//Lower Unibar Widget List Icon Title
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_icon_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area( 
+			$wp_customize, 
+			'lower_unibar_widgets_content_lists_icon_title', 
+			array(
+				'label'	=> __( 'Icon' ),
+				'section' => 'lower_unibar_list_styling',
+				'settings' => 'lower_unibar_widgets_content_lists_icon_title',
+			) 
+		));
+
+		//Lower Unibar Widget List Icon Type
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_icon',
+		    array(
+		        'default' => 'none',
+		    )
+		);
+		$wp_customize->add_control(
+		    'lower_unibar_widgets_content_lists_icon',
+		    array(
+		        'type' => 'select',
+		        'label' => 'List Icon',
+		        'section' => 'lower_unibar_list_styling',
+		        'choices' => array(
+					'none' => 'None',
+					'square' => 'Square',
+					'disc' => 'Disc',
+					'circle' => 'Circle',
+		        ),
+		    )
+		);
+		
+		//Lower Unibar Widget List Padding Title
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_padding_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area( 
+			$wp_customize, 
+			'lower_unibar_widgets_content_lists_padding_title', 
+			array(
+				'label'	=> __( 'Spacing' ),
+				'section' => 'lower_unibar_list_styling',
+				'settings' => 'lower_unibar_widgets_content_lists_padding_title',
+			) 
+		));
+		
+		//Lower Unibar Widget List Padding Top
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_padding_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_padding_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Top Spacing',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 25,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Padding Bottom
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_padding_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_padding_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Bottom Spacing',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 25,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Padding Left
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_padding_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_padding_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Left Spacing',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+		
+		//Lower Unibar Widget List Padding Right
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_padding_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_padding_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Right Spacing',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 2,
+			),
+		) );
+
+		//Lower Unibar Widget List Border Title
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area( 
+			$wp_customize, 
+			'lower_unibar_widgets_content_lists_border_title', 
+			array(
+				'label'	=> __( 'Borders' ),
+				'section' => 'lower_unibar_list_styling',
+				'settings' => 'lower_unibar_widgets_content_lists_border_title',
+			) 
+		));
+		
+		//Lower Unibar Widget List Border Color
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_color',
+		    array(
+		        'default' => '#CCC',
+		    )
+		);
+		$wp_customize->add_control(
+		    new WP_Customize_Color_Control(
+		        $wp_customize,
+		        'lower_unibar_widgets_content_lists_border_color',
+		        array(
+		            'label' => 'Border Color',
+		            'section' => 'lower_unibar_list_styling',
+		            'settings' => 'lower_unibar_widgets_content_lists_border_color',
+		        )
+		    )
+		);
+		
+		//Lower Unibar Widget List Border Style
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_style',
+		    array(
+		        'default' => 'solid',
+		    )
+		);
+		$wp_customize->add_control(
+		    'lower_unibar_widgets_content_lists_border_style',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Border Style',
+		        'section' => 'lower_unibar_list_styling',
+		        'choices' => array(
+					'dotted' => 'Dotted',
+					'dashed' => 'Dashed',
+					'solid' => 'Solid',
+					'double' => 'Double',
+					'groove' => 'Groove',
+		        ),
+		    )
+		);
+		
+		
+		//Lower Unibar Widget List Border Top
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_top',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_border_top', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Top Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Border Bottom
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_bottom',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_border_bottom', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Bottom Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Border Left
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_left',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_border_left', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Left Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Border Right
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_right',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_border_right', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Right Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
+		
+		//Lower Unibar Widget List Border Radius
+		$wp_customize->add_setting(
+		    'lower_unibar_widgets_content_lists_border_radius',
+		    array(
+		        'default' => '0',
+		    )
+		);
+		$wp_customize->add_control( 'lower_unibar_widgets_content_lists_border_radius', array(
+			'type'        => 'range',
+			'priority'    => 10,
+			'section'     => 'lower_unibar_list_styling',
+			'label'       => 'Rounded Border',
+			'input_attrs' => array(
+				'min'   => 0,
+				'max'   => 50,
+				'step'  => 1,
+			),
+		) );
 ?>
