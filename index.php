@@ -40,8 +40,32 @@
                             <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                        <?php endif; ?>
 
+                        <?php } ?>
+
+                        <div class="page_navigation">
+                            <?php if(get_theme_mod('cw_navigation_nextAndPreviousPage_navigation_style','text') == 'text') { ?>
+                                <div class="text_nav">
+                                    <div class="alignleft"><?php next_posts_link('< Previous') ?></div>
+                                    <div class="alignright"><?php previous_posts_link('Next >;') ?></div>
+                                </div>
+                            <?php } else { ?>
+                                <div class="numerical_nav">
+                                   <?php global $wp_query;
+                                    $all_pages = $wp_query->max_num_pages;
+                                    if ($all_pages > 1){
+                                        $current_page = max(1, get_query_var('paged'));
+                                        echo paginate_links(array(
+                                            'base' => get_pagenum_link(1) . '%_%',
+                                            'format' => '/page/%#%',
+                                            'current' => $current_page,
+                                            'total' => $all_pages,
+                                        ));
+                                    } ?>
+                                </div>
+                            <?php } ?>
+                        </div>
+
                     </div>
-                <?php } ?>
             </div> 
         </div>
 	

@@ -1234,6 +1234,27 @@ if($pcolumn == 1) { ?>
     padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
+.page_navigation {
+    padding:10px;
+}
+
+.page_navigation .page-numbers {
+    padding:5px;
+    margin-right:5px;
+    text-decoration:none;
+}
+
+.page_navigation .dots {
+    background-color:transparent;
+}
+
+.page_navigation .numerical_nav {
+}
+
+.page_navigation .text_nav a {
+    text-decoration:none;
+}
+
 #single_content {
     overflow: hidden; 
     text-overflow: ellipsis;

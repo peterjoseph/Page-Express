@@ -3080,5 +3080,63 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
+
+
+		$wp_customize->add_section('cw_navigation', array('title' => 'Navigation & Breadcrumbs','panel' => 'content','priority' => 30,));
+
+		//Navigation Next & Previous Pages Title
+		$wp_customize->add_setting(
+		    'cw_navigation_nextAndPreviousPage_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_navigation_nextAndPreviousPage_title',
+			array(
+				'label'	=> __( 'Next & Previous Page' ),
+				'section' => 'cw_navigation',
+				'settings' => 'cw_navigation_nextAndPreviousPage_title',
+			) 
+		));
+
+		//Navigation Next & Previous Pages Navigation Style
+		$wp_customize->add_setting(
+		    'cw_navigation_nextAndPreviousPage_navigation_style',
+		    array(
+		        'default' => 'text',
+		    )
+		);
+		$wp_customize->add_control(
+		    'cw_navigation_nextAndPreviousPage_navigation_style',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Navigation Style',
+		        'section' => 'cw_navigation',
+		        'choices' => array(
+					'text' => 'Next & Previous Links',
+		            'number' => 'Numerical Page Links',
+		        ),
+		    )
+		);
 		
+		//Navigation Breadcrumbs Title
+		$wp_customize->add_setting(
+		    'cw_navigation_breadcrumps_title',
+		    array(
+		        'default' => '',
+		    )
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
+			$wp_customize, 
+			'cw_navigation_breadcrumps_title',
+			array(
+				'label'	=> __( 'Breadcrumbs' ),
+				'section' => 'cw_navigation',
+				'settings' => 'cw_navigation_breadcrumps_title',
+			) 
+		));
+
+
 ?>
