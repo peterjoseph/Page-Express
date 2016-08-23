@@ -3082,7 +3082,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		);
 
 
-		$wp_customize->add_section('cw_navigation', array('title' => 'Navigation & Breadcrumbs','panel' => 'content','priority' => 30,));
+		$wp_customize->add_section('cw_navigation', array('title' => 'Navigation','panel' => 'content','priority' => 30,));
 
 		//Navigation Next & Previous Pages Title
 		$wp_customize->add_setting(
@@ -3120,23 +3120,5 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-
-		//Navigation Breadcrumbs Title
-		$wp_customize->add_setting(
-		    'cw_navigation_breadcrumps_title',
-		    array(
-		        'default' => '',
-		    )
-		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
-			$wp_customize,
-			'cw_navigation_breadcrumps_title',
-			array(
-				'label'	=> __( 'Breadcrumbs' ),
-				'section' => 'cw_navigation',
-				'settings' => 'cw_navigation_breadcrumps_title',
-			)
-		));
-
 
 ?>
