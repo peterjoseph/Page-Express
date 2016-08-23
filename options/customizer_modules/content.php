@@ -1,9 +1,9 @@
 <?php
 
 $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'priority' => 30,) );
-		
+
         $wp_customize->add_section('content_visibility', array('title' => 'Content Visibility','panel' => 'content','priority' => 30,));
-        
+
 		//Wrapper (Content & Sidebars) Visibility
 		$wp_customize->add_setting(
 		    'wrapper_visibility',
@@ -26,7 +26,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         //Content Visibility
 		$wp_customize->add_setting(
 		    'content_visibility',
@@ -49,10 +49,10 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
-        
+
+
         $wp_customize->add_section('content_wrapper_layout', array('title' => 'Wrapper Layout','panel' => 'content','priority' => 30,));
-        
+
 		//Content Layout Title
 		$wp_customize->add_setting(
 		    'cw_layout_title',
@@ -60,16 +60,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'cw_layout_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_layout_title',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'content_wrapper_layout',
 				'settings' => 'cw_layout_title',
-			) 
+			)
 		));
-        
+
         //Wrapper Width % or px
 		$wp_customize->add_setting(
 		    'cw_width_option',
@@ -89,7 +89,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         //Wrapper Width Fixed
 		$wp_customize->add_setting(
 		    'cw_width_fixed',
@@ -108,7 +108,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-        
+
         //Wrapper Width Fluid
 		$wp_customize->add_setting(
 		    'cw_width_fluid',
@@ -127,7 +127,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-        
+
         //Wrapper Alignment
 		$wp_customize->add_setting(
 		    'cw_alignment',
@@ -148,9 +148,9 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         $wp_customize->add_section('content_wrapper_background', array('title' => 'Wrapper Background','panel' => 'content','priority' => 30,));
-        
+
         //Content Background Title
 		$wp_customize->add_setting(
 		    'cw_background_title',
@@ -158,16 +158,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'cw_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'content_wrapper_background',
 				'settings' => 'cw_background_title',
-			) 
+			)
 		));
-		
+
 		//Wrapper Background Visibility
 		$wp_customize->add_setting(
 			'cw_background_visibility'
@@ -181,7 +181,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'settings' => 'cw_background_visibility',
 		    )
 		);
-		
+
 		//Background Color
 		$wp_customize->add_setting(
 		    'cw_background_color',
@@ -200,7 +200,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Background Image
 		$wp_customize->add_setting( 'cw_background_image' );
 		$wp_customize->add_control(
@@ -242,7 +242,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image repeat
 		$wp_customize->add_setting(
 		    'cw_background_image_repeat',
@@ -265,7 +265,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image Type
 		$wp_customize->add_setting(
 		    'cw_background_image_type',
@@ -286,9 +286,9 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         $wp_customize->add_section('content_wrapper_borders', array('title' => 'Wrapper Borders','panel' => 'content','priority' => 30,));
-        
+
         //Content Wrapper Border Title
 		$wp_customize->add_setting(
 		    'cw_border_title',
@@ -296,16 +296,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'cw_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'content_wrapper_borders',
 				'settings' => 'cw_border_title',
-			) 
+			)
 		));
-		
+
 		//Content Wrapper Border Color
 		$wp_customize->add_setting(
 		    'cw_border_color',
@@ -324,7 +324,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Content Wrapper Border Style
 		$wp_customize->add_setting(
 		    'cw_border_style',
@@ -347,8 +347,8 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Content Wrapper Border Top
 		$wp_customize->add_setting(
 		    'cw_border_top',
@@ -367,7 +367,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Content Wrapper Border Bottom
 		$wp_customize->add_setting(
 		    'cw_border_bottom',
@@ -386,7 +386,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Content Wrapper Border Left
 		$wp_customize->add_setting(
 		    'cw_border_left',
@@ -405,7 +405,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Content Wrapper Border Right
 		$wp_customize->add_setting(
 		    'cw_border_right',
@@ -424,7 +424,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Content Wrapper Border Radius
 		$wp_customize->add_setting(
 		    'cw_border_radius',
@@ -443,9 +443,9 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-        
+
         $wp_customize->add_section('content_wrapper_padding', array('title' => 'Wrapper Padding','panel' => 'content','priority' => 30,));
-        
+
         //Content Wrapper Padding Title
 		$wp_customize->add_setting(
 		    'cw_padding_title',
@@ -453,16 +453,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'cw_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_padding_title',
 			array(
 				'label'	=> __( 'Padding' ),
 				'section' => 'content_wrapper_padding',
 				'settings' => 'cw_padding_title',
-			) 
+			)
 		));
-		
+
 		//Content Wrapper Padding Top
 		$wp_customize->add_setting(
 		    'cw_padding_top',
@@ -481,7 +481,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Content Wrapper Padding Bottom
 		$wp_customize->add_setting(
 		    'cw_padding_bottom',
@@ -500,7 +500,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Content Wrapper Padding Left
 		$wp_customize->add_setting(
 		    'cw_padding_left',
@@ -519,7 +519,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Content Wrapper Padding Right
 		$wp_customize->add_setting(
 		    'cw_padding_right',
@@ -538,9 +538,9 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-        
+
         $wp_customize->add_section('content_wrapper_margins', array('title' => 'Wrapper Margins','panel' => 'content','priority' => 30,));
-        
+
         //Content Wrapper Margins Title
 		$wp_customize->add_setting(
 		    'cw_margins_title',
@@ -548,16 +548,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'cw_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'cw_margins_title',
 			array(
 				'label'	=> __( 'Margins' ),
 				'section' => 'content_wrapper_margins',
 				'settings' => 'cw_margins_title',
-			) 
+			)
 		));
-		
+
 		//Content Wrapper Margin Top
 		$wp_customize->add_setting(
 		    'cw_margin_top',
@@ -576,8 +576,8 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Content Wrapper Margin Bottom
 		$wp_customize->add_setting(
 		    'cw_margin_bottom',
@@ -598,7 +598,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		) );
 
 		$wp_customize->add_section('content_post_metabox', array('title' => 'Meta','panel' => 'content','priority' => 30,));
-        
+
         //Post-Page Homepage Meta Box Author visibility
 		$wp_customize->add_setting(
 			'content_meta_box_author',
@@ -615,7 +615,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'settings' => 'content_meta_box_author',
 		    )
 		);
-        
+
         //Post-Page Homepage Meta Box Comments
 		$wp_customize->add_setting(
 			'content_meta_box_comments',
@@ -632,7 +632,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'settings' => 'content_meta_box_comments',
 		    )
 		);
-        
+
         //Post-Page Homepage Meta Box time
 		$wp_customize->add_setting(
 			'content_meta_box_time',
@@ -649,7 +649,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'settings' => 'content_meta_box_time',
 		    )
 		);
-        
+
         //Post-Page Homepage Meta Box Categories
 		$wp_customize->add_setting(
 			'content_meta_box_categories',
@@ -666,9 +666,9 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'settings' => 'content_meta_box_categories',
 		    )
 		);
-        
+
         $wp_customize->add_section('content_post_homepage_layout', array('title' => 'Homepage Layout','panel' => 'content','priority' => 30,));
-		
+
 		//Homepage Layout Title
 		$wp_customize->add_setting(
 		    'homepage_layout_title',
@@ -676,17 +676,17 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
 			'homepage_layout_title',
 			array(
 				'label'	=> __( 'Layout Options' ),
 				'section' => 'content_post_homepage_layout',
 				'settings' => 'homepage_layout_title',
-			) 
+			)
 		));
-        
-        
+
+
         //Post-Page Homepage Column Visibility
 		$wp_customize->add_setting(
 		    'homepage_column',
@@ -708,7 +708,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         //Post-Page Homepage Show Featured Image Visibility
 		$wp_customize->add_setting(
 		    'homepage_featured_image',
@@ -729,7 +729,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         //Post-Page Homepage Show Meta Box
 		$wp_customize->add_setting(
 		    'homepage_meta_box',
@@ -750,7 +750,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-        
+
         //Post-Page Homepage Spacing
 		$wp_customize->add_setting(
 		    'homepage_spacing',
@@ -769,7 +769,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-        
+
         //Post-Page Enable Excerpts
 		$wp_customize->add_setting(
 			'homepage_enable_excerpts',
@@ -807,8 +807,8 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		) );
 
 
-        $wp_customize->add_section('content_single_layout', array('title' => 'Post/Page Layout','panel' => 'content','priority' => 30,));        
-        
+        $wp_customize->add_section('content_single_layout', array('title' => 'Post/Page Layout','panel' => 'content','priority' => 30,));
+
         //Post-Page Homepage Layout Title
 		$wp_customize->add_setting(
 		    'postpage_layout_title',
@@ -816,16 +816,16 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
 			'postpage_layout_title',
 			array(
 				'label'	=> __( 'Layout Options' ),
 				'section' => 'content_single_layout',
 				'settings' => 'postpage_layout_title',
-			) 
+			)
 		));
-        
+
         //Post-Page Spacing
 		$wp_customize->add_setting(
 		    'postpage_spacing',
@@ -2043,14 +2043,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_single_comments_comment_area_grand_layout_title',
 			array(
 				'label'	=> __( 'Comments Area' ),
 				'section' => 'cw_single_comments',
 				'settings' => 'cw_single_comments_comment_area_grand_layout_title',
-			) 
+			)
 		));
 
 		//Comments Area Layout Title
@@ -2136,7 +2136,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Comment Area Background Image
 		$wp_customize->add_setting( 'cw_single_comments_backgrounds_comment_area_background_image' );
 		$wp_customize->add_control(
@@ -2179,7 +2179,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image repeat
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_comment_area_background_image_repeat',
@@ -2202,7 +2202,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image Type
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_comment_area_background_image_type',
@@ -2259,7 +2259,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Comments Area Padding Bottom
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_comment_area_bottom',
@@ -2278,7 +2278,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Comments Area Padding Left
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_comment_area_left',
@@ -2297,7 +2297,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Comments Area Padding Right
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_comment_area_right',
@@ -2333,7 +2333,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'settings' => 'cw_single_comments_borders_title',
 			)
 		));
-		
+
 		//Comments Area Border Color
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_comment_area_color',
@@ -2352,7 +2352,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Comments Area Border Style
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_comment_area_border_style',
@@ -2394,7 +2394,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Comments Area Border Bottom
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_comment_area_bottom',
@@ -2413,7 +2413,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Comments Area Border Left
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_comment_area_left',
@@ -2432,7 +2432,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Comments Area Border Right
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_comment_area_right',
@@ -2478,14 +2478,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_single_comments_all_comments_grand_layout_title',
 			array(
 				'label'	=> __( 'All Comments' ),
 				'section' => 'cw_single_comments',
 				'settings' => 'cw_single_comments_all_comments_grand_layout_title',
-			) 
+			)
 		));
 
 
@@ -2561,7 +2561,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Individual Comment Padding Bottom
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_bottom',
@@ -2580,7 +2580,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Individual Comment Padding Left
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_left',
@@ -2599,7 +2599,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Individual Comment Padding Right
 		$wp_customize->add_setting(
 		    'cw_single_comments_padding_individual_comment_right',
@@ -2654,7 +2654,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Individual Comment Border Style
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_style',
@@ -2696,7 +2696,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Individual Comment Border Bottom
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_bottom',
@@ -2715,7 +2715,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Individual Comment Border Left
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_left',
@@ -2734,7 +2734,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Individual Comment Border Right
 		$wp_customize->add_setting(
 		    'cw_single_comments_border_individual_comment_right',
@@ -2780,14 +2780,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_single_comments_top_level_comments_grand_layout_title',
 			array(
 				'label'	=> __( 'Top Level Comments' ),
 				'section' => 'cw_single_comments',
 				'settings' => 'cw_single_comments_top_level_comments_grand_layout_title',
-			) 
+			)
 		));
 
 		//Top Level Comment Backgrounds Title
@@ -2839,7 +2839,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Top Level Comment Background Image
 		$wp_customize->add_setting( 'cw_single_comments_backgrounds_top_level_comment_background_image' );
 		$wp_customize->add_control(
@@ -2882,7 +2882,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image repeat
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_top_level_comments_background_image_repeat',
@@ -2905,7 +2905,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image Type
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_top_level_comments_background_image_type',
@@ -2934,14 +2934,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_single_comments_responding_comments_grand_layout_title',
 			array(
 				'label'	=> __( 'Responding Comments' ),
 				'section' => 'cw_single_comments',
 				'settings' => 'cw_single_comments_responding_comments_grand_layout_title',
-			) 
+			)
 		));
 
 		//Responding Comments Backgrounds Title
@@ -2993,7 +2993,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        )
 		    )
 		);
-		
+
 		//Responding Comments Background Image
 		$wp_customize->add_setting( 'cw_single_comments_backgrounds_responding_comments_background_image' );
 		$wp_customize->add_control(
@@ -3036,7 +3036,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image repeat
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_responding_comments_background_image_repeat',
@@ -3059,7 +3059,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Background Image Type
 		$wp_customize->add_setting(
 		    'cw_single_comments_backgrounds_responding_comments_background_image_type',
@@ -3091,14 +3091,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_navigation_nextAndPreviousPage_title',
 			array(
 				'label'	=> __( 'Next & Previous Page' ),
 				'section' => 'cw_navigation',
 				'settings' => 'cw_navigation_nextAndPreviousPage_title',
-			) 
+			)
 		));
 
 		//Navigation Next & Previous Pages Navigation Style
@@ -3120,7 +3120,7 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        ),
 		    )
 		);
-		
+
 		//Navigation Breadcrumbs Title
 		$wp_customize->add_setting(
 		    'cw_navigation_breadcrumps_title',
@@ -3128,14 +3128,14 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
 			'cw_navigation_breadcrumps_title',
 			array(
 				'label'	=> __( 'Breadcrumbs' ),
 				'section' => 'cw_navigation',
 				'settings' => 'cw_navigation_breadcrumps_title',
-			) 
+			)
 		));
 
 
