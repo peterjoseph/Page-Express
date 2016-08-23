@@ -1,17 +1,18 @@
 <?php
 		/** REGISTER GLOBAL OPTIONS PANEL **/
-		$wp_customize->add_panel( 
+		$wp_customize->add_panel(
 			'globaloptions', array('title' => __( 'Advanced Options' ),
 		) );
-		
+
 		/** REGISTER GlOBAL OPTIONS SECTIONS **/
-	    
+
 		$wp_customize->add_section('g_appearance', array('title' => 'Appearance','panel' => 'globaloptions','priority' => 43,));
 		$wp_customize->add_section('g_scripts', array('title' => 'Scripts','panel' => 'globaloptions','priority' => 43,));
 		$wp_customize->add_section('g_forms', array('title' => 'HTML Form Styling','panel' => 'globaloptions','priority' => 43,));
-		
+		$wp_customize->add_section('g_widget_appearance', array('title' => 'Default Widget Styling','panel' => 'globaloptions','priority' => 43,));
+
 		/** REGISTER GLOBAL OPTIONS **/
-		
+
 		//Sitewide CSS
 		$wp_customize->add_setting(
 		    'sitewide_css',
@@ -29,12 +30,12 @@
 		        'type' => 'textarea',
 		    )
 		);
-        
+
 		/* SANITIZATION */
 		function sitewide_css_sanitization( $input ) {
 			return wp_kses_post( force_balance_tags( $input ) );
 		}
-		
+
 		//Analytics
 		$wp_customize->add_setting(
 		    'g_analytics',
@@ -51,7 +52,7 @@
 		        'type' => 'textarea',
 		    )
 		);
-        
+
         //Line Space
 		$wp_customize->add_setting(
 		    'scripts_line_space',
@@ -59,15 +60,15 @@
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Line_Space( 
-			$wp_customize, 
-			'scripts_line_space', 
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'scripts_line_space',
 			array(
 				'section' => 'g_scripts',
 				'settings' => 'scripts_line_space',
-			) 
+			)
 		));
-        
+
         //Javascript
 		$wp_customize->add_setting(
 		    'c_javascript',
@@ -1731,5 +1732,158 @@
 				'step'  => 2,
 			),
 		) );
+
+		//Default Widget Styling - Archives
+		$wp_customize->add_setting(
+				'g_default_widget_styling_archives',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_archives',
+			array(
+				'label'	=> __( 'Archives' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_archives',
+			)
+		));
+
+		//Default Widget Styling - Categories
+		$wp_customize->add_setting(
+				'g_default_widget_styling_categories',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_categories',
+			array(
+				'label'	=> __( 'Categories' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_categories',
+			)
+		));
+
+		//Default Widget Styling - Meta
+		$wp_customize->add_setting(
+				'g_default_widget_styling_meta',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_meta',
+			array(
+				'label'	=> __( 'Meta' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_meta',
+			)
+		));
+
+		//Default Widget Styling - Recent Posts
+		$wp_customize->add_setting(
+				'g_default_widget_styling_recent_posts',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_recent_posts',
+			array(
+				'label'	=> __( 'Recent Posts' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_recent_posts',
+			)
+		));
+
+		//Default Widget Styling - Search
+		$wp_customize->add_setting(
+				'g_default_widget_styling_search',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_search',
+			array(
+				'label'	=> __( 'Search' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_search',
+			)
+		));
+
+		//Default Widget Styling - Calendar
+		$wp_customize->add_setting(
+				'g_default_widget_styling_calendar',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_calendar',
+			array(
+				'label'	=> __( 'Calendar' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_calendar',
+			)
+		));
+
+		//Default Widget Styling - Pages
+		$wp_customize->add_setting(
+				'g_default_widget_styling_pages',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_pages',
+			array(
+				'label'	=> __( 'Pages' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_pages',
+			)
+		));
+
+		//Default Widget Styling - RSS
+		$wp_customize->add_setting(
+				'g_default_widget_styling_rss',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_rss',
+			array(
+				'label'	=> __( 'RSS' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_rss',
+			)
+		));
+
+		//Default Widget Styling - Tag Cloud
+		$wp_customize->add_setting(
+				'g_default_widget_styling_tag_cloud',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_tag_cloud',
+			array(
+				'label'	=> __( 'Tag Cloud' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_tag_cloud',
+			)
+		));
 
 ?>
