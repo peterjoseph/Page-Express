@@ -1886,4 +1886,55 @@
 			)
 		));
 
+		//Default Widget Styling - Tag Cloud - Tag Style Title
+		$wp_customize->add_setting(
+			'g_default_widget_styling_tag_cloud_tag_style_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'g_default_widget_styling_tag_cloud_tag_style_title',
+			array(
+				'label'	=> __( 'Layout' ),
+				'section' => 'g_widget_appearance',
+				'settings' => 'g_default_widget_styling_tag_cloud_tag_style_title',
+			)
+		));
+
+		//Default Widget Styling - Tag Cloud - Tag Style
+		$wp_customize->add_setting(
+			'g_default_widget_styling_tag_cloud_tag_style',
+			array(
+				'default' => 'fixed',
+			)
+		);
+		$wp_customize->add_control(
+			'g_default_widget_styling_tag_cloud_tag_style',
+			array(
+				'type' => 'select',
+				'label' => 'Cloud Style',
+				'section' => 'g_widget_appearance',
+				'choices' => array(
+					'fixed' => 'Fixed Word Cloud',
+					'variable' => 'Growing Word Cloud',
+				),
+			)
+		);
+
+		//Default Widget Styling - Tag Cloud - Show Post Count
+		$wp_customize->add_setting(
+			'g_default_widget_styling_tag_cloud_count_visibility'
+		);
+		$wp_customize->add_control(
+				'g_default_widget_styling_tag_cloud_count_visibility',
+				array(
+						'type' => 'checkbox',
+						'label' => 'Show Post Count',
+				'section' => 'g_widget_appearance',
+						'settings' => 'g_default_widget_styling_tag_cloud_count_visibility',
+				)
+		);
+
 ?>
