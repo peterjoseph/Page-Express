@@ -270,7 +270,7 @@ img {
 }
 
 #single_content .metadata {
-    text-align:center;
+    text-align:<?php echo get_theme_mod('postpage_meta_box_alignment','center') ?>;
     padding:5px;
 }
 
@@ -1238,7 +1238,7 @@ if($pcolumn == 1) { ?>
 }
 
 #post_content .metadata {
-    text-align:left;
+    text-align:<?php echo get_theme_mod('homepage_meta_box_alignment','center') ?>;
     padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 

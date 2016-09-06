@@ -751,6 +751,27 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 		    )
 		);
 
+    //Post-Page Homepage Meta-Box Alignment
+    $wp_customize->add_setting(
+        'homepage_meta_box_alignment',
+        array(
+            'default' => 'center',
+        )
+    );
+    $wp_customize->add_control(
+        'homepage_meta_box_alignment',
+        array(
+            'type' => 'select',
+            'label' => 'Post Details Alignment',
+            'section' => 'content_post_homepage_layout',
+            'choices' => array(
+              'center' => 'Center',
+                'left' => 'Left',
+                'right' => 'Right',
+            ),
+        )
+    );
+
         //Post-Page Homepage Spacing
 		$wp_customize->add_setting(
 		    'homepage_spacing',
@@ -844,6 +865,27 @@ $wp_customize->add_panel('content', array('title' => __( 'Content Area' ), 'prio
 				'step'  => 1,
 			),
 		) );
+
+    //Post-Page Meta-Box Alignment
+    $wp_customize->add_setting(
+        'postpage_meta_box_alignment',
+        array(
+            'default' => 'center',
+        )
+    );
+    $wp_customize->add_control(
+        'postpage_meta_box_alignment',
+        array(
+            'type' => 'select',
+            'label' => 'Post Details Alignment',
+            'section' => 'content_single_layout',
+            'choices' => array(
+              'center' => 'Center',
+                'left' => 'Left',
+                'right' => 'Right',
+            ),
+        )
+    );
 
 		$wp_customize->add_section('content_single_typography', array('title' => 'Typography','panel' => 'content','priority' => 30,));
 
