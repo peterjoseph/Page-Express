@@ -606,7 +606,11 @@ div.comments_list li {
 }
 
 .upper_unibar_widget_content ul, .upper_unibar_widget_content ol {
+  <?php if (get_theme_mod('upper_unibar_widgets_content_lists_icon','none') == 'none') { ?>
+    margin: 0 0 0 0;
+  <?php } else { ?>
     margin: 0 0 0 1.3333em;
+  <?php } ?>
 }
 
 #upper_unibar_content ul.menu {
@@ -913,7 +917,11 @@ div.comments_list li {
 }
 
 .left_sidebar_widget ul, .left_sidebar_widget ol {
+  <?php if (get_theme_mod('left_sidebar_widgets_content_lists_icon','none') == 'none') { ?>
+    margin: 0 0 0 0;
+  <?php } else { ?>
     margin: 0 0 0 1.3333em;
+  <?php } ?>
 }
 
 .left_sidebar_widget_title {
@@ -1083,7 +1091,11 @@ div.comments_list li {
 }
 
 .right_sidebar_widget ul, .right_sidebar_widget ol {
-    margin: 0 0 0 1.3333em;
+    <?php if (get_theme_mod('right_sidebar_widgets_content_lists_icon','none') == 'none') { ?>
+      margin: 0 0 0 0;
+    <?php } else { ?>
+      margin: 0 0 0 1.3333em;
+    <?php } ?>
 }
 
 .right_sidebar_widget_title {
@@ -1218,6 +1230,8 @@ if($pcolumn == 1) { ?>
     text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
     padding-top:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
+    padding-left:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
+    padding-right:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
 #post_content .title a {
@@ -1230,7 +1244,7 @@ if($pcolumn == 1) { ?>
 }
 
 #post_content .metadata {
-    text-align:center;
+    text-align:left;
     padding:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
 }
 
@@ -1425,7 +1439,11 @@ if($pcolumn == 1) { ?>
 }
 
 .lower_unibar_widget_content ul, .lower_unibar_widget_content ol {
+  <?php if (get_theme_mod('lower_unibar_widgets_content_lists_icon','none') == 'none') { ?>
+    margin: 0 0 0 0;
+  <?php } else { ?>
     margin: 0 0 0 1.3333em;
+  <?php } ?>
 }
 
 #lower_unibar_content ul.menu {
@@ -1757,7 +1775,11 @@ if($pcolumn == 1) { ?>
 }
 
 .lower_multibar_widget_content ul, .lower_multibar_widget_content ol {
+  <?php if (get_theme_mod('lower_multibar_widgets_content_lists_icon','none') == 'none') { ?>
+    margin: 0 0 0 0;
+  <?php } else { ?>
     margin: 0 0 0 1.3333em;
+  <?php } ?>
 }
 
 #footer {
@@ -2054,10 +2076,8 @@ select {
 <?php if(get_theme_mod('g_default_widget_styling_tag_cloud_tag_style','fixed') == 'fixed') { ?>
   .tagcloud a {
   	background-color: #ddd;
-  	border-radius: 3px;
-  	color: #000;
   	display: inline-block;
-  	font-size: 16px !important;
+  	font-size: 14px !important;
   	margin: 0 5px 5px 0;
   	padding: 2px 5px;
   	text-decoration: none;
@@ -2075,3 +2095,39 @@ select {
   .tagcloud a:hover {
   }
 <?php } ?>
+
+
+//RSS Widget
+a.rsswidget {
+display:block
+}
+
+.rsswidget > ul { border: 10px solid #CCC; }
+
+
+.widget_rss .widget-title img {
+	display: none;
+}
+
+.widget_rss li {
+	margin-bottom: 0.625rem;
+}
+
+.widget_rss li a {
+	display: block;
+}
+
+.widget_rss li .rss-date {
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
+.widget_rss li .rss-date, .widget_rss li cite {
+	color: rgba(153, 153, 153, 0.7);
+	font-size: 0.875rem;
+}
+
+.widget_rss li .rssSummary {
+	font-size: 0.875rem;
+	display: inline;
+}
