@@ -106,26 +106,6 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 			),
 		) );
 
-
-         //Left Sidebar Padding
-		$wp_customize->add_setting(
-		    'left_sidebar_layout_padding',
-		    array(
-		        'default' => '0',
-		    )
-		);
-		$wp_customize->add_control( 'left_sidebar_layout_padding', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'left_sidebar_layout',
-			'label'       => 'Sidebar Padding',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 40,
-				'step'  => 1,
-			),
-		) );
-
         $wp_customize->add_section('left_sidebar_background', array('title' => 'Background','panel' => 'left_sidebar','priority' => 30,));
 
         //Left Sidebar Background Visibility

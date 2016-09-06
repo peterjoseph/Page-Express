@@ -838,7 +838,10 @@ div.comments_list li {
 }
 
 #left_sidebar_content_wrapper {
-	   padding:<?php echo get_theme_mod('left_sidebar_layout_padding','0') ?>px;
+  padding-top:<?php echo get_theme_mod('left_sidebar_padding_top','10') ?>px;
+  padding-bottom:<?php echo get_theme_mod('left_sidebar_padding_bottom','10') ?>px;
+  padding-left:<?php echo get_theme_mod('left_sidebar_padding_left','10') ?>px;
+  padding-right:<?php echo get_theme_mod('left_sidebar_padding_right','10') ?>px;
 }
 
 .left_sidebar_content {
@@ -857,12 +860,6 @@ div.comments_list li {
     border-left:<?php echo get_theme_mod('left_sidebar_border_left','0') ?>px <?php echo get_theme_mod('left_sidebar_border_style','solid') ?> <?php echo get_theme_mod('left_sidebar_border_color','#CCC') ?>;
     border-right:<?php echo get_theme_mod('left_sidebar_border_right','1') ?>px <?php echo get_theme_mod('left_sidebar_border_style','solid') ?> <?php echo get_theme_mod('left_sidebar_border_color','#CCC') ?>;
     border-radius:<?php echo get_theme_mod('left_sidebar_border_radius','0') ?>px;
-    padding-top:<?php echo get_theme_mod('left_sidebar_padding_top','10') ?>px;
-    padding-bottom:<?php echo get_theme_mod('left_sidebar_padding_bottom','10') ?>px;
-    padding-left:<?php echo get_theme_mod('left_sidebar_padding_left','10') ?>px;
-    padding-right:<?php echo get_theme_mod('left_sidebar_padding_right','10') ?>px;
-    margin-top:0px;
-    margin-bottom:0px;
 }
 
 .left_sidebar_widget {
@@ -1012,7 +1009,10 @@ div.comments_list li {
 }
 
 #right_sidebar_content_wrapper {
-    padding:<?php echo get_theme_mod('right_sidebar_layout_padding','0') ?>px;
+  padding-top:<?php echo get_theme_mod('right_sidebar_padding_top','10') ?>px;
+  padding-bottom:<?php echo get_theme_mod('right_sidebar_padding_bottom','10') ?>px;
+  padding-left:<?php echo get_theme_mod('right_sidebar_padding_left','10') ?>px;
+  padding-right:<?php echo get_theme_mod('right_sidebar_padding_right','10') ?>px;
 }
 
 .right_sidebar_content {
@@ -1031,12 +1031,6 @@ div.comments_list li {
     border-left:<?php echo get_theme_mod('right_sidebar_border_left','1') ?>px <?php echo get_theme_mod('right_sidebar_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_border_color','#CCC') ?>;
     border-right:<?php echo get_theme_mod('right_sidebar_border_right','0') ?>px <?php echo get_theme_mod('right_sidebar_border_style','solid') ?> <?php echo get_theme_mod('right_sidebar_border_color','#CCC') ?>;
     border-radius:<?php echo get_theme_mod('right_sidebar_border_radius','0') ?>px;
-    padding-top:<?php echo get_theme_mod('right_sidebar_padding_top','10') ?>px;
-    padding-bottom:<?php echo get_theme_mod('right_sidebar_padding_bottom','10') ?>px;
-    padding-left:<?php echo get_theme_mod('right_sidebar_padding_left','10') ?>px;
-    padding-right:<?php echo get_theme_mod('right_sidebar_padding_right','10') ?>px;
-    margin-top:0px;
-    margin-bottom:0px;
 }
 
 .right_sidebar_widget {

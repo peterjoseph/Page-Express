@@ -106,27 +106,6 @@ $wp_customize->add_panel('right_sidebar', array('title' => __( 'Right Sidebar' )
 			),
 		) );
 
-
-         //Right Sidebar Padding
-		$wp_customize->add_setting(
-		    'right_sidebar_layout_padding',
-		    array(
-		        'default' => '0',
-		    )
-		);
-		$wp_customize->add_control( 'right_sidebar_layout_padding', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'right_sidebar_layout',
-			'label'       => 'Sidebar Padding',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 40,
-				'step'  => 1,
-			),
-		) );
-
-
         $wp_customize->add_section('right_sidebar_background', array('title' => 'Background','panel' => 'right_sidebar','priority' => 30,));
 
         //Right Sidebar Background Visibility
