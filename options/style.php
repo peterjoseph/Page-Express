@@ -837,8 +837,8 @@ div.comments_list li {
     <?php } ?>
 }
 
-#left_sidebar_wrapper {
-	   padding:<?php echo get_theme_mod('ls_layout_padding','0') ?>px;
+#left_sidebar_content_wrapper {
+	   padding:<?php echo get_theme_mod('left_sidebar_layout_padding','0') ?>px;
 }
 
 .left_sidebar_content {
@@ -1011,7 +1011,7 @@ div.comments_list li {
     color:<?php echo get_theme_mod('left_sidebar_menu_link_hover_color','#333') ?>;
 }
 
-#right_sidebar_wrapper {
+#right_sidebar_content_wrapper {
     padding:<?php echo get_theme_mod('right_sidebar_layout_padding','0') ?>px;
 }
 
