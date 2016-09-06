@@ -1,7 +1,7 @@
 <?php
 
 $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 'priority' => 30,) );
-		
+
         $wp_customize->add_section('left_sidebar_vis', array('title' => 'Left Sidebar Visibility','panel' => 'left_sidebar','priority' => 30,));
 
        //Left Sidebar Visibility
@@ -26,11 +26,11 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-        
-        
-        
+
+
+
         $wp_customize->add_section('left_sidebar_layout', array('title' => 'Layout','panel' => 'left_sidebar','priority' => 30,));
-        
+
                 //Left Sidebar Layout Title
 		$wp_customize->add_setting(
 		    'left_sidebar_layout_title',
@@ -38,16 +38,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_layout_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_layout_title',
 			array(
 				'label'	=> __( 'Left Sidebar Layout' ),
 				'section' => 'left_sidebar_layout',
 				'settings' => 'left_sidebar_layout_title',
-			) 
+			)
 		));
-        
+
         //Left Sidebar Width % or px
 		$wp_customize->add_setting(
 		    'left_sidebar_width_option',
@@ -67,7 +67,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-        
+
         //Left Sidebar Width Fixed
 		$wp_customize->add_setting(
 		    'left_sidebar_width_fixed',
@@ -86,7 +86,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-        
+
         //Left Sidebar Width Fluid
 		$wp_customize->add_setting(
 		    'left_sidebar_width_fluid',
@@ -105,8 +105,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-        
-        
+
+
          //Left Sidebar Padding
 		$wp_customize->add_setting(
 		    'left_sidebar_layout_padding',
@@ -125,7 +125,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-        
+
         $wp_customize->add_section('left_sidebar_background', array('title' => 'Background','panel' => 'left_sidebar','priority' => 30,));
 
         //Left Sidebar Background Visibility
@@ -141,7 +141,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'settings' => 'left_sidebar_background_visible',
 		    )
 		);
-		
+
 		//Left Sidebar Background Color
 		$wp_customize->add_setting(
 		    'left_sidebar_background_color',
@@ -160,7 +160,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Background Image
 		$wp_customize->add_setting( 'left_sidebar_background_image' );
 		$wp_customize->add_control(
@@ -202,7 +202,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Background Image repeat
 		$wp_customize->add_setting(
 		    'left_sidebar_background_image_repeat',
@@ -225,7 +225,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Background Image Type
 		$wp_customize->add_setting(
 		    'left_sidebar_background_image_type',
@@ -248,7 +248,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		);
 
         $wp_customize->add_section('left_sidebar_border', array('title' => 'Border','panel' => 'left_sidebar','priority' => 30,));
-        
+
         //Left Sidebar Border Title
 		$wp_customize->add_setting(
 		    'left_sidebar_border_title',
@@ -256,16 +256,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'left_sidebar_border',
 				'settings' => 'left_sidebar_border_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Border Color
 		$wp_customize->add_setting(
 		    'left_sidebar_border_color',
@@ -284,7 +284,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Border Style
 		$wp_customize->add_setting(
 		    'left_sidebar_border_style',
@@ -307,8 +307,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Left Sidebar Border Top
 		$wp_customize->add_setting(
 		    'left_sidebar_border_top',
@@ -327,7 +327,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Border Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_border_bottom',
@@ -346,7 +346,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Border Left
 		$wp_customize->add_setting(
 		    'left_sidebar_border_left',
@@ -365,7 +365,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Border Right
 		$wp_customize->add_setting(
 		    'left_sidebar_border_right',
@@ -384,7 +384,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Border Radius
 		$wp_customize->add_setting(
 		    'left_sidebar_border_radius',
@@ -403,9 +403,9 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-        
+
         $wp_customize->add_section('left_sidebar_padding', array('title' => 'Padding','panel' => 'left_sidebar','priority' => 30,));
-        
+
         //Left Sidebar Padding Title
 		$wp_customize->add_setting(
 		    'left_sidebar_padding_title',
@@ -413,16 +413,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_padding_title',
 			array(
 				'label'	=> __( 'Padding' ),
 				'section' => 'left_sidebar_padding',
 				'settings' => 'left_sidebar_padding_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Padding Top
 		$wp_customize->add_setting(
 		    'left_sidebar_padding_top',
@@ -441,7 +441,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Padding Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_padding_bottom',
@@ -460,7 +460,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Padding Left
 		$wp_customize->add_setting(
 		    'left_sidebar_padding_left',
@@ -479,7 +479,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Padding Right
 		$wp_customize->add_setting(
 		    'left_sidebar_padding_right',
@@ -498,67 +498,9 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-        
-        $wp_customize->add_section('left_sidebar_margins', array('title' => 'Margins','panel' => 'left_sidebar','priority' => 30,));
-        
-        //Left Sidebar Margins Title
-		$wp_customize->add_setting(
-		    'left_sidebar_margins_title',
-		    array(
-		        'default' => '',
-		    )
-		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_margins_title', 
-			array(
-				'label'	=> __( 'Margins' ),
-				'section' => 'left_sidebar_margins',
-				'settings' => 'left_sidebar_margins_title',
-			) 
-		));
-		
-		//Left Sidebar Margin Top
-		$wp_customize->add_setting(
-		    'left_sidebar_margin_top',
-		    array(
-		        'default' => '0',
-		    )
-		);
-		$wp_customize->add_control( 'left_sidebar_margin_top', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'left_sidebar_margins',
-			'label'       => 'Top Margin',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
-		
-		
-		//Left Sidebar Margin Bottom
-		$wp_customize->add_setting(
-		    'left_sidebar_margin_bottom',
-		    array(
-		        'default' => '0',
-		    )
-		);
-		$wp_customize->add_control( 'left_sidebar_margin_bottom', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'left_sidebar_margins',
-			'label'       => 'Bottom Margin',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
-        
+
         $wp_customize->add_section('left_sidebar_widget_styling', array('title' => 'Widget Styling','panel' => 'left_sidebar','priority' => 30,));
-        
+
         //Left Sidebar Grand Widget Styling Title
 		$wp_customize->add_setting(
 		    'left_sidebar_grand_widget_styling_title',
@@ -566,16 +508,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_grand_widget_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'left_sidebar_grand_widget_styling_title',
 			array(
 				'label'	=> __( 'Widget Styling' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_grand_widget_styling_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Layout Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_layout_title',
@@ -583,16 +525,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_layout_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_layout_title',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_layout_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Header Visibility
 		$wp_customize->add_setting(
 			'left_sidebar_widgets_header_visibility'
@@ -606,7 +548,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'settings' => 'left_sidebar_widgets_header_visibility',
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Styling Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_title',
@@ -614,16 +556,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_title_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_title_title',
 			array(
 				'label'	=> __( 'Title Font Styling' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_title_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Text Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_text_color',
@@ -642,7 +584,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title text font
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_fonts',
@@ -681,7 +623,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Font Size
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_font_size',
@@ -700,7 +642,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Font Weight
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_font_weight',
@@ -721,7 +663,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Font Alignment
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_font_alignment',
@@ -750,16 +692,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_title_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_title_background_title',
 			array(
 				'label'	=> __( 'Title Background' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_title_background_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Background Visibility
 		$wp_customize->add_setting(
 			'left_sidebar_widgets_title_background_visible'
@@ -773,7 +715,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'settings' => 'left_sidebar_widgets_title_background_visible',
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Background Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_background_color',
@@ -792,7 +734,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Background Image
 		$wp_customize->add_setting( 'left_sidebar_widgets_title_background_image' );
 		$wp_customize->add_control(
@@ -834,7 +776,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Background Image repeat
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_background_image_repeat',
@@ -857,7 +799,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Background Image Type
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_background_image_type',
@@ -878,7 +820,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Border Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_title',
@@ -886,16 +828,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_title_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_title_border_title',
 			array(
 				'label'	=> __( 'Title Borders' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_title_border_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Border Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_color',
@@ -914,7 +856,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Title Border Style
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_style',
@@ -937,8 +879,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Left Sidebar Widget Title Border Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_top',
@@ -957,7 +899,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Border Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_bottom',
@@ -976,7 +918,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Border Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_left',
@@ -995,7 +937,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Border Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_right',
@@ -1014,7 +956,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Border Radius
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_border_radius',
@@ -1033,7 +975,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Padding Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_padding_title',
@@ -1041,16 +983,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_title_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_title_padding_title',
 			array(
 				'label'	=> __( 'Title Padding' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_title_padding_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Padding Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_padding_top',
@@ -1069,7 +1011,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Padding Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_padding_bottom',
@@ -1088,7 +1030,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Padding Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_padding_left',
@@ -1107,7 +1049,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Padding Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_padding_right',
@@ -1126,7 +1068,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Title Margins Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_margins_title',
@@ -1134,16 +1076,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_title_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_title_margins_title',
 			array(
 				'label'	=> __( 'Title Margins' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_title_margins_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Margin Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_margin_top',
@@ -1162,8 +1104,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Left Sidebar Widget Title Margin Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_title_margin_bottom',
@@ -1190,17 +1132,17 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_title',
 			array(
 				'label'	=> __( 'Content Font Styling' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_content_title',
-			) 
+			)
 		));
-		
-		
+
+
 		//Left Sidebar Widget Content Text Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_text_color',
@@ -1219,7 +1161,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content text font
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_fonts',
@@ -1258,7 +1200,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Font Size
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_font_size',
@@ -1277,7 +1219,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Font Weight
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_font_weight',
@@ -1298,7 +1240,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Font Alignment
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_font_alignment',
@@ -1319,7 +1261,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Content Link Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_link_color',
@@ -1338,7 +1280,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Content Link Decoration
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_link_decoration',
@@ -1362,7 +1304,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Content Link Weight
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_link_weight',
@@ -1383,7 +1325,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Background Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_background_title',
@@ -1391,16 +1333,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_background_title',
 			array(
 				'label'	=> __( 'Content Background' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_content_background_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Content Background Visibility
 		$wp_customize->add_setting(
 			'left_sidebar_widgets_content_background_visible'
@@ -1414,7 +1356,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'settings' => 'left_sidebar_widgets_content_background_visible',
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Background Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_background_color',
@@ -1433,7 +1375,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Background Image
 		$wp_customize->add_setting( 'left_sidebar_widgets_content_background_image' );
 		$wp_customize->add_control(
@@ -1475,7 +1417,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Background Image repeat
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_background_image_repeat',
@@ -1498,7 +1440,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Background Image Type
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_background_image_type',
@@ -1519,7 +1461,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Border Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_title',
@@ -1527,16 +1469,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_border_title',
 			array(
 				'label'	=> __( 'Content Borders' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_content_border_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Title Border Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_color',
@@ -1555,7 +1497,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget Content Border Style
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_style',
@@ -1578,8 +1520,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Left Sidebar Widget Content Border Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_top',
@@ -1598,7 +1540,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Border Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_bottom',
@@ -1617,7 +1559,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Border Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_left',
@@ -1636,7 +1578,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Border Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_right',
@@ -1655,7 +1597,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Border Radius
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_border_radius',
@@ -1674,7 +1616,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Padding Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_padding_title',
@@ -1682,16 +1624,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_padding_title',
 			array(
 				'label'	=> __( 'Content Padding' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_content_padding_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Content Padding Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_padding_top',
@@ -1710,7 +1652,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Padding Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_padding_bottom',
@@ -1729,7 +1671,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Padding Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_padding_left',
@@ -1748,7 +1690,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Padding Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_padding_right',
@@ -1767,7 +1709,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget Content Margins Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_margins_title',
@@ -1775,16 +1717,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_margins_title',
 			array(
 				'label'	=> __( 'Content Margins' ),
 				'section' => 'left_sidebar_widget_styling',
 				'settings' => 'left_sidebar_widgets_content_margins_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget Content Margin Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_margin_top',
@@ -1803,8 +1745,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Left Sidebar Widget Content Margin Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_margin_bottom',
@@ -1823,7 +1765,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-        
+
         $wp_customize->add_section('left_sidebar_menu_styling', array('title' => 'Menu Styling','panel' => 'left_sidebar','priority' => 30,));
 
         //Left Sidebar Menu Styling Title
@@ -1833,16 +1775,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_grand_widget_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'left_sidebar_grand_widget_styling_title',
 			array(
 				'label'	=> __( 'Menu Styling' ),
 				'section' => 'left_sidebar_menu_styling',
 				'settings' => 'left_sidebar_grand_menu_styling_title',
-			) 
+			)
 		));
-        
+
 		//Left Sidebar Menu Layout Title
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_layout',
@@ -1850,16 +1792,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_menu_layout', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_menu_layout',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'left_sidebar_menu_styling',
 				'settings' => 'left_sidebar_menu_layout',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Menu Height
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_height',
@@ -1878,7 +1820,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Menu Spacing
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_spacing',
@@ -1897,7 +1839,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Font Styling Title
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_styling_title',
@@ -1905,16 +1847,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_menu_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_menu_styling_title',
 			array(
 				'label'	=> __( 'Font Styling' ),
 				'section' => 'left_sidebar_menu_styling',
 				'settings' => 'left_sidebar_menu_styling_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Menu Link Color
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_link_color',
@@ -1933,7 +1875,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Menu Link font
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_fonts',
@@ -1972,7 +1914,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Menu Font Weight
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_font_weight',
@@ -1993,7 +1935,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Menu Link Hover Color
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_link_hover_color',
@@ -2012,7 +1954,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Menu Link Decoration
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_link_decoration',
@@ -2036,7 +1978,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Menu Link Alignment
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_link_alignment',
@@ -2057,7 +1999,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Background Title
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_background_title',
@@ -2065,16 +2007,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_menu_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_menu_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'left_sidebar_menu_styling',
 				'settings' => 'left_sidebar_menu_background_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Menu Background Visibility
 		$wp_customize->add_setting(
 			'left_sidebar_menu_background_visible'
@@ -2088,7 +2030,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'settings' => 'left_sidebar_menu_background_visible',
 		    )
 		);
-		
+
 		//Left Sidebar Menu Background Color
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_background_color',
@@ -2106,7 +2048,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Menu Background Image
 		$wp_customize->add_setting( 'left_sidebar_menu_background_image' );
 		$wp_customize->add_control(
@@ -2119,7 +2061,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Hover Background Color
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_hover_background_color',
@@ -2137,7 +2079,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Hover Background Image
 		$wp_customize->add_setting( 'left_sidebar_menu_hover_background_image' );
 		$wp_customize->add_control(
@@ -2150,7 +2092,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Menu Background Image position
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_background_image_position',
@@ -2178,7 +2120,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Menu Background Image repeat
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_background_image_repeat',
@@ -2201,7 +2143,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Menu Borders Title
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_borders_title',
@@ -2209,16 +2151,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_menu_borders_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_menu_borders_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'left_sidebar_menu_styling',
 				'settings' => 'left_sidebar_menu_borders_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Menu Border Color
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_color',
@@ -2237,7 +2179,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Menu Border Style
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_style',
@@ -2260,8 +2202,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Left Sidebar Menu Border Top
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_top',
@@ -2280,7 +2222,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Menu Border Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_bottom',
@@ -2299,7 +2241,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Menu Border Left
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_left',
@@ -2318,7 +2260,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Menu Border Right
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_right',
@@ -2337,7 +2279,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Menu Border Radius
 		$wp_customize->add_setting(
 		    'left_sidebar_menu_border_radius',
@@ -2356,7 +2298,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-        
+
 		$wp_customize->add_section('left_sidebar_list_styling', array('title' => 'List Styling','panel' => 'left_sidebar','priority' => 30,));
 
 		//Left Sidebar Widget List Icon Title
@@ -2366,14 +2308,14 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_lists_icon_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_lists_icon_title',
 			array(
 				'label'	=> __( 'Icon' ),
 				'section' => 'left_sidebar_list_styling',
 				'settings' => 'left_sidebar_widgets_content_lists_icon_title',
-			) 
+			)
 		));
 
 		//Left Sidebar Widget List Icon Type
@@ -2397,7 +2339,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
+
 		//Left Sidebar Widget List Padding Title
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_padding_title',
@@ -2405,16 +2347,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_lists_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_lists_padding_title',
 			array(
 				'label'	=> __( 'Spacing' ),
 				'section' => 'left_sidebar_list_styling',
 				'settings' => 'left_sidebar_widgets_content_lists_padding_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget List Padding Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_padding_top',
@@ -2433,7 +2375,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Padding Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_padding_bottom',
@@ -2452,7 +2394,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Padding Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_padding_left',
@@ -2471,7 +2413,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Padding Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_padding_right',
@@ -2498,16 +2440,16 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'left_sidebar_widgets_content_lists_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'left_sidebar_widgets_content_lists_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'left_sidebar_list_styling',
 				'settings' => 'left_sidebar_widgets_content_lists_border_title',
-			) 
+			)
 		));
-		
+
 		//Left Sidebar Widget List Border Color
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_color',
@@ -2526,7 +2468,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        )
 		    )
 		);
-		
+
 		//Left Sidebar Widget List Border Style
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_style',
@@ -2549,8 +2491,8 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Left Sidebar Widget List Border Top
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_top',
@@ -2569,7 +2511,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Border Bottom
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_bottom',
@@ -2588,7 +2530,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Border Left
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_left',
@@ -2607,7 +2549,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Border Right
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_right',
@@ -2626,7 +2568,7 @@ $wp_customize->add_panel('left_sidebar', array('title' => __( 'Left Sidebar' ), 
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Left Sidebar Widget List Border Radius
 		$wp_customize->add_setting(
 		    'left_sidebar_widgets_content_lists_border_radius',

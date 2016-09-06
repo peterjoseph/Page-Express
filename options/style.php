@@ -861,8 +861,8 @@ div.comments_list li {
     padding-bottom:<?php echo get_theme_mod('left_sidebar_padding_bottom','10') ?>px;
     padding-left:<?php echo get_theme_mod('left_sidebar_padding_left','10') ?>px;
     padding-right:<?php echo get_theme_mod('left_sidebar_padding_right','10') ?>px;
-    margin-top:<?php echo get_theme_mod('left_sidebar_margin_top','0') ?>px;
-    margin-bottom:<?php echo get_theme_mod('left_sidebar_margin_bottom','0') ?>px;
+    margin-top:0px;
+    margin-bottom:0px;
 }
 
 .left_sidebar_widget {
@@ -1035,8 +1035,8 @@ div.comments_list li {
     padding-bottom:<?php echo get_theme_mod('right_sidebar_padding_bottom','10') ?>px;
     padding-left:<?php echo get_theme_mod('right_sidebar_padding_left','10') ?>px;
     padding-right:<?php echo get_theme_mod('right_sidebar_padding_right','10') ?>px;
-    margin-top:<?php echo get_theme_mod('right_sidebar_margin_top','0') ?>px;
-    margin-bottom:<?php echo get_theme_mod('right_sidebar_margin_bottom','0') ?>px;
+    margin-top:0px;
+    margin-bottom:0px;
 }
 
 .right_sidebar_widget {
