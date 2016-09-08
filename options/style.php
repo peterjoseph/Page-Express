@@ -2144,4 +2144,5 @@ select {
   background-color:#FFF;
   background-image: url('<?php echo get_bloginfo('template_directory') ?>/images/search.png');
   background-position: center center;
+  font-size:14px;
 }
