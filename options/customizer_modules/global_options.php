@@ -1818,6 +1818,26 @@
 			)
 		));
 
+		//Default Widget Styling - Search - Bar Style
+		$wp_customize->add_setting(
+			'g_default_widget_styling_search_bar_style',
+			array(
+				'default' => 'inside',
+			)
+		);
+		$wp_customize->add_control(
+			'g_default_widget_styling_search_bar_style',
+			array(
+				'type' => 'select',
+				'label' => 'Search Button Position',
+				'section' => 'g_widget_appearance',
+				'choices' => array(
+					'inside' => 'Inside Search Box',
+					'outside' => 'Outside Search Box',
+				),
+			)
+		);
+
 		// //Default Widget Styling - Calendar
 		// $wp_customize->add_setting(
 		// 		'g_default_widget_styling_calendar',

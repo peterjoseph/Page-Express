@@ -2090,6 +2090,8 @@ select {
   }
 <?php } ?>
 
+<?php if(get_theme_mod('g_default_widget_styling_search_bar_style','inside') == 'inside') { ?>
+
 #searchform div {
   margin-left:auto;
   margin-right:auto;
@@ -2103,7 +2105,7 @@ select {
 }
 
 #searchform #s {
-  height:48px;
+  height:40px;
   display:inline;
   padding-top:0px;
   padding-bottom:0px;
@@ -2133,7 +2135,7 @@ select {
 
 #searchform #searchsubmit {
   display:inline-block;
-  height:50px;
+  height:42px;
   float:right;
   border-radius:0px;
   color:transparent;
@@ -2146,3 +2148,62 @@ select {
   background-position: center center;
   font-size:14px;
 }
+
+<?php } else { ?>
+
+  #searchform div {
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    overflow:hidden;
+    display:flex;
+  }
+
+  #searchform .screen-reader-text {
+    display:none;
+  }
+
+  #searchform #s {
+    height:40px;
+    display:inline;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    border:1px solid #CCC;
+    border-right: 1px solid #CCC;
+    background-color:#FFF;
+    flex-grow: 1;
+  }
+
+  #searchform #s:active {
+    background-color:#FFF;
+    background-image:none;
+    border:1px solid #CCC;
+    border-right:1px solid #CCC;
+    border-radius:0px;
+  }
+
+  #searchform #s:hover {
+    background-color:#FFF;
+    background-image:none;
+    border:1px solid #CCC;
+    border-right:1px solid #CCC;
+    border-radius:0px;
+  }
+
+  #searchform #searchsubmit {
+    display:inline-block;
+    height:42px;
+    float:right;
+    border-radius:0px;
+    color:transparent;
+    border: 1px solid #CCC;
+    padding:0px;
+    background-color:#FFF;
+    background-image: url('<?php echo get_bloginfo('template_directory') ?>/images/search.png');
+    background-position: center center;
+    font-size:14px;
+  }
+
+<?php } ?>
