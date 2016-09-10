@@ -1829,11 +1829,31 @@
 			'g_default_widget_styling_search_bar_style',
 			array(
 				'type' => 'select',
-				'label' => 'Search Button Position',
+				'label' => 'Button Position',
 				'section' => 'g_widget_appearance',
 				'choices' => array(
 					'inside' => 'Inside Search Box',
 					'outside' => 'Outside Search Box',
+				),
+			)
+		);
+
+		//Default Widget Styling - Search - Button Type
+		$wp_customize->add_setting(
+			'g_default_widget_styling_search_button_type',
+			array(
+				'default' => 'icon',
+			)
+		);
+		$wp_customize->add_control(
+			'g_default_widget_styling_search_button_type',
+			array(
+				'type' => 'select',
+				'label' => 'Button Type',
+				'section' => 'g_widget_appearance',
+				'choices' => array(
+					'icon' => 'Icon',
+					'text' => 'Text',
 				),
 			)
 		);
