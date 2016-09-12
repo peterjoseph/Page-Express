@@ -838,6 +838,7 @@ div.comments_list li {
 }
 
 #left_sidebar_content_wrapper {
+  float:left;
   padding-top:<?php echo get_theme_mod('left_sidebar_padding_top','10') ?>px;
   padding-bottom:<?php echo get_theme_mod('left_sidebar_padding_bottom','10') ?>px;
   padding-left:<?php echo get_theme_mod('left_sidebar_padding_left','10') ?>px;
@@ -1009,6 +1010,7 @@ div.comments_list li {
 }
 
 #right_sidebar_content_wrapper {
+  float:left;
   padding-top:<?php echo get_theme_mod('right_sidebar_padding_top','10') ?>px;
   padding-bottom:<?php echo get_theme_mod('right_sidebar_padding_bottom','10') ?>px;
   padding-left:<?php echo get_theme_mod('right_sidebar_padding_left','10') ?>px;
