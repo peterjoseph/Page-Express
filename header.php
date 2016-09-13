@@ -43,15 +43,18 @@ if ( $paged >= 2 || $page >= 2 )
 
 <div id="header">
     <?php global $header1; if($header1 == TRUE) { ?>
-        <div id="h1_wrapper">
+        <div id="primary_header">
+					<div id="primary_header_content">
+						Header
+	        </div>
         </div>
     <?php } ?>
-    
+
     <?php global $header2; if($header2 == TRUE) { ?>
         <div id="h2_wrapper">
         </div>
     <?php } ?>
-    
+
     <?php global $header3; if($header3 == TRUE) { ?>
         <div id="h3_wrapper">
         </div>
@@ -59,7 +62,7 @@ if ( $paged >= 2 || $page >= 2 )
 </div>
 
 <?php global $uunibar; if($uunibar == TRUE) { ?>
-	
+
 	<div id="upper_unibar">
 		<div id="upper_unibar_content">
 			<?php if ( is_active_sidebar( 'uub' ) ) : ?>

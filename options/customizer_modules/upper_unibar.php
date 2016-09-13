@@ -1,9 +1,9 @@
 <?php
 
 $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ), 'priority' => 30,) );
-		
+
         $wp_customize->add_section('upper_uni_visibility', array('title' => 'Upper Uni-Bar Visibility','panel' => 'upper_unibar','priority' => 30,));
-        
+
 		//Upper Uni-Bar Visibility
 		$wp_customize->add_setting(
 		    'upper_unibar_visibility',
@@ -26,27 +26,27 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-        
-        
-        $wp_customize->add_section('upper_unibar_layout', array('title' => 'Layout','panel' => 'upper_unibar','priority' => 30,));
-        
-        //Upper Unibar Grand Layout Title
+
+
+    $wp_customize->add_section('upper_unibar_layout', array('title' => 'Layout','panel' => 'upper_unibar','priority' => 30,));
+
+    //Upper Unibar Grand Layout Title
 		$wp_customize->add_setting(
 		    'upper_unibar_grand_layout_title',
 		    array(
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_grand_layout_title', 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'upper_unibar_grand_layout_title',
 			array(
 				'label'	=> __( 'Panel Styling' ),
 				'section' => 'upper_unibar_layout',
 				'settings' => 'upper_unibar_grand_layout_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Layout Title
 		$wp_customize->add_setting(
 		    'upper_unibar_layout_title',
@@ -54,16 +54,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_layout_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_layout_title',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'upper_unibar_layout',
 				'settings' => 'upper_unibar_layout_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-Bar Width % or px
 		$wp_customize->add_setting(
 		    'upper_unibar_width_option',
@@ -83,7 +83,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-        
+
         //Upper Uni-Bar Width Fixed
 		$wp_customize->add_setting(
 		    'upper_unibar_width_fixed',
@@ -102,7 +102,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-        
+
         //Upper Uni-Bar Width Fluid
 		$wp_customize->add_setting(
 		    'upper_unibar_width_fluid',
@@ -121,7 +121,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Alignment
 		$wp_customize->add_setting(
 		    'upper_unibar_alignment',
@@ -142,7 +142,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-Bar Content Width % or px
 		$wp_customize->add_setting(
 		    'upper_unibar_content_width_option',
@@ -162,7 +162,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-        
+
         //Upper Uni-Bar Content Width Fixed
 		$wp_customize->add_setting(
 		    'upper_unibar_content_width_fixed',
@@ -181,7 +181,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-        
+
         //Upper Uni-Bar Content Width Fluid
 		$wp_customize->add_setting(
 		    'upper_unibar_content_width_fluid',
@@ -200,7 +200,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Content Alignment
 		$wp_customize->add_setting(
 		    'upper_unibar_content_alignment',
@@ -221,9 +221,9 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-        
+
         $wp_customize->add_section('upper_unibar_background', array('title' => 'Background','panel' => 'upper_unibar','priority' => 30,));
-        
+
         //Upper Uni-bar Background Title
 		$wp_customize->add_setting(
 		    'upper_unibar_background_title',
@@ -231,16 +231,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'upper_unibar_background',
 				'settings' => 'upper_unibar_background_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Background Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_background_visible'
@@ -254,7 +254,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_background_visible',
 		    )
 		);
-		
+
 		//Upper Uni-bar Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_background_color',
@@ -273,7 +273,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Background Image
 		$wp_customize->add_setting( 'upper_unibar_background_image' );
 		$wp_customize->add_control(
@@ -315,7 +315,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Background Image repeat
 		$wp_customize->add_setting(
 		    'upper_unibar_background_image_repeat',
@@ -338,7 +338,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Background Image Type
 		$wp_customize->add_setting(
 		    'upper_unibar_background_image_type',
@@ -359,9 +359,9 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-        
+
         $wp_customize->add_section('upper_unibar_borders', array('title' => 'Borders','panel' => 'upper_unibar','priority' => 30,));
-        
+
         //Upper Uni-bar Border Title
 		$wp_customize->add_setting(
 		    'upper_unibar_border_title',
@@ -369,16 +369,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'upper_unibar_borders',
 				'settings' => 'upper_unibar_border_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_border_color',
@@ -397,7 +397,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_border_style',
@@ -420,8 +420,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_border_top',
@@ -440,7 +440,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_border_bottom',
@@ -459,7 +459,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_border_left',
@@ -478,7 +478,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_border_right',
@@ -497,7 +497,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_border_radius',
@@ -516,9 +516,9 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-        
+
         $wp_customize->add_section('upper_unibar_padding', array('title' => 'Padding','panel' => 'upper_unibar','priority' => 30,));
-        
+
         //Upper Uni-bar Padding Title
 		$wp_customize->add_setting(
 		    'upper_unibar_padding_title',
@@ -526,16 +526,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_padding_title',
 			array(
 				'label'	=> __( 'Padding' ),
 				'section' => 'upper_unibar_padding',
 				'settings' => 'upper_unibar_padding_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Padding Top
 		$wp_customize->add_setting(
 		    'upper_unibar_padding_top',
@@ -554,7 +554,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Padding Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_padding_bottom',
@@ -573,7 +573,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Padding Left
 		$wp_customize->add_setting(
 		    'upper_unibar_padding_left',
@@ -592,7 +592,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Padding Right
 		$wp_customize->add_setting(
 		    'upper_unibar_padding_right',
@@ -611,9 +611,9 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-        
+
         $wp_customize->add_section('upper_unibar_margins', array('title' => 'Margins','panel' => 'upper_unibar','priority' => 30,));
-        
+
         //Upper Uni-bar Margins Title
 		$wp_customize->add_setting(
 		    'upper_unibar_margins_title',
@@ -621,16 +621,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_margins_title',
 			array(
 				'label'	=> __( 'Margins' ),
 				'section' => 'upper_unibar_margins',
 				'settings' => 'upper_unibar_margins_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Margin Top
 		$wp_customize->add_setting(
 		    'upper_unibar_margin_top',
@@ -649,7 +649,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Margin Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_margin_bottom',
@@ -668,11 +668,11 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-        
-        
+
+
         $wp_customize->add_section('upper_unibar_menu_styling', array('title' => 'Menu Styling','panel' => 'upper_unibar','priority' => 30,));
-        
-        
+
+
         //Upper Uni-bar Grand Menu Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_grand_menu_styling_title',
@@ -680,17 +680,17 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_grand_menu_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'upper_unibar_grand_menu_styling_title',
 			array(
 				'label'	=> __( 'Menu Styling' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_grand_menu_styling_title',
-			) 
+			)
 		));
-        
-        
+
+
         //Upper Uni-bar Menu Type
 		$wp_customize->add_setting(
 		    'upper_unibar_menu_type',
@@ -710,8 +710,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Vertical Menu Layout Title
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_layout',
@@ -719,17 +719,17 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_vertical_menu_layout', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_vertical_menu_layout',
 			array(
 				'label'	=> __( 'Vertical Layout' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_vertical_menu_layout',
-			) 
+			)
 		));
-		
-		
+
+
 		//Upper Uni-bar Vertical Menu Height
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_height',
@@ -748,7 +748,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Width
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_width',
@@ -767,7 +767,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 10,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Spacing
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_spacing',
@@ -786,7 +786,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Font Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_styling_title',
@@ -794,16 +794,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_vertical_menu_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_vertical_menu_styling_title',
 			array(
 				'label'	=> __( 'Font Styling' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_vertical_menu_styling_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Vertical Menu Link Color
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_link_color',
@@ -822,7 +822,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Link font
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_fonts',
@@ -861,7 +861,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Font Weight
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_font_weight',
@@ -882,7 +882,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Link Hover Color
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_link_hover_color',
@@ -901,7 +901,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Link Decoration
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_link_decoration',
@@ -925,7 +925,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Link Alignment
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_link_alignment',
@@ -946,7 +946,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Background Title
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_background_title',
@@ -954,16 +954,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_vertical_menu_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_vertical_menu_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_vertical_menu_background_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Vertical Menu Background Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_vertical_menu_background_visible'
@@ -977,7 +977,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_vertical_menu_background_visible',
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_background_color',
@@ -995,7 +995,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Background Image
 		$wp_customize->add_setting( 'upper_unibar_vertical_menu_background_image' );
 		$wp_customize->add_control(
@@ -1008,7 +1008,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Hover Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_hover_background_color',
@@ -1026,7 +1026,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Hover Background Image
 		$wp_customize->add_setting( 'upper_unibar_vertical_menu_hover_background_image' );
 		$wp_customize->add_control(
@@ -1039,7 +1039,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Background Image position
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_background_image_position',
@@ -1067,7 +1067,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Background Image repeat
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_background_image_repeat',
@@ -1090,7 +1090,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Borders Title
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_borders_title',
@@ -1098,16 +1098,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_vertical_menu_borders_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_vertical_menu_borders_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_vertical_menu_borders_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Vertical Menu Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_color',
@@ -1126,7 +1126,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Vertical Menu Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_style',
@@ -1149,8 +1149,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Vertical Menu Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_top',
@@ -1169,7 +1169,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_bottom',
@@ -1188,7 +1188,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_left',
@@ -1207,7 +1207,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_right',
@@ -1226,7 +1226,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Vertical Menu Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_vertical_menu_border_radius',
@@ -1253,16 +1253,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_horizontal_menu_layout', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_horizontal_menu_layout',
 			array(
 				'label'	=> __( 'Horizontal Layout' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_horizontal_menu_layout',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Horizontal Menu Height
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_height',
@@ -1281,7 +1281,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Width
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_width',
@@ -1300,7 +1300,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Spacing
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_spacing',
@@ -1319,7 +1319,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Font Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_styling_title',
@@ -1327,16 +1327,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_horizontal_menu_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_horizontal_menu_styling_title',
 			array(
 				'label'	=> __( 'Font Styling' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_horizontal_menu_styling_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Horizontal Menu Link Color
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_link_color',
@@ -1355,7 +1355,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Link font
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_fonts',
@@ -1394,7 +1394,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Font Weight
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_font_weight',
@@ -1415,7 +1415,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Link Hover Color
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_link_hover_color',
@@ -1434,7 +1434,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Link Decoration
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_link_decoration',
@@ -1458,7 +1458,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Background Title
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_background_title',
@@ -1466,16 +1466,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_horizontal_menu_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_horizontal_menu_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_horizontal_menu_background_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Horizontal Menu Background Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_horizontal_menu_background_visible'
@@ -1489,7 +1489,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_horizontal_menu_background_visible',
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_background_color',
@@ -1507,7 +1507,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Background Image
 		$wp_customize->add_setting( 'upper_unibar_horizontal_menu_background_image' );
 		$wp_customize->add_control(
@@ -1520,7 +1520,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Hover Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_hover_background_color',
@@ -1538,7 +1538,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Hover Background Image
 		$wp_customize->add_setting( 'upper_unibar_horizontal_menu_hover_background_image' );
 		$wp_customize->add_control(
@@ -1551,7 +1551,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Background Image position
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_background_image_position',
@@ -1579,7 +1579,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Background Image repeat
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_background_image_repeat',
@@ -1602,7 +1602,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Borders Title
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_borders_title',
@@ -1610,16 +1610,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_horizontal_menu_borders_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_horizontal_menu_borders_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'upper_unibar_menu_styling',
 				'settings' => 'upper_unibar_horizontal_menu_borders_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Horizontal Menu Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_color',
@@ -1638,7 +1638,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Horizontal Menu Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_style',
@@ -1661,8 +1661,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Horizontal Menu Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_top',
@@ -1681,7 +1681,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_bottom',
@@ -1700,7 +1700,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_left',
@@ -1719,7 +1719,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_right',
@@ -1738,7 +1738,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Horizontal Menu Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_horizontal_menu_border_radius',
@@ -1757,10 +1757,10 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-        
-        
+
+
         $wp_customize->add_section('upper_unibar_widget_styling', array('title' => 'Widget Styling','panel' => 'upper_unibar','priority' => 30,));
-        
+
         //Upper Uni-bar Grand Widget Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_grand_widget_styling_title',
@@ -1768,16 +1768,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_grand_widget_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'upper_unibar_grand_widget_styling_title',
 			array(
 				'label'	=> __( 'Widget Styling' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_grand_widget_styling_title',
-			) 
+			)
 		));
-        
+
         //Upper Uni-bar Widget Header Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_widgets_header_visibility',
@@ -1794,7 +1794,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_widgets_header_visibility',
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_title',
@@ -1802,16 +1802,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title_title',
 			array(
 				'label'	=> __( 'Title Font Styling' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Title Text Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_text_color',
@@ -1830,7 +1830,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title text font
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_fonts',
@@ -1869,7 +1869,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Font Size
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_font_size',
@@ -1888,7 +1888,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Font Weight
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_font_weight',
@@ -1909,7 +1909,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Font Alignment
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_font_alignment',
@@ -1938,16 +1938,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title_background_title',
 			array(
 				'label'	=> __( 'Title Background' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title_background_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Title Background Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_widgets_title_background_visible',
@@ -1964,7 +1964,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_widgets_title_background_visible',
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_background_color',
@@ -1983,7 +1983,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Background Image
 		$wp_customize->add_setting( 'upper_unibar_widgets_title_background_image' );
 		$wp_customize->add_control(
@@ -2025,7 +2025,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Background Image repeat
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_background_image_repeat',
@@ -2048,7 +2048,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Background Image Type
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_background_image_type',
@@ -2069,7 +2069,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Border Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_title',
@@ -2077,16 +2077,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title_border_title',
 			array(
 				'label'	=> __( 'Title Borders' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title_border_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Title Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_color',
@@ -2105,7 +2105,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Title Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_style',
@@ -2128,8 +2128,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Widget Title Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_top',
@@ -2148,7 +2148,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_bottom',
@@ -2167,7 +2167,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_left',
@@ -2186,7 +2186,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_right',
@@ -2205,7 +2205,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_border_radius',
@@ -2224,7 +2224,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Padding Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_padding_title',
@@ -2232,16 +2232,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title_padding_title',
 			array(
 				'label'	=> __( 'Title Padding' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title_padding_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Title Padding Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_padding_top',
@@ -2260,7 +2260,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Padding Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_padding_bottom',
@@ -2279,7 +2279,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Padding Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_padding_left',
@@ -2298,7 +2298,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Padding Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_padding_right',
@@ -2317,7 +2317,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Title Margins Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_margins_title',
@@ -2325,16 +2325,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title_margins_title',
 			array(
 				'label'	=> __( 'Title Margins' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title_margins_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Title Margin Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_margin_top',
@@ -2353,8 +2353,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Upper Uni-bar Widget Title Margin Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title_margin_bottom',
@@ -2373,7 +2373,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
         //Upper Uni-bar Widget Content Styling Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_title',
@@ -2381,16 +2381,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_title',
 			array(
 				'label'	=> __( 'Content Font Styling' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Text Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_text_color',
@@ -2409,7 +2409,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget text font
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_fonts',
@@ -2448,7 +2448,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Font Size
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_font_size',
@@ -2467,7 +2467,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Font Weight
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_font_weight',
@@ -2488,7 +2488,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Font Alignment
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_font_alignment',
@@ -2509,7 +2509,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Link Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_link_color',
@@ -2528,7 +2528,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Link Decoration
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_link_decoration',
@@ -2552,7 +2552,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Link Weight
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_link_weight',
@@ -2573,7 +2573,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Background Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_background_title',
@@ -2581,16 +2581,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_background_title',
 			array(
 				'label'	=> __( 'Content Background' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_background_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Background Visibility
 		$wp_customize->add_setting(
 			'upper_unibar_widgets_background_visible',
@@ -2607,7 +2607,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'settings' => 'upper_unibar_widgets_background_visible',
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Background Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_background_color',
@@ -2626,7 +2626,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Background Image
 		$wp_customize->add_setting( 'upper_unibar_widgets_background_image' );
 		$wp_customize->add_control(
@@ -2668,7 +2668,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Background Image repeat
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_background_image_repeat',
@@ -2691,7 +2691,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Background Image Type
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_background_image_type',
@@ -2712,7 +2712,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Border Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_title',
@@ -2720,16 +2720,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_border_title',
 			array(
 				'label'	=> __( 'Widget Content Borders' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_border_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_color',
@@ -2748,7 +2748,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Uni-bar Widget Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_style',
@@ -2771,8 +2771,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Uni-bar Widget Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_top',
@@ -2791,7 +2791,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_bottom',
@@ -2810,7 +2810,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_left',
@@ -2829,7 +2829,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_right',
@@ -2848,7 +2848,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_border_radius',
@@ -2867,7 +2867,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Padding Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_padding_title',
@@ -2875,16 +2875,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_padding_title',
 			array(
 				'label'	=> __( 'Padding' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_padding_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Padding Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_padding_top',
@@ -2903,7 +2903,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Padding Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_padding_bottom',
@@ -2922,7 +2922,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Padding Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_padding_left',
@@ -2941,7 +2941,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Padding Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_padding_right',
@@ -2960,7 +2960,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Uni-bar Widget Margins Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_margins_title',
@@ -2968,16 +2968,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_margins_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_margins_title',
 			array(
 				'label'	=> __( 'Margins' ),
 				'section' => 'upper_unibar_widget_styling',
 				'settings' => 'upper_unibar_widgets_margins_title',
-			) 
+			)
 		));
-		
+
 		//Upper Uni-bar Widget Margin Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_margin_top',
@@ -2996,8 +2996,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Upper Uni-bar Widget Margin Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_margin_bottom',
@@ -3016,7 +3016,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-        
+
 
 		$wp_customize->add_section('upper_unibar_list_styling', array('title' => 'List Styling','panel' => 'upper_unibar','priority' => 30,));
 
@@ -3027,14 +3027,14 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_content_lists_icon_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_content_lists_icon_title',
 			array(
 				'label'	=> __( 'Icon' ),
 				'section' => 'upper_unibar_list_styling',
 				'settings' => 'upper_unibar_widgets_content_lists_icon_title',
-			) 
+			)
 		));
 
 		//Upper Unibar Widget List Icon Type
@@ -3058,7 +3058,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
+
 		//Upper Unibar Widget List Padding Title
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_padding_title',
@@ -3066,16 +3066,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_content_lists_padding_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_content_lists_padding_title',
 			array(
 				'label'	=> __( 'Spacing' ),
 				'section' => 'upper_unibar_list_styling',
 				'settings' => 'upper_unibar_widgets_content_lists_padding_title',
-			) 
+			)
 		));
-		
+
 		//Upper Unibar Widget List Padding Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_padding_top',
@@ -3094,7 +3094,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Padding Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_padding_bottom',
@@ -3113,7 +3113,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Padding Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_padding_left',
@@ -3132,7 +3132,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Padding Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_padding_right',
@@ -3159,16 +3159,16 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'upper_unibar_widgets_content_lists_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'upper_unibar_widgets_content_lists_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'upper_unibar_list_styling',
 				'settings' => 'upper_unibar_widgets_content_lists_border_title',
-			) 
+			)
 		));
-		
+
 		//Upper Unibar Widget List Border Color
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_color',
@@ -3187,7 +3187,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        )
 		    )
 		);
-		
+
 		//Upper Unibar Widget List Border Style
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_style',
@@ -3210,8 +3210,8 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Upper Unibar Widget List Border Top
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_top',
@@ -3230,7 +3230,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Border Bottom
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_bottom',
@@ -3249,7 +3249,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Border Left
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_left',
@@ -3268,7 +3268,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Border Right
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_right',
@@ -3287,7 +3287,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Upper Unibar Widget List Border Radius
 		$wp_customize->add_setting(
 		    'upper_unibar_widgets_content_lists_border_radius',

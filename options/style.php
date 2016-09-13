@@ -463,6 +463,73 @@ div.comments_list li {
     padding:10px;
 }
 
+#primary_header {
+    <?php if(get_theme_mod('primary_header_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('primary_header_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('primary_header_width_fluid','100') ?>%;
+    <?php } ?>
+     min-height:30px;
+	 <?php
+     $h1position = get_theme_mod('primary_header_alignment','center');
+     if($h1position == 'center') { ?>
+        margin-left:auto;
+        margin-right:auto;
+    <?php } else if($h1position == 'left') { ?>
+        margin-left:initial;
+        margin-right:auto;
+    <?php } else { ?>
+        margin-left:auto;
+        margin-right:initial;
+    <?php } ?>
+    box-sizing:border-box;
+    <!-- <?php if(!get_theme_mod('primary_header_background_visible')) { ?>background-color:<?php echo get_theme_mod('primary_header_background_color','#000') ?>;<?php } else { ?>background-color:transparent;<?php } ?>
+    <?php if(!get_theme_mod('primary_header_background_visible')) { ?>background-image:url('<?php echo get_theme_mod('primary_header_background_image','none') ?>');<?php } ?>
+    background-position:<?php echo get_theme_mod('primary_header_background_image_position','initial') ?>;
+    background-repeat:<?php echo get_theme_mod('primary_header_background_image_repeat','no-repeat') ?>;
+    background-size:<?php echo get_theme_mod('primary_header_background_image_type','intial') ?>;
+    border-top:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#CCC') ?>;
+    border-bottom:<?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#CCC') ?>;
+    border-left:<?php echo get_theme_mod('primary_header_border_left','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#CCC') ?>;
+    border-right:<?php echo get_theme_mod('primary_header_border_right','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#CCC') ?>;
+    border-radius:<?php echo get_theme_mod('primary_header_border_radius','0') ?>px;
+    padding-top:<?php echo get_theme_mod('primary_header_padding_top','0') ?>px;
+    padding-bottom:<?php echo get_theme_mod('primary_header_padding_bottom','0') ?>px;
+    padding-left:<?php echo get_theme_mod('primary_header_padding_left','0') ?>px;
+    padding-right:<?php echo get_theme_mod('primary_header_padding_right','0') ?>px;
+    margin-top:<?php echo get_theme_mod('primary_header_margin_top','0') ?>px;
+    margin-bottom:<?php echo get_theme_mod('primary_header_margin_bottom','0') ?>px; -->
+    overflow:auto
+}
+
+#primary_header_content {
+    <?php if(get_theme_mod('primary_header_content_width_option','fluid') == 'fixed') { ?>
+        width:<?php echo (get_theme_mod('primary_header_content_width_fixed','1000')) ?>px;
+    <? }  else { ?>
+        width:<?php echo get_theme_mod('primary_header_content_width_fluid','100') ?>%;
+    <?php } ?>
+    <?php if(get_theme_mod('primary_header_width_option','fluid') == 'fixed') { ?>
+        max-width:<?php echo (get_theme_mod('primary_header_width_fixed','1100')) ?>px;
+    <? }  else { ?>
+        max-width:<?php echo get_theme_mod('primary_header_width_fluid','100') ?>%;
+    <?php } ?>
+     height:auto;
+	 <?php
+     $h1position = get_theme_mod('primary_header_content_alignment','center');
+     if($h1position == 'center') { ?>
+        margin-left:auto;
+        margin-right:auto;
+    <?php } else if($h1position == 'left') { ?>
+        margin-left:initial;
+        margin-right:auto;
+    <?php } else { ?>
+        margin-right:initial;
+        margin-left:auto;
+    <?php } ?>
+    padding:0px;
+    overflow:auto
+}
+
 #upper_unibar {
     <?php if(get_theme_mod('upper_unibar_width_option','fluid') == 'fixed') { ?>
         width:<?php echo (get_theme_mod('upper_unibar_width_fixed','1100')) ?>px;
