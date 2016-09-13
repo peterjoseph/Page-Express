@@ -544,7 +544,9 @@ div.comments_list li {
         margin-right:auto;
     <?php } else if($luposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php } else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     box-sizing:border-box;
@@ -586,7 +588,9 @@ div.comments_list li {
         margin-right:auto;
     <?php } else if($luposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php } else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     padding:0px;
@@ -1373,7 +1377,9 @@ if($pcolumn == 1) { ?>
         margin-right:auto;
     <?php } else if($luposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php } else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     box-sizing:border-box;
@@ -1415,7 +1421,9 @@ if($pcolumn == 1) { ?>
         margin-right:auto;
     <?php } else if($luposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php } else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     padding:0px;
@@ -1634,8 +1642,10 @@ if($pcolumn == 1) { ?>
     <?php }
       else if($lmposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php }
      else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     box-sizing:border-box;
@@ -1672,7 +1682,9 @@ if($pcolumn == 1) { ?>
     <?php }
       else if($lmcposition == 'left') { ?>
         margin-left:initial;
+        margin-right:auto;
     <?php } else { ?>
+        margin-left:auto;
         margin-right:initial;
     <?php } ?>
     padding-left:0px;
