@@ -1,7 +1,66 @@
 /** Wordpress Customizer CSS **/
-#region_titles {font-weight:bold; color:#333; font-size:18px; text-align:center; line-height:40px; width:240px; height:40px; padding:10px; margin-top:15px; margin-bottom:5px; border:1px solid #CCC;}
-#grand_region_titles {font-weight:bold; color:#FFF; background-color:#333; font-size:18px; text-align:center; line-height:40px; width:240px; height:40px; padding:10px; border:1px solid #000;}
-#linespace {width:100%; border-bottom:1px solid #CCC; margin-top:15px; margin-bottom:15px; margin-left:auto; margin-right:auto;}
+#header_type {
+
+}
+
+#header_type input[type="radio"] {
+    display: none;
+}
+
+#header_type input[type="radio"] + label {
+  display:inline-block;
+  margin:-2px;
+  padding: 4px 12px;
+  background-color: #e7e7e7;
+  border-color: #ddd;
+}
+
+#header_type span {
+  text-decoration:underline;
+  color: red;
+}
+
+#header_type input[type="radio"]:checked + label {
+  background-image: none;
+  background-color:#d0d0d0;
+}
+
+#region_titles {
+  font-weight:bold;
+  color:#333;
+  font-size:18px;
+  text-align:center;
+  line-height:40px;
+  width:240px;
+  height:40px;
+  padding:10px;
+  margin-top:15px;
+  margin-bottom:5px;
+  border:1px solid #CCC;
+}
+
+#grand_region_titles {
+  font-weight:bold;
+  color:#FFF;
+  background-color:#333;
+  font-size:18px;
+  text-align:center;
+  line-height:40px;
+  width:240px;
+  height:40px;
+  padding:10px;
+  border:1px solid #000;
+}
+
+#linespace {
+  width:100%;
+  border-bottom:1px solid #CCC;
+  margin-top:15px;
+  margin-bottom:15px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 input[type=range] {width:100%;}
 .customize-control select {min-width:100%;}
 
@@ -100,5 +159,12 @@ li#accordion-panel-globaloptions > h3.accordion-section-title:before {
 }
 
 /** Post/Page Meta Box CSS **/
-#meta-box-title {font-weight:bold; border-bottom:1px solid #ccc;}
-#meta-box-content {padding-top:10px; padding-bottom:10px;}
+#meta-box-title {
+  font-weight:bold;
+  border-bottom:1px solid #ccc;
+}
+
+#meta-box-content {
+  padding-top:10px;
+  padding-bottom:10px;
+}

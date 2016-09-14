@@ -27,6 +27,26 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		    )
 		);
 
+		$wp_customize->add_section('primary_header_type', array('title' => 'Header Type','panel' => 'header_one','priority' => 30,));
+
+		//Primary Header Type
+		$wp_customize->add_setting(
+				'primary_header_type_select',
+				array(
+						'default' => '',
+				)
+		);
+		$wp_customize->add_control( new WP_header_type(
+			$wp_customize,
+			'primary_header_type_select',
+			array(
+				'label'	=> __( 'Header Type' ),
+				'description'	=> __( 'Do something in here' ),
+				'section' => 'primary_header_type',
+				'settings' => 'primary_header_type_select',
+			)
+		));
+
 		$wp_customize->add_section('primary_header_layout', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
 
 		//Primary Header Width % or px
