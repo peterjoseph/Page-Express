@@ -14,20 +14,38 @@ if( class_exists( 'WP_Customize_Control' ) ):
 					<form action="">
 						    <input type="radio" name="a" value="a" id="a" checked />
 						    <label for="a">
-									<img value="b" src="">
-									<span>Option 1</span>
+									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/menu_only.png">
+									<span>Menu Only</span>
 								</label>
 
 						    <input type="radio" name="a" value="b" id="b" />
 						    <label for="b">
-									<img value="b" src="">
-									<span>Option 2</span>
+									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_only.png">
+									<span>Logo Only</span>
 								</label>
 
 						    <input type="radio" name="a" value="c" id="c" />
 						    <label for="c">
-									<img value="b" src="">
-									<span>Option 3</span>
+									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_menu.png">
+									<span>Logo and Menu</span>
+								</label>
+
+								<input type="radio" name="a" value="d" id="d" />
+						    <label for="d">
+									<img value="d" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_widget.png">
+									<span>Logo and Widget</span>
+								</label>
+
+								<input type="radio" name="a" value="e" id="e" />
+						    <label for="e">
+									<img value="e" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_menu_widget.png">
+									<span>Logo, Menu and Widget</span>
+								</label>
+
+								<input type="radio" name="a" value="f" id="f" />
+						    <label for="f">
+									<img value="f" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/menu_widget.png">
+									<span>Menu and Widget</span>
 								</label>
 					</form>
 				</div>

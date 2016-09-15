@@ -41,7 +41,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			'primary_header_type_select',
 			array(
 				'label'	=> __( 'Header Type' ),
-				'description'	=> __( 'Do something in here' ),
+				'description'	=> __( 'Select a header style from the options below' ),
 				'section' => 'primary_header_type',
 				'settings' => 'primary_header_type_select',
 			)
