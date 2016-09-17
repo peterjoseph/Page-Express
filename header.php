@@ -15,7 +15,7 @@ if ( $paged >= 2 || $page >= 2 )
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<style><?php include (get_template_directory().'/options/style.php'); echo get_theme_mod('sitewide_css') ?></style>
+<style><?php include (get_template_directory().'/options/style.php'); include (get_template_directory().'/options/responsive.php'); echo get_theme_mod('sitewide_css') ?></style>
 <?php if(get_theme_mod('c_javascript')) { ?>
   <script type="text/javascript"><?php echo get_theme_mod('c_javascript') ?></script>
 <?php } ?>
@@ -42,23 +42,42 @@ if ( $paged >= 2 || $page >= 2 )
 <?php include (get_template_directory().'/options/visibility.php'); ?>
 
 <div id="header">
-    <?php global $header1; if($header1 == TRUE) { ?>
-        <div id="primary_header">
-					<div id="primary_header_content">
-						<?php echo get_theme_mod('primary_header_type_select','menu-only') ?>
-	        </div>
-        </div>
-    <?php } ?>
+	<div class="mobile">
 
-    <?php global $header2; if($header2 == TRUE) { ?>
-        <div id="h2_wrapper">
-        </div>
-    <?php } ?>
+	</div>
+	<div class="standard">
+		<?php global $header1; if($header1 == TRUE) { ?>
+			<div id="primary_header">
+						<div id="primary_header_content">
+							<?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Logo','Logo & Menu','Logo & Widget','Logo, Menu & Widget'), true )) { ?>
+								<div id="logo">
 
-    <?php global $header3; if($header3 == TRUE) { ?>
-        <div id="h3_wrapper">
-        </div>
-    <?php } ?>
+								</div>
+							<?php } ?>
+							<?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Menu','Logo & Menu','Logo, Menu & Widget','Menu & Widget'), true )) { ?>
+								<div id="menu">
+
+								</div>
+							<?php } ?>
+							<?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Logo & Widget','Logo, Menu & Widget','Menu & Widget'), true )) { ?>
+								<div id="widget">
+
+								</div>
+							<?php } ?>
+				</div>
+			</div>
+		<?php } ?>
+
+		<?php global $header2; if($header2 == TRUE) { ?>
+			<div id="h2_wrapper">
+			</div>
+		<?php } ?>
+
+		<?php global $header3; if($header3 == TRUE) { ?>
+			<div id="h3_wrapper">
+			</div>
+		<?php } ?>
+	</div>
 </div>
 
 <?php global $uunibar; if($uunibar == TRUE) { ?>
