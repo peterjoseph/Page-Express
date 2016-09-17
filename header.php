@@ -45,7 +45,7 @@ if ( $paged >= 2 || $page >= 2 )
     <?php global $header1; if($header1 == TRUE) { ?>
         <div id="primary_header">
 					<div id="primary_header_content">
-						Header
+						<?php echo get_theme_mod('primary_header_type_select','menu-only') ?>
 	        </div>
         </div>
     <?php } ?>

@@ -1,58 +1,42 @@
 <?php
 /** REGISTER CUSTOM CONTROLS **/
 if( class_exists( 'WP_Customize_Control' ) ):
-	//Header Type
+
+	//Header Type Control
 	class WP_header_type extends WP_Customize_Control {
-		public $type = 'headerType';
+			public $type = 'radio-header';
 
-		public function render_content() {
-		?>
-			<label>
+			public function enqueue() {
+				wp_enqueue_script( 'jquery-ui-button' );
+			}
+
+			public function render_content() {
+				if ( empty( $this->choices ) ) {
+					return;
+				}
+
+				$name = 'header-' . $this->id;
+				?>
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
-				<div id="header_type">
-					<form action="">
-						    <input type="radio" name="a" value="a" id="a" checked />
-						    <label for="a">
-									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/menu_only.png">
-									<span>Menu Only</span>
-								</label>
-
-						    <input type="radio" name="a" value="b" id="b" />
-						    <label for="b">
-									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_only.png">
-									<span>Logo Only</span>
-								</label>
-
-						    <input type="radio" name="a" value="c" id="c" />
-						    <label for="c">
-									<img value="b" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_menu.png">
-									<span>Logo and Menu</span>
-								</label>
-
-								<input type="radio" name="a" value="d" id="d" />
-						    <label for="d">
-									<img value="d" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_widget.png">
-									<span>Logo and Widget</span>
-								</label>
-
-								<input type="radio" name="a" value="e" id="e" />
-						    <label for="e">
-									<img value="e" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/logo_menu_widget.png">
-									<span>Logo, Menu and Widget</span>
-								</label>
-
-								<input type="radio" name="a" value="f" id="f" />
-						    <label for="f">
-									<img value="f" src="<?php echo get_bloginfo('template_directory') ?>/options/images/header_options/menu_widget.png">
-									<span>Menu and Widget</span>
-								</label>
-					</form>
+				<?php if ( ! empty( $this->description ) ) : ?>
+					<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+				<?php endif; ?>
+				<div id="option_<?php echo $this->id; ?>" class="image">
+					<div id="header_type">
+					<?php foreach ( $this->choices as $value => $label ) : ?>
+						<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" id="<?php echo $this->id . $value; ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?>>
+							<label for="<?php echo $this->id . $value; ?>">
+								<img src="<?php echo esc_html( $label ); ?>" alt="<?php echo esc_attr( $value ); ?>" title="<?php echo esc_attr( $value ); ?>">
+								<span><?php echo esc_attr( $value ); ?></span>
+							</label>
+						</input>
+					<?php endforeach; ?>
+					</div>
 				</div>
-			</label>
-		<?php
+				<script>jQuery(document).ready(function($) { $( '[id="option_<?php echo $this->id; ?>"]' ).buttonset(); });</script>
+				<?php
+			}
 		}
-	}
 
 	//Section Title Control
 	class WP_Customize_Title_Area extends WP_Customize_Control {

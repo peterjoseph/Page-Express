@@ -1,8 +1,4 @@
 /** Wordpress Customizer CSS **/
-#header_type {
-
-}
-
 #header_type input[type="radio"] {
     display: none;
 }
