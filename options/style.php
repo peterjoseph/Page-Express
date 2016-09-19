@@ -324,7 +324,7 @@ img {
         margin-right:initial;
     <?php } ?>
     box-sizing:border-box;
-    <!-- <?php if(!get_theme_mod('primary_header_background_visible')) { ?>background-color:<?php echo get_theme_mod('primary_header_background_color','#000') ?>;<?php } else { ?>background-color:transparent;<?php } ?>
+    <?php if(!get_theme_mod('primary_header_background_visible')) { ?>background-color:<?php echo get_theme_mod('primary_header_background_color','#000') ?>;<?php } else { ?>background-color:transparent;<?php } ?>
     <?php if(!get_theme_mod('primary_header_background_visible')) { ?>background-image:url('<?php echo get_theme_mod('primary_header_background_image','none') ?>');<?php } ?>
     background-position:<?php echo get_theme_mod('primary_header_background_image_position','initial') ?>;
     background-repeat:<?php echo get_theme_mod('primary_header_background_image_repeat','no-repeat') ?>;
@@ -339,8 +339,8 @@ img {
     padding-left:<?php echo get_theme_mod('primary_header_padding_left','0') ?>px;
     padding-right:<?php echo get_theme_mod('primary_header_padding_right','0') ?>px;
     margin-top:<?php echo get_theme_mod('primary_header_margin_top','0') ?>px;
-    margin-bottom:<?php echo get_theme_mod('primary_header_margin_bottom','0') ?>px; -->
-    overflow:auto
+    margin-bottom:<?php echo get_theme_mod('primary_header_margin_bottom','0') ?>px;
+    overflow:auto;
 }
 
 #primary_header_content {
