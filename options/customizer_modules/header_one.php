@@ -598,4 +598,106 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				'step'  => 1,
 			),
 		) );
+
+    /** PRIMARY HEADER LOGO Options **/
+    $wp_customize->add_section('primary_header_logo', array('title' => 'Logo Styling','panel' => 'header_one','priority' => 30,));
+
+    //Primary Header Logo Title
+    $wp_customize->add_setting(
+        'primary_header_logo_title',
+        array(
+            'default' => '',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Title_Area(
+        $wp_customize,
+        'primary_header_logo_title',
+        array(
+            'label'	=> __( 'Logo' ),
+            'section' => 'primary_header_logo',
+            'settings' => 'primary_header_logo_title',
+        )
+    ));
+
+    //Primary Header Logo Image
+    $wp_customize->add_setting( 'primary_header_logo_image' );
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'primary_header_logo_image',
+            array(
+                'label' => 'Upload Logo',
+                'section' => 'primary_header_logo',
+                'settings' => 'primary_header_logo_image'
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'primary_header_sitetitle',
+        array(
+            'default' => 'My Site',
+        )
+    );
+    $wp_customize->add_control(
+        'primary_header_sitetitle',
+        array(
+            'label' => 'Site Title',
+            'section' => 'primary_header_logo',
+            'type' => 'text',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'primary_header_tagline',
+        array(
+            'default' => 'just another Wordpress site',
+        )
+    );
+    $wp_customize->add_control(
+        'primary_header_tagline',
+        array(
+            'label' => 'Tagline',
+            'section' => 'primary_header_logo',
+            'type' => 'text',
+        )
+    );
+
+    //Primary Header Logo Alignment Title
+    $wp_customize->add_setting(
+        'primary_header_logo_alignment_title',
+        array(
+            'default' => '',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Title_Area(
+        $wp_customize,
+        'primary_header_logo_alignment_title',
+        array(
+            'label'	=> __( 'Logo Alignment' ),
+            'section' => 'primary_header_logo',
+            'settings' => 'primary_header_logo_alignment_title',
+        )
+    ));
+
+    //Primary Header Logo Alignment
+    $wp_customize->add_setting(
+        'primary_header_logo_alignment',
+        array(
+            'default' => 'center',
+        )
+    );
+    $wp_customize->add_control(
+        'primary_header_logo_alignment',
+        array(
+            'type' => 'select',
+            'label' => 'Logo Alignment',
+            'section' => 'primary_header_logo',
+            'choices' => array(
+                'left' => 'Left',
+                'center' => 'Center',
+                'right' => 'Right',
+            ),
+        )
+    );
 ?>
