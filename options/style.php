@@ -340,7 +340,7 @@ img {
     padding-right:<?php echo get_theme_mod('primary_header_padding_right','0') ?>px;
     margin-top:<?php echo get_theme_mod('primary_header_margin_top','0') ?>px;
     margin-bottom:<?php echo get_theme_mod('primary_header_margin_bottom','0') ?>px;
-    overflow:auto;
+    overflow:hidden;
 }
 
 #primary_header_content {
@@ -368,24 +368,33 @@ img {
         margin-left:auto;
     <?php } ?>
     padding:0px;
-    overflow:auto;
+    overflow:hidden;
     display: flex;
 }
 
 #primary_header_content #logo {
     text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
-    flex: 1 0 200px;
+    flex: 1;
 }
 
-#primary_header_content #logo h3 {
+#primary_header_content #logo a {
+    text-decoration:none;
+}
+
+#primary_header_content #logo .wrapper {
+    display:inline-block;
+}
+
+#primary_header_content #logo .title {
     color:<?php echo get_theme_mod('primary_header_logo_title_text_color','#FFF') ?>;
     font-family:<?php echo get_theme_mod('primary_header_logo_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') ?>px;
     line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_title_font_weight','bold') ?>;
+
 }
 
-#primary_header_content #logo h4 {
+#primary_header_content #logo .tagline {
     color:<?php echo get_theme_mod('primary_header_logo_tagline_text_color','#CCC') ?>;
     font-family:<?php echo get_theme_mod('primary_header_logo_tagline_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') ?>px;
@@ -393,12 +402,18 @@ img {
     font-weight:<?php echo get_theme_mod('primary_header_logo_tagline_font_weight','normal') ?>;
 }
 
+<?php if(get_theme_mod('primary_header_logo_tagline_position')) { ?>
+    #primary_header_content #logo .title, #primary_header_content #logo .tagline {
+        display:inline;
+    }
+<? } ?>
+
 #primary_header_content #menu {
-    flex: 1 0 200px;
+    flex: 1;
 }
 
 #primary_header_content #widget {
-    flex: 1 0 200px;
+    flex: 1;
 }
 
 #upper_unibar {

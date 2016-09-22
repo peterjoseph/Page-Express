@@ -930,4 +930,18 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			),
 		)
 	);
+
+	//Primary Header Widget Tagline Position
+	$wp_customize->add_setting(
+		'primary_header_logo_tagline_position'
+	);
+	$wp_customize->add_control(
+		'primary_header_logo_tagline_position',
+		array(
+			'type' => 'checkbox',
+			'label' => 'Display tagline on same line as title',
+			'section' => 'primary_header_logo',
+			'settings' => 'primary_header_logo_tagline_position',
+		)
+	);
 ?>

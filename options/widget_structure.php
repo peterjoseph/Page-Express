@@ -5,6 +5,33 @@ add_action( 'widgets_init', 'widget_areas' );
 
 /** WIDGET AREA FUNCTIONS **/
 function widget_areas() {
+    register_sidebar( array(
+        'name'          => 'Primary Header',
+        'id'            => 'primary_header',
+        'before_widget' => '<div class="primary_header_widget_content">',
+        'after_widget'  => '</div>',
+        'before_title' => '<div class="primary_header_widget_header">',
+        'after_title' => '</div>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => 'Secondary Header',
+        'id'            => 'secondary_header',
+        'before_widget' => '<div class="secondary_header_widget_content">',
+        'after_widget'  => '</div>',
+        'before_title' => '<div class="secondary_header_widget_content">',
+        'after_title' => '</div>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => 'Tertiary Header',
+        'id'            => 'tertiary_header',
+        'before_widget' => '<div class="tertiary_header_widget_content">',
+        'after_widget'  => '</div>',
+        'before_title' => '<div class="tertiary_header_widget_content">',
+        'after_title' => '</div>',
+    ) );
+
 	register_sidebar( array(
 		'name'          => 'Upper Uni-Bar',
 		'id'            => 'uub',
