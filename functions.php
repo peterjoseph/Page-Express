@@ -1,7 +1,7 @@
 <?php
 	/** IMPORT OPTIONS **/
 	require_once ( get_template_directory() . '/options/customize.php' );
-	require_once ( get_template_directory() . '/options/widget_structure.php' );
+	require_once ( get_template_directory() . '/options/widget_menu_structure.php' );
 
     /** FEATURES IMAGE SUPPORT **/
     add_theme_support('post-thumbnails', array('post'));

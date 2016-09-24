@@ -1,4 +1,14 @@
-<?php	
+<?php
+
+/** REGISTER GLOBAL MENUS **/
+add_action( 'init', 'menu_areas' );
+function menu_areas()
+{
+    register_nav_menus(array(
+        'primary_menu' => 'Primary Header Menu',
+        'secondary_header' => 'Secondary Header Menu',
+    ));
+}
 	
 /** REGISTER WIDGET AREAS **/
 add_action( 'widgets_init', 'widget_areas' );

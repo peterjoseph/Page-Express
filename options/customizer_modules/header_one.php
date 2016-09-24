@@ -944,4 +944,520 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			'settings' => 'primary_header_logo_tagline_position',
 		)
 	);
+
+	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_one','priority' => 30,));
+
+	//Primary Header Menu Layout Title
+	$wp_customize->add_setting(
+		'primary_header_menu_layout',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize,
+		'primary_header_menu_layout',
+		array(
+			'label'	=> __( 'Layout' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_layout',
+		)
+	));
+
+	//Primary Header Menu Height
+	$wp_customize->add_setting(
+		'primary_header_menu_height',
+		array(
+			'default' => '25',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_height', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Height',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Menu Spacing
+	$wp_customize->add_setting(
+		'primary_header_menu_spacing',
+		array(
+			'default' => '5',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_spacing', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Button Spacing',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 25,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Font Styling Title
+	$wp_customize->add_setting(
+		'primary_header_menu_styling_title',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize,
+		'primary_header_menu_styling_title',
+		array(
+			'label'	=> __( 'Font Styling' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_styling_title',
+		)
+	));
+
+	//Primary Header Menu Link Color
+	$wp_customize->add_setting(
+		'primary_header_menu_link_color',
+		array(
+			'default' => '#333',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_link_color',
+			array(
+				'label' => 'Font Color',
+				'section' => 'primary_header_menu_styling',
+				'settings' => 'primary_header_menu_link_color',
+			)
+		)
+	);
+
+	//Primary Header Menu Link font
+	$wp_customize->add_setting(
+		'primary_header_menu_fonts',
+		array(
+			'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_fonts',
+		array(
+			'type' => 'select',
+			'label' => 'Font Style',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+				'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
+				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
+				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
+				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+				'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
+				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
+				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+				'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
+				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
+				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
+				'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
+				'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
+				'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
+				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
+				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
+				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+			),
+		)
+	);
+
+	//Primary Header Menu Font Weight
+	$wp_customize->add_setting(
+		'primary_header_menu_font_weight',
+		array(
+			'default' => 'normal',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_font_weight',
+		array(
+			'type' => 'select',
+			'label' => 'Font Weight',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'normal' => 'Normal',
+				'bold' => 'Bold',
+				'light' => 'Light',
+			),
+		)
+	);
+
+	//Primary Header Menu Link Hover Color
+	$wp_customize->add_setting(
+		'primary_header_menu_link_hover_color',
+		array(
+			'default' => '#317dbf',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_link_hover_color',
+			array(
+				'label' => 'Link Hover Color',
+				'section' => 'primary_header_menu_styling',
+				'settings' => 'primary_header_menu_link_hover_color',
+			)
+		)
+	);
+
+	//Primary Header Menu Link Decoration
+	$wp_customize->add_setting(
+		'primary_header_menu_link_decoration',
+		array(
+			'default' => 'none',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_link_decoration',
+		array(
+			'type' => 'select',
+			'label' => 'Link Decoration',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'none' => 'none',
+				'underline' => 'underline',
+				'overline' => 'overline',
+				'line-through' => 'line-through',
+				'initial' => 'initial',
+				'inherit' => 'inherit',
+			),
+		)
+	);
+
+	//Primary Header Menu Link Alignment
+	$wp_customize->add_setting(
+		'primary_header_menu_link_alignment',
+		array(
+			'default' => 'center',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_link_alignment',
+		array(
+			'type' => 'select',
+			'label' => 'Text Alignment',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'center' => 'Center',
+				'left' => 'Left',
+				'right' => 'Right',
+			),
+		)
+	);
+
+	//Primary Header Background Title
+	$wp_customize->add_setting(
+		'primary_header_menu_background_title',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize,
+		'primary_header_menu_background_title',
+		array(
+			'label'	=> __( 'Background' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_background_title',
+		)
+	));
+
+	//Primary Header Menu Background Visibility
+	$wp_customize->add_setting(
+		'primary_header_menu_background_visible'
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_background_visible',
+		array(
+			'type' => 'checkbox',
+			'label' => 'Disable Background Visibility',
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_background_visible',
+		)
+	);
+
+	//Primary Header Menu Background Color
+	$wp_customize->add_setting(
+		'primary_header_menu_background_color',
+		array(
+			'default' => '#9E9E9E',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_background_color',
+			array(
+				'label' => 'Link Background Color',
+				'section' => 'primary_header_menu_styling',
+			)
+		)
+	);
+
+	//Primary Header Menu Background Image
+	$wp_customize->add_setting( 'primary_header_menu_background_image' );
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'primary_header_menu_background_image',
+			array(
+				'label' => 'Link Background image',
+				'section' => 'primary_header_menu_styling',
+			)
+		)
+	);
+
+	//Primary Header Hover Background Color
+	$wp_customize->add_setting(
+		'primary_header_menu_hover_background_color',
+		array(
+			'default' => '#C7C7C7',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_hover_background_color',
+			array(
+				'label' => 'Link Hover Background Color',
+				'section' => 'primary_header_menu_styling',
+			)
+		)
+	);
+
+	//Primary Header Hover Background Image
+	$wp_customize->add_setting( 'primary_header_menu_hover_background_image' );
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'primary_header_menu_hover_background_image',
+			array(
+				'label' => 'Link Hover Background Image',
+				'section' => 'primary_header_menu_styling',
+			)
+		)
+	);
+
+	//Primary Header Menu Background Image position
+	$wp_customize->add_setting(
+		'primary_header_menu_background_image_position',
+		array(
+			'default' => 'initial',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_background_image_position',
+		array(
+			'type' => 'select',
+			'label' => 'Background Image Position',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'initial' => 'Initial',
+				'left top' => 'Top Left',
+				'left center' => 'Center Left',
+				'left bottom' => 'Bottom Left',
+				'right top' => 'Top Right',
+				'right center' => 'Center Right',
+				'right bottom' => 'Bottom Right',
+				'center top' => 'Top Center',
+				'center center' => 'Center Center',
+				'center bottom' => 'Bottom Center',
+			),
+		)
+	);
+
+	//Primary Header Menu Background Image repeat
+	$wp_customize->add_setting(
+		'primary_header_menu_background_image_repeat',
+		array(
+			'default' => 'no-repeat',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_background_image_repeat',
+		array(
+			'type' => 'select',
+			'label' => 'Background Image Repetition',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'no-repeat' => 'No Repeat',
+				'repeat' => 'Repeat',
+				'repeat-x' => 'Repeat X',
+				'repeat-y' => 'Repeat Y',
+				'initial' => 'Initial',
+			),
+		)
+	);
+
+	//Primary Header Menu Borders Title
+	$wp_customize->add_setting(
+		'primary_header_menu_borders_title',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize,
+		'primary_header_menu_borders_title',
+		array(
+			'label'	=> __( 'Borders' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_borders_title',
+		)
+	));
+
+	//Primary Header Menu Border Color
+	$wp_customize->add_setting(
+		'primary_header_menu_border_color',
+		array(
+			'default' => '#000',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_border_color',
+			array(
+				'label' => 'Border Color',
+				'section' => 'primary_header_menu_styling',
+				'settings' => 'primary_header_menu_border_color',
+			)
+		)
+	);
+
+	//Primary Header Menu Border Style
+	$wp_customize->add_setting(
+		'primary_header_menu_border_style',
+		array(
+			'default' => 'solid',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_border_style',
+		array(
+			'type' => 'select',
+			'label' => 'Border Style',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'dotted' => 'Dotted',
+				'dashed' => 'Dashed',
+				'solid' => 'Solid',
+				'double' => 'Double',
+				'groove' => 'Groove',
+			),
+		)
+	);
+
+
+	//Primary Header Menu Border Top
+	$wp_customize->add_setting(
+		'primary_header_menu_border_top',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_border_top', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Top Border',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Menu Border Bottom
+	$wp_customize->add_setting(
+		'primary_header_menu_border_bottom',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_border_bottom', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Bottom Border',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Menu Border Left
+	$wp_customize->add_setting(
+		'primary_header_menu_border_left',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_border_left', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Left Border',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Menu Border Right
+	$wp_customize->add_setting(
+		'primary_header_menu_border_right',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_border_right', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Right Border',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
+	//Primary Header Menu Border Radius
+	$wp_customize->add_setting(
+		'primary_header_menu_border_radius',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_border_radius', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Rounded Border',
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 50,
+			'step'  => 2,
+		),
+	) );
 ?>
