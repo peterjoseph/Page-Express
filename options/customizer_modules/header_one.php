@@ -49,9 +49,6 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
     					'Menu' 		=> get_template_directory_uri() . '/options/images/header_options/menu_only.png',
     					'Logo' 	=> get_template_directory_uri() . '/options/images/header_options/logo_only.png',
     					'Logo & Menu'	=> get_template_directory_uri() . '/options/images/header_options/logo_menu.png',
-    					'Logo & Widget' 		=> get_template_directory_uri() . '/options/images/header_options/logo_widget.png',
-              'Logo, Menu & Widget' 		=> get_template_directory_uri() . '/options/images/header_options/logo_menu_widget.png',
-              'Menu & Widget' 		=> get_template_directory_uri() . '/options/images/header_options/menu_widget.png',
     				)
     			)
     		)
@@ -718,7 +715,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	));
 
-	//Primary Header Widget Title Text Color
+	//Primary Header Logo Title Text Color
 	$wp_customize->add_setting(
 		'primary_header_logo_title_text_color',
 		array(
@@ -737,7 +734,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
-	//Primary Header Widget Title text font
+	//Primary Header Logo Title text font
 	$wp_customize->add_setting(
 		'primary_header_logo_title_fonts',
 		array(
@@ -776,7 +773,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
-	//Primary Header Widget Title Font Size
+	//Primary Header Logo Title Font Size
 	$wp_customize->add_setting(
 		'primary_header_logo_title_font_size',
 		array(
@@ -795,7 +792,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		),
 	) );
 
-	//Primary Header Widget Title Font Weight
+	//Primary Header Logo Title Font Weight
 	$wp_customize->add_setting(
 		'primary_header_logo_title_font_weight',
 		array(
@@ -833,7 +830,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	));
 
-	//Primary Header Widget Tagline Text Color
+	//Primary Header Logo Tagline Text Color
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_text_color',
 		array(
@@ -852,7 +849,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
-	//Primary Header Widget Tagline text font
+	//Primary Header Logo Tagline text font
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_fonts',
 		array(
@@ -891,7 +888,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
-	//Primary Header Widget Tagline Font Size
+	//Primary Header Logo Tagline Font Size
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_font_size',
 		array(
@@ -910,7 +907,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		),
 	) );
 
-	//Primary Header Widget Tagline Font Weight
+	//Primary Header Logo Tagline Font Weight
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_font_weight',
 		array(
@@ -931,7 +928,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
-	//Primary Header Widget Tagline Position
+	//Primary Header Logo Tagline Position
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_position'
 	);
@@ -946,6 +943,44 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 	);
 
 	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_one','priority' => 30,));
+
+	//Primary Header Menu Alignment Title
+	$wp_customize->add_setting(
+		'primary_header_menu_alignment_title',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize,
+		'primary_header_menu_alignment_title',
+		array(
+			'label'	=> __( 'Menu Alignment' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_alignment_title',
+		)
+	));
+
+	//Primary Header Menu Alignment
+	$wp_customize->add_setting(
+		'primary_header_menu_alignment',
+		array(
+			'default' => 'left',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_menu_alignment',
+		array(
+			'type' => 'select',
+			'label' => 'Menu Alignment',
+			'section' => 'primary_header_menu_styling',
+			'choices' => array(
+				'left' => 'Left',
+				'center' => 'Center',
+				'right' => 'Right',
+			),
+		)
+	);
 
 	//Primary Header Menu Layout Title
 	$wp_customize->add_setting(
@@ -1002,7 +1037,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		),
 	) );
 
-	//Primary Header Font Styling Title
+	//Primary Header Menu Font Styling Title
 	$wp_customize->add_setting(
 		'primary_header_menu_styling_title',
 		array(

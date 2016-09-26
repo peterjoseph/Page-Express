@@ -22,13 +22,8 @@
                 <?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Menu','Logo & Menu','Logo, Menu & Widget','Menu & Widget'), true )) { ?>
                     <div id="menu">
                         <?php if ( has_nav_menu( 'primary_menu' ) ) {
-                            wp_nav_menu( array( 'theme_location' => 'primary-menu') );
+                            wp_nav_menu( array( 'theme_location' => 'primary_menu') );
                         } ?>
-                    </div>
-                <?php } ?>
-                <?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Logo & Widget','Logo, Menu & Widget','Menu & Widget'), true )) { ?>
-                    <div id="widget">
-
                     </div>
                 <?php } ?>
             </div>

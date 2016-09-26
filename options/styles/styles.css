@@ -170,3 +170,9 @@ li#accordion-panel-globaloptions > h3.accordion-section-title:before {
   padding-top:10px;
   padding-bottom:10px;
 }
+
+/* Title Margins */
+
+li#accordion-section-primary_header_margins {
+    margin-bottom:20px;
+}

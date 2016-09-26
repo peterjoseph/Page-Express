@@ -374,6 +374,7 @@ img {
 
 #primary_header_content #logo {
     text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
+    line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
     flex: 1;
 }
 

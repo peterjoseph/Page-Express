@@ -27,4 +27,14 @@
         return $text;
     }
     add_filter( 'the_excerpt', 'clean_excerpt' );
+
+    /** ADD MENU DESCRIPTIONS **/
+    function menu_description( $item_output, $item, $depth, $args ) {
+        if ( !empty( $item->description ) ) {
+            $item_output = str_replace( $args->link_after . '</a>', '<br><span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+        }
+
+        return $item_output;
+    }
+    add_filter( 'walker_nav_menu_start_el', 'menu_description', 10, 4 );
  ?>
