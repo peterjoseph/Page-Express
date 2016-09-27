@@ -31,7 +31,7 @@
     /** ADD MENU DESCRIPTIONS **/
     function menu_description( $item_output, $item, $depth, $args ) {
         if ( !empty( $item->description ) ) {
-            $item_output = str_replace( $args->link_after . '</a>', '<br><span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+            $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
         }
 
         return $item_output;

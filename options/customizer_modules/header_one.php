@@ -965,7 +965,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 	$wp_customize->add_setting(
 		'primary_header_menu_alignment',
 		array(
-			'default' => 'left',
+			'default' => 'right',
 		)
 	);
 	$wp_customize->add_control(
@@ -1058,7 +1058,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 	$wp_customize->add_setting(
 		'primary_header_menu_link_color',
 		array(
-			'default' => '#333',
+			'default' => '#FFF',
 		)
 	);
 	$wp_customize->add_control(
@@ -1112,6 +1112,25 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
+//Primary Header Menu Font Size
+	$wp_customize->add_setting(
+		'primary_header_menu_font_size',
+		array(
+			'default' => '14',
+		)
+	);
+	$wp_customize->add_control( 'primary_header_menu_font_size', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Font Size',
+		'input_attrs' => array(
+			'min'   => 8,
+			'max'   => 50,
+			'step'  => 1,
+		),
+	) );
+
 	//Primary Header Menu Font Weight
 	$wp_customize->add_setting(
 		'primary_header_menu_font_weight',
@@ -1137,7 +1156,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 	$wp_customize->add_setting(
 		'primary_header_menu_link_hover_color',
 		array(
-			'default' => '#317dbf',
+			'default' => '#CCC',
 		)
 	);
 	$wp_customize->add_control(

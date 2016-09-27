@@ -13,6 +13,6 @@ jQuery(window).load(function(){
     changeHeight();
 });
 
-$(window).resize(function() {
+jQuery(window).resize(function() {
     changeHeight();
 });
