@@ -440,6 +440,7 @@ img {
     font-size:<?php echo (get_theme_mod('primary_header_menu_font_size','14') - 4) ?>px;
     text-decoration: none;
     font-weight:300;
+    text-transform: none;
 }
 
 #primary_header_content #menu .wrapper li a span.menu-item-description {
@@ -488,6 +489,7 @@ img {
     text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','center') ?>;
     display: inline-block;
     text-decoration:<?php echo get_theme_mod('primary_header_menu_link_decoration','none') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_menu_font_transformation','normal') ?>;
 }
 
 #primary_header_content #menu .current-menu-item a, #primary_header_content #menu .current_page_item a, #primary_header_content #menu a:hover {

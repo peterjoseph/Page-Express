@@ -1152,6 +1152,28 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
+    //Primary Header Menu Font Transformation
+    $wp_customize->add_setting(
+        'primary_header_menu_font_transformation',
+        array(
+            'default' => 'none',
+        )
+    );
+    $wp_customize->add_control(
+        'primary_header_menu_font_transformation',
+        array(
+            'type' => 'select',
+            'label' => 'Font Transformation',
+            'section' => 'primary_header_menu_styling',
+            'choices' => array(
+                'none' => 'None',
+                'uppercase' => 'Uppercase',
+                'lowercase' => 'Lowercase',
+                'capitalize' => 'Capitalize',
+            ),
+        )
+    );
+
 	//Primary Header Menu Link Hover Color
 	$wp_customize->add_setting(
 		'primary_header_menu_link_hover_color',
