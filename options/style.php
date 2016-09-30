@@ -314,7 +314,6 @@ img {
     <? }  else { ?>
         width:<?php echo get_theme_mod('primary_header_width_fluid','100') ?>%;
     <?php } ?>
-     min-height:30px;
 	 <?php
      $h1position = get_theme_mod('primary_header_alignment','center');
      if($h1position == 'center') { ?>
@@ -392,22 +391,22 @@ img {
 
 #primary_header_content #logo .wrapper {
     display:inline-block;
+    vertical-align:middle;
 }
 
 #primary_header_content #logo .title {
     color:<?php echo get_theme_mod('primary_header_logo_title_text_color','#FFF') ?>;
     font-family:<?php echo get_theme_mod('primary_header_logo_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') ?>px;
-    line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
+    line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_title_font_weight','bold') ?>;
-
 }
 
 #primary_header_content #logo .tagline {
     color:<?php echo get_theme_mod('primary_header_logo_tagline_text_color','#CCC') ?>;
     font-family:<?php echo get_theme_mod('primary_header_logo_tagline_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') ?>px;
-    line-height:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') + 2 ?>px;
+    line-height:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_tagline_font_weight','normal') ?>;
 }
 
@@ -419,20 +418,38 @@ img {
 
 #primary_header_content #menu {
     flex-grow: 1;
+    position: relative;
 }
 
 #primary_header_content #menu .wrapper {
-    display:table;
-    <?php if(get_theme_mod('primary_header_menu_alignment','right') == 'center') { ?>
-        margin-left:auto;
-        margin-right:auto;
-    <?php } else if(get_theme_mod('primary_header_menu_alignment','right') == 'left') { ?>
-        margin-left:initial;
-        margin-right:auto;
-    <?php } else { ?>
-        margin-right:initial;
-        margin-left:auto;
-    <?php } ?>
+    <?php if (get_theme_mod('primary_header_type_select','Menu') == 'Menu') { ?>
+        display:table;
+        <?php if(get_theme_mod('primary_header_menu_alignment','right') == 'center') { ?>
+            margin-left:auto;
+            margin-right:auto;
+        <?php } else if(get_theme_mod('primary_header_menu_alignment','right') == 'left') { ?>
+            margin-left:initial;
+            margin-right:auto;
+        <?php } else { ?>
+            margin-right:initial;
+            margin-left:auto;
+        <?php }
+    }
+    else { ?>
+        position:absolute;
+        display:table;
+        top:50%;
+        <?php if(get_theme_mod('primary_header_menu_alignment','right') == 'right') { ?>
+            right:0;
+            transform: translate(0,-50%);
+        <?php } else if(get_theme_mod('primary_header_menu_alignment','right') == 'center') { ?>
+            left: 50%;
+            transform: translate(-50%,-50%);
+        <?php } else { ?>
+            left:0;
+            transform: translate(0,-50%);
+        <?php }
+    } ?>
 }
 
 #primary_header_content #menu .wrapper .menu-item-description {

@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                <?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Menu','Logo & Menu','Logo, Menu & Widget','Menu & Widget'), true )) { ?>
+                <?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Menu','Logo & Menu'), true )) { ?>
                     <div id="menu">
                         <div class="wrapper">
                             <?php if ( has_nav_menu( 'primary_menu' ) ) {
