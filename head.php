@@ -23,7 +23,7 @@
                     <div id="menu">
                         <div class="wrapper">
                             <?php if ( has_nav_menu( 'primary_menu' ) ) {
-                                wp_nav_menu( array( 'theme_location' => 'primary_menu') );
+                                wp_nav_menu( array( 'theme_location' => 'primary_menu', 'depth' => '2') );
                             } ?>
                         </div>
                     </div>
