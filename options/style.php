@@ -521,6 +521,11 @@ img {
     position: absolute;
     display: none;
     top: 100%;
+    <?php if(get_theme_mod('primary_header_menu_alignment','right') == 'right') { ?>
+        right:0;
+    <?php } else { ?>
+        left:0;
+    <?php } ?>
     <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
         background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#C7C7C7') ?>;
     <?php } else { ?>
