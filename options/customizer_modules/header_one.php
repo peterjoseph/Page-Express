@@ -27,7 +27,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		    )
 		);
 
-		$wp_customize->add_section('primary_header_type', array('title' => 'Header Type','panel' => 'header_one','priority' => 30,));
+	$wp_customize->add_section('primary_header_type', array('title' => 'Header Type','panel' => 'header_one','priority' => 30,));
 
     //Primary Header Type
     $wp_customize->add_setting(

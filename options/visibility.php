@@ -25,17 +25,17 @@ if ((is_page() || is_single()) && ($visibility_control == true)) {
 /** UNIVERSAL PAGE OPTIONS **/
 else {
     //Header 1
-    $h1vis = get_theme_mod('primary_header_visibility','hidden');
+    $h1vis = get_theme_mod('primary_header_visibility','visible');
 	if($h1vis == 'visible' || ($h1vis == 'homepage' && is_front_page() && $wp_query->get( 'paged' ) < 2 ) || ($h1vis == 'page' && is_page()) || ($h1vis == 'posts' && is_single())) {
         $header1 = TRUE;
     }
     //Header 2
-    $h2vis = get_theme_mod('secondary_header_visibility','hidden');
+    $h2vis = get_theme_mod('secondary_header_visibility','visible');
 	if($h2vis == 'visible' || ($h2vis == 'homepage' && is_front_page() && $wp_query->get( 'paged' ) < 2 ) || ($h2vis == 'page' && is_page()) || ($h2vis == 'posts' && is_single())) {
         $header2 = TRUE;
     }
     //Header 3
-    $h3vis = get_theme_mod('tertiary_header_visibility','hidden');
+    $h3vis = get_theme_mod('tertiary_header_visibility','visible');
 	if($h3vis == 'visible' || ($h3vis == 'homepage' && is_front_page() && $wp_query->get( 'paged' ) < 2 ) || ($h3vis == 'page' && is_page()) || ($h3vis == 'posts' && is_single())) {
         $header3 = TRUE;
     }
