@@ -23,7 +23,7 @@ h1{
     font-family:<?php echo get_theme_mod('cw_single_typography_h1_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('cw_single_typography_h1_font_size','35') ?>px;
     color:<?php echo get_theme_mod('cw_single_typography_h1_font_color','#333') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_h1_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h1_font_transformation','none') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h1_font_size','30') + 8 ?>px;
     padding-top:<?php echo get_theme_mod('cw_single_typography_h1_font_padding','0')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_h1_font_padding','0')?>px;
@@ -38,7 +38,7 @@ h2{
     font-family:<?php echo get_theme_mod('cw_single_typography_h2_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('cw_single_typography_h2_font_size','32') ?>px;
     color:<?php echo get_theme_mod('cw_single_typography_h2_font_color','#333') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_h2_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h2_font_transformation','none') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h2_font_size','30') + 8 ?>px;
     padding-top:<?php echo get_theme_mod('cw_single_typography_h2_font_padding','0')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_h2_font_padding','0')?>px;
@@ -53,7 +53,7 @@ h3{
     font-family:<?php echo get_theme_mod('cw_single_typography_h3_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('cw_single_typography_h3_font_size','28') ?>px;
     color:<?php echo get_theme_mod('cw_single_typography_h3_font_color','#333') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_h3_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h3_font_transformation','none') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h3_font_size','30') + 8 ?>px;
     padding-top:<?php echo get_theme_mod('cw_single_typography_h3_font_padding','0')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_h3_font_padding','0')?>px;
@@ -97,7 +97,7 @@ h6{
     font-family:<?php echo get_theme_mod('cw_single_typography_h6_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('cw_single_typography_h6_font_size','14') ?>px;
     color:<?php echo get_theme_mod('cw_single_typography_h6_font_color','#333') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_h6_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_h6_font_transformation','none') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_h6_font_size','30') + 8 ?>px;
     padding-top:<?php echo get_theme_mod('cw_single_typography_h6_font_padding','0')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_h6_font_padding','0')?>px;
@@ -398,6 +398,7 @@ img {
     font-size:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') ?>px;
     line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_title_font_weight','bold') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_logo_title_font_transformation','none') ?>;
 }
 
 #primary_header_content #logo .tagline {
@@ -406,6 +407,7 @@ img {
     font-size:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') ?>px;
     line-height:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_tagline_font_weight','normal') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_logo_tagline_font_transformation','none') ?>;
 }
 
 <?php if(get_theme_mod('primary_header_logo_tagline_position')) { ?>
@@ -504,7 +506,7 @@ img {
     text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','center') ?>;
     display: inline-block;
     text-decoration:<?php echo get_theme_mod('primary_header_menu_link_decoration','none') ?>;
-    text-transform:<?php echo get_theme_mod('primary_header_menu_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_menu_font_transformation','none') ?>;
 }
 
 #primary_header_content #menu .current-menu-item a, #primary_header_content #menu .current_page_item a, #primary_header_content #menu a:hover {
@@ -1315,7 +1317,7 @@ if($pcolumn == 1) { ?>
     font-family:<?php echo get_theme_mod('cw_single_typography_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
     font-style:<?php echo get_theme_mod('cw_single_typography_title_font_style','normal') ?>;
     text-align:<?php echo get_theme_mod('cw_single_typography_title_font_alignment','center') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','none') ?>;
     padding-top:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
     padding-left:<?php echo get_theme_mod('homepage_spacing','5') ?>px;
@@ -1369,7 +1371,7 @@ if($pcolumn == 1) { ?>
     font-style:<?php echo get_theme_mod('cw_single_typography_title_font_style','normal') ?>;
     text-align:<?php echo get_theme_mod('cw_single_typography_title_font_alignment','center') ?>;
     font-weight:<?php echo get_theme_mod('cw_single_typography_title_font_weight','normal') ?>;
-    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','normal') ?>;
+    text-transform:<?php echo get_theme_mod('cw_single_typography_title_font_transformation','none') ?>;
     line-height:<?php echo get_theme_mod('cw_single_typography_title_font_size','30') + 8 ?>px;
     padding-top:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;
     padding-bottom:<?php echo get_theme_mod('cw_single_typography_title_font_padding','5')?>px;

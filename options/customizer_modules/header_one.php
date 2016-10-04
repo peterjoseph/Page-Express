@@ -813,6 +813,28 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		)
 	);
 
+	//Primary Header Logo Title Font Transformation
+	$wp_customize->add_setting(
+		'primary_header_logo_title_font_transformation',
+		array(
+			'default' => 'none',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_logo_title_font_transformation',
+		array(
+			'type' => 'select',
+			'label' => 'Font Transformation',
+			'section' => 'primary_header_logo',
+			'choices' => array(
+				'none' => 'None',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+			),
+		)
+	);
+
 	//Primary Header Logo Tagline Styling title
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_styling_title',
@@ -924,6 +946,28 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				'normal' => 'Normal',
 				'bold' => 'Bold',
 				'light' => 'Light',
+			),
+		)
+	);
+
+	//Primary Header Logo Tagline Font Transformation
+	$wp_customize->add_setting(
+		'primary_header_logo_tagline_font_transformation',
+		array(
+			'default' => 'none',
+		)
+	);
+	$wp_customize->add_control(
+		'primary_header_logo_tagline_font_transformation',
+		array(
+			'type' => 'select',
+			'label' => 'Font Transformation',
+			'section' => 'primary_header_logo',
+			'choices' => array(
+				'none' => 'None',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
 			),
 		)
 	);
