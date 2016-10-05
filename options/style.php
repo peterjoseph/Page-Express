@@ -419,6 +419,7 @@ img {
 #primary_header_content #menu {
     flex-grow: 1;
     position: relative;
+    z-index:5;
 }
 
 #primary_header_content #menu .wrapper {
@@ -664,6 +665,7 @@ img {
 #secondary_header_content #menu {
     flex-grow: 1;
     position: relative;
+    z-index:4;
 }
 
 #secondary_header_content #menu .wrapper {
@@ -909,6 +911,7 @@ img {
 #tertiary_header_content #menu {
     flex-grow: 1;
     position: relative;
+    z-index:3;
 }
 
 #tertiary_header_content #menu .wrapper {
