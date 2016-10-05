@@ -142,6 +142,12 @@ li#accordion-section-global_background > h3.accordion-section-title:before {
     vertical-align:middle;
 }
 
+li#accordion-panel-responsive_design > h3.accordion-section-title:before {
+    content: url(../images/icons/background.png);
+    padding-right:5px;
+    vertical-align:middle;
+}
+
 li#accordion-panel-nav_menus > h3.accordion-section-title:before {
     content: url(../images/icons/menus.png);
     padding-right:5px;

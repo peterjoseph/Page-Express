@@ -300,12 +300,16 @@ img {
 #header .mobile {
     width:100%;
     height:80px;
-    background-color:#000;
+    background-color:<?php echo get_theme_mod('responsive_design_header_background_color','#333') ?>;
     display:none;
 }
 
 #header .mobile .logo {
+    float:left;
+}
 
+#header .mobile .menu {
+    float:right;
 }
 
 #primary_header {

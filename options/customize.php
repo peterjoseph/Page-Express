@@ -25,6 +25,7 @@
         require_once ( get_template_directory() . '/options/customizer_modules/multibar.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/footer.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/global_background.php' );
+        require_once ( get_template_directory() . '/options/customizer_modules/responsive_design.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/global_options.php' );
 		
 		/** REGISTER CONTENT WRAPPER SECTIONS **/
