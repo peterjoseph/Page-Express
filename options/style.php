@@ -531,7 +531,7 @@ img {
     <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
         background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#C7C7C7') ?>;
     <?php } else { ?>
-        background-color: #FFF;
+        background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
     <?php } ?>
     z-index:5;
 }
@@ -776,7 +776,7 @@ img {
     <?php if(!get_theme_mod('secondary_header_menu_background_visible')) { ?>
         background-color:<?php echo get_theme_mod('secondary_header_menu_background_color','#C7C7C7') ?>;
     <?php } else { ?>
-        background-color: #FFF;
+        background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
     <?php } ?>
     z-index:5;
 }
@@ -1021,7 +1021,7 @@ img {
     <?php if(!get_theme_mod('tertiary_header_menu_background_visible')) { ?>
         background-color:<?php echo get_theme_mod('tertiary_header_menu_background_color','#C7C7C7') ?>;
     <?php } else { ?>
-        background-color: #FFF;
+        background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
     <?php } ?>
     z-index:5;
 }
