@@ -1,5 +1,20 @@
 <div class="mobile">
-
+    <div class="logo">
+        <?php if(get_theme_mod('responsive_design_header_logo_image')) { ?>
+            <a href="<?php echo home_url(); ?>/">
+                <img src="<?php echo get_theme_mod('responsive_design_header_logo_image'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            </a>
+        <? }  else { ?>
+            <h4><a href="<?php echo home_url(); ?>/"><?php bloginfo( 'name' ); ?></a></h4>
+        <?php } ?>
+    </div>
+    <div class="menu">
+        <?php if(get_theme_mod('responsive_design_header_menu_icon','light') == 'light') { ?>
+            <img src="<?php echo get_template_directory_uri (); ?>/images/menu/burger_light.png">
+        <? }  else { ?>
+            <img src="<?php echo get_template_directory_uri (); ?>/images/menu/burger_dark.png">
+        <?php } ?>
+    </div>
 </div>
 <div class="standard">
     <?php global $header1; if($header1 == TRUE) { ?>

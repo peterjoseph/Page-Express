@@ -1,7 +1,7 @@
 @media only screen and (max-width: 800px) {
     #header {
         <?php if(get_theme_mod('responsive_design_header_fixed')) { ?>
-            padding-bottom:80px;
+            padding-bottom:60px;
         <?php } ?>
     }
 

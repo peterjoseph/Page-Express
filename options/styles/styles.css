@@ -143,7 +143,7 @@ li#accordion-section-global_background > h3.accordion-section-title:before {
 }
 
 li#accordion-panel-responsive_design > h3.accordion-section-title:before {
-    content: url(../images/icons/background.png);
+    content: url(../images/icons/responsive.png);
     padding-right:5px;
     vertical-align:middle;
 }

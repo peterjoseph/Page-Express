@@ -299,7 +299,7 @@ img {
 
 #header .mobile {
     width:100%;
-    height:80px;
+    height:60px;
     background-color:<?php echo get_theme_mod('responsive_design_header_background_color','#333') ?>;
     display:none;
 }
@@ -308,8 +308,35 @@ img {
     float:left;
 }
 
+#header .mobile .logo img {
+    height:40px;
+    width:auto;
+    padding:10px;
+}
+
+#header .mobile .logo h4 {
+    padding: 12px;
+}
+
+#header .mobile .logo h4 a {
+    font-size:18px;
+    padding: 12px;
+    color:<?php echo get_theme_mod('responsive_design_header_logo_font_color','#FFF') ?>;
+    text-decoration: none;
+    text-transform:uppercase;
+}
+
 #header .mobile .menu {
     float:right;
+    width:24px;
+    height:24px;
+    margin-top:18px;
+    margin-right:18px;
+}
+
+#header .mobile .menu img {
+    width:24px;
+    height:24px;
 }
 
 #primary_header {
