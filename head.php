@@ -1,3 +1,4 @@
+<?php global $header1; global $header2; global $header3; if($header1 == TRUE || $header2 == TRUE || $header3 == TRUE) { ?>
 <div class="mobile">
     <div class="logo">
         <?php if(get_theme_mod('responsive_design_header_logo_image')) { ?>
@@ -16,8 +17,9 @@
         <?php } ?>
     </div>
 </div>
+<?php } ?>
 <div class="standard">
-    <?php global $header1; if($header1 == TRUE) { ?>
+    <?php if($header1 == TRUE) { ?>
         <div id="primary_header">
             <div id="primary_header_content">
                 <?php if( in_array(get_theme_mod('primary_header_type_select','Menu'), array('Logo','Logo & Menu'), true )) { ?>
@@ -47,7 +49,7 @@
         </div>
     <?php } ?>
 
-    <?php global $header2; if($header2 == TRUE) { ?>
+    <?php if($header2 == TRUE) { ?>
         <div id="secondary_header">
             <div id="secondary_header_content">
                 <?php if( in_array(get_theme_mod('secondary_header_type_select','Menu'), array('Logo','Logo & Menu'), true )) { ?>
@@ -77,7 +79,7 @@
         </div>
     <?php } ?>
 
-    <?php global $header3; if($header3 == TRUE) { ?>
+    <?php if($header3 == TRUE) { ?>
         <div id="tertiary_header">
             <div id="tertiary_header_content">
                 <?php if( in_array(get_theme_mod('tertiary_header_type_select','Menu'), array('Logo','Logo & Menu'), true )) { ?>
