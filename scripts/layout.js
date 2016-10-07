@@ -15,4 +15,20 @@ jQuery(window).load(function(){
 
 jQuery(window).resize(function() {
     changeHeight();
+
+    if (jQuery(window).width() <= 800) {
+        jQuery( "#header" ).find(".standard").css('display','none');
+        jQuery( "#header" ).find(".mobile").css('display','block');
+
+    }
+    else {
+        jQuery( "#header" ).find(".standard").css('display','block');
+        jQuery( "#header" ).find(".mobile").css('display','none');
+    }
+});
+
+jQuery( document ).ready(function() {
+    jQuery( ".mobile" ).find(".menu").click(function() {
+        jQuery( "#header" ).find(".standard").slideToggle();
+    })
 });
