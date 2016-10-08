@@ -79,24 +79,30 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			)
 		);
 
-    	//Primary Header Width Fixed
+		//Primary Header Width Fixed
 		$wp_customize->add_setting(
-		    'primary_header_width_fixed',
-		    array(
-		        'default' => '1100',
-		    )
+			'primary_header_width_fixed',
+			array(
+				'default' => '1100',
+			)
 		);
-		$wp_customize->add_control( 'primary_header_width_fixed', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_layout',
-			'label'       => 'Width [Fixed]',
-			'input_attrs' => array(
-				'min'   => 800,
-				'max'   => 1400,
-				'step'  => 2,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_width_fixed',
+				array(
+					'label'       => __('Width [Fixed]'),
+					'section'     => 'primary_header_layout',
+					'settings'    => 'primary_header_width_fixed',
+					'type' => __('px'),
+					'input_attrs' => array(
+						'min' => 800,
+						'max' => 1400,
+						'step'  => 2,
+					),
+				)
+			)
+		);
 
         //Primary Header Width Fluid
 		$wp_customize->add_setting(

@@ -40,7 +40,7 @@ if( class_exists( 'WP_Customize_Control' ) ):
 
 	//Button Select Control
 	class WP_button_select extends WP_Customize_Control {
-		public $type = 'radio-header';
+		public $type = 'button-select';
 
 		public function enqueue() {
 			wp_enqueue_script( 'jquery-ui-button' );
@@ -101,6 +101,35 @@ if( class_exists( 'WP_Customize_Control' ) ):
 		?>
 			<div id="linespace"></div>
 		<?php
+		}
+	}
+
+	//Custom Range Control Control
+	class WP_range extends WP_Customize_Control {
+		public $type = 'range';
+		public function enqueue() {
+			wp_enqueue_script( 'jquery' );
+		}
+		public function render_content() {
+			?>
+			<label>
+				<?php if ( ! empty( $this->label )) : ?>
+					<span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
+				<?php endif; ?>
+				<span class="cs-range-value"><?php echo esc_attr($this->value()); ?></span><?php if ( ! empty( $this->type )) : ?><?php echo $this->type; ?><?php endif; ?>
+				<input data-input-type="range" type="range" <?php $this->input_attrs(); ?> value="<?php echo esc_attr($this->value()); ?>" <?php $this->link(); ?> />
+			</label>
+			<script>(function ($) {
+					jQuery(document).ready(function ($) {
+						$('input[data-input-type]').on('input change', function () {
+							var val = $(this).val();
+							$(this).prev('.cs-range-value').html(val);
+							$(this).val(val);
+						});
+					})
+				})(jQuery);
+			</script>
+			<?php
 		}
 	}
 
