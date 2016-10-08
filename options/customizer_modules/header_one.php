@@ -58,25 +58,28 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 
 		//Primary Header Width % or px
 		$wp_customize->add_setting(
-		    'primary_header_width_option',
-		    array(
-		        'default' => 'fluid',
-		    )
+			'primary_header_width_option',
+			array(
+				'default' => 'fluid',
+			)
 		);
 		$wp_customize->add_control(
-		    'primary_header_width_option',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Header Width (Fixed or Flexible)',
-		        'section' => 'primary_header_layout',
-		        'choices' => array(
-					'fixed' => 'Fixed',
-		            'fluid' => 'Fluid',
-		        ),
-		    )
+			new WP_button_select(
+				$wp_customize,
+				'primary_header_width_option',
+				array(
+					'settings'		=> 'primary_header_width_option',
+					'section'		=> 'primary_header_layout',
+					'label'			=> __( 'Header Width (Fixed or Flexible)'),
+					'choices'		=> array(
+						'fixed' => 'Fixed',
+						'fluid' => 'Fluid',
+					)
+				)
+			)
 		);
 
-    //Primary Header Width Fixed
+    	//Primary Header Width Fixed
 		$wp_customize->add_setting(
 		    'primary_header_width_fixed',
 		    array(
@@ -875,7 +878,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_fonts',
 		array(
-			'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			'default' => 'Arial',
 		)
 	);
 	$wp_customize->add_control(
@@ -885,27 +888,27 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			'label' => 'Font Style',
 			'section' => 'primary_header_logo',
 			'choices' => array(
-				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
-				'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
-				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
-				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
-				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
-				'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
-				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
-				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
-				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial',
+				'"Arial Narrow",Arial,sans-serif' => 'Arial Narrow',
+				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri',
+				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara',
+				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura',
+				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva',
+				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => 'Gill Sans',
+				'"Helvetica Neue",Helvetica,Arial,sans-serif' => 'Helvetica Neue',
+				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma',
+				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => 'Segoe UI',
+				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => 'Trebuchet MS',
 				'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
-				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
-				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
-				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
-				'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
-				'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
-				'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
-				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
-				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
-				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => 'Big Caslon',
+				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => 'Book Antiqua',
+				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => 'Calisto MT',
+				'Cambria,Georgia,serif' => 'Cambria',
+				'Georgia,Times,"Times New Roman",serif' => 'Georgia',
+				'"Lucida Bright",Georgia,serif' => 'Lucida Bright',
+				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino',
+				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua',
+				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'Times New Roman',
 			),
 		)
 	);

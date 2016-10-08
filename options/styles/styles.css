@@ -20,11 +20,28 @@
   float:left;
 }
 
-#header_type input[type="radio"]:checked + label {
+#button_select input[type="radio"]:checked + label {
   background-color:#FFF;
-  -webkit-box-shadow:inset 0px 0px 0px 1px #CCC;
-  -moz-box-shadow:inset 0px 0px 0px 1px #CCC;
-  box-shadow:inset 0px 0px 0px 1px #CCC;
+}
+
+#button_select input[type="radio"] {
+    display: none;
+}
+
+#button_select input[type="radio"] + label {
+    display:inline-block;
+    margin-bottom:5px;
+    border:1px solid #CCC;
+    margin-right:-4px;
+}
+
+#button_select span {
+    padding:3px 8px 3px 8px;
+    float:left;
+}
+
+#button_select input[type="radio"]:checked + label {
+    background-color:#FFF;
 }
 
 #region_titles {

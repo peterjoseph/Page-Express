@@ -38,6 +38,41 @@ if( class_exists( 'WP_Customize_Control' ) ):
 			}
 		}
 
+	//Button Select Control
+	class WP_button_select extends WP_Customize_Control {
+		public $type = 'radio-header';
+
+		public function enqueue() {
+			wp_enqueue_script( 'jquery-ui-button' );
+		}
+
+		public function render_content() {
+			if ( empty( $this->choices ) ) {
+				return;
+			}
+
+			$name = 'header-' . $this->id;
+			?>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+			<?php if ( ! empty( $this->description ) ) : ?>
+				<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+			<?php endif; ?>
+			<div id="option_<?php echo $this->id; ?>">
+				<div id="button_select">
+					<?php foreach ( $this->choices as $value => $label ) : ?>
+						<input class="button-select" type="radio" value="<?php echo esc_attr( $value ); ?>" id="<?php echo $this->id . $value; ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?>>
+						<label for="<?php echo $this->id . $value; ?>">
+							<span><?php echo esc_attr( $label ); ?></span>
+						</label>
+						</input>
+					<?php endforeach; ?>
+				</div>
+			</div>
+			<script>jQuery(document).ready(function($) { $( '[id="option_<?php echo $this->id; ?>"]' ).buttonset(); });</script>
+			<?php
+		}
+	}
+
 	//Section Title Control
 	class WP_Customize_Title_Area extends WP_Customize_Control {
 		public $type = 'titlearea';
