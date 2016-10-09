@@ -2347,6 +2347,10 @@ div.comments_list li {
 	<?php } ?>
   }
 
+#lower_unibar_content ul.menu .sub-menu {
+    display: none;
+}
+
 #lower_multibar {
     min-height:100px;
     <?php if(!get_theme_mod('lower_multibar_background_visible')) { ?>
