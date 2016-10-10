@@ -80,6 +80,10 @@
   margin-right:auto;
 }
 
+#customize-controls .description {
+    font-style: normal;
+}
+
 input[type=range] {width:100%;}
 .customize-control select {min-width:100%;}
 

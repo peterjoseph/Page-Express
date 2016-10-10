@@ -1,10 +1,10 @@
 <?php
 
-$wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 'priority' => 30,) );
+	$wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 'priority' => 30,) );
 
-    $wp_customize->add_section('header_one_visibility', array('title' => 'Primary Header Visibility','panel' => 'header_one','priority' => 30,));
+    	$wp_customize->add_section('header_one_visibility', array('title' => 'Visibility','panel' => 'header_one','priority' => 30,));
 
-    //Primary Header Visibility
+    	//Primary Header Visibility
 		$wp_customize->add_setting(
 		    'primary_header_visibility',
 		    array(
@@ -27,34 +27,62 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		    )
 		);
 
-	$wp_customize->add_section('primary_header_type', array('title' => 'Header Type','panel' => 'header_one','priority' => 30,));
+		$wp_customize->add_section('primary_header_stying', array('title' => 'Header Styling','panel' => 'header_one','priority' => 30,));
 
-    //Primary Header Type
-    $wp_customize->add_setting(
-        'primary_header_type_select',
-        array(
-            'default' => 'Menu',
-        )
-    );
-    $wp_customize->add_control(
-    		new WP_header_type(
-    			$wp_customize,
-    			'primary_header_type_select',
-    			array(
-    				'settings'		=> 'primary_header_type_select',
-    				'section'		=> 'primary_header_type',
-    				'label'			=> __( 'Header Type', 'object' ),
-    				'description'	=> __( 'Select a header style from the options below', 'object' ),
-    				'choices'		=> array(
-    					'Menu' 		=> get_template_directory_uri() . '/options/images/header_options/menu_only.png',
-    					'Logo' 	=> get_template_directory_uri() . '/options/images/header_options/logo_only.png',
-    					'Logo & Menu'	=> get_template_directory_uri() . '/options/images/header_options/logo_menu.png',
-    				)
-    			)
-    		)
-    	);
+		//Primary Header Layout Title
+		$wp_customize->add_setting(
+			'primary_header_layout_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'primary_header_layout_title',
+			array(
+				'label'	=> __( 'Layout' ),
+				'section' => 'primary_header_stying',
+				'settings' => 'primary_header_layout_title',
+			)
+		));
 
-		$wp_customize->add_section('primary_header_layout', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
+		//Primary Header Type
+		$wp_customize->add_setting(
+			'primary_header_type_select',
+			array(
+				'default' => 'Menu',
+			)
+		);
+		$wp_customize->add_control(
+			'primary_header_type_select',
+			array(
+				'type' => 'select',
+				'label' => 'Header Type',
+				'section' => 'primary_header_stying',
+				'description'	=> __( 'Hide or show Logo and Menu in header' ),
+				'choices' => array(
+					'Logo & Menu' => 'Logo and Menu',
+					'Menu' => 'Menu Only',
+					'Logo' => 'Logo Only',
+				),
+			)
+		);
+
+		//Line Space
+		$wp_customize->add_setting(
+			'primary_header_layout_space_one',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'primary_header_layout_space_one',
+			array(
+				'section' => 'primary_header_stying',
+				'settings' => 'primary_header_layout_space_one',
+			)
+		));
 
 		//Primary Header Width % or px
 		$wp_customize->add_setting(
@@ -69,8 +97,9 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				'primary_header_width_option',
 				array(
 					'settings'		=> 'primary_header_width_option',
-					'section'		=> 'primary_header_layout',
-					'label'			=> __( 'Header Width (Fixed or Flexible)'),
+					'section'		=> 'primary_header_stying',
+					'label'			=> __( 'Header Width'),
+					'description'	=> __( 'Assign fixed or fluid width to header' ),
 					'choices'		=> array(
 						'fixed' => 'Fixed',
 						'fluid' => 'Fluid',
@@ -91,10 +120,9 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				$wp_customize,
 				'primary_header_width_fixed',
 				array(
-					'label'       => __('Width [Fixed]'),
-					'section'     => 'primary_header_layout',
+					'section'     => 'primary_header_stying',
 					'settings'    => 'primary_header_width_fixed',
-					'type' => __('px'),
+					'type' => __(' pixels'),
 					'input_attrs' => array(
 						'min' => 800,
 						'max' => 1400,
@@ -104,127 +132,179 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			)
 		);
 
-        //Primary Header Width Fluid
 		$wp_customize->add_setting(
-		    'primary_header_width_fluid',
-		    array(
-		        'default' => '100',
-		    )
+			'primary_header_width_fluid',
+			array(
+				'default' => '100',
+			)
 		);
-		$wp_customize->add_control( 'primary_header_width_fluid', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_layout',
-			'label'       => 'Width [Fluid]',
-			'input_attrs' => array(
-				'min'   => 50,
-				'max'   => 100,
-				'step'  => 2,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_width_fluid', array(
+					'section'     => 'primary_header_stying',
+					'settings'    => 'primary_header_width_fluid',
+					'type' => __(" percent"),
+					'input_attrs' => array(
+						'min'   => 50,
+						'max'   => 100,
+						'step'  => 2,
+					),
+				)
+			) );
 
 		//Primary Header Alignment
 		$wp_customize->add_setting(
-		    'primary_header_alignment',
-		    array(
-		        'default' => 'center',
-		    )
+			'primary_header_alignment',
+			array(
+				'default' => 'center',
+			)
 		);
 		$wp_customize->add_control(
-		    'primary_header_alignment',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Header Alignment',
-		        'section' => 'primary_header_layout',
-		        'choices' => array(
-					'center' => 'Center',
-					'left' => 'Left',
-					'right' => 'Right',
-		        ),
-		    )
+			new WP_button_select(
+				$wp_customize,
+				'primary_header_alignment',
+				array(
+					'settings'		=> 'primary_header_alignment',
+					'section'		=> 'primary_header_stying',
+					'label'			=> __( 'Header Alignment'),
+					'description'	=> __( 'Change alignment of header relative to rest of page' ),
+					'choices'		=> array(
+						'left' => 'Left',
+						'center' => 'Center',
+						'right' => 'Right',
+					)
+				)
+			)
 		);
+
+		//Line Space
+		$wp_customize->add_setting(
+			'primary_header_layout_space_two',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'primary_header_layout_space_two',
+			array(
+				'section' => 'primary_header_stying',
+				'settings' => 'primary_header_layout_space_two',
+			)
+		));
 
 		//Primary Header Content Width % or px
 		$wp_customize->add_setting(
-		    'primary_header_content_width_option',
-		    array(
-		        'default' => 'fluid',
-		    )
+			'primary_header_content_width_option',
+			array(
+				'default' => 'fluid',
+			)
 		);
 		$wp_customize->add_control(
-		    'primary_header_content_width_option',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Content Width (Fixed or Flexible)',
-		        'section' => 'primary_header_layout',
-		        'choices' => array(
-					'fixed' => 'Fixed',
-		            'fluid' => 'Fluid',
-		        ),
-		    )
+			new WP_button_select(
+				$wp_customize,
+				'primary_header_content_width_option',
+				array(
+					'settings'		=> 'primary_header_content_width_option',
+					'section'		=> 'primary_header_stying',
+					'label'			=> __( 'Content Width'),
+					'description'	=> __( 'Assign fixed or fluid width to content inside header' ),
+					'choices'		=> array(
+						'fixed' => 'Fixed',
+						'fluid' => 'Fluid',
+					)
+				)
+			)
 		);
 
-    //Primary Header Content Width Fixed
+    	//Primary Header Content Width Fixed
 		$wp_customize->add_setting(
-		    'primary_header_content_width_fixed',
-		    array(
-		        'default' => '1000',
-		    )
+			'primary_header_content_width_fixed',
+			array(
+				'default' => '1000',
+			)
 		);
-		$wp_customize->add_control( 'primary_header_content_width_fixed', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_layout',
-			'label'       => 'Width [Fixed]',
-			'input_attrs' => array(
-				'min'   => 800,
-				'max'   => 1400,
-				'step'  => 2,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_content_width_fixed', array(
+					'section'     => 'primary_header_stying',
+					'settings'    => 'primary_header_content_width_fixed',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 800,
+						'max'   => 1400,
+						'step'  => 2,
+					),
+				)
+			) );
 
         //Primary Header Content Width Fluid
 		$wp_customize->add_setting(
-		    'primary_header_content_width_fluid',
-		    array(
-		        'default' => '100',
-		    )
+			'primary_header_content_width_fluid',
+			array(
+				'default' => '100',
+			)
 		);
-		$wp_customize->add_control( 'primary_header_content_width_fluid', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_layout',
-			'label'       => 'Width [Fluid]',
-			'input_attrs' => array(
-				'min'   => 50,
-				'max'   => 100,
-				'step'  => 2,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_content_width_fluid', array(
+					'section'     => 'primary_header_stying',
+					'settings'    => 'primary_header_content_width_fluid',
+					'type' => __(" percent"),
+					'input_attrs' => array(
+						'min'   => 50,
+						'max'   => 100,
+						'step'  => 2,
+					),
+				)
+			) );
 
 		//Primary Header Content Alignment
 		$wp_customize->add_setting(
-		    'primary_header_content_alignment',
-		    array(
-		        'default' => 'center',
-		    )
+			'primary_header_content_alignment',
+			array(
+				'default' => 'center',
+			)
 		);
 		$wp_customize->add_control(
-		    'primary_header_content_alignment',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Content Alignment',
-		        'section' => 'primary_header_layout',
-		        'choices' => array(
-					'center' => 'Center',
-					'left' => 'Left',
-					'right' => 'Right',
-		        ),
-		    )
+			new WP_button_select(
+				$wp_customize,
+				'primary_header_content_alignment',
+				array(
+					'settings'		=> 'primary_header_content_alignment',
+					'section'		=> 'primary_header_stying',
+					'label'			=> __( 'Content Alignment'),
+					'description'	=> __( 'Change alignment of content inside header' ),
+					'choices'		=> array(
+						'left' => 'Left',
+						'center' => 'Center',
+						'right' => 'Right',
+					)
+				)
+			)
 		);
 
 		/** PRIMARY HEADER BACKGROUND **/
-		$wp_customize->add_section('primary_header_background', array('title' => 'Background','panel' => 'header_one','priority' => 30,));
+
+		//Primary Header Background Title
+		$wp_customize->add_setting(
+			'primary_header_background_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'primary_header_background_title',
+			array(
+				'label'	=> __( 'Background' ),
+				'section' => 'primary_header_stying',
+				'settings' => 'primary_header_background_title',
+			)
+		));
 
 		//Primary Header Background Visibility
 		$wp_customize->add_setting(
@@ -234,8 +314,9 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			'primary_header_background_visible',
 			array(
 				'type' => 'checkbox',
-				'label' => 'Disable header Background',
-				'section' => 'primary_header_background',
+				'label' => 'Disable Header Background',
+				'section' => 'primary_header_stying',
+				'description'	=> __( 'Remove background and make header transparent' ),
 				'settings' => 'primary_header_background_visible',
 			)
 		);
@@ -253,7 +334,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				'primary_header_background_color',
 				array(
 					'label' => 'Background Color',
-					'section' => 'primary_header_background',
+					'section' => 'primary_header_stying',
 					'settings' => 'primary_header_background_color',
 				)
 			)
@@ -267,7 +348,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 				'primary_header_background_image',
 				array(
 					'label' => 'Background Image',
-					'section' => 'primary_header_background',
+					'section' => 'primary_header_stying',
 					'settings' => 'primary_header_background_image'
 				)
 			)
@@ -277,7 +358,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		$wp_customize->add_setting(
 			'primary_header_background_image_position',
 			array(
-				'default' => 'initial',
+				'default' => 'left top',
 			)
 		);
 		$wp_customize->add_control(
@@ -285,9 +366,9 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			array(
 				'type' => 'select',
 				'label' => 'Background Image Position',
-				'section' => 'primary_header_background',
+				'description'	=> __( 'Assign background image starting position in header' ),
+				'section' => 'primary_header_stying',
 				'choices' => array(
-					'initial' => 'Initial',
 					'left top' => 'Top Left',
 					'left center' => 'Center Left',
 					'left bottom' => 'Bottom Left',
@@ -305,7 +386,7 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 		$wp_customize->add_setting(
 			'primary_header_background_image_repeat',
 			array(
-				'default' => 'no-repeat',
+				'default' => 'repeat',
 			)
 		);
 		$wp_customize->add_control(
@@ -313,13 +394,13 @@ $wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 
 			array(
 				'type' => 'select',
 				'label' => 'Background Image Repetition',
-				'section' => 'primary_header_background',
+				'section' => 'primary_header_stying',
+				'description'	=> __( 'Control background image repetition in header' ),
 				'choices' => array(
 					'no-repeat' => 'No Repeat',
 					'repeat' => 'Repeat',
-					'repeat-x' => 'Repeat X',
-					'repeat-y' => 'Repeat Y',
-					'initial' => 'Initial',
+					'repeat-x' => 'Repeat Horizontally',
+					'repeat-y' => 'Repeat Vertically',
 				),
 			)
 		);
