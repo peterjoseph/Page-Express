@@ -8,10 +8,16 @@
 		$wp_customize->remove_section( 'title_tagline' );
 
         function customizer_stylesheet() {
-                    wp_register_style( 'customizer-css', get_template_directory_uri() . '/options/styles/styles.css', NULL, NULL, 'all' );
-                    wp_enqueue_style( 'customizer-css' );
-                }
+            wp_register_style( 'customizer-css', get_template_directory_uri() . '/options/styles/styles.css', NULL, NULL, 'all' );
+            wp_enqueue_style( 'customizer-css' );
+        }
         add_action( 'customize_controls_print_styles', 'customizer_stylesheet' );
+
+        function enqueue_customizer_scripts() {
+            wp_enqueue_script( 'customizer-js-layout', get_template_directory_uri() . '/options/scripts/customizer_layout.js', NULL, NULL, 'all' );
+            wp_enqueue_script( 'customizer-js-layout', get_template_directory_uri() . '/options/scripts/customizer_fill.js', NULL, NULL, 'all' );
+        }
+        add_action( 'customize_controls_enqueue_scripts', 'enqueue_customizer_scripts' );
         
         require_once ( get_template_directory() . '/options/customizer_modules/custom_controls.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/header_one.php' );
@@ -38,6 +44,6 @@
 		$wp_customize->add_section('lm_structure', array('title' => 'Multi-Bar','panel' => 'structure','priority' => 30,));
 		$wp_customize->add_section('f_structure', array('title' => 'Footer','panel' => 'structure','priority' => 30,));
 
-};
+    };
 
 ?>

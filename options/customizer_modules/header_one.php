@@ -500,17 +500,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_border_top', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_borders',
-			'label'       => 'Top Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_border_top', array(
+					'priority'    => 10,
+					'section'     => 'primary_header_borders',
+					'label'       => 'Top Border',
+					'type' => __("px"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Primary Header Border Bottom
 		$wp_customize->add_setting(
@@ -519,17 +523,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_border_bottom', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_borders',
-			'label'       => 'Bottom Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_border_bottom', array(
+					'priority'    => 10,
+					'section'     => 'primary_header_borders',
+					'label'       => 'Bottom Border',
+					'type' => __("px"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Primary Header Border Left
 		$wp_customize->add_setting(
@@ -538,17 +546,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_border_left', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_borders',
-			'label'       => 'Left Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_border_left', array(
+					'priority'    => 10,
+					'section'     => 'primary_header_borders',
+					'label'       => 'Left Border',
+					'type' => __("px"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Primary Header Border Right
 		$wp_customize->add_setting(
@@ -557,17 +569,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_border_right', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_borders',
-			'label'       => 'Right Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_border_right', array(
+					'priority'    => 10,
+					'section'     => 'primary_header_borders',
+					'label'       => 'Right Border',
+					'type' => __("px"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Primary Header Border Radius
 		$wp_customize->add_setting(
@@ -576,17 +592,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_border_radius', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'primary_header_borders',
-			'label'       => 'Rounded Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 2,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'primary_header_border_radius', array(
+					'priority'    => 10,
+					'section'     => 'primary_header_borders',
+					'label'       => 'Border Rounding',
+					'type' => __("px"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		/** PRIMARY HEADER PADDING **/
 		$wp_customize->add_section('primary_header_padding', array('title' => 'Inner Spacing','panel' => 'header_one','priority' => 30,));
@@ -710,7 +730,7 @@
 		) );
 
     /** PRIMARY HEADER LOGO Options **/
-    $wp_customize->add_section('primary_header_logo', array('title' => 'Header Logo Styling','panel' => 'header_one','priority' => 30,));
+    $wp_customize->add_section('primary_header_logo', array('title' => 'Logo Styling','panel' => 'header_one','priority' => 30,));
 
     //Primary Header Logo Title
     $wp_customize->add_setting(
@@ -1099,7 +1119,7 @@
 		)
 	);
 
-	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Header Menu Styling','panel' => 'header_one','priority' => 30,));
+	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_one','priority' => 30,));
 
 	//Primary Header Menu Alignment Title
 	$wp_customize->add_setting(
