@@ -363,11 +363,13 @@ img {
     background-position:<?php echo get_theme_mod('primary_header_background_image_position','left top') ?>;
     background-repeat:<?php echo get_theme_mod('primary_header_background_image_repeat','repeat') ?>;
     background-size:<?php echo get_theme_mod('primary_header_background_image_type','intial') ?>;
-    border-top:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
-    border-bottom:<?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
-    border-left:<?php echo get_theme_mod('primary_header_border_left','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
-    border-right:<?php echo get_theme_mod('primary_header_border_right','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
-    border-radius:<?php echo get_theme_mod('primary_header_border_radius','0') ?>px;
+    <?php if(get_theme_mod('primary_header_border_style','solid') != 'none') { ?>
+        border-top:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
+        border-bottom:<?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
+        border-left:<?php echo get_theme_mod('primary_header_border_left','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
+        border-right:<?php echo get_theme_mod('primary_header_border_right','0') ?>px <?php echo get_theme_mod('primary_header_border_style','solid') ?> <?php echo get_theme_mod('primary_header_border_color','#000') ?>;
+        border-radius:<?php echo get_theme_mod('primary_header_border_radius','0') ?>px;
+    <?php } ?>
     padding-top:<?php echo get_theme_mod('primary_header_padding_top','0') ?>px;
     padding-bottom:<?php echo get_theme_mod('primary_header_padding_bottom','0') ?>px;
     padding-left:<?php echo get_theme_mod('primary_header_padding_left','0') ?>px;

@@ -4,6 +4,25 @@
 
     	$wp_customize->add_section('header_one_visibility', array('title' => 'Visibility','panel' => 'header_one','priority' => 30,));
 
+        /** PRIMARY HEADER VISIBILITY **/
+
+        //Primary Header Visibility Title
+        $wp_customize->add_setting(
+            'primary_header_visibility_title',
+            array(
+                'default' => '',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+            $wp_customize,
+            'primary_header_visibility_title',
+            array(
+                'label'	=> __( 'Visibility' ),
+                'section' => 'header_one_visibility',
+                'settings' => 'primary_header_visibility_title',
+            )
+        ));
+
     	//Primary Header Visibility
 		$wp_customize->add_setting(
 		    'primary_header_visibility',
@@ -15,7 +34,7 @@
 		    'primary_header_visibility',
 		    array(
 		        'type' => 'select',
-		        'label' => 'Header 1',
+                'description'	=> __( 'Set where header will be visible' ),
 		        'section' => 'header_one_visibility',
 		        'choices' => array(
 					'visible' => 'Visible Everywhere',
@@ -27,7 +46,9 @@
 		    )
 		);
 
-		$wp_customize->add_section('primary_header_stying', array('title' => 'Header Styling','panel' => 'header_one','priority' => 30,));
+		$wp_customize->add_section('primary_header_stying', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
+
+        /** PRIMARY HEADER LAYOUT **/
 
 		//Primary Header Layout Title
 		$wp_customize->add_setting(
@@ -287,6 +308,8 @@
 			)
 		);
 
+        $wp_customize->add_section('primary_header_background', array('title' => 'Background','panel' => 'header_one','priority' => 30,));
+
 		/** PRIMARY HEADER BACKGROUND **/
 
 		//Primary Header Background Title
@@ -301,7 +324,7 @@
 			'primary_header_background_title',
 			array(
 				'label'	=> __( 'Background' ),
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_background',
 				'settings' => 'primary_header_background_title',
 			)
 		));
@@ -315,7 +338,7 @@
 			array(
 				'type' => 'checkbox',
 				'label' => 'Disable Header Background',
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_background',
 				'description'	=> __( 'Remove background and make header transparent' ),
 				'settings' => 'primary_header_background_visible',
 			)
@@ -334,7 +357,7 @@
 				'primary_header_background_color',
 				array(
 					'label' => 'Background Color',
-					'section' => 'primary_header_stying',
+					'section' => 'primary_header_background',
 					'settings' => 'primary_header_background_color',
 				)
 			)
@@ -348,7 +371,7 @@
 				'primary_header_background_image',
 				array(
 					'label' => 'Background Image',
-					'section' => 'primary_header_stying',
+					'section' => 'primary_header_background',
 					'settings' => 'primary_header_background_image'
 				)
 			)
@@ -367,7 +390,7 @@
 				'type' => 'select',
 				'label' => 'Background Image Position',
 				'description'	=> __( 'Assign background image starting position in header' ),
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_background',
 				'choices' => array(
 					'left top' => 'Top Left',
 					'left center' => 'Center Left',
@@ -394,7 +417,7 @@
 			array(
 				'type' => 'select',
 				'label' => 'Background Image Repetition',
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_background',
 				'description'	=> __( 'Control background image repetition in header' ),
 				'choices' => array(
 					'no-repeat' => 'No Repeat',
@@ -417,7 +440,7 @@
 				'default' => '',
 			)
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
 			$wp_customize,
 			'primary_header_border_title',
 			array(
@@ -426,6 +449,30 @@
 				'settings' => 'primary_header_border_title',
 			)
 		));
+
+        //Primary Header Border Style
+        $wp_customize->add_setting(
+            'primary_header_border_style',
+            array(
+                'default' => 'solid',
+            )
+        );
+        $wp_customize->add_control(
+            'primary_header_border_style',
+            array(
+                'type' => 'select',
+                'label' => 'Border',
+                'section' => 'primary_header_borders',
+                'choices' => array(
+                    'none' => 'None',
+                    'dotted' => 'Dotted',
+                    'dashed' => 'Dashed',
+                    'solid' => 'Solid',
+                    'double' => 'Double',
+                    'groove' => 'Groove',
+                ),
+            )
+        );
 
 		//Primary Header Border Color
 		$wp_customize->add_setting(
@@ -445,30 +492,6 @@
 				)
 			)
 		);
-
-		//Primary Header Border Style
-		$wp_customize->add_setting(
-			'primary_header_border_style',
-			array(
-				'default' => 'solid',
-			)
-		);
-		$wp_customize->add_control(
-			'primary_header_border_style',
-			array(
-				'type' => 'select',
-				'label' => 'Border Style',
-				'section' => 'primary_header_borders',
-				'choices' => array(
-					'dotted' => 'Dotted',
-					'dashed' => 'Dashed',
-					'solid' => 'Solid',
-					'double' => 'Double',
-					'groove' => 'Groove',
-				),
-			)
-		);
-
 
 		//Primary Header Border Top
 		$wp_customize->add_setting(
@@ -687,7 +710,7 @@
 		) );
 
     /** PRIMARY HEADER LOGO Options **/
-    $wp_customize->add_section('primary_header_logo', array('title' => 'Logo Styling','panel' => 'header_one','priority' => 30,));
+    $wp_customize->add_section('primary_header_logo', array('title' => 'Header Logo Styling','panel' => 'header_one','priority' => 30,));
 
     //Primary Header Logo Title
     $wp_customize->add_setting(
@@ -1076,7 +1099,7 @@
 		)
 	);
 
-	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_one','priority' => 30,));
+	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Header Menu Styling','panel' => 'header_one','priority' => 30,));
 
 	//Primary Header Menu Alignment Title
 	$wp_customize->add_setting(
