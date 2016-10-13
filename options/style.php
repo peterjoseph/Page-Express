@@ -392,7 +392,7 @@ img {
   <?php if(get_theme_mod('primary_header_border_style','solid') != 'none') { ?>
   border-style:<?php echo get_theme_mod('primary_header_border_style','solid') ?>;
   border-color:<?php echo get_theme_mod('primary_header_border_color','#000') ?>;
-  border-width:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_left','0') ?>px <?php echo get_theme_mod('primary_header_border_right','0') ?>px;
+  border-width:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_right','0') ?>px <?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_left','0') ?>px ;
   border-radius:<?php echo get_theme_mod('primary_header_border_radius','0') ?>px;
   <?php } ?>
 

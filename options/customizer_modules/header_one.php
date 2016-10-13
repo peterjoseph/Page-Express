@@ -507,7 +507,7 @@
 					'priority'    => 10,
 					'section'     => 'primary_header_borders',
 					'label'       => 'Top Border',
-					'type' => __("px"),
+					'type' => __(" pixels"),
 					'input_attrs' => array(
 						'min'   => 0,
 						'max'   => 50,
@@ -530,7 +530,7 @@
 					'priority'    => 10,
 					'section'     => 'primary_header_borders',
 					'label'       => 'Bottom Border',
-					'type' => __("px"),
+					'type' => __(" pixels"),
 					'input_attrs' => array(
 						'min'   => 0,
 						'max'   => 50,
@@ -553,7 +553,7 @@
 					'priority'    => 10,
 					'section'     => 'primary_header_borders',
 					'label'       => 'Left Border',
-					'type' => __("px"),
+					'type' => __(" pixels"),
 					'input_attrs' => array(
 						'min'   => 0,
 						'max'   => 50,
@@ -576,7 +576,7 @@
 					'priority'    => 10,
 					'section'     => 'primary_header_borders',
 					'label'       => 'Right Border',
-					'type' => __("px"),
+					'type' => __(" pixels"),
 					'input_attrs' => array(
 						'min'   => 0,
 						'max'   => 50,
@@ -599,7 +599,7 @@
 					'priority'    => 10,
 					'section'     => 'primary_header_borders',
 					'label'       => 'Border Rounding',
-					'type' => __("px"),
+					'type' => __(" pixels"),
 					'input_attrs' => array(
 						'min'   => 0,
 						'max'   => 50,
