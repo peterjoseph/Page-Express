@@ -349,6 +349,7 @@
 			'primary_header_background_color',
 			array(
 				'default' => '#333',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
