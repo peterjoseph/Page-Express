@@ -2,28 +2,29 @@
 
 	$wp_customize->add_panel('header_one', array('title' => __( 'Primary Header' ), 'priority' => 30,) );
 
-    	$wp_customize->add_section('header_one_visibility', array('title' => 'Visibility','panel' => 'header_one','priority' => 30,));
+	$wp_customize->add_section('header_one_visibility', array('title' => 'Visibility','panel' => 'header_one','priority' => 30,));
 
-        /** PRIMARY HEADER VISIBILITY **/
+    /** PRIMARY HEADER VISIBILITY **/
 
-        //Primary Header Visibility Title
-        $wp_customize->add_setting(
-            'primary_header_visibility_title',
-            array(
-                'default' => '',
-            )
-        );
-        $wp_customize->add_control( new WP_Customize_Grand_Title_Area(
-            $wp_customize,
-            'primary_header_visibility_title',
-            array(
-                'label'	=> __( 'Visibility' ),
-                'section' => 'header_one_visibility',
-                'settings' => 'primary_header_visibility_title',
-            )
-        ));
+    //Primary Header Visibility Title
+    $wp_customize->add_setting(
+        'primary_header_visibility_title',
+        array(
+            'default' => '',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+        $wp_customize,
+        'primary_header_visibility_title',
+        array(
+            'label'	=> __( 'Visibility' ),
+            'section' => 'header_one_visibility',
+						'description'	=> __( 'Set where header will be visible' ),
+            'settings' => 'primary_header_visibility_title',
+        )
+    ));
 
-    	//Primary Header Visibility
+    //Primary Header Visibility
 		$wp_customize->add_setting(
 		    'primary_header_visibility',
 		    array(
@@ -34,21 +35,20 @@
 		    'primary_header_visibility',
 		    array(
 		        'type' => 'select',
-                'description'	=> __( 'Set where header will be visible' ),
 		        'section' => 'header_one_visibility',
 		        'choices' => array(
-					'visible' => 'Visible Everywhere',
-		            'hidden' => 'Hidden',
-		            'homepage' => 'Homepage Only',
-		            'page' => 'Pages Only',
-					'posts' => 'Posts Only',
+						'visible' => 'Visible Everywhere',
+            'hidden' => 'Hidden',
+            'homepage' => 'Homepage Only',
+            'page' => 'Pages Only',
+						'posts' => 'Posts Only',
 		        ),
 		    )
 		);
 
 		$wp_customize->add_section('primary_header_stying', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
 
-        /** PRIMARY HEADER LAYOUT **/
+    /** PRIMARY HEADER LAYOUT **/
 
 		//Primary Header Layout Title
 		$wp_customize->add_setting(
@@ -612,6 +612,24 @@
 		/** PRIMARY HEADER PADDING **/
 		$wp_customize->add_section('primary_header_padding', array('title' => 'Inner Spacing','panel' => 'header_one','priority' => 30,));
 
+		//Primary Header Padding Title
+		$wp_customize->add_setting(
+			'primary_header_padding_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'primary_header_padding_title',
+			array(
+				'label'	=> __( 'Inner Padding' ),
+				'description'	=> __( 'Add padding to the content inside the header' ),
+				'section' => 'primary_header_padding',
+				'settings' => 'primary_header_padding_title',
+			)
+		));
+
 		//Primary Header Padding Top
 		$wp_customize->add_setting(
 			'primary_header_padding_top',
@@ -619,16 +637,20 @@
 				'default' => '14',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_padding_top', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_padding_top', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
 			'label'       => 'Top',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Primary Header Padding Bottom
@@ -638,16 +660,20 @@
 				'default' => '14',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_padding_bottom', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_padding_bottom', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
 			'label'       => 'Bottom',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Primary Header Padding Left
@@ -657,16 +683,20 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_padding_left', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_padding_left', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
 			'label'       => 'Left',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Primary Header Padding Right
@@ -676,20 +706,42 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_padding_right', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_padding_right', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
 			'label'       => 'Right',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		/** PRIMARY HEADER MARGINS **/
 		$wp_customize->add_section('primary_header_margins', array('title' => 'Outer Spacing','panel' => 'header_one','priority' => 30,));
+
+		//Primary Header Margin Title
+		$wp_customize->add_setting(
+			'primary_header_margin_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'primary_header_margin_title',
+			array(
+				'label'	=> __( 'Outer Spacing' ),
+				'description'	=> __( 'Add spacing to separate header from other page elements' ),
+				'section' => 'primary_header_margins',
+				'settings' => 'primary_header_margin_title',
+			)
+		));
 
 		//Primary Header Margin Top
 		$wp_customize->add_setting(
@@ -698,18 +750,21 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_margin_top', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_margin_top', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_margins',
 			'label'       => 'Top',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 1,
 			),
+			)
 		) );
-
 
 		//Primary Header Margin Bottom
 		$wp_customize->add_setting(
@@ -718,16 +773,20 @@
 				'default' => '0',
 			)
 		);
-		$wp_customize->add_control( 'primary_header_margin_bottom', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_margin_bottom', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_margins',
 			'label'       => 'Bottom',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 1,
 			),
+			)
 		) );
 
     /** PRIMARY HEADER LOGO Options **/
@@ -914,16 +973,20 @@
 			'default' => '32',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_logo_title_font_size', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_logo_title_font_size', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_logo',
 		'label'       => 'Font Size',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 8,
 			'max'   => 70,
 			'step'  => 2,
 		),
+	)
 	) );
 
 	//Primary Header Logo Title Font Weight
@@ -1051,16 +1114,20 @@
 			'default' => '18',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_logo_tagline_font_size', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_logo_tagline_font_size', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_logo',
 		'label'       => 'Font Size',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 2,
 		),
+		)
 	) );
 
 	//Primary Header Logo Tagline Font Weight
@@ -1297,16 +1364,20 @@
 			'default' => '14',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_font_size', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_font_size', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Font Size',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 8,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Font Weight

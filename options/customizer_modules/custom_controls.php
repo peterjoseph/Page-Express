@@ -91,6 +91,9 @@ if( class_exists( 'WP_Customize_Control' ) ):
 		public function render_content() {
 		?>
 				<div id="grand_region_titles"><?php echo esc_html( $this->label ); ?></div>
+				<?php if ( ! empty( $this->description ) ) : ?>
+				<div id="grand_region_titles_description" class="description customize-control-description"><?php echo esc_html( $this->description ); ?></div>
+				<?php endif; ?>
 		<?php
 		}
 	}

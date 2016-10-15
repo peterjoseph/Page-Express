@@ -60,13 +60,20 @@
 #grand_region_titles {
   font-weight:bold;
   color:#FFF;
-  background-color:#FFB580;
+  background-color:#333;
   font-size:18px;
   text-align:center;
   line-height:40px;
   height:40px;
   padding:10px;
-  border:1px solid #ff9549;
+  border:1px solid #333;
+}
+
+#grand_region_titles_description {
+  background-color:#FFFFFF;
+  padding:10px;
+  border:1px solid #CCC;
+  border-top:0px;
 }
 
 #linespace {
