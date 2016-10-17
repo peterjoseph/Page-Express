@@ -623,7 +623,7 @@
 			$wp_customize,
 			'primary_header_padding_title',
 			array(
-				'label'	=> __( 'Inner Padding' ),
+				'label'	=> __( 'Inner Spacing' ),
 				'description'	=> __( 'Add padding to the content inside the header' ),
 				'section' => 'primary_header_padding',
 				'settings' => 'primary_header_padding_title',
@@ -792,6 +792,24 @@
     /** PRIMARY HEADER LOGO Options **/
     $wp_customize->add_section('primary_header_logo', array('title' => 'Logo Styling','panel' => 'header_one','priority' => 30,));
 
+		//Primary Header Logo Styling Title
+		$wp_customize->add_setting(
+			'primary_header_logo_styling_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'primary_header_logo_styling_title',
+			array(
+				'label'	=> __( 'Logo Styling' ),
+				'description'	=> __( 'Logo or text instead' ),
+				'section' => 'primary_header_logo',
+				'settings' => 'primary_header_logo_styling_title',
+			)
+		));
+
     //Primary Header Logo Title
     $wp_customize->add_setting(
         'primary_header_logo_title',
@@ -816,78 +834,10 @@
             $wp_customize,
             'primary_header_logo_image',
             array(
-                'label' => 'Upload Logo',
+                'label' => 'Logo Image',
                 'section' => 'primary_header_logo',
                 'settings' => 'primary_header_logo_image'
             )
-        )
-    );
-
-    $wp_customize->add_setting(
-        'primary_header_sitetitle',
-        array(
-            'default' => 'My Site',
-        )
-    );
-    $wp_customize->add_control(
-        'primary_header_sitetitle',
-        array(
-            'label' => 'Site Title',
-            'section' => 'primary_header_logo',
-            'type' => 'text',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'primary_header_tagline',
-        array(
-            'default' => 'just another Wordpress site',
-        )
-    );
-    $wp_customize->add_control(
-        'primary_header_tagline',
-        array(
-            'label' => 'Tagline',
-            'section' => 'primary_header_logo',
-            'type' => 'text',
-        )
-    );
-
-    //Primary Header Logo Alignment Title
-    $wp_customize->add_setting(
-        'primary_header_logo_alignment_title',
-        array(
-            'default' => '',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Title_Area(
-        $wp_customize,
-        'primary_header_logo_alignment_title',
-        array(
-            'label'	=> __( 'Logo Alignment' ),
-            'section' => 'primary_header_logo',
-            'settings' => 'primary_header_logo_alignment_title',
-        )
-    ));
-
-    //Primary Header Logo Alignment
-    $wp_customize->add_setting(
-        'primary_header_logo_alignment',
-        array(
-            'default' => 'left',
-        )
-    );
-    $wp_customize->add_control(
-        'primary_header_logo_alignment',
-        array(
-            'type' => 'select',
-            'label' => 'Logo Alignment',
-            'section' => 'primary_header_logo',
-            'choices' => array(
-                'left' => 'Left',
-                'center' => 'Center',
-                'right' => 'Right',
-            ),
         )
     );
 
@@ -902,11 +852,51 @@
 		$wp_customize,
 		'primary_header_logo_title_styling_title',
 		array(
-			'label'	=> __( 'Site Title Styling' ),
+			'label'	=> __( 'Title' ),
 			'section' => 'primary_header_logo',
 			'settings' => 'primary_header_logo_title_styling_title',
 		)
 	));
+
+	//Primary Header Logo Site Title
+	$wp_customize->add_setting(
+			'primary_header_sitetitle',
+			array(
+					'default' => 'My Site',
+			)
+	);
+	$wp_customize->add_control(
+			'primary_header_sitetitle',
+			array(
+					'label' => 'Site Title',
+					'section' => 'primary_header_logo',
+					'type' => 'text',
+			)
+	);
+
+	//Primary Header Logo Alignment
+	$wp_customize->add_setting(
+		'primary_header_logo_alignment',
+		array(
+			'default' => 'left',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_logo_alignment',
+			array(
+				'settings'		=> 'primary_header_logo_alignment',
+				'section'		=> 'primary_header_logo',
+				'label' => 'Text Alignment',
+				'choices'		=> array(
+					'left' => 'Left',
+					'center' => 'Center',
+					'right' => 'Right',
+				)
+			)
+		)
+	);
 
 	//Primary Header Logo Title Text Color
 	$wp_customize->add_setting(
@@ -941,27 +931,27 @@
 			'label' => 'Font Style',
 			'section' => 'primary_header_logo',
 			'choices' => array(
-				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
-				'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
-				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
-				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
-				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
-				'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
-				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
-				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
-				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial',
+				'"Arial Narrow",Arial,sans-serif' => 'Arial Narrow',
+				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri',
+				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara',
+				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura',
+				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva',
+				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => 'Gill Sans',
+				'"Helvetica Neue",Helvetica,Arial,sans-serif' => 'Helvetica Neue',
+				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma',
+				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => 'Segoe UI',
+				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => 'Trebuchet MS',
 				'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
-				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
-				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
-				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
-				'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
-				'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
-				'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
-				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
-				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
-				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => 'Big Caslon',
+				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => 'Book Antiqua',
+				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => 'Calisto MT',
+				'Cambria,Georgia,serif' => 'Cambria',
+				'Georgia,Times,"Times New Roman",serif' => 'Georgia',
+				'"Lucida Bright",Georgia,serif' => 'Lucida Bright',
+				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino',
+				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua',
+				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'Times New Roman',
 			),
 		)
 	);
@@ -997,16 +987,19 @@
 		)
 	);
 	$wp_customize->add_control(
-		'primary_header_logo_title_font_weight',
-		array(
-			'type' => 'select',
-			'label' => 'Font Weight',
-			'section' => 'primary_header_logo',
-			'choices' => array(
-				'normal' => 'Normal',
-				'bold' => 'Bold',
-				'light' => 'Light',
-			),
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_logo_title_font_weight',
+			array(
+				'settings'		=> 'primary_header_logo_title_font_weight',
+				'section'		=> 'primary_header_logo',
+				'label' => 'Font Weight',
+				'choices'		=> array(
+					'normal' => 'Normal',
+					'bold' => 'Bold',
+					'light' => 'Light',
+				)
+			)
 		)
 	);
 
@@ -1043,11 +1036,27 @@
 		$wp_customize,
 		'primary_header_logo_tagline_styling_title',
 		array(
-			'label'	=> __( 'Site Tagline Styling' ),
+			'label'	=> __( 'Tagline' ),
 			'section' => 'primary_header_logo',
 			'settings' => 'primary_header_logo_tagline_styling_title',
 		)
 	));
+
+	//Primary Header Logo Site Tagline
+	$wp_customize->add_setting(
+			'primary_header_tagline',
+			array(
+					'default' => 'just another Wordpress site',
+			)
+	);
+	$wp_customize->add_control(
+			'primary_header_tagline',
+			array(
+					'label' => 'Tagline',
+					'section' => 'primary_header_logo',
+					'type' => 'text',
+			)
+	);
 
 	//Primary Header Logo Tagline Text Color
 	$wp_customize->add_setting(
@@ -1138,16 +1147,19 @@
 		)
 	);
 	$wp_customize->add_control(
-		'primary_header_logo_tagline_font_weight',
-		array(
-			'type' => 'select',
-			'label' => 'Font Weight',
-			'section' => 'primary_header_logo',
-			'choices' => array(
-				'normal' => 'Normal',
-				'bold' => 'Bold',
-				'light' => 'Light',
-			),
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_logo_tagline_font_weight',
+			array(
+				'settings'		=> 'primary_header_logo_tagline_font_weight',
+				'section'		=> 'primary_header_logo',
+				'label' => 'Font Weight',
+				'choices'		=> array(
+					'normal' => 'Normal',
+					'bold' => 'Bold',
+					'light' => 'Light',
+				)
+			)
 		)
 	);
 
@@ -1188,6 +1200,23 @@
 	);
 
 	$wp_customize->add_section('primary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_one','priority' => 30,));
+
+	//Primary Header Menu Styling Title
+	$wp_customize->add_setting(
+		'primary_header_menu_options_title',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+		$wp_customize,
+		'primary_header_menu_options_title',
+		array(
+			'label'	=> __( 'Menu Styling' ),
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_menu_options_title',
+		)
+	));
 
 	//Primary Header Menu Alignment Title
 	$wp_customize->add_setting(
@@ -1332,27 +1361,27 @@
 			'label' => 'Font Style',
 			'section' => 'primary_header_menu_styling',
 			'choices' => array(
-				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
-				'"Arial Narrow",Arial,sans-serif' => '"Arial Narrow",Arial,sans-serif',
-				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif',
-				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura,"Trebuchet MS",Arial,sans-serif',
-				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva,Tahoma,Verdana,sans-serif',
-				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
-				'"Helvetica Neue",Helvetica,Arial,sans-serif' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
-				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma,Verdana,Segoe,sans-serif',
-				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => '"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif',
-				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+				'Arial,"Helvetica Neue",Helvetica,sans-serif' => 'Arial',
+				'"Arial Narrow",Arial,sans-serif' => 'Arial Narrow',
+				'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Calibri',
+				'Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif' => 'Candara',
+				'Futura,"Trebuchet MS",Arial,sans-serif' => 'Futura',
+				'Geneva,Tahoma,Verdana,sans-serif' => 'Geneva',
+				'"Gill Sans","Gill Sans MT",Calibri,sans-serif' => 'Gill Sans',
+				'"Helvetica Neue",Helvetica,Arial,sans-serif' => 'Helvetica Neue',
+				'Tahoma,Verdana,Segoe,sans-serif' => 'Tahoma',
+				'"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif' => 'Segoe UI',
+				'"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif' => 'Trebuchet MS',
 				'Verdana,Geneva,sans-serif' => 'Verdana,Geneva,sans-serif',
-				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
-				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => '"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif',
-				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => '"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif',
-				'Cambria,Georgia,serif' => 'Cambria,Georgia,serif',
-				'Georgia,Times,"Times New Roman",serif' => 'Georgia,Times,"Times New Roman",serif',
-				'"Lucida Bright",Georgia,serif' => '"Lucida Bright",Georgia,serif',
-				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif',
-				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif',
-				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif',
+				'"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif' => 'Big Caslon',
+				'"Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif' => 'Book Antiqua',
+				'"Calisto MT","Bookman Old Style",Bookman,"Goudy Old Style",Garamond,"Hoefler Text","Bitstream Charter",Georgia,serif' => 'Calisto MT',
+				'Cambria,Georgia,serif' => 'Cambria',
+				'Georgia,Times,"Times New Roman",serif' => 'Georgia',
+				'"Lucida Bright",Georgia,serif' => 'Lucida Bright',
+				'Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif' => 'Palatino',
+				'Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif' => 'Perpetua',
+				'TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif' => 'Times New Roman',
 			),
 		)
 	);

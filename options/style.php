@@ -434,7 +434,11 @@ img {
 }
 
 #primary_header_content #logo {
+    <?php if(!get_theme_mod('primary_header_logo_image')) { ?>
     text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
+    <?php } else { ?>
+    text-align:left;
+    <?php } ?>
     line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
     <?php if (get_theme_mod('primary_header_type_select','Menu') != 'Logo') { ?>
         flex-shrink: 1
@@ -451,7 +455,7 @@ img {
     display:inline-block;
     vertical-align:middle;
 }
-
+<?php if(!get_theme_mod('primary_header_logo_image')) { ?>
 #primary_header_content #logo .title {
     color:<?php echo get_theme_mod('primary_header_logo_title_text_color','#FFF') ?>;
     font-family:<?php echo get_theme_mod('primary_header_logo_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
@@ -469,7 +473,7 @@ img {
     font-weight:<?php echo get_theme_mod('primary_header_logo_tagline_font_weight','normal') ?>;
     text-transform:<?php echo get_theme_mod('primary_header_logo_tagline_font_transformation','none') ?>;
 }
-
+<?php } ?>
 <?php if(get_theme_mod('primary_header_logo_tagline_position')) { ?>
     #primary_header_content #logo .title, #primary_header_content #logo .tagline {
         display:inline;
