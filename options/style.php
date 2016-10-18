@@ -434,10 +434,10 @@ img {
 }
 
 #primary_header_content #logo {
-    <?php if(!get_theme_mod('primary_header_logo_image')) { ?>
-    text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
+    <?php if (get_theme_mod('primary_header_type_select','Menu') == 'Logo & Menu') { ?>
+    text-align: left;
     <?php } else { ?>
-    text-align:left;
+    text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
     <?php } ?>
     line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
     <?php if (get_theme_mod('primary_header_type_select','Menu') != 'Logo') { ?>

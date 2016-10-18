@@ -344,6 +344,22 @@
 			)
 		);
 
+		//Line Space
+		$wp_customize->add_setting(
+			'primary_header_layout_space_four',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'primary_header_layout_space_four',
+			array(
+				'section' => 'primary_header_background',
+				'settings' => 'primary_header_layout_space_four',
+			)
+		));
+
 		//Primary Header Background Color
 		$wp_customize->add_setting(
 			'primary_header_background_color',
@@ -841,6 +857,46 @@
         )
     );
 
+		//Line Space
+		$wp_customize->add_setting(
+			'primary_header_layout_space_five',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'primary_header_layout_space_five',
+			array(
+				'section' => 'primary_header_logo',
+				'settings' => 'primary_header_layout_space_five',
+			)
+		));
+
+		//Primary Header Logo Alignment
+		$wp_customize->add_setting(
+			'primary_header_logo_alignment',
+			array(
+				'default' => 'left',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_button_select(
+				$wp_customize,
+				'primary_header_logo_alignment',
+				array(
+					'settings'		=> 'primary_header_logo_alignment',
+					'section'		=> 'primary_header_logo',
+					'label' => 'Alignment',
+					'choices'		=> array(
+						'left' => 'Left',
+						'center' => 'Center',
+						'right' => 'Right',
+					)
+				)
+			)
+		);
+
 	//Primary Header Logo Title Styling title
 	$wp_customize->add_setting(
 		'primary_header_logo_title_styling_title',
@@ -868,35 +924,27 @@
 	$wp_customize->add_control(
 			'primary_header_sitetitle',
 			array(
-					'label' => 'Site Title',
+					'label' => 'Title',
 					'section' => 'primary_header_logo',
 					'type' => 'text',
 			)
 	);
 
-	//Primary Header Logo Alignment
+	//Line Space
 	$wp_customize->add_setting(
-		'primary_header_logo_alignment',
+		'primary_header_layout_space_six',
 		array(
-			'default' => 'left',
+			'default' => '',
 		)
 	);
-	$wp_customize->add_control(
-		new WP_button_select(
-			$wp_customize,
-			'primary_header_logo_alignment',
-			array(
-				'settings'		=> 'primary_header_logo_alignment',
-				'section'		=> 'primary_header_logo',
-				'label' => 'Text Alignment',
-				'choices'		=> array(
-					'left' => 'Left',
-					'center' => 'Center',
-					'right' => 'Right',
-				)
-			)
+	$wp_customize->add_control( new WP_Line_Space(
+		$wp_customize,
+		'primary_header_layout_space_six',
+		array(
+			'section' => 'primary_header_logo',
+			'settings' => 'primary_header_layout_space_six',
 		)
-	);
+	));
 
 	//Primary Header Logo Title Text Color
 	$wp_customize->add_setting(
@@ -1058,6 +1106,22 @@
 			)
 	);
 
+	//Line Space
+	$wp_customize->add_setting(
+		'primary_header_layout_space_seven',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Line_Space(
+		$wp_customize,
+		'primary_header_layout_space_seven',
+		array(
+			'section' => 'primary_header_logo',
+			'settings' => 'primary_header_layout_space_seven',
+		)
+	));
+
 	//Primary Header Logo Tagline Text Color
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_text_color',
@@ -1214,47 +1278,10 @@
 		array(
 			'label'	=> __( 'Menu Styling' ),
 			'section' => 'primary_header_menu_styling',
+			'description'	=> __( 'Add styling to the menus' ),
 			'settings' => 'primary_header_menu_options_title',
 		)
 	));
-
-	//Primary Header Menu Alignment Title
-	$wp_customize->add_setting(
-		'primary_header_menu_alignment_title',
-		array(
-			'default' => '',
-		)
-	);
-	$wp_customize->add_control( new WP_Customize_Title_Area(
-		$wp_customize,
-		'primary_header_menu_alignment_title',
-		array(
-			'label'	=> __( 'Menu Alignment' ),
-			'section' => 'primary_header_menu_styling',
-			'settings' => 'primary_header_menu_alignment_title',
-		)
-	));
-
-	//Primary Header Menu Alignment
-	$wp_customize->add_setting(
-		'primary_header_menu_alignment',
-		array(
-			'default' => 'right',
-		)
-	);
-	$wp_customize->add_control(
-		'primary_header_menu_alignment',
-		array(
-			'type' => 'select',
-			'label' => 'Menu Alignment',
-			'section' => 'primary_header_menu_styling',
-			'choices' => array(
-				'left' => 'Left',
-				'center' => 'Center',
-				'right' => 'Right',
-			),
-		)
-	);
 
 	//Primary Header Menu Layout Title
 	$wp_customize->add_setting(
@@ -1280,16 +1307,20 @@
 			'default' => '25',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_height', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_height', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Height',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Spacing
@@ -1299,17 +1330,45 @@
 			'default' => '5',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_spacing', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_spacing', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
-		'label'       => 'Button Spacing',
+		'label'       => 'Horizontal Button Spacing',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 25,
 			'step'  => 1,
 		),
+		)
 	) );
+
+	//Primary Header Menu Alignment
+	$wp_customize->add_setting(
+		'primary_header_menu_alignment',
+		array(
+			'default' => 'right',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_menu_alignment',
+			array(
+				'settings'		=> 'primary_header_menu_alignment',
+				'section'		=> 'primary_header_menu_styling',
+				'label' => 'Menu Alignment',
+				'choices'		=> array(
+					'left' => 'Left',
+					'center' => 'Center',
+					'right' => 'Right',
+				)
+			)
+		)
+	);
 
 	//Primary Header Menu Font Styling Title
 	$wp_customize->add_setting(
@@ -1386,7 +1445,7 @@
 		)
 	);
 
-//Primary Header Menu Font Size
+	//Primary Header Menu Font Size
 	$wp_customize->add_setting(
 		'primary_header_menu_font_size',
 		array(
@@ -1417,16 +1476,19 @@
 		)
 	);
 	$wp_customize->add_control(
-		'primary_header_menu_font_weight',
-		array(
-			'type' => 'select',
-			'label' => 'Font Weight',
-			'section' => 'primary_header_menu_styling',
-			'choices' => array(
-				'normal' => 'Normal',
-				'bold' => 'Bold',
-				'light' => 'Light',
-			),
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_menu_font_weight',
+			array(
+				'settings'		=> 'primary_header_menu_font_weight',
+				'section'		=> 'primary_header_menu_styling',
+				'label' => 'Font Weight',
+				'choices'		=> array(
+					'normal' => 'Normal',
+					'bold' => 'Bold',
+					'light' => 'Light',
+				)
+			)
 		)
 	);
 
@@ -1451,6 +1513,22 @@
             ),
         )
     );
+
+		//Line Space
+		$wp_customize->add_setting(
+			'primary_header_layout_space_eight',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'primary_header_layout_space_eight',
+			array(
+				'section' => 'primary_header_menu_styling',
+				'settings' => 'primary_header_layout_space_eight',
+			)
+		));
 
 	//Primary Header Menu Link Hover Color
 	$wp_customize->add_setting(
@@ -1503,16 +1581,19 @@
 		)
 	);
 	$wp_customize->add_control(
-		'primary_header_menu_link_alignment',
-		array(
-			'type' => 'select',
-			'label' => 'Text Alignment',
-			'section' => 'primary_header_menu_styling',
-			'choices' => array(
-				'center' => 'Center',
-				'left' => 'Left',
-				'right' => 'Right',
-			),
+		new WP_button_select(
+			$wp_customize,
+			'primary_header_menu_link_alignment',
+			array(
+				'settings'		=> 'primary_header_menu_link_alignment',
+				'section'		=> 'primary_header_menu_styling',
+				'label' => 'Submenu Link Alignment',
+				'choices'		=> array(
+					'left' => 'Left',
+					'center' => 'Center',
+					'right' => 'Right',
+				)
+			)
 		)
 	);
 
@@ -1546,6 +1627,22 @@
 			'settings' => 'primary_header_menu_background_visible',
 		)
 	);
+
+	//Line Space
+	$wp_customize->add_setting(
+		'primary_header_layout_space_nine',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control( new WP_Line_Space(
+		$wp_customize,
+		'primary_header_layout_space_nine',
+		array(
+			'section' => 'primary_header_menu_styling',
+			'settings' => 'primary_header_layout_space_nine',
+		)
+	));
 
 	//Primary Header Menu Background Color
 	$wp_customize->add_setting(
@@ -1677,25 +1774,6 @@
 		)
 	));
 
-	//Primary Header Menu Border Color
-	$wp_customize->add_setting(
-		'primary_header_menu_border_color',
-		array(
-			'default' => '#000',
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'primary_header_menu_border_color',
-			array(
-				'label' => 'Border Color',
-				'section' => 'primary_header_menu_styling',
-				'settings' => 'primary_header_menu_border_color',
-			)
-		)
-	);
-
 	//Primary Header Menu Border Style
 	$wp_customize->add_setting(
 		'primary_header_menu_border_style',
@@ -1719,6 +1797,24 @@
 		)
 	);
 
+	//Primary Header Menu Border Color
+	$wp_customize->add_setting(
+		'primary_header_menu_border_color',
+		array(
+			'default' => '#000',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'primary_header_menu_border_color',
+			array(
+				'label' => 'Border Color',
+				'section' => 'primary_header_menu_styling',
+				'settings' => 'primary_header_menu_border_color',
+			)
+		)
+	);
 
 	//Primary Header Menu Border Top
 	$wp_customize->add_setting(
@@ -1727,16 +1823,20 @@
 			'default' => '0',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_border_top', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_border_top', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Top Border',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Border Bottom
@@ -1746,16 +1846,20 @@
 			'default' => '0',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_border_bottom', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_border_bottom', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Bottom Border',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Border Left
@@ -1765,16 +1869,20 @@
 			'default' => '0',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_border_left', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_border_left', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Left Border',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Border Right
@@ -1784,16 +1892,20 @@
 			'default' => '0',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_border_right', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_border_right', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Right Border',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 1,
 		),
+		)
 	) );
 
 	//Primary Header Menu Border Radius
@@ -1803,15 +1915,19 @@
 			'default' => '0',
 		)
 	);
-	$wp_customize->add_control( 'primary_header_menu_border_radius', array(
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_border_radius', array(
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
-		'label'       => 'Rounded Border',
+		'label'       => 'Border Rounding',
+		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
 			'max'   => 50,
 			'step'  => 2,
 		),
+		)
 	) );
 ?>
