@@ -19,7 +19,6 @@
         array(
             'label'	=> __( 'Visibility' ),
             'section' => 'header_one_visibility',
-						'description'	=> __( 'Set where header will be visible' ),
             'settings' => 'primary_header_visibility_title',
         )
     ));
@@ -480,6 +479,7 @@
                 'type' => 'select',
                 'label' => 'Border',
                 'section' => 'primary_header_borders',
+								'description'	=> __( 'Select border style to display around header' ),
                 'choices' => array(
                     'none' => 'None',
                     'dotted' => 'Dotted',
@@ -640,7 +640,6 @@
 			'primary_header_padding_title',
 			array(
 				'label'	=> __( 'Inner Spacing' ),
-				'description'	=> __( 'Add padding to the content inside the header' ),
 				'section' => 'primary_header_padding',
 				'settings' => 'primary_header_padding_title',
 			)
@@ -753,7 +752,6 @@
 			'primary_header_margin_title',
 			array(
 				'label'	=> __( 'Outer Spacing' ),
-				'description'	=> __( 'Add spacing to separate header from other page elements' ),
 				'section' => 'primary_header_margins',
 				'settings' => 'primary_header_margin_title',
 			)
@@ -820,7 +818,6 @@
 			'primary_header_logo_styling_title',
 			array(
 				'label'	=> __( 'Logo Styling' ),
-				'description'	=> __( 'Logo or text instead' ),
 				'section' => 'primary_header_logo',
 				'settings' => 'primary_header_logo_styling_title',
 			)
@@ -851,6 +848,7 @@
             'primary_header_logo_image',
             array(
                 'label' => 'Logo Image',
+								'description'	=> __( 'Upload image to display as logo in header' ),
                 'section' => 'primary_header_logo',
                 'settings' => 'primary_header_logo_image'
             )
@@ -925,6 +923,7 @@
 			'primary_header_sitetitle',
 			array(
 					'label' => 'Title',
+					'description'	=> __( 'Display written text as logo' ),
 					'section' => 'primary_header_logo',
 					'type' => 'text',
 			)
@@ -1101,6 +1100,7 @@
 			'primary_header_tagline',
 			array(
 					'label' => 'Tagline',
+					'description'	=> __( 'Include written tagline below text logo' ),
 					'section' => 'primary_header_logo',
 					'type' => 'text',
 			)
@@ -1278,7 +1278,6 @@
 		array(
 			'label'	=> __( 'Menu Styling' ),
 			'section' => 'primary_header_menu_styling',
-			'description'	=> __( 'Add styling to the menus' ),
 			'settings' => 'primary_header_menu_options_title',
 		)
 	));
@@ -1314,6 +1313,7 @@
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Height',
+		'description'	=> __( 'Add spacing to top and bottom of menu buttons' ),
 		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
@@ -1337,6 +1337,7 @@
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Horizontal Button Spacing',
+		'description'	=> __( 'Add horizontal spacing between menu buttons' ),
 		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
@@ -1543,6 +1544,7 @@
 			'primary_header_menu_link_hover_color',
 			array(
 				'label' => 'Link Hover Color',
+				'description'	=> __( 'Assign new font color when user hovers on link' ),
 				'section' => 'primary_header_menu_styling',
 				'settings' => 'primary_header_menu_link_hover_color',
 			)
@@ -1588,6 +1590,7 @@
 				'settings'		=> 'primary_header_menu_link_alignment',
 				'section'		=> 'primary_header_menu_styling',
 				'label' => 'Submenu Link Alignment',
+				'description'	=> __( 'Adjust the alignment of links in drop-down menus' ),
 				'choices'		=> array(
 					'left' => 'Left',
 					'center' => 'Center',
@@ -1623,6 +1626,7 @@
 		array(
 			'type' => 'checkbox',
 			'label' => 'Disable Background Visibility',
+			'description'	=> __( 'Remove background from buttons and make transparent' ),
 			'section' => 'primary_header_menu_styling',
 			'settings' => 'primary_header_menu_background_visible',
 		)
@@ -1688,6 +1692,7 @@
 			'primary_header_menu_hover_background_color',
 			array(
 				'label' => 'Link Hover Background Color',
+				'description'	=> __( 'Assign new background color when user hovers on button' ),
 				'section' => 'primary_header_menu_styling',
 			)
 		)
@@ -1701,6 +1706,7 @@
 			'primary_header_menu_hover_background_image',
 			array(
 				'label' => 'Link Hover Background Image',
+				'description'	=> __( 'Add background image to display when user hovers on button' ),
 				'section' => 'primary_header_menu_styling',
 			)
 		)

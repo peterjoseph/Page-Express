@@ -79,14 +79,15 @@
 #linespace {
   width:100%;
   border-bottom:1px solid #CCC;
-  margin-top:15px;
-  margin-bottom:15px;
+  margin-top:5px;
+  margin-bottom:5px;
   margin-left:auto;
   margin-right:auto;
 }
 
 #customize-controls .description {
-    font-style: normal;
+  font-style: normal;
+  font-size: 10px;
 }
 
 input[type=range] {width:100%;}
