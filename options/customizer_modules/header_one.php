@@ -238,7 +238,7 @@
 			)
 		);
 
-    	//Primary Header Content Width Fixed
+    //Primary Header Content Width Fixed
 		$wp_customize->add_setting(
 			'primary_header_content_width_fixed',
 			array(
@@ -260,7 +260,7 @@
 				)
 			) );
 
-        //Primary Header Content Width Fluid
+    //Primary Header Content Width Fluid
 		$wp_customize->add_setting(
 			'primary_header_content_width_fluid',
 			array(
@@ -307,7 +307,7 @@
 			)
 		);
 
-        $wp_customize->add_section('primary_header_background', array('title' => 'Background','panel' => 'header_one','priority' => 30,));
+    $wp_customize->add_section('primary_header_background', array('title' => 'Background','panel' => 'header_one','priority' => 30,));
 
 		/** PRIMARY HEADER BACKGROUND **/
 
@@ -466,30 +466,30 @@
 			)
 		));
 
-        //Primary Header Border Style
-        $wp_customize->add_setting(
-            'primary_header_border_style',
-            array(
-                'default' => 'solid',
-            )
-        );
-        $wp_customize->add_control(
-            'primary_header_border_style',
-            array(
-                'type' => 'select',
-                'label' => 'Border',
-                'section' => 'primary_header_borders',
-								'description'	=> __( 'Select border style to display around header' ),
-                'choices' => array(
-                    'none' => 'None',
-                    'dotted' => 'Dotted',
-                    'dashed' => 'Dashed',
-                    'solid' => 'Solid',
-                    'double' => 'Double',
-                    'groove' => 'Groove',
-                ),
-            )
-        );
+    //Primary Header Border Style
+    $wp_customize->add_setting(
+        'primary_header_border_style',
+        array(
+            'default' => 'solid',
+        )
+    );
+    $wp_customize->add_control(
+        'primary_header_border_style',
+        array(
+            'type' => 'select',
+            'label' => 'Border',
+            'section' => 'primary_header_borders',
+						'description'	=> __( 'Select border style to display around header' ),
+            'choices' => array(
+                'none' => 'None',
+                'dotted' => 'Dotted',
+                'dashed' => 'Dashed',
+                'solid' => 'Solid',
+                'double' => 'Double',
+                'groove' => 'Groove',
+            ),
+        )
+    );
 
 		//Primary Header Border Color
 		$wp_customize->add_setting(
@@ -658,7 +658,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
-			'label'       => 'Top',
+			'label'       => 'Top Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -681,7 +681,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
-			'label'       => 'Bottom',
+			'label'       => 'Bottom Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -704,7 +704,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
-			'label'       => 'Left',
+			'label'       => 'Left Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -727,7 +727,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_padding',
-			'label'       => 'Right',
+			'label'       => 'Right Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -770,7 +770,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_margins',
-			'label'       => 'Top',
+			'label'       => 'Top Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -793,7 +793,7 @@
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'primary_header_margins',
-			'label'       => 'Bottom',
+			'label'       => 'Bottom Spacing',
 			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
@@ -885,7 +885,7 @@
 				array(
 					'settings'		=> 'primary_header_logo_alignment',
 					'section'		=> 'primary_header_logo',
-					'label' => 'Alignment',
+					'label' => 'Logo Alignment',
 					'choices'		=> array(
 						'left' => 'Left',
 						'center' => 'Center',
@@ -1257,7 +1257,7 @@
 		'primary_header_logo_tagline_position',
 		array(
 			'type' => 'checkbox',
-			'label' => 'Display tagline on same line as title',
+			'label' => 'Display tagline on same line as title text',
 			'section' => 'primary_header_logo',
 			'settings' => 'primary_header_logo_tagline_position',
 		)
@@ -1312,8 +1312,8 @@
 		'type'        => 'range',
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
-		'label'       => 'Height',
-		'description'	=> __( 'Add spacing to top and bottom of menu buttons' ),
+		'label'       => 'Vertical Button Height',
+		'description'	=> __( 'Adjust height of menu buttons' ),
 		'type' => __(" pixels"),
 		'input_attrs' => array(
 			'min'   => 0,
@@ -1515,6 +1515,28 @@
         )
     );
 
+		//Primary Header Menu Link Decoration
+		$wp_customize->add_setting(
+			'primary_header_menu_link_decoration',
+			array(
+				'default' => 'none',
+			)
+		);
+		$wp_customize->add_control(
+			'primary_header_menu_link_decoration',
+			array(
+				'type' => 'select',
+				'label' => 'Font Decoration',
+				'section' => 'primary_header_menu_styling',
+				'choices' => array(
+					'none' => 'None',
+					'underline' => 'Underline',
+					'overline' => 'Overline',
+					'line-through' => 'Line-through',
+				),
+			)
+		);
+
 		//Line Space
 		$wp_customize->add_setting(
 			'primary_header_layout_space_eight',
@@ -1543,35 +1565,11 @@
 			$wp_customize,
 			'primary_header_menu_link_hover_color',
 			array(
-				'label' => 'Link Hover Color',
+				'label' => 'Button Hover Text Color',
 				'description'	=> __( 'Assign new font color when user hovers on link' ),
 				'section' => 'primary_header_menu_styling',
 				'settings' => 'primary_header_menu_link_hover_color',
 			)
-		)
-	);
-
-	//Primary Header Menu Link Decoration
-	$wp_customize->add_setting(
-		'primary_header_menu_link_decoration',
-		array(
-			'default' => 'none',
-		)
-	);
-	$wp_customize->add_control(
-		'primary_header_menu_link_decoration',
-		array(
-			'type' => 'select',
-			'label' => 'Link Decoration',
-			'section' => 'primary_header_menu_styling',
-			'choices' => array(
-				'none' => 'none',
-				'underline' => 'underline',
-				'overline' => 'overline',
-				'line-through' => 'line-through',
-				'initial' => 'initial',
-				'inherit' => 'inherit',
-			),
 		)
 	);
 
@@ -1589,7 +1587,7 @@
 			array(
 				'settings'		=> 'primary_header_menu_link_alignment',
 				'section'		=> 'primary_header_menu_styling',
-				'label' => 'Submenu Link Alignment',
+				'label' => 'Drop-down Menu Text Alignment',
 				'description'	=> __( 'Adjust the alignment of links in drop-down menus' ),
 				'choices'		=> array(
 					'left' => 'Left',
@@ -1660,7 +1658,7 @@
 			$wp_customize,
 			'primary_header_menu_background_color',
 			array(
-				'label' => 'Link Background Color',
+				'label' => 'Button Background Color',
 				'section' => 'primary_header_menu_styling',
 			)
 		)
@@ -1673,7 +1671,7 @@
 			$wp_customize,
 			'primary_header_menu_background_image',
 			array(
-				'label' => 'Link Background image',
+				'label' => 'Button Background image',
 				'section' => 'primary_header_menu_styling',
 			)
 		)
@@ -1691,7 +1689,7 @@
 			$wp_customize,
 			'primary_header_menu_hover_background_color',
 			array(
-				'label' => 'Link Hover Background Color',
+				'label' => 'Button Hover Background Color',
 				'description'	=> __( 'Assign new background color when user hovers on button' ),
 				'section' => 'primary_header_menu_styling',
 			)
@@ -1705,7 +1703,7 @@
 			$wp_customize,
 			'primary_header_menu_hover_background_image',
 			array(
-				'label' => 'Link Hover Background Image',
+				'label' => 'Button Hover Background Image',
 				'description'	=> __( 'Add background image to display when user hovers on button' ),
 				'section' => 'primary_header_menu_styling',
 			)
@@ -1716,7 +1714,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_background_image_position',
 		array(
-			'default' => 'initial',
+			'default' => 'left top',
 		)
 	);
 	$wp_customize->add_control(
@@ -1726,7 +1724,6 @@
 			'label' => 'Background Image Position',
 			'section' => 'primary_header_menu_styling',
 			'choices' => array(
-				'initial' => 'Initial',
 				'left top' => 'Top Left',
 				'left center' => 'Center Left',
 				'left bottom' => 'Bottom Left',
@@ -1744,7 +1741,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_background_image_repeat',
 		array(
-			'default' => 'no-repeat',
+			'default' => 'repeat',
 		)
 	);
 	$wp_customize->add_control(
@@ -1756,9 +1753,8 @@
 			'choices' => array(
 				'no-repeat' => 'No Repeat',
 				'repeat' => 'Repeat',
-				'repeat-x' => 'Repeat X',
-				'repeat-y' => 'Repeat Y',
-				'initial' => 'Initial',
+				'repeat-x' => 'Repeat Horizontally',
+				'repeat-y' => 'Repeat Vertically',
 			),
 		)
 	);
@@ -1791,9 +1787,10 @@
 		'primary_header_menu_border_style',
 		array(
 			'type' => 'select',
-			'label' => 'Border Style',
+			'label' => 'Border',
 			'section' => 'primary_header_menu_styling',
 			'choices' => array(
+				'none' => 'None',
 				'dotted' => 'Dotted',
 				'dashed' => 'Dashed',
 				'solid' => 'Solid',
