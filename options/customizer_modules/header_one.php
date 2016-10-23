@@ -855,21 +855,22 @@
         )
     );
 
-		//Line Space
-		$wp_customize->add_setting(
-			'primary_header_layout_space_five',
-			array(
-				'default' => '',
-			)
-		);
-		$wp_customize->add_control( new WP_Line_Space(
-			$wp_customize,
-			'primary_header_layout_space_five',
-			array(
-				'section' => 'primary_header_logo',
-				'settings' => 'primary_header_layout_space_five',
-			)
-		));
+		//Primary Header Logo Layout Title
+    $wp_customize->add_setting(
+        'primary_header_logo_layout_title',
+        array(
+            'default' => '',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Title_Area(
+        $wp_customize,
+        'primary_header_logo_layout_title',
+        array(
+            'label'	=> __( 'Layout' ),
+            'section' => 'primary_header_logo',
+            'settings' => 'primary_header_logo_layout_title',
+        )
+    ));
 
 		//Primary Header Logo Alignment
 		$wp_customize->add_setting(

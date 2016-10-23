@@ -622,6 +622,12 @@ img {
     display: block;
 }
 
+/******************************************************/
+/*                                                    */
+/*                 Secondary Header                   */
+/*                                                    */
+/******************************************************/
+
 #secondary_header {
     <?php if(get_theme_mod('secondary_header_width_option','fluid') == 'fixed') { ?>
         width:<?php echo (get_theme_mod('secondary_header_width_fixed','1100')) ?>px;
