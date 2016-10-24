@@ -70,7 +70,7 @@
 		$wp_customize->add_setting(
 			'primary_header_type_select',
 			array(
-				'default' => 'Menu',
+				'default' => 'Logo & Menu',
 			)
 		);
 		$wp_customize->add_control(
@@ -218,7 +218,7 @@
 		$wp_customize->add_setting(
 			'primary_header_content_width_option',
 			array(
-				'default' => 'fluid',
+				'default' => 'fixed',
 			)
 		);
 		$wp_customize->add_control(
@@ -363,7 +363,7 @@
 		$wp_customize->add_setting(
 			'primary_header_background_color',
 			array(
-				'default' => '#333',
+				'default' => '#FFF',
 				'transport' => 'postMessage',
 			)
 		);
@@ -470,7 +470,7 @@
     $wp_customize->add_setting(
         'primary_header_border_style',
         array(
-            'default' => 'solid',
+            'default' => 'none',
         )
     );
     $wp_customize->add_control(
@@ -495,7 +495,7 @@
 		$wp_customize->add_setting(
 			'primary_header_border_color',
 			array(
-				'default' => '#000',
+				'default' => '#444',
 			)
 		);
 		$wp_customize->add_control(
@@ -649,7 +649,7 @@
 		$wp_customize->add_setting(
 			'primary_header_padding_top',
 			array(
-				'default' => '14',
+				'default' => '16',
 			)
 		);
 		$wp_customize->add_control(
@@ -672,7 +672,7 @@
 		$wp_customize->add_setting(
 			'primary_header_padding_bottom',
 			array(
-				'default' => '14',
+				'default' => '16',
 			)
 		);
 		$wp_customize->add_control(
@@ -917,7 +917,7 @@
 	$wp_customize->add_setting(
 			'primary_header_sitetitle',
 			array(
-					'default' => 'My Site',
+					'default' => 'Page Express',
 			)
 	);
 	$wp_customize->add_control(
@@ -950,7 +950,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_title_text_color',
 		array(
-			'default' => '#FFF',
+			'default' => '#333',
 		)
 	);
 	$wp_customize->add_control(
@@ -969,7 +969,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_title_fonts',
 		array(
-			'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
 		)
 	);
 	$wp_customize->add_control(
@@ -1008,7 +1008,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_title_font_size',
 		array(
-			'default' => '32',
+			'default' => '36',
 		)
 	);
 	$wp_customize->add_control(
@@ -1055,7 +1055,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_title_font_transformation',
 		array(
-			'default' => 'none',
+			'default' => 'capitalize',
 		)
 	);
 	$wp_customize->add_control(
@@ -1094,7 +1094,7 @@
 	$wp_customize->add_setting(
 			'primary_header_tagline',
 			array(
-					'default' => 'just another Wordpress site',
+					'default' => 'Craft a beautiful Wordpress Website',
 			)
 	);
 	$wp_customize->add_control(
@@ -1127,7 +1127,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_text_color',
 		array(
-			'default' => '#CCC',
+			'default' => '#333',
 		)
 	);
 	$wp_customize->add_control(
@@ -1146,7 +1146,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_fonts',
 		array(
-			'default' => 'Arial',
+			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
 		)
 	);
 	$wp_customize->add_control(
@@ -1185,7 +1185,7 @@
 	$wp_customize->add_setting(
 		'primary_header_logo_tagline_font_size',
 		array(
-			'default' => '18',
+			'default' => '14',
 		)
 	);
 	$wp_customize->add_control(
@@ -1252,7 +1252,10 @@
 
 	//Primary Header Logo Tagline Position
 	$wp_customize->add_setting(
-		'primary_header_logo_tagline_position'
+		'primary_header_logo_tagline_position',
+			array(
+					'default' => '1',
+			)
 	);
 	$wp_customize->add_control(
 		'primary_header_logo_tagline_position',
@@ -1304,7 +1307,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_height',
 		array(
-			'default' => '25',
+			'default' => '14',
 		)
 	);
 	$wp_customize->add_control(
@@ -1328,7 +1331,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_spacing',
 		array(
-			'default' => '5',
+			'default' => '20',
 		)
 	);
 	$wp_customize->add_control(
@@ -1393,7 +1396,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_link_color',
 		array(
-			'default' => '#FFF',
+			'default' => '#333',
 		)
 	);
 	$wp_customize->add_control(
@@ -1412,7 +1415,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_fonts',
 		array(
-			'default' => 'Arial,"Helvetica Neue",Helvetica,sans-serif',
+			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
 		)
 	);
 	$wp_customize->add_control(
@@ -1498,7 +1501,7 @@
     $wp_customize->add_setting(
         'primary_header_menu_font_transformation',
         array(
-            'default' => 'none',
+            'default' => 'capitalize',
         )
     );
     $wp_customize->add_control(
@@ -1558,7 +1561,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_link_hover_color',
 		array(
-			'default' => '#CCC',
+			'default' => '#ba2a2a',
 		)
 	);
 	$wp_customize->add_control(
@@ -1578,7 +1581,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_link_alignment',
 		array(
-			'default' => 'center',
+			'default' => 'left',
 		)
 	);
 	$wp_customize->add_control(
@@ -1651,7 +1654,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_background_color',
 		array(
-			'default' => '#9E9E9E',
+			'default' => '#FFF',
 		)
 	);
 	$wp_customize->add_control(
@@ -1682,7 +1685,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_hover_background_color',
 		array(
-			'default' => '#C7C7C7',
+			'default' => '#F4F4F4',
 		)
 	);
 	$wp_customize->add_control(
@@ -1742,7 +1745,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_background_image_repeat',
 		array(
-			'default' => 'repeat',
+			'default' => 'no-repeat',
 		)
 	);
 	$wp_customize->add_control(
@@ -1781,7 +1784,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_border_style',
 		array(
-			'default' => 'solid',
+			'default' => 'none',
 		)
 	);
 	$wp_customize->add_control(
@@ -1805,7 +1808,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_border_color',
 		array(
-			'default' => '#000',
+			'default' => '#444',
 		)
 	);
 	$wp_customize->add_control(

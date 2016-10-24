@@ -378,7 +378,7 @@ img {
   box-sizing:border-box;
 
   <?php if(!get_theme_mod('primary_header_background_visible')) { ?>
-  background-color:<?php echo get_theme_mod('primary_header_background_color','#000') ?>;
+  background-color:<?php echo get_theme_mod('primary_header_background_color','#FFF') ?>;
   <?php if(get_theme_mod('primary_header_background_image')) { ?>
   background-image:url('<?php echo get_theme_mod('primary_header_background_image') ?>');
   background-position:<?php echo get_theme_mod('primary_header_background_image_position','left top') ?>;
@@ -389,15 +389,15 @@ img {
   background-color:transparent;
   <?php } ?>
 
-  <?php if(get_theme_mod('primary_header_border_style','solid') != 'none') { ?>
-  border-style:<?php echo get_theme_mod('primary_header_border_style','solid') ?>;
-  border-color:<?php echo get_theme_mod('primary_header_border_color','#000') ?>;
+  <?php if(get_theme_mod('primary_header_border_style','none') != 'none') { ?>
+  border-style:<?php echo get_theme_mod('primary_header_border_style','none') ?>;
+  border-color:<?php echo get_theme_mod('primary_header_border_color','#444') ?>;
   border-width:<?php echo get_theme_mod('primary_header_border_top','0') ?>px <?php echo get_theme_mod('primary_header_border_right','0') ?>px <?php echo get_theme_mod('primary_header_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_border_left','0') ?>px ;
   border-radius:<?php echo get_theme_mod('primary_header_border_radius','0') ?>px;
   <?php } ?>
 
-  padding-top:<?php echo get_theme_mod('primary_header_padding_top','0') ?>px;
-  padding-bottom:<?php echo get_theme_mod('primary_header_padding_bottom','0') ?>px;
+  padding-top:<?php echo get_theme_mod('primary_header_padding_top','16') ?>px;
+  padding-bottom:<?php echo get_theme_mod('primary_header_padding_bottom','16') ?>px;
   padding-left:<?php echo get_theme_mod('primary_header_padding_left','0') ?>px;
   padding-right:<?php echo get_theme_mod('primary_header_padding_right','0') ?>px;
 
@@ -406,7 +406,7 @@ img {
 }
 
 #primary_header_content {
-    <?php if(get_theme_mod('primary_header_content_width_option','fluid') == 'fixed') { ?>
+    <?php if(get_theme_mod('primary_header_content_width_option','fixed') == 'fixed') { ?>
         width:<?php echo (get_theme_mod('primary_header_content_width_fixed','1000')) ?>px;
     <? }  else { ?>
         width:<?php echo get_theme_mod('primary_header_content_width_fluid','100') ?>%;
@@ -434,12 +434,12 @@ img {
 }
 
 #primary_header_content #logo {
-    <?php if (get_theme_mod('primary_header_type_select','Menu') == 'Logo & Menu') { ?>
+    <?php if (get_theme_mod('primary_header_type_select','Logo & Menu') == 'Logo & Menu') { ?>
     text-align: left;
     <?php } else { ?>
     text-align:<?php echo get_theme_mod('primary_header_logo_alignment','left') ?>;
     <?php } ?>
-    line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 2 ?>px;
+    line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','36') + 2 ?>px;
     <?php if (get_theme_mod('primary_header_type_select','Menu') != 'Logo') { ?>
         flex-shrink: 1
     <?php } else { ?>
@@ -457,24 +457,24 @@ img {
 }
 <?php if(!get_theme_mod('primary_header_logo_image')) { ?>
 #primary_header_content #logo .title {
-    color:<?php echo get_theme_mod('primary_header_logo_title_text_color','#FFF') ?>;
-    font-family:<?php echo get_theme_mod('primary_header_logo_title_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    color:<?php echo get_theme_mod('primary_header_logo_title_text_color','#333') ?>;
+    font-family:<?php echo get_theme_mod('primary_header_logo_title_fonts','"Helvetica Neue",Helvetica,Arial,sans-serif') ?>;
     font-size:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') ?>px;
     line-height:<?php echo get_theme_mod('primary_header_logo_title_font_size','32') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_title_font_weight','bold') ?>;
-    text-transform:<?php echo get_theme_mod('primary_header_logo_title_font_transformation','none') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_logo_title_font_transformation','capitalize') ?>;
 }
 
 #primary_header_content #logo .tagline {
-    color:<?php echo get_theme_mod('primary_header_logo_tagline_text_color','#CCC') ?>;
-    font-family:<?php echo get_theme_mod('primary_header_logo_tagline_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-size:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') ?>px;
-    line-height:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','18') + 10 ?>px;
+    color:<?php echo get_theme_mod('primary_header_logo_tagline_text_color','#333') ?>;
+    font-family:<?php echo get_theme_mod('primary_header_logo_tagline_fonts','"Helvetica Neue",Helvetica,Arial,sans-serif') ?>;
+    font-size:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','14') ?>px;
+    line-height:<?php echo get_theme_mod('primary_header_logo_tagline_font_size','14') + 10 ?>px;
     font-weight:<?php echo get_theme_mod('primary_header_logo_tagline_font_weight','normal') ?>;
     text-transform:<?php echo get_theme_mod('primary_header_logo_tagline_font_transformation','none') ?>;
 }
 <?php } ?>
-<?php if(get_theme_mod('primary_header_logo_tagline_position')) { ?>
+<?php if(get_theme_mod('primary_header_logo_tagline_position','1')) { ?>
     #primary_header_content #logo .title, #primary_header_content #logo .tagline {
         display:inline;
     }
@@ -538,19 +538,19 @@ img {
     text-align:center;
     display:inline-block;
     <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
-        background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#9E9E9E') ?>;
+        background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#FFF') ?>;
         background-image:url('<?php echo get_theme_mod('primary_header_menu_background_image','none') ?>');
         background-position:<?php echo get_theme_mod('primary_header_menu_background_image_position','left top') ?>;
-        background-repeat:<?php echo get_theme_mod('primary_header_menu_background_image_repeat','repeat') ?>;
+        background-repeat:<?php echo get_theme_mod('primary_header_menu_background_image_repeat','no-repeat') ?>;
     <?php } ?>
-    border-top:<?php echo get_theme_mod('primary_header_menu_border_top','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','solid') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#000') ?>;
-    border-bottom:<?php echo get_theme_mod('primary_header_menu_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','solid') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#000') ?>;
-    border-left:<?php echo get_theme_mod('primary_header_menu_border_left','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','solid') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#000') ?>;
-    border-right:<?php echo get_theme_mod('primary_header_menu_border_right','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','solid') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#000') ?>;
+    border-top:<?php echo get_theme_mod('primary_header_menu_border_top','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','none') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#444') ?>;
+    border-bottom:<?php echo get_theme_mod('primary_header_menu_border_bottom','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','none') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#444') ?>;
+    border-left:<?php echo get_theme_mod('primary_header_menu_border_left','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','none') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#444') ?>;
+    border-right:<?php echo get_theme_mod('primary_header_menu_border_right','0') ?>px <?php echo get_theme_mod('primary_header_menu_border_style','none') ?> <?php echo get_theme_mod('primary_header_menu_border_color','#444') ?>;
     border-radius:<?php echo get_theme_mod('primary_header_menu_border_radius','0') ?>px;
     margin:0px;
-    padding-left:<?php echo get_theme_mod('primary_header_menu_spacing','5') ?>px;
-    padding-right:<?php echo get_theme_mod('primary_header_menu_spacing','5') ?>px;
+    padding-left:<?php echo get_theme_mod('primary_header_menu_spacing','20') ?>px;
+    padding-right:<?php echo get_theme_mod('primary_header_menu_spacing','20') ?>px;
     padding:0px;
 }
 
@@ -559,28 +559,28 @@ img {
 }
 
 #primary_header_content #menu li a  {
-    color:<?php echo get_theme_mod('primary_header_menu_link_color','#FFF') ?>;
-    font-family:<?php echo get_theme_mod('primary_header_menu_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+    color:<?php echo get_theme_mod('primary_header_menu_link_color','#333') ?>;
+    font-family:<?php echo get_theme_mod('primary_header_menu_fonts','"Helvetica Neue",Helvetica,Arial,sans-serif') ?>;
     font-weight:<?php echo get_theme_mod('primary_header_menu_font_weight','normal') ?>;
     font-size:<?php echo get_theme_mod('primary_header_menu_font_size','14') ?>px;
     line-height:<?php echo (get_theme_mod('primary_header_menu_font_size','14') + 4) ?>px;
-    padding-left:<?php echo get_theme_mod('primary_header_menu_spacing','5') ?>px;
-    padding-right:<?php echo get_theme_mod('primary_header_menu_spacing','5') ?>px;
-    padding-top:<?php echo get_theme_mod('primary_header_menu_height','25') ?>px;
-    padding-bottom:<?php echo get_theme_mod('primary_header_menu_height','25') ?>px;
-    text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','center') ?>;
+    padding-left:<?php echo get_theme_mod('primary_header_menu_spacing','20') ?>px;
+    padding-right:<?php echo get_theme_mod('primary_header_menu_spacing','20') ?>px;
+    padding-top:<?php echo get_theme_mod('primary_header_menu_height','14') ?>px;
+    padding-bottom:<?php echo get_theme_mod('primary_header_menu_height','14') ?>px;
+    text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','left') ?>;
     display: inline-block;
     text-decoration:<?php echo get_theme_mod('primary_header_menu_link_decoration','none') ?>;
-    text-transform:<?php echo get_theme_mod('primary_header_menu_font_transformation','none') ?>;
+    text-transform:<?php echo get_theme_mod('primary_header_menu_font_transformation','capitalize') ?>;
 }
 
 #primary_header_content #menu .current-menu-item a, #primary_header_content #menu .current_page_item a, #primary_header_content #menu a:hover {
-    color:<?php echo get_theme_mod('primary_header_menu_link_hover_color','#CCC') ?>;
+    color:<?php echo get_theme_mod('primary_header_menu_link_hover_color','#ba2a2a') ?>;
     <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
-        background-color:<?php echo get_theme_mod('primary_header_menu_hover_background_color','#C7C7C7') ?>;
+        background-color:<?php echo get_theme_mod('primary_header_menu_hover_background_color','#F4F4F4') ?>;
         background-image:url('<?php echo get_theme_mod('primary_header_menu_hover_background_image','none') ?>');
         background-position:<?php echo get_theme_mod('primary_header_menu_background_image_position','left top') ?>;
-        background-repeat:<?php echo get_theme_mod('primary_header_menu_background_image_repeat','repeat') ?>;
+        background-repeat:<?php echo get_theme_mod('primary_header_menu_background_image_repeat','no-repeat') ?>;
     <?php } ?>
 }
 
@@ -594,10 +594,10 @@ img {
         left:0;
     <?php } ?>
     <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
-        background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#C7C7C7') ?>;
+        background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#FFF') ?>;
     <?php } else { ?>
       <?php if(!get_theme_mod('primary_header_background_visible')) { ?>
-      background-color:<?php echo get_theme_mod('primary_header_background_color','#000') ?>;
+      background-color:<?php echo get_theme_mod('primary_header_background_color','#FFF') ?>;
       <?php } else { ?>
       background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
       <?php } ?>
@@ -611,7 +611,7 @@ img {
 
 #primary_header_content #menu ul ul li {
     float: none;
-    text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','center') ?>;
+    text-align:<?php echo get_theme_mod('primary_header_menu_link_alignment','left') ?>;
 }
 
 #primary_header_content #menu ul ul li a {

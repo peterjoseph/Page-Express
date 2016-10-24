@@ -29,8 +29,8 @@
                                 <?php if(get_theme_mod('primary_header_logo_image')) { ?>
                                     <img src="<?php echo get_theme_mod('primary_header_logo_image'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                                 <?php } else { ?>
-                                    <?php echo "<div class='title'>" . get_theme_mod('primary_header_sitetitle','My Site') . "</div>"; ?>
-                                    <?php echo "<div class='tagline'>" . get_theme_mod('primary_header_tagline','just another Wordpress site') . "</div>"; ?>
+                                    <?php echo "<div class='title'>" . get_theme_mod('primary_header_sitetitle','Page Express') . "</div>"; ?>
+                                    <?php echo "<div class='tagline'>" . get_theme_mod('primary_header_tagline','Craft a beautiful Wordpress Website') . "</div>"; ?>
                                 <?php } ?>
                             </a>
                         </div>
