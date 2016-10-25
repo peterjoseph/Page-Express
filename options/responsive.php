@@ -21,20 +21,22 @@
         <?php } ?>
         display:none;
         width:100%;
-        height:70%;
+        max-height:70%;
         background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
         overflow:auto;
     }
 
     #header .standard #primary_header {
-        width:100%;
-        box-sizing:border-box;
-        background-color:transparent;
-        background-image:none;
-        border:0px;
-        border-radius:0px;
-        padding:0px;
-        margin:0px;
+      width:100%;
+      box-sizing:border-box;
+      border:0px;
+      border-radius:0px;
+      padding:0px;
+      margin:0px;
+      <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
+      background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#FFF') ?>;
+      background-image:none;
+      <?php } ?>
     }
 
     #header .standard #primary_header_content {
@@ -82,7 +84,7 @@
         margin:0px;
         padding:0px;
         <?php if(!get_theme_mod('primary_header_menu_background_visible')) { ?>
-            background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#9E9E9E') ?>;
+            background-color:<?php echo get_theme_mod('primary_header_menu_background_color','#FFF') ?>;
             background-image:none;
         <?php } ?>
         border:0px;
@@ -144,12 +146,14 @@
     #header .standard #secondary_header {
         width:100%;
         box-sizing:border-box;
-        background-color:transparent;
-        background-image:none;
         border:0px;
         border-radius:0px;
         padding:0px;
         margin:0px;
+        <?php if(!get_theme_mod('secondary_header_menu_background_visible')) { ?>
+        background-color:<?php echo get_theme_mod('secondary_header_menu_background_color','#FFF') ?>;
+        background-image:none;
+        <?php } ?>
     }
 
     #header .standard #secondary_header_content {
@@ -259,12 +263,14 @@
     #header .standard #tertiary_header {
         width:100%;
         box-sizing:border-box;
-        background-color:transparent;
-        background-image:none;
         border:0px;
         border-radius:0px;
         padding:0px;
         margin:0px;
+        <?php if(!get_theme_mod('tertiary_header_menu_background_visible')) { ?>
+        background-color:<?php echo get_theme_mod('tertiary_header_menu_background_color','#FFF') ?>;
+        background-image:none;
+        <?php } ?>
     }
 
     #header .standard #tertiary_header_content {

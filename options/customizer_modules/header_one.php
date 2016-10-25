@@ -1331,7 +1331,7 @@
 	$wp_customize->add_setting(
 		'primary_header_menu_spacing',
 		array(
-			'default' => '20',
+			'default' => '10',
 		)
 	);
 	$wp_customize->add_control(
@@ -1341,6 +1341,30 @@
 		'priority'    => 10,
 		'section'     => 'primary_header_menu_styling',
 		'label'       => 'Horizontal Button Spacing',
+		'description'	=> __( 'Adjust width of menu buttons' ),
+		'type' => __(" pixels"),
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 25,
+			'step'  => 1,
+		),
+		)
+	) );
+
+	//Primary Header Menu Spacing
+	$wp_customize->add_setting(
+		'primary_header_menu_separation',
+		array(
+			'default' => '0',
+		)
+	);
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_separation', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Horizontal Button Separation',
 		'description'	=> __( 'Add horizontal spacing between menu buttons' ),
 		'type' => __(" pixels"),
 		'input_attrs' => array(
