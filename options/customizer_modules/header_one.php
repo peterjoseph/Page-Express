@@ -109,6 +109,7 @@
 			'primary_header_width_option',
 			array(
 				'default' => 'fluid',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -133,6 +134,7 @@
 			'primary_header_width_fixed',
 			array(
 				'default' => '1100',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -156,6 +158,7 @@
 			'primary_header_width_fluid',
 			array(
 				'default' => '100',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -178,6 +181,7 @@
 			'primary_header_alignment',
 			array(
 				'default' => 'center',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -219,6 +223,7 @@
 			'primary_header_content_width_option',
 			array(
 				'default' => 'fixed',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -243,6 +248,7 @@
 			'primary_header_content_width_fixed',
 			array(
 				'default' => '1000',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -265,6 +271,7 @@
 			'primary_header_content_width_fluid',
 			array(
 				'default' => '100',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
