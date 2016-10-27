@@ -400,14 +400,9 @@ img {
 
 #primary_header_content {
   <?php if(get_theme_mod('primary_header_content_width_option','fixed') == 'fixed') { ?>
-  width:<?php echo (get_theme_mod('primary_header_content_width_fixed','1000')) ?>px;
+  max-width:<?php echo (get_theme_mod('primary_header_content_width_fixed','1000')) ?>px;
   <? }  else { ?>
-  width:<?php echo get_theme_mod('primary_header_content_width_fluid','100') ?>%;
-  <?php } ?>
-  <?php if(get_theme_mod('primary_header_width_option','fluid') == 'fixed') { ?>
-  max-width:<?php echo (get_theme_mod('primary_header_width_fixed','1100')) ?>px;
-  <? }  else { ?>
-  max-width:<?php echo get_theme_mod('primary_header_width_fluid','100') ?>%;
+  max-width:<?php echo get_theme_mod('primary_header_content_width_fluid','100') ?>%;
   <?php } ?>
   height:auto;
   <?php
