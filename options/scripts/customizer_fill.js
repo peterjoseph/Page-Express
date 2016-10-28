@@ -220,4 +220,112 @@ jQuery(function($){
       } );
   });
 
+  //Primary Header Logo Alignment
+  wp.customize( 'primary_header_logo_alignment', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('#logo').css('text-align', to );
+      } );
+  });
+
+  //Primary Header Site Title
+  wp.customize( 'primary_header_sitetitle', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.title').html( to );
+      } );
+  });
+
+  //Primary Header Logo Title Text Color
+  wp.customize( 'primary_header_logo_title_text_color', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.title').css( 'color' , to );
+      } );
+  });
+
+  //Primary Header Logo Title Font Family
+  wp.customize( 'primary_header_logo_title_fonts', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.title').css( 'font-family' , to );
+      } );
+  });
+
+  //Primary Header Logo Title Font Size
+  wp.customize( 'primary_header_logo_title_font_size', function( value ) {
+      value.bind( function( to ) {
+          let height = parseInt(to) + 10;
+          $('#primary_header_content').find('div.title').css( 'font-size' , to + 'px' );
+          $('#primary_header_content').find('div.title').css( 'line-height' , height + 'px' );
+      } );
+  });
+
+  //Primary Header Logo Title Font Weight
+  wp.customize( 'primary_header_logo_title_font_weight', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.title').css( 'font-weight' , to );
+      } );
+  });
+
+  //Primary Header Logo Title Font Transformation
+  wp.customize( 'primary_header_logo_title_font_transformation', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.title').css( 'text-transform' , to );
+      } );
+  });
+
+  //Primary Header Site Tagline
+  wp.customize( 'primary_header_tagline', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.tagline').html( to );
+      } );
+  });
+
+  //Primary Header Logo Tagline Text Color
+  wp.customize( 'primary_header_logo_tagline_text_color', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.tagline').css( 'color' , to );
+      } );
+  });
+
+  //Primary Header Logo Tagline Font Family
+  wp.customize( 'primary_header_logo_tagline_fonts', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.tagline').css( 'font-family' , to );
+      } );
+  });
+
+  //Primary Header Logo Tagline Font Size
+  wp.customize( 'primary_header_logo_tagline_font_size', function( value ) {
+      value.bind( function( to ) {
+          let height = parseInt(to) + 10;
+          $('#primary_header_content').find('div.tagline').css( 'font-size' , to + 'px' );
+          $('#primary_header_content').find('div.tagline').css( 'line-height' , height + 'px' );
+      } );
+  });
+
+  //Primary Header Logo Tagline Font Weight
+  wp.customize( 'primary_header_logo_tagline_font_weight', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.tagline').css( 'font-weight' , to );
+      } );
+  });
+
+  //Primary Header Logo Tagline Font Transformation
+  wp.customize( 'primary_header_logo_tagline_font_transformation', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('div.tagline').css( 'text-transform' , to );
+      } );
+  });
+
+  //Primary Header Logo Tagline Position
+  wp.customize( 'primary_header_logo_tagline_position', function( value ) {
+      value.bind( function( to ) {
+        if(to == 1) {
+          $('#primary_header_content').find('div.title').css( 'display' , 'inline' );
+          $('#primary_header_content').find('div.tagline').css( 'display' , 'inline' );
+        } else {
+          $('#primary_header_content').find('div.title').css( 'display' , 'block' );
+          $('#primary_header_content').find('div.tagline').css( 'display' , 'block' );
+        }
+      } );
+  });
+
 });

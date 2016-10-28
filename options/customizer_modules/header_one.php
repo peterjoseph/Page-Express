@@ -871,7 +871,11 @@
     ));
 
     //Primary Header Logo Image
-    $wp_customize->add_setting( 'primary_header_logo_image' );
+    $wp_customize->add_setting( 'primary_header_logo_image',
+		array(
+				'default' => '',
+			)
+		);
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
             $wp_customize,
@@ -907,6 +911,7 @@
 			'primary_header_logo_alignment',
 			array(
 				'default' => 'left',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -948,6 +953,7 @@
 			'primary_header_sitetitle',
 			array(
 					'default' => 'Page Express',
+					'transport' => 'postMessage',
 			)
 	);
 	$wp_customize->add_control(
@@ -981,6 +987,7 @@
 		'primary_header_logo_title_text_color',
 		array(
 			'default' => '#333',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1000,6 +1007,7 @@
 		'primary_header_logo_title_fonts',
 		array(
 			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1039,6 +1047,7 @@
 		'primary_header_logo_title_font_size',
 		array(
 			'default' => '36',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1062,6 +1071,7 @@
 		'primary_header_logo_title_font_weight',
 		array(
 			'default' => 'bold',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1075,7 +1085,7 @@
 				'choices'		=> array(
 					'normal' => 'Normal',
 					'bold' => 'Bold',
-					'light' => 'Light',
+					'lighter' => 'Light',
 				)
 			)
 		)
@@ -1086,6 +1096,7 @@
 		'primary_header_logo_title_font_transformation',
 		array(
 			'default' => 'capitalize',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1125,6 +1136,7 @@
 			'primary_header_tagline',
 			array(
 					'default' => 'Craft a beautiful Wordpress Website',
+					'transport' => 'postMessage',
 			)
 	);
 	$wp_customize->add_control(
@@ -1158,6 +1170,7 @@
 		'primary_header_logo_tagline_text_color',
 		array(
 			'default' => '#333',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1177,6 +1190,7 @@
 		'primary_header_logo_tagline_fonts',
 		array(
 			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1216,6 +1230,7 @@
 		'primary_header_logo_tagline_font_size',
 		array(
 			'default' => '14',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1239,6 +1254,7 @@
 		'primary_header_logo_tagline_font_weight',
 		array(
 			'default' => 'normal',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1252,7 +1268,7 @@
 				'choices'		=> array(
 					'normal' => 'Normal',
 					'bold' => 'Bold',
-					'light' => 'Light',
+					'lighter' => 'Light',
 				)
 			)
 		)
@@ -1263,6 +1279,7 @@
 		'primary_header_logo_tagline_font_transformation',
 		array(
 			'default' => 'none',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1285,6 +1302,7 @@
 		'primary_header_logo_tagline_position',
 			array(
 					'default' => '1',
+					'transport' => 'postMessage',
 			)
 	);
 	$wp_customize->add_control(
