@@ -1356,6 +1356,7 @@
 		'primary_header_menu_height',
 		array(
 			'default' => '14',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1380,6 +1381,7 @@
 		'primary_header_menu_spacing',
 		array(
 			'default' => '10',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1404,6 +1406,7 @@
 		'primary_header_menu_separation',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1428,6 +1431,7 @@
 		'primary_header_menu_alignment',
 		array(
 			'default' => 'right',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1469,6 +1473,7 @@
 		'primary_header_menu_link_color',
 		array(
 			'default' => '#333',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1488,6 +1493,7 @@
 		'primary_header_menu_fonts',
 		array(
 			'default' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1527,6 +1533,7 @@
 		'primary_header_menu_font_size',
 		array(
 			'default' => '14',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1550,6 +1557,7 @@
 		'primary_header_menu_font_weight',
 		array(
 			'default' => 'normal',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1574,6 +1582,7 @@
         'primary_header_menu_font_transformation',
         array(
             'default' => 'capitalize',
+						'transport' => 'postMessage',
         )
     );
     $wp_customize->add_control(
@@ -1596,6 +1605,7 @@
 			'primary_header_menu_link_decoration',
 			array(
 				'default' => 'none',
+				'transport' => 'postMessage',
 			)
 		);
 		$wp_customize->add_control(
@@ -1634,6 +1644,7 @@
 		'primary_header_menu_link_hover_color',
 		array(
 			'default' => '#ba2a2a',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1654,6 +1665,7 @@
 		'primary_header_menu_link_alignment',
 		array(
 			'default' => 'left',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
