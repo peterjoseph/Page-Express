@@ -1571,7 +1571,7 @@
 				'choices'		=> array(
 					'normal' => 'Normal',
 					'bold' => 'Bold',
-					'light' => 'Light',
+					'lighter' => 'Light',
 				)
 			)
 		)
@@ -1705,7 +1705,10 @@
 
 	//Primary Header Menu Background Visibility
 	$wp_customize->add_setting(
-		'primary_header_menu_background_visible'
+		'primary_header_menu_background_visible',
+		array(
+			'transport' => 'postMessage',
+		)
 	);
 	$wp_customize->add_control(
 		'primary_header_menu_background_visible',
@@ -1739,6 +1742,7 @@
 		'primary_header_menu_background_color',
 		array(
 			'default' => '#FFF',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1753,7 +1757,11 @@
 	);
 
 	//Primary Header Menu Background Image
-	$wp_customize->add_setting( 'primary_header_menu_background_image' );
+	$wp_customize->add_setting( 'primary_header_menu_background_image',
+	array(
+		'transport' => 'postMessage',
+	)
+ );
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
@@ -1770,6 +1778,7 @@
 		'primary_header_menu_hover_background_color',
 		array(
 			'default' => '#F4F4F4',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1785,7 +1794,11 @@
 	);
 
 	//Primary Header Hover Background Image
-	$wp_customize->add_setting( 'primary_header_menu_hover_background_image' );
+	$wp_customize->add_setting( 'primary_header_menu_hover_background_image',
+	array(
+		'transport' => 'postMessage',
+	)
+ );
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
@@ -1803,6 +1816,7 @@
 		'primary_header_menu_background_image_position',
 		array(
 			'default' => 'left top',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1830,6 +1844,7 @@
 		'primary_header_menu_background_image_repeat',
 		array(
 			'default' => 'no-repeat',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1869,6 +1884,7 @@
 		'primary_header_menu_border_style',
 		array(
 			'default' => 'none',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1893,6 +1909,7 @@
 		'primary_header_menu_border_color',
 		array(
 			'default' => '#444',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1912,6 +1929,7 @@
 		'primary_header_menu_border_top',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1935,6 +1953,7 @@
 		'primary_header_menu_border_bottom',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1958,6 +1977,7 @@
 		'primary_header_menu_border_left',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1981,6 +2001,7 @@
 		'primary_header_menu_border_right',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -2004,6 +2025,7 @@
 		'primary_header_menu_border_radius',
 		array(
 			'default' => '0',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
