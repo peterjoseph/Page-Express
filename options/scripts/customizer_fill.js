@@ -380,11 +380,11 @@ jQuery(function($){
           $('#primary_header_content').find('#menu .wrapper').css('right', '0' );
           $('#primary_header_content').find('#menu .wrapper').css('transform', 'translate(0,-50%)' );
         }
-        if(to == 'right') {
-          $('#primary_header_content').find('#menu .sub-menu').css('right', '0' );
-        } else {
-          $('#primary_header_content').find('#menu .sub-menu').css('left', '0' );
-        }
+      }
+      if(to == 'right') {
+        $('#primary_header_content').find('#menu .sub-menu').css({'right': '0', 'left': 'initial'});
+      } else {
+        $('#primary_header_content').find('#menu .sub-menu').css({'left': '0', 'right': 'initial'});
       }
     } );
   });
@@ -460,19 +460,6 @@ jQuery(function($){
       } );
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   //Primary Header Menu Background Visibility
   wp.customize( 'primary_header_menu_background_visible', function( value ) {
       value.bind( function( to ) {
@@ -488,11 +475,27 @@ jQuery(function($){
             function(){ $(this).css('background-image', 'none') }
           );
           if(wp.customize.value('primary_header_background_visible')() == 0) {
-            $('primary_header_content #menu .sub-menu li').css('background-color', wp.customize.value('primary_header_background_color')() );
-            $('primary_header_content #menu .sub-menu li').css('background-image', 'none' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-color', wp.customize.value('primary_header_background_color')() );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-image', 'none' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) },
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) }
+            );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-image', 'none') },
+              function(){ $(this).css('background-image', 'none') }
+            );
           } else {
-            $('primary_header_content #menu .sub-menu li').css('background-color', 'transparent' );
-            $('primary_header_content #menu .sub-menu li').css('background-image', 'none' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-color', 'rgba(0, 0, 0, 0.4)' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-image', 'none');
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-color', 'rgba(0, 0, 0, 0.4)') },
+              function(){ $(this).css('background-color', 'rgba(0, 0, 0, 0.4)') }
+            );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-image', 'none') },
+              function(){ $(this).css('background-image', 'none') }
+            );
           }
         } else {
           $('#primary_header_content #menu li').css('background-color', wp.customize.value('primary_header_menu_background_color')() );
@@ -559,16 +562,6 @@ jQuery(function($){
       } );
   });
 
-
-
-
-
-
-
-
-
-
-
     //Primary Header Menu Border Style
     wp.customize( 'primary_header_menu_border_style', function( value ) {
         value.bind( function( to ) {
@@ -619,6 +612,7 @@ jQuery(function($){
     wp.customize( 'primary_header_menu_border_radius', function( value ) {
         value.bind( function( to ) {
           $('#primary_header_content #menu li').css('border-radius', to + 'px' );
+          $('#primary_header_content #menu .sub-menu li').css('border-radius', '0' + 'px' );
         } );
     });
 

@@ -596,6 +596,7 @@ img {
   background-image:url('<?php echo get_bloginfo('template_url') ?>/images/transparent_background.png');
   <?php } ?>
   <?php } ?>
+  border-radius:0px;
 }
 
 #primary_header_content #menu ul ul {
