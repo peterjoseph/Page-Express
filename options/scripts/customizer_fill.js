@@ -453,6 +453,13 @@ jQuery(function($){
       } );
   });
 
+  //Primary Header Menu Drop-down Menu Vertical Spacing
+  wp.customize( 'primary_header_menu_sub_vertical_spacing', function( value ) {
+      value.bind( function( to ) {
+          $('#primary_header_content').find('.sub-menu').css('padding-top' , to + 'px' );
+      } );
+  });
+
 
 
 
@@ -472,43 +479,32 @@ jQuery(function($){
         if(to == 1) {
           $('#primary_header_content #menu li').css('background-color', 'transparent' );
           $('#primary_header_content #menu li').css('background-image', 'none' );
-
-          $('#primary_header_content #menu .current-menu-item a').css('background-color', 'transparent' );
-          $('#primary_header_content #menu .current_page_item a').css('background-color', 'transparent' );
           $('#primary_header_content #menu li').hover(
             function(){ $(this).css('background-color', 'transparent') },
             function(){ $(this).css('background-color', 'transparent') }
           );
-
-          $('#primary_header_content #menu .current-menu-item a').css('background-image', 'none' );
-          $('#primary_header_content #menu .current_page_item a').css('background-image', 'none' );
           $('#primary_header_content #menu li').hover(
             function(){ $(this).css('background-image', 'none') },
             function(){ $(this).css('background-image', 'none') }
           );
-
-          $('primary_header_content #menu .sub-menu').css('background-color', 'transparent' );
-          $('primary_header_content #menu .sub-menu').css('background-image', 'none' );
+          if(wp.customize.value('primary_header_background_visible')() == 0) {
+            $('primary_header_content #menu .sub-menu li').css('background-color', wp.customize.value('primary_header_background_color')() );
+            $('primary_header_content #menu .sub-menu li').css('background-image', 'none' );
+          } else {
+            $('primary_header_content #menu .sub-menu li').css('background-color', 'transparent' );
+            $('primary_header_content #menu .sub-menu li').css('background-image', 'none' );
+          }
         } else {
           $('#primary_header_content #menu li').css('background-color', wp.customize.value('primary_header_menu_background_color')() );
           $('#primary_header_content #menu li').css('background-image', 'url(' + wp.customize.value('primary_header_menu_background_image')() + ')'  );
-
-          $('#primary_header_content #menu .current-menu-item a').css('background-color', wp.customize.value('primary_header_menu_background_color')() );
-          $('#primary_header_content #menu .current_page_item a').css('background-color', wp.customize.value('primary_header_menu_background_color')() );
           $('#primary_header_content #menu li').hover(
             function(){ $(this).css('background-color', wp.customize.value('primary_header_menu_hover_background_color')()) },
             function(){ $(this).css('background-color', wp.customize.value('primary_header_menu_background_color')() ) }
           );
-
-          $('#primary_header_content #menu .current-menu-item a').css('background-image', 'url(' + wp.customize.value('primary_header_menu_background_image')() + ')'  );
-          $('#primary_header_content #menu .current_page_item a').css('background-image', 'url(' + wp.customize.value('primary_header_menu_background_image')() + ')'  );
           $('#primary_header_content #menu li').hover(
             function(){ $(this).css('background-image', 'url(' + wp.customize.value('primary_header_menu_hover_background_image')() + ')'  ) },
             function(){ $(this).css('background-image', 'url(' + wp.customize.value('primary_header_menu_background_image')() + ')'  ) }
           );
-
-          $('primary_header_content #menu .sub-menu').css('background-color', wp.customize.value('primary_header_menu_background_color')() );
-          $('primary_header_content #menu .sub-menu').css('background-image', 'url(' + wp.customize.value('primary_header_menu_background_image')() + ')'  );
         }
       } );
   });
@@ -517,9 +513,6 @@ jQuery(function($){
   wp.customize( 'primary_header_menu_background_color', function( value ) {
       value.bind( function( to ) {
         $('#primary_header_content #menu li').css('background-color', to );
-        $('#primary_header_content #menu .current-menu-item a').css('background-color', to );
-        $('#primary_header_content #menu .current_page_item a').css('background-color', to );
-        $('#primary_header_content #menu .sub-menu').css('background-color', to );
         $('#primary_header_content #menu li').css('background-color', to );
       } );
   });
@@ -528,9 +521,6 @@ jQuery(function($){
   wp.customize( 'primary_header_menu_background_image', function( value ) {
       value.bind( function( to ) {
           $('#primary_header_content #menu li').css('background-image', 'url(' + to + ')' );
-          $('#primary_header_content #menu .current-menu-item a').css('background-image', 'url(' + to + ')' );
-          $('#primary_header_content #menu .current_page_item a').css('background-image', 'url(' + to + ')' );
-          $('#primary_header_content #menu .sub-menu').css('background-image', 'url(' + to + ')' );
           $('#primary_header_content #menu li').css('background-image', 'url(' + to + ')' );
       } );
   });
@@ -538,7 +528,7 @@ jQuery(function($){
   //Primary Header Menu Hover Background Color
   wp.customize( 'primary_header_menu_hover_background_color', function( value ) {
       value.bind( function( to ) {
-        $('#primary_header_content #menu a').hover(
+        $('#primary_header_content #menu li').hover(
           function(){ $(this).css('background-color', to ) },
           function(){ $(this).css('background-color', wp.customize.value('primary_header_menu_background_color')() ) }
         );
@@ -559,8 +549,6 @@ jQuery(function($){
   wp.customize( 'primary_header_menu_background_image_position', function( value ) {
       value.bind( function( to ) {
           $('#primary_header_content #menu li').css('background-position', to );
-          $('#primary_header_content #menu .current-menu-item').css('background-position', to );
-          $('#primary_header_content #menu .current_page_item').css('background-position', to );
       } );
   });
 
@@ -568,10 +556,18 @@ jQuery(function($){
   wp.customize( 'primary_header_menu_background_image_repeat', function( value ) {
       value.bind( function( to ) {
           $('#primary_header_content #menu li').css('background-repeat', to );
-          $('#primary_header_content #menu .current-menu-item').css('background-repeat', to );
-          $('#primary_header_content #menu .current_page_item').css('background-repeat', to );
       } );
   });
+
+
+
+
+
+
+
+
+
+
 
     //Primary Header Menu Border Style
     wp.customize( 'primary_header_menu_border_style', function( value ) {

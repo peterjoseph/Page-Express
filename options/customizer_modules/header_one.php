@@ -1686,6 +1686,30 @@
 		)
 	);
 
+	//Primary Header Menu Sub-Menu Vertical spacing
+	$wp_customize->add_setting(
+		'primary_header_menu_sub_vertical_spacing',
+		array(
+			'default' => '10',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'primary_header_menu_sub_vertical_spacing', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'primary_header_menu_styling',
+		'label'       => 'Drop-down Menu Vertical Spacing',
+		'type' => __(" pixels"),
+		'input_attrs' => array(
+			'min'   => 0,
+			'max'   => 30,
+			'step'  => 1,
+		),
+		)
+	) );
+
 	//Primary Header Background Title
 	$wp_customize->add_setting(
 		'primary_header_menu_background_title',
