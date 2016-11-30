@@ -94,9 +94,42 @@ jQuery(function($){
         if(to == 1) {
           $('#primary_header').css('background-color', 'transparent' );
           $('#primary_header').css('background-image', 'none' );
+          if(wp.customize.value('primary_header_menu_background_visible')() == 0) {
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-color', wp.customize.value('primary_header_background_color')() );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-image', 'none' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) },
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) }
+            );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-image', 'none') },
+              function(){ $(this).css('background-image', 'none') }
+            );
+          } else {
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-color', 'rgba(0, 0, 0, 0.4)' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-image', 'none');
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-color', 'rgba(0, 0, 0, 0.4)') },
+              function(){ $(this).css('background-color', 'rgba(0, 0, 0, 0.4)') }
+            );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-image', 'none') },
+              function(){ $(this).css('background-image', 'none') }
+            );
+          }
         } else {
           $('#primary_header').css('background-color', wp.customize.value('primary_header_background_color')() );
           $('#primary_header').css('background-image', 'url(' + wp.customize.value('primary_header_background_image')() + ')' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-color', wp.customize.value('primary_header_background_color')() );
+            $('#primary_header_content').find('#menu ul .sub-menu li').css('background-image', 'none' );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) },
+              function(){ $(this).css('background-color', wp.customize.value('primary_header_background_color')()) }
+            );
+            $('#primary_header_content').find('#menu ul .sub-menu li').hover(
+              function(){ $(this).css('background-image', 'none') },
+              function(){ $(this).css('background-image', 'none') }
+            );
         }
       } );
   });
