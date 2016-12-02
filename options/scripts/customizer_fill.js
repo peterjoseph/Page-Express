@@ -469,8 +469,6 @@ jQuery(function($){
   //Primary Header Menu Link Hover Color
   wp.customize( 'primary_header_menu_link_hover_color', function( value ) {
       value.bind( function( to ) {
-          $('#primary_header_content').find('#menu .current-menu-item a').css( 'color' , to );
-          $('#primary_header_content').find('#menu .current_page_item a').css( 'color' , to );
           $('#primary_header_content').find('#menu a').hover(
             function(){ $(this).css('color', to) },
             function(){ $(this).css('color', wp.customize.value('primary_header_menu_link_color')() ) }
