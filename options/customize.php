@@ -24,6 +24,7 @@
 				add_action( 'customize_preview_init', 'customizer_fill' );
 
         require_once ( get_template_directory() . '/options/customizer_modules/custom_controls.php' );
+				require_once ( get_template_directory() . '/options/customizer_modules/sanitization.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/header_one.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/header_two.php' );
         require_once ( get_template_directory() . '/options/customizer_modules/header_three.php' );
