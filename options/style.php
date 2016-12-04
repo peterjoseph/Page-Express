@@ -4,6 +4,10 @@
 /*                                                    */
 /******************************************************/
 
+html {
+  height:auto;
+}
+
 body {
   height:100%;
   color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
@@ -14,8 +18,9 @@ body {
   <?php if(get_theme_mod('global_background_image')) { ?>
   background-image:url('<?php echo get_theme_mod('global_background_image','none') ?>');
   background-position:<?php echo get_theme_mod('global_background_image_position','left top') ?>;
-  background-repeat:<?php echo get_theme_mod('global_background_image_repeat','no-repeat') ?>;
+  background-repeat:<?php echo get_theme_mod('global_background_image_repeat','repeat') ?>;
   background-size:<?php echo get_theme_mod('global_background_image_type','initial') ?>;
+  background-attachment:<?php echo get_theme_mod('global_background_image_scroll','scroll') ?>;
   <?php } ?>
 }
 

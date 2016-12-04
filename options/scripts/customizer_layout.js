@@ -178,13 +178,13 @@ jQuery(function($){
   //Page Background Position & Repetition Buttons
   wp.customize( 'global_background_image', function( value ) {
       if(!wp.customize.value('global_background_image')()) {
-        $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type' ).hide();
+        $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type , #customize-control-global_background_image_scroll' ).hide();
       }
       value.bind( function( to ) {
         if(wp.customize.value('global_background_image')()) {
-          $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type' ).show(300);
+          $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type , #customize-control-global_background_image_scroll' ).show(300);
         } else {
-          $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type' ).hide(300);
+          $( '#customize-control-global_background_image_position , #customize-control-global_background_image_repeat , #customize-control-global_background_image_type , #customize-control-global_background_image_scroll' ).hide(300);
         }
       } );
   } );

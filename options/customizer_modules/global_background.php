@@ -26,6 +26,7 @@
 		    'global_background_color',
 		    array(
 		        'default' => '#FFF',
+						'transport' => 'postMessage',
 		    )
 		);
 		$wp_customize->add_control(
@@ -41,7 +42,11 @@
 		);
 
 		//Background Image
-		$wp_customize->add_setting( 'global_background_image' );
+		$wp_customize->add_setting( 'global_background_image',
+			array(
+				'transport' => 'postMessage',
+			)
+		);
 		$wp_customize->add_control(
 		    new WP_Customize_Image_Control(
 		        $wp_customize,
@@ -59,6 +64,7 @@
 		    'global_background_image_position',
 		    array(
 		        'default' => 'left top',
+						'transport' => 'postMessage',
 		    )
 		);
 		$wp_customize->add_control(
@@ -87,6 +93,7 @@
 		    'global_background_image_type',
 		    array(
 		        'default' => 'initial',
+						'transport' => 'postMessage',
 		    )
 		);
 		$wp_customize->add_control(
@@ -104,11 +111,12 @@
 		    )
 		);
 
-		//Background Image repeat
+		//Background Image Repeat
 		$wp_customize->add_setting(
 		    'global_background_image_repeat',
 		    array(
-		        'default' => 'no-repeat',
+		        'default' => 'repeat',
+						'transport' => 'postMessage',
 		    )
 		);
 		$wp_customize->add_control(
@@ -117,7 +125,7 @@
 		        'type' => 'select',
 		        'label' => 'Background Image Repetition',
 		        'section' => 'global_background',
-						'description'	=> __( 'Set repetition direction' ),
+						'description'	=> __( 'Set image repetition direction' ),
 		        'choices' => array(
 							'no-repeat' => 'No Repeat',
 		          'repeat' => 'Repeat',
@@ -125,6 +133,31 @@
 		          'repeat-y' => 'Repeat Vertically',
 		        ),
 		    )
+		);
+
+		//Background Image Scroll
+		$wp_customize->add_setting(
+			'global_background_image_scroll',
+			array(
+				'default' => 'scroll',
+				'transport' => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_button_select(
+				$wp_customize,
+				'global_background_image_scroll',
+				array(
+					'settings'		=> 'global_background_image_scroll',
+					'section'		=> 'global_background',
+					'label' => 'Background Image Scroll',
+					'description'	=> __( 'Scroll background image with page or keep fixed to browser window' ),
+					'choices'		=> array(
+						'scroll' => 'Scroll',
+						'fixed' => 'Fixed',
+					)
+				)
+			)
 		);
 
 ?>

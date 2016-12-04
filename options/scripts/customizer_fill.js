@@ -647,4 +647,53 @@ jQuery(function($){
         } );
     });
 
+
+    /****************************************/
+    /*                                      */
+    /*           PAGE BACKGROUND            */
+    /*                                      */
+    /****************************************/
+
+    //Page Background Color
+    wp.customize( 'global_background_color', function( value ) {
+        value.bind( function( to ) {
+          $('html, body').css('background-color', to );
+        } );
+    });
+
+    //Page Background Image
+    wp.customize( 'global_background_image', function( value ) {
+        value.bind( function( to ) {
+            $('html, body').css('background-image', 'url(' + to + ')' );
+        } );
+    });
+
+    //Page Background Position
+    wp.customize( 'global_background_image_position', function( value ) {
+        value.bind( function( to ) {
+            $('html, body').css('background-position', to );
+        } );
+    });
+
+    //Page Background Image Repeat
+    wp.customize( 'global_background_image_repeat', function( value ) {
+        value.bind( function( to ) {
+            $('html, body').css('background-repeat', to );
+        } );
+    });
+
+    //Page Background Image Type
+    wp.customize( 'global_background_image_type', function( value ) {
+        value.bind( function( to ) {
+            $('html, body').css('background-size', to );
+        } );
+    });
+
+    //Page Background Image Scroll
+    wp.customize( 'global_background_image_scroll', function( value ) {
+        value.bind( function( to ) {
+            $('html, body').css('background-attachment', to );
+        } );
+    });
+
 });
