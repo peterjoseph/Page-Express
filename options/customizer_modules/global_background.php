@@ -1,9 +1,26 @@
 <?php
 
-$wp_customize->add_section('global_background', array('title' => 'Global Background','priority' => 30,));
-		
-/************* BACKGROUND *************/
-		
+	$wp_customize->add_section('global_background', array('title' => 'Page Background','priority' => 30,));
+
+		/** GLOBAL BACKGROUND **/
+
+		//Background Title
+		$wp_customize->add_setting(
+			'global_background_title',
+			array(
+				'default' => '',
+			)
+		);
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+			$wp_customize,
+			'global_background_title',
+			array(
+				'label'	=> __( 'Page Background' ),
+				'section' => 'global_background',
+				'settings' => 'global_background_title',
+			)
+		));
+
 		//Background Color
 		$wp_customize->add_setting(
 		    'global_background_color',
@@ -22,7 +39,7 @@ $wp_customize->add_section('global_background', array('title' => 'Global Backgro
 		        )
 		    )
 		);
-		
+
 		//Background Image
 		$wp_customize->add_setting( 'global_background_image' );
 		$wp_customize->add_control(
@@ -41,30 +58,52 @@ $wp_customize->add_section('global_background', array('title' => 'Global Backgro
 		$wp_customize->add_setting(
 		    'global_background_image_position',
 		    array(
-		        'default' => 'initial',
+		        'default' => 'left top',
 		    )
 		);
 		$wp_customize->add_control(
 		    'global_background_image_position',
 		    array(
-		        'type' => 'select',
-		        'label' => 'Background Image Position',
-		        'section' => 'global_background',
-		        'choices' => array(
-					'initial' => 'Initial',
-		            'left top' => 'Top Left',
-		            'left center' => 'Center Left',
-		            'left bottom' => 'Bottom Left',
-		            'right top' => 'Top Right',
-					'right center' => 'Center Right',
-					'right bottom' => 'Bottom Right',
-					'center top' => 'Top Center',
-					'center center' => 'Center Center',
-					'center bottom' => 'Bottom Center',
+	        'type' => 'select',
+	        'label' => 'Background Image Position',
+	        'section' => 'global_background',
+					'description'	=> __( 'Assign background image starting position' ),
+	        'choices' => array(
+	          'left top' => 'Top Left',
+	          'left center' => 'Center Left',
+	          'left bottom' => 'Bottom Left',
+	          'right top' => 'Top Right',
+						'right center' => 'Center Right',
+						'right bottom' => 'Bottom Right',
+						'center top' => 'Top Center',
+						'center center' => 'Center Center',
+						'center bottom' => 'Bottom Center',
 		        ),
 		    )
 		);
-		
+
+		//Background Image Type
+		$wp_customize->add_setting(
+		    'global_background_image_type',
+		    array(
+		        'default' => 'initial',
+		    )
+		);
+		$wp_customize->add_control(
+		    'global_background_image_type',
+		    array(
+		        'type' => 'select',
+		        'label' => 'Background Image Sizing',
+		        'section' => 'global_background',
+						'description'	=> __( 'Repeat or Stretch background image' ),
+		        'choices' => array(
+							'initial' => 'Repeat background image',
+				      'contain' => 'Stretch background image to browser window',
+							'cover' => 'Stretch image to browser window while maintaining scaling (Some content may be cut off)',
+		        ),
+		    )
+		);
+
 		//Background Image repeat
 		$wp_customize->add_setting(
 		    'global_background_image_repeat',
@@ -78,37 +117,14 @@ $wp_customize->add_section('global_background', array('title' => 'Global Backgro
 		        'type' => 'select',
 		        'label' => 'Background Image Repetition',
 		        'section' => 'global_background',
+						'description'	=> __( 'Set repetition direction' ),
 		        'choices' => array(
-					'no-repeat' => 'No Repeat',
-		            'repeat' => 'Repeat',
-		            'repeat-x' => 'Repeat X',
-		            'repeat-y' => 'Repeat Y',
-					'initial' => 'Initial',
+							'no-repeat' => 'No Repeat',
+		          'repeat' => 'Repeat',
+		          'repeat-x' => 'Repeat Horizontally',
+		          'repeat-y' => 'Repeat Vertically',
 		        ),
 		    )
 		);
-		
-		//Background Image Type
-		$wp_customize->add_setting(
-		    'global_background_image_type',
-		    array(
-		        'default' => 'initial',
-		    )
-		);
-		$wp_customize->add_control(
-		    'global_background_image_type',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Background Image Type',
-		        'section' => 'global_background',
-		        'choices' => array(
-					'initial' => 'Repeat the background image',
-		            'contain' => 'Stretch the image in the browser',
-					'cover' => 'Scale the image (Some content may be cut off)',
-		        ),
-		    )
-		);
-        
-        
-        
+
 ?>

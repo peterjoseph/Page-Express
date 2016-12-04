@@ -5,16 +5,18 @@
 /******************************************************/
 
 body {
-    height:100%;
-    font-family:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
-    font-size:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
-    line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
-    color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
-    background-color:<?php echo get_theme_mod('global_background_color','#FFF') ?>;
-    background-image:url('<?php echo get_theme_mod('global_background_image','none') ?>');
-    background-position:<?php echo get_theme_mod('global_background_image_position','initial') ?>;
-    background-repeat:<?php echo get_theme_mod('global_background_image_repeat','no-repeat') ?>;
-    background-size:<?php echo get_theme_mod('global_background_image_type','initial') ?>;
+  height:100%;
+  color:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_color','#333') ?>;
+  font-family:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
+  font-size:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
+  line-height:<?php echo get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') + get_theme_mod('cw_single_typography_entry_paragraph_font_size','14') ?>px;
+  background-color:<?php echo get_theme_mod('global_background_color','#FFF') ?>;
+  <?php if(get_theme_mod('global_background_image')) { ?>
+  background-image:url('<?php echo get_theme_mod('global_background_image','none') ?>');
+  background-position:<?php echo get_theme_mod('global_background_image_position','left top') ?>;
+  background-repeat:<?php echo get_theme_mod('global_background_image_repeat','no-repeat') ?>;
+  background-size:<?php echo get_theme_mod('global_background_image_type','initial') ?>;
+  <?php } ?>
 }
 
 a {
