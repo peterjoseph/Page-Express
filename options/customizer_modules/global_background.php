@@ -26,7 +26,7 @@
 		$wp_customize->add_setting(
 		    'global_background_color',
 		    array(
-		        'default' => '#FFF',
+		        'default' => '#F3F3F3',
 						'transport' => 'postMessage',
 						'sanitize_callback' => 'sanitize_hex_color',
 		    )
