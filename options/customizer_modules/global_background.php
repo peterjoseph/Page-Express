@@ -9,6 +9,7 @@
 			'global_background_title',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_header_title',
 			)
 		);
 		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
@@ -27,6 +28,7 @@
 		    array(
 		        'default' => '#FFF',
 						'transport' => 'postMessage',
+						'sanitize_callback' => 'sanitize_hex_color',
 		    )
 		);
 		$wp_customize->add_control(
@@ -45,6 +47,7 @@
 		$wp_customize->add_setting( 'global_background_image',
 			array(
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_image',
 			)
 		);
 		$wp_customize->add_control(
@@ -65,6 +68,7 @@
 		    array(
 		        'default' => 'left top',
 						'transport' => 'postMessage',
+						'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
@@ -94,6 +98,7 @@
 		    array(
 		        'default' => 'initial',
 						'transport' => 'postMessage',
+						'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
@@ -117,6 +122,7 @@
 		    array(
 		        'default' => 'repeat',
 						'transport' => 'postMessage',
+						'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
@@ -141,6 +147,7 @@
 			array(
 				'default' => 'scroll',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
