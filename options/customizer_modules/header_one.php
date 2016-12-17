@@ -11,6 +11,7 @@
         'primary_header_visibility_title',
         array(
             'default' => '',
+						'sanitize_callback' => 'pe_sanitize_header_title',
         )
     );
     $wp_customize->add_control( new WP_Customize_Grand_Title_Area(
@@ -28,6 +29,7 @@
 		    'primary_header_visibility',
 		    array(
 		        'default' => 'visible',
+						'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
@@ -45,7 +47,7 @@
 		    )
 		);
 
-		$wp_customize->add_section('primary_header_stying', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
+		$wp_customize->add_section('primary_header_styling', array('title' => 'Layout','panel' => 'header_one','priority' => 30,));
 
     /** PRIMARY HEADER LAYOUT **/
 
@@ -54,6 +56,7 @@
 			'primary_header_layout_title',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_header_title',
 			)
 		);
 		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
@@ -61,7 +64,7 @@
 			'primary_header_layout_title',
 			array(
 				'label'	=> __( 'Layout' ),
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_styling',
 				'settings' => 'primary_header_layout_title',
 			)
 		));
@@ -71,6 +74,7 @@
 			'primary_header_type_select',
 			array(
 				'default' => 'Logo & Menu',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -78,7 +82,7 @@
 			array(
 				'type' => 'select',
 				'label' => 'Header Type',
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_styling',
 				'description'	=> __( 'Hide or show Logo and Menu in header' ),
 				'choices' => array(
 					'Logo & Menu' => 'Logo and Menu',
@@ -93,13 +97,14 @@
 			'primary_header_layout_space_one',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_line_space',
 			)
 		);
 		$wp_customize->add_control( new WP_Line_Space(
 			$wp_customize,
 			'primary_header_layout_space_one',
 			array(
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_styling',
 				'settings' => 'primary_header_layout_space_one',
 			)
 		));
@@ -110,6 +115,7 @@
 			array(
 				'default' => 'fluid',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -118,7 +124,7 @@
 				'primary_header_width_option',
 				array(
 					'settings'		=> 'primary_header_width_option',
-					'section'		=> 'primary_header_stying',
+					'section'		=> 'primary_header_styling',
 					'label'			=> __( 'Header Width'),
 					'description'	=> __( 'Assign fixed or fluid width to header' ),
 					'choices'		=> array(
@@ -135,6 +141,7 @@
 			array(
 				'default' => '1100',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_range',
 			)
 		);
 		$wp_customize->add_control(
@@ -142,7 +149,7 @@
 				$wp_customize,
 				'primary_header_width_fixed',
 				array(
-					'section'     => 'primary_header_stying',
+					'section'     => 'primary_header_styling',
 					'settings'    => 'primary_header_width_fixed',
 					'type' => __(' pixels'),
 					'input_attrs' => array(
@@ -159,13 +166,14 @@
 			array(
 				'default' => '100',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_range',
 			)
 		);
 		$wp_customize->add_control(
 			new WP_range(
 				$wp_customize,
 				'primary_header_width_fluid', array(
-					'section'     => 'primary_header_stying',
+					'section'     => 'primary_header_styling',
 					'settings'    => 'primary_header_width_fluid',
 					'type' => __(" percent"),
 					'input_attrs' => array(
@@ -182,6 +190,7 @@
 			array(
 				'default' => 'center',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -190,7 +199,7 @@
 				'primary_header_alignment',
 				array(
 					'settings'		=> 'primary_header_alignment',
-					'section'		=> 'primary_header_stying',
+					'section'		=> 'primary_header_styling',
 					'label'			=> __( 'Header Alignment'),
 					'description'	=> __( 'Change alignment of header relative to rest of page' ),
 					'choices'		=> array(
@@ -207,13 +216,14 @@
 			'primary_header_layout_space_two',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_line_space',
 			)
 		);
 		$wp_customize->add_control( new WP_Line_Space(
 			$wp_customize,
 			'primary_header_layout_space_two',
 			array(
-				'section' => 'primary_header_stying',
+				'section' => 'primary_header_styling',
 				'settings' => 'primary_header_layout_space_two',
 			)
 		));
@@ -224,6 +234,7 @@
 			array(
 				'default' => 'fixed',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -232,7 +243,7 @@
 				'primary_header_content_width_option',
 				array(
 					'settings'		=> 'primary_header_content_width_option',
-					'section'		=> 'primary_header_stying',
+					'section'		=> 'primary_header_styling',
 					'label'			=> __( 'Content Width'),
 					'description'	=> __( 'Assign fixed or fluid width to content inside header. Content width may appear smaller if size entered is greater than width of header.' ),
 					'choices'		=> array(
@@ -249,13 +260,14 @@
 			array(
 				'default' => '1000',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_range',
 			)
 		);
 		$wp_customize->add_control(
 			new WP_range(
 				$wp_customize,
 				'primary_header_content_width_fixed', array(
-					'section'     => 'primary_header_stying',
+					'section'     => 'primary_header_styling',
 					'settings'    => 'primary_header_content_width_fixed',
 					'type' => __(" pixels"),
 					'input_attrs' => array(
@@ -272,13 +284,14 @@
 			array(
 				'default' => '100',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_range',
 			)
 		);
 		$wp_customize->add_control(
 			new WP_range(
 				$wp_customize,
 				'primary_header_content_width_fluid', array(
-					'section'     => 'primary_header_stying',
+					'section'     => 'primary_header_styling',
 					'settings'    => 'primary_header_content_width_fluid',
 					'type' => __(" percent"),
 					'input_attrs' => array(
@@ -295,6 +308,7 @@
 			array(
 				'default' => 'center',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -303,7 +317,7 @@
 				'primary_header_content_alignment',
 				array(
 					'settings'		=> 'primary_header_content_alignment',
-					'section'		=> 'primary_header_stying',
+					'section'		=> 'primary_header_styling',
 					'label'			=> __( 'Content Alignment'),
 					'description'	=> __( 'Change alignment of content inside header' ),
 					'choices'		=> array(
@@ -324,6 +338,7 @@
 			'primary_header_background_title',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_header_title',
 			)
 		);
 		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
@@ -341,6 +356,7 @@
 			'primary_header_background_visible',
 			array(
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_checkbox',
 			)
 		);
 		$wp_customize->add_control(
@@ -359,6 +375,7 @@
 			'primary_header_layout_space_four',
 			array(
 				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_line_space',
 			)
 		);
 		$wp_customize->add_control( new WP_Line_Space(
@@ -376,6 +393,7 @@
 			array(
 				'default' => '#FFF',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
 		$wp_customize->add_control(
@@ -394,6 +412,7 @@
 		$wp_customize->add_setting( 'primary_header_background_image',
 			array(
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_image',
 			)
 		);
 		$wp_customize->add_control(
@@ -414,6 +433,7 @@
 			array(
 				'default' => 'left top',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(
@@ -443,6 +463,7 @@
 			array(
 				'default' => 'repeat',
 				'transport' => 'postMessage',
+				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
 		$wp_customize->add_control(

@@ -7,6 +7,11 @@
     return null;
   }
 
+  //Customizer Line Space
+  function pe_sanitize_line_space( $input ) {
+    return null;
+  }
+
   //Image Upload
   function pe_sanitize_image( $image, $setting ) {
     $type = array(
@@ -23,9 +28,18 @@
 
   //Select Options
   function pe_sanitize_select( $input, $setting ) {
-  	$input = sanitize_key( $input );
   	$choices = $setting->manager->get_control( $setting->id )->choices;
   	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+  }
+
+  //Range
+  function pe_sanitize_range( $number, $setting ) {
+  	$number = absint( $number );
+  	$atts = $setting->manager->get_control( $setting->id )->input_attrs;
+  	$min = ( isset( $atts['min'] ) ? $atts['min'] : $number );
+  	$max = ( isset( $atts['max'] ) ? $atts['max'] : $number );
+  	$step = ( isset( $atts['step'] ) ? $atts['step'] : 1 );
+  	return ( $min <= $number && $number <= $max && is_int( $number / $step ) ? $number : $setting->default );
   }
 
   //Checkbox
