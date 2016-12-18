@@ -1718,7 +1718,7 @@
 		array(
 			'default' => '#ba2a2a',
 			'transport' => 'postMessage',
-			//'sanitize_callback' => 'sanitize_hex_color',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
