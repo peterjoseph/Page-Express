@@ -576,6 +576,10 @@ img {
   display: inline-block;
 }
 
+#primary_header_content #menu li a:hover {
+  color:<?php echo get_theme_mod('primary_header_menu_link_hover_color','#ba2a2a') ?>;
+}
+
 #primary_header_content #menu .sub-menu {
   position: absolute;
   top: 100%;
