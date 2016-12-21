@@ -1,9 +1,9 @@
 <?php
 
 $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' => 30,) );
-		
+
         $wp_customize->add_section('footer_visibility', array('title' => 'Footer Visibility','panel' => 'footer','priority' => 30,));
-        
+
         /** FOOTER VISIBILITY **/
 		$wp_customize->add_setting(
 		    'footer_visibility',
@@ -27,16 +27,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
-        
+
+
         /** FOOTER CONTENT **/
         $wp_customize->add_section('footer_content', array('title' => 'Copyright Text','panel' => 'footer','priority' => 30,));
-		
+
 		//Footer Copyright Text
 		$wp_customize->add_setting(
 		    'footer_copyright',
 		    array(
-		        'default' => 'Copyright &copy; 2016. All Rights Reserved. Created with Object.',
+		        'default' => 'Copyright &copy; 2017. All Rights Reserved. Created with Page Express.',
 		    )
 		);
 		$wp_customize->add_control(
@@ -48,10 +48,10 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'type' => 'textarea',
 		    )
 		);
-        
+
         /** FOOTER Layout **/
         $wp_customize->add_section('footer_layout', array('title' => 'Layout & Design','panel' => 'footer','priority' => 30,));
-		
+
         //Footer Background Area Width % or px
 		$wp_customize->add_setting(
 		    'footer_background_width_option',
@@ -71,7 +71,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
+
         //Footer Background Area Width Fixed
 		$wp_customize->add_setting(
 		    'footer_background_width_fixed',
@@ -90,7 +90,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         //Footer Background Area Width Fluid
 		$wp_customize->add_setting(
 		    'footer_background_width_fluid',
@@ -109,7 +109,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         //Footer Alignment
 		$wp_customize->add_setting(
 		    'footer_alignment',
@@ -130,7 +130,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
+
         //Line Space
 		$wp_customize->add_setting(
 		    'footer_layout_line_space_one',
@@ -138,16 +138,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Line_Space( 
-			$wp_customize, 
-			'footer_layout_line_space_one', 
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'footer_layout_line_space_one',
 			array(
 				'section' => 'footer_layout',
 				'settings' => 'footer_layout_line_space_one',
-			) 
+			)
 		));
-		
-        
+
+
         //Footer Content Area Width % or px
 		$wp_customize->add_setting(
 		    'footer_content_area_width_option',
@@ -167,7 +167,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
+
         //Footer Content Area Width Fixed
 		$wp_customize->add_setting(
 		    'footer_content_area_width_fixed',
@@ -186,7 +186,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         //Footer Content Area Width Fluid
 		$wp_customize->add_setting(
 		    'footer_content_area_width_fluid',
@@ -205,7 +205,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         //Footer Content Alignment
 		$wp_customize->add_setting(
 		    'footer_content_alignment',
@@ -226,7 +226,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
+
         //Line Space
 		$wp_customize->add_setting(
 		    'footer_layout_line_space_two',
@@ -234,15 +234,15 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Line_Space( 
-			$wp_customize, 
-			'footer_layout_line_space_two', 
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'footer_layout_line_space_two',
 			array(
 				'section' => 'footer_layout',
 				'settings' => 'footer_layout_line_space_two',
-			) 
+			)
 		));
-		
+
 		//Text and Widget Alignment
 		$wp_customize->add_setting(
 		    'footer_widget_alignment',
@@ -264,7 +264,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer link position (Below, Above, Same Line as copyright text)
 		$wp_customize->add_setting(
 		    'footer_widget_position',
@@ -284,11 +284,11 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
-        
+
+
         /** FOOTER FONTS **/
         $wp_customize->add_section('footer_font_styling', array('title' => 'Typography','panel' => 'footer','priority' => 30,));
-		
+
 		//Footer Text Color
 		$wp_customize->add_setting(
 		    'footer_text_color',
@@ -307,7 +307,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer text font
 		$wp_customize->add_setting(
 		    'footer_fonts',
@@ -346,7 +346,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Font Size
 		$wp_customize->add_setting(
 		    'footer_font_size',
@@ -365,7 +365,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Font Weight
 		$wp_customize->add_setting(
 		    'footer_font_weight',
@@ -386,7 +386,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Link Color
 		$wp_customize->add_setting(
 		    'footer_link_color',
@@ -405,7 +405,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Link Decoration
 		$wp_customize->add_setting(
 		    'footer_link_decoration',
@@ -429,7 +429,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Link Weight
 		$wp_customize->add_setting(
 		    'footer_link_weight',
@@ -450,11 +450,11 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
-         
+
+
         /** FOOTER BACKGROUND **/
         $wp_customize->add_section('footer_background', array('title' => 'Background','panel' => 'footer','priority' => 30,));
-		
+
 		//Footer Background Visibility
 		$wp_customize->add_setting(
 			'footer_background_visible'
@@ -468,7 +468,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'settings' => 'footer_background_visible',
 		    )
 		);
-		
+
 		//Footer Background Color
 		$wp_customize->add_setting(
 		    'footer_background_color',
@@ -487,7 +487,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Background Image
 		$wp_customize->add_setting( 'footer_background_image' );
 		$wp_customize->add_control(
@@ -529,7 +529,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Background Image repeat
 		$wp_customize->add_setting(
 		    'footer_background_image_repeat',
@@ -552,12 +552,12 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-        
-        
+
+
         /** FOOTER BORDER **/
         $wp_customize->add_section('footer_borders', array('title' => 'Borders','panel' => 'footer','priority' => 30,));
-        
-        
+
+
 		//Border Title
 		$wp_customize->add_setting(
 		    'footer_border_title',
@@ -565,16 +565,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'footer_border_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'footer_border_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'footer_borders',
 				'settings' => 'footer_border_title',
-			) 
+			)
 		));
-		
+
 		//Footer Border Color
 		$wp_customize->add_setting(
 		    'footer_border_color',
@@ -593,7 +593,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Border Style
 		$wp_customize->add_setting(
 		    'footer_border_style',
@@ -616,8 +616,8 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Footer Border Top
 		$wp_customize->add_setting(
 		    'footer_border_top',
@@ -636,7 +636,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Border Bottom
 		$wp_customize->add_setting(
 		    'footer_border_bottom',
@@ -655,7 +655,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Border Left
 		$wp_customize->add_setting(
 		    'footer_border_left',
@@ -674,7 +674,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Border Right
 		$wp_customize->add_setting(
 		    'footer_border_right',
@@ -693,7 +693,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Border Radius
 		$wp_customize->add_setting(
 		    'footer_border_radius',
@@ -712,10 +712,10 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         /** FOOTER PADDING **/
         $wp_customize->add_section('footer_padding', array('title' => 'Inner Spacing','panel' => 'footer','priority' => 30,));
-	
+
 		//Footer Padding Top
 		$wp_customize->add_setting(
 		    'footer_padding_top',
@@ -734,7 +734,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Footer Padding Bottom
 		$wp_customize->add_setting(
 		    'footer_padding_bottom',
@@ -753,7 +753,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Footer Padding Left
 		$wp_customize->add_setting(
 		    'footer_padding_left',
@@ -772,7 +772,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-		
+
 		//Footer Padding Right
 		$wp_customize->add_setting(
 		    'footer_padding_right',
@@ -791,10 +791,10 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 2,
 			),
 		) );
-        
+
         /** FOOTER MARGINS **/
         $wp_customize->add_section('footer_margins', array('title' => 'Outer Spacing','panel' => 'footer','priority' => 30,));
-		
+
 		//Footer Margin Top
 		$wp_customize->add_setting(
 		    'footer_margin_top',
@@ -813,8 +813,8 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
-		
+
+
 		//Footer Margin Bottom
 		$wp_customize->add_setting(
 		    'footer_margin_bottom',
@@ -833,10 +833,10 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-        
+
         /** FOOTER MENU STYLING **/
         $wp_customize->add_section('footer_menu_styling', array('title' => 'Menu Widget Styling','panel' => 'footer','priority' => 30,));
-        
+
         //Footer Menu Layout Title
 		$wp_customize->add_setting(
 		    'footer_menu_layout',
@@ -844,16 +844,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'footer_menu_layout', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'footer_menu_layout',
 			array(
 				'label'	=> __( 'Layout' ),
 				'section' => 'footer_menu_styling',
 				'settings' => 'footer_menu_layout',
-			) 
+			)
 		));
-		
+
 		//Footer Menu Height
 		$wp_customize->add_setting(
 		    'footer_menu_height',
@@ -872,7 +872,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Width
 		$wp_customize->add_setting(
 		    'footer_menu_width',
@@ -891,7 +891,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Spacing
 		$wp_customize->add_setting(
 		    'footer_menu_spacing',
@@ -910,7 +910,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Font Styling Title
 		$wp_customize->add_setting(
 		    'footer_menu_styling_title',
@@ -918,16 +918,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'footer_menu_styling_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'footer_menu_styling_title',
 			array(
 				'label'	=> __( 'Typography' ),
 				'section' => 'footer_menu_styling',
 				'settings' => 'footer_menu_styling_title',
-			) 
+			)
 		));
-		
+
 		//Footer Menu Link Color
 		$wp_customize->add_setting(
 		    'footer_menu_link_color',
@@ -946,7 +946,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Menu Link font
 		$wp_customize->add_setting(
 		    'footer_menu_fonts',
@@ -985,7 +985,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Menu Font Weight
 		$wp_customize->add_setting(
 		    'footer_menu_font_weight',
@@ -1006,7 +1006,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Menu Link Hover Color
 		$wp_customize->add_setting(
 		    'footer_menu_link_hover_color',
@@ -1025,7 +1025,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Menu Link Decoration
 		$wp_customize->add_setting(
 		    'footer_menu_link_decoration',
@@ -1049,7 +1049,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Background Title
 		$wp_customize->add_setting(
 		    'footer_menu_background_title',
@@ -1057,16 +1057,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'footer_menu_background_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'footer_menu_background_title',
 			array(
 				'label'	=> __( 'Background' ),
 				'section' => 'footer_menu_styling',
 				'settings' => 'footer_menu_background_title',
-			) 
+			)
 		));
-		
+
 		//Footer Menu Background Visibility
 		$wp_customize->add_setting(
 			'footer_menu_background_visible'
@@ -1080,7 +1080,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'settings' => 'footer_menu_background_visible',
 		    )
 		);
-		
+
 		//Footer Menu Background Color
 		$wp_customize->add_setting(
 		    'footer_menu_background_color',
@@ -1098,7 +1098,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Menu Background Image
 		$wp_customize->add_setting( 'footer_menu_background_image' );
 		$wp_customize->add_control(
@@ -1111,7 +1111,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Hover Background Color
 		$wp_customize->add_setting(
 		    'footer_menu_hover_background_color',
@@ -1129,7 +1129,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Hover Background Image
 		$wp_customize->add_setting( 'footer_menu_hover_background_image' );
 		$wp_customize->add_control(
@@ -1142,7 +1142,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Menu Background Image position
 		$wp_customize->add_setting(
 		    'footer_menu_background_image_position',
@@ -1170,7 +1170,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Menu Background Image repeat
 		$wp_customize->add_setting(
 		    'footer_menu_background_image_repeat',
@@ -1193,7 +1193,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
+
 		//Footer Menu Borders Title
 		$wp_customize->add_setting(
 		    'footer_menu_borders_title',
@@ -1201,16 +1201,16 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area( 
-			$wp_customize, 
-			'footer_menu_borders_title', 
+		$wp_customize->add_control( new WP_Customize_Title_Area(
+			$wp_customize,
+			'footer_menu_borders_title',
 			array(
 				'label'	=> __( 'Borders' ),
 				'section' => 'footer_menu_styling',
 				'settings' => 'footer_menu_borders_title',
-			) 
+			)
 		));
-		
+
 		//Footer Menu Border Color
 		$wp_customize->add_setting(
 		    'footer_menu_border_color',
@@ -1229,7 +1229,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        )
 		    )
 		);
-		
+
 		//Footer Menu Border Style
 		$wp_customize->add_setting(
 		    'footer_menu_border_style',
@@ -1252,8 +1252,8 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 		        ),
 		    )
 		);
-		
-		
+
+
 		//Footer Menu Border Top
 		$wp_customize->add_setting(
 		    'footer_menu_border_top',
@@ -1272,7 +1272,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Border Bottom
 		$wp_customize->add_setting(
 		    'footer_menu_border_bottom',
@@ -1291,7 +1291,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Border Left
 		$wp_customize->add_setting(
 		    'footer_menu_border_left',
@@ -1310,7 +1310,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Border Right
 		$wp_customize->add_setting(
 		    'footer_menu_border_right',
@@ -1329,7 +1329,7 @@ $wp_customize->add_panel('footer', array('title' => __( 'Footer' ), 'priority' =
 				'step'  => 1,
 			),
 		) );
-		
+
 		//Footer Menu Border Radius
 		$wp_customize->add_setting(
 		    'footer_menu_border_radius',

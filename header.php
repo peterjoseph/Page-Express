@@ -9,7 +9,7 @@ $site_description = get_bloginfo( 'description', 'display' );
 if ( $site_description && ( is_home() || is_front_page() ) )
 	echo " | $site_description";
 if ( $paged >= 2 || $page >= 2 )
-	echo ' | ' . sprintf( __( 'Page %s', 'ObjectTheme' ), max( $paged, $page ) );
+	echo ' | ' . sprintf( __( 'Page %s', 'pageexpress' ), max( $paged, $page ) );
 
 ?></title>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />

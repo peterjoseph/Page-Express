@@ -1,9 +1,9 @@
 <?php
 
 $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' ), 'priority' => 30,) );
-		
+
         $wp_customize->add_section('header_three_visibility', array('title' => 'Tertiary Header Visibility','panel' => 'header_three','priority' => 30,));
-        
+
         //Header 3 Visibility
 		$wp_customize->add_setting(
 		    'tertiary_header_visibility',
@@ -26,9 +26,9 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
 		        ),
 		    )
 		);
-        
+
         $wp_customize->add_section('tertiary_header_type', array('title' => 'Header Type','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Type
         $wp_customize->add_setting(
             'tertiary_header_type_select',
@@ -43,8 +43,8 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 array(
                     'settings'		=> 'tertiary_header_type_select',
                     'section'		=> 'tertiary_header_type',
-                    'label'			=> __( 'Header Type', 'object' ),
-                    'description'	=> __( 'Select a header style from the options below', 'object' ),
+                    'label'			=> __( 'Header Type', 'pageexpress' ),
+                    'description'	=> __( 'Select a header style from the options below', 'pageexpress' ),
                     'choices'		=> array(
                         'Menu' 		=> get_template_directory_uri() . '/options/images/header_options/menu_only.png',
                         'Logo' 	=> get_template_directory_uri() . '/options/images/header_options/logo_only.png',
@@ -53,9 +53,9 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         $wp_customize->add_section('tertiary_header_layout', array('title' => 'Layout','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Width % or px
         $wp_customize->add_setting(
             'tertiary_header_width_option',
@@ -75,7 +75,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Width Fixed
         $wp_customize->add_setting(
             'tertiary_header_width_fixed',
@@ -94,7 +94,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Width Fluid
         $wp_customize->add_setting(
             'tertiary_header_width_fluid',
@@ -113,7 +113,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Alignment
         $wp_customize->add_setting(
             'tertiary_header_alignment',
@@ -134,7 +134,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Content Width % or px
         $wp_customize->add_setting(
             'tertiary_header_content_width_option',
@@ -154,7 +154,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Content Width Fixed
         $wp_customize->add_setting(
             'tertiary_header_content_width_fixed',
@@ -173,7 +173,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Content Width Fluid
         $wp_customize->add_setting(
             'tertiary_header_content_width_fluid',
@@ -192,7 +192,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Content Alignment
         $wp_customize->add_setting(
             'tertiary_header_content_alignment',
@@ -213,10 +213,10 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         /** PRIMARY HEADER BACKGROUND **/
         $wp_customize->add_section('tertiary_header_background', array('title' => 'Background','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Background Visibility
         $wp_customize->add_setting(
             'tertiary_header_background_visible'
@@ -230,7 +230,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_background_visible',
             )
         );
-        
+
         //Tertiary Header Background Color
         $wp_customize->add_setting(
             'tertiary_header_background_color',
@@ -249,7 +249,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Background Image
         $wp_customize->add_setting( 'tertiary_header_background_image' );
         $wp_customize->add_control(
@@ -263,7 +263,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Background Image position
         $wp_customize->add_setting(
             'tertiary_header_background_image_position',
@@ -291,7 +291,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Background Image repeat
         $wp_customize->add_setting(
             'tertiary_header_background_image_repeat',
@@ -314,12 +314,12 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
-        
+
+
         /** PRIMARY HEADER BORDER **/
         $wp_customize->add_section('tertiary_header_borders', array('title' => 'Borders','panel' => 'header_three','priority' => 30,));
-        
-        
+
+
         //Border Title
         $wp_customize->add_setting(
             'tertiary_header_border_title',
@@ -336,7 +336,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_border_title',
             )
         ));
-        
+
         //Tertiary Header Border Color
         $wp_customize->add_setting(
             'tertiary_header_border_color',
@@ -355,7 +355,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Border Style
         $wp_customize->add_setting(
             'tertiary_header_border_style',
@@ -378,8 +378,8 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
-        
+
+
         //Tertiary Header Border Top
         $wp_customize->add_setting(
             'tertiary_header_border_top',
@@ -398,7 +398,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Border Bottom
         $wp_customize->add_setting(
             'tertiary_header_border_bottom',
@@ -417,7 +417,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Border Left
         $wp_customize->add_setting(
             'tertiary_header_border_left',
@@ -436,7 +436,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Border Right
         $wp_customize->add_setting(
             'tertiary_header_border_right',
@@ -455,7 +455,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Border Radius
         $wp_customize->add_setting(
             'tertiary_header_border_radius',
@@ -474,10 +474,10 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         /** PRIMARY HEADER PADDING **/
         $wp_customize->add_section('tertiary_header_padding', array('title' => 'Inner Spacing','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Padding Top
         $wp_customize->add_setting(
             'tertiary_header_padding_top',
@@ -496,7 +496,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Padding Bottom
         $wp_customize->add_setting(
             'tertiary_header_padding_bottom',
@@ -515,7 +515,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Padding Left
         $wp_customize->add_setting(
             'tertiary_header_padding_left',
@@ -534,7 +534,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Padding Right
         $wp_customize->add_setting(
             'tertiary_header_padding_right',
@@ -553,10 +553,10 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         /** PRIMARY HEADER MARGINS **/
         $wp_customize->add_section('tertiary_header_margins', array('title' => 'Outer Spacing','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Margin Top
         $wp_customize->add_setting(
             'tertiary_header_margin_top',
@@ -575,8 +575,8 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
-        
+
+
         //Tertiary Header Margin Bottom
         $wp_customize->add_setting(
             'tertiary_header_margin_bottom',
@@ -595,10 +595,10 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         /** PRIMARY HEADER LOGO Options **/
         $wp_customize->add_section('tertiary_header_logo', array('title' => 'Logo Styling','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Logo Title
         $wp_customize->add_setting(
             'tertiary_header_logo_title',
@@ -615,7 +615,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_logo_title',
             )
         ));
-        
+
         //Tertiary Header Logo Image
         $wp_customize->add_setting( 'tertiary_header_logo_image' );
         $wp_customize->add_control(
@@ -629,7 +629,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         $wp_customize->add_setting(
             'tertiary_header_sitetitle',
             array(
@@ -644,7 +644,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'type' => 'text',
             )
         );
-        
+
         $wp_customize->add_setting(
             'tertiary_header_tagline',
             array(
@@ -659,7 +659,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'type' => 'text',
             )
         );
-        
+
         //Tertiary Header Logo Alignment Title
         $wp_customize->add_setting(
             'tertiary_header_logo_alignment_title',
@@ -676,7 +676,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_logo_alignment_title',
             )
         ));
-        
+
         //Tertiary Header Logo Alignment
         $wp_customize->add_setting(
             'tertiary_header_logo_alignment',
@@ -697,7 +697,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Title Styling title
         $wp_customize->add_setting(
             'tertiary_header_logo_title_styling_title',
@@ -714,7 +714,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_logo_title_styling_title',
             )
         ));
-        
+
         //Tertiary Header Logo Title Text Color
         $wp_customize->add_setting(
             'tertiary_header_logo_title_text_color',
@@ -733,7 +733,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Logo Title text font
         $wp_customize->add_setting(
             'tertiary_header_logo_title_fonts',
@@ -772,7 +772,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Title Font Size
         $wp_customize->add_setting(
             'tertiary_header_logo_title_font_size',
@@ -791,7 +791,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Logo Title Font Weight
         $wp_customize->add_setting(
             'tertiary_header_logo_title_font_weight',
@@ -812,7 +812,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Title Font Transformation
         $wp_customize->add_setting(
             'tertiary_header_logo_title_font_transformation',
@@ -834,7 +834,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Tagline Styling title
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_styling_title',
@@ -851,7 +851,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_logo_tagline_styling_title',
             )
         ));
-        
+
         //Tertiary Header Logo Tagline Text Color
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_text_color',
@@ -870,7 +870,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Logo Tagline text font
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_fonts',
@@ -909,7 +909,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Tagline Font Size
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_font_size',
@@ -928,7 +928,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 2,
             ),
         ) );
-        
+
         //Tertiary Header Logo Tagline Font Weight
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_font_weight',
@@ -949,7 +949,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Tagline Font Transformation
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_font_transformation',
@@ -971,7 +971,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Logo Tagline Position
         $wp_customize->add_setting(
             'tertiary_header_logo_tagline_position'
@@ -985,9 +985,9 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_logo_tagline_position',
             )
         );
-        
+
         $wp_customize->add_section('tertiary_header_menu_styling', array('title' => 'Menu Styling','panel' => 'header_three','priority' => 30,));
-        
+
         //Tertiary Header Menu Alignment Title
         $wp_customize->add_setting(
             'tertiary_header_menu_alignment_title',
@@ -1004,7 +1004,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_alignment_title',
             )
         ));
-        
+
         //Tertiary Header Menu Alignment
         $wp_customize->add_setting(
             'tertiary_header_menu_alignment',
@@ -1025,7 +1025,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Layout Title
         $wp_customize->add_setting(
             'tertiary_header_menu_layout',
@@ -1042,7 +1042,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_layout',
             )
         ));
-        
+
         //Tertiary Header Menu Height
         $wp_customize->add_setting(
             'tertiary_header_menu_height',
@@ -1061,7 +1061,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Spacing
         $wp_customize->add_setting(
             'tertiary_header_menu_spacing',
@@ -1080,7 +1080,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Font Styling Title
         $wp_customize->add_setting(
             'tertiary_header_menu_styling_title',
@@ -1097,7 +1097,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_styling_title',
             )
         ));
-        
+
         //Tertiary Header Menu Link Color
         $wp_customize->add_setting(
             'tertiary_header_menu_link_color',
@@ -1116,7 +1116,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Menu Link font
         $wp_customize->add_setting(
             'tertiary_header_menu_fonts',
@@ -1155,7 +1155,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Font Size
         $wp_customize->add_setting(
             'tertiary_header_menu_font_size',
@@ -1174,7 +1174,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Font Weight
         $wp_customize->add_setting(
             'tertiary_header_menu_font_weight',
@@ -1195,7 +1195,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Font Transformation
         $wp_customize->add_setting(
             'tertiary_header_menu_font_transformation',
@@ -1217,7 +1217,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Link Hover Color
         $wp_customize->add_setting(
             'tertiary_header_menu_link_hover_color',
@@ -1236,7 +1236,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Menu Link Decoration
         $wp_customize->add_setting(
             'tertiary_header_menu_link_decoration',
@@ -1260,7 +1260,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Link Alignment
         $wp_customize->add_setting(
             'tertiary_header_menu_link_alignment',
@@ -1281,7 +1281,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Background Title
         $wp_customize->add_setting(
             'tertiary_header_menu_background_title',
@@ -1298,7 +1298,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_background_title',
             )
         ));
-        
+
         //Tertiary Header Menu Background Visibility
         $wp_customize->add_setting(
             'tertiary_header_menu_background_visible'
@@ -1312,7 +1312,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_background_visible',
             )
         );
-        
+
         //Tertiary Header Menu Background Color
         $wp_customize->add_setting(
             'tertiary_header_menu_background_color',
@@ -1330,7 +1330,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Menu Background Image
         $wp_customize->add_setting( 'tertiary_header_menu_background_image' );
         $wp_customize->add_control(
@@ -1343,7 +1343,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Hover Background Color
         $wp_customize->add_setting(
             'tertiary_header_menu_hover_background_color',
@@ -1361,7 +1361,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Hover Background Image
         $wp_customize->add_setting( 'tertiary_header_menu_hover_background_image' );
         $wp_customize->add_control(
@@ -1374,7 +1374,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Menu Background Image position
         $wp_customize->add_setting(
             'tertiary_header_menu_background_image_position',
@@ -1402,7 +1402,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Background Image repeat
         $wp_customize->add_setting(
             'tertiary_header_menu_background_image_repeat',
@@ -1425,7 +1425,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
+
         //Tertiary Header Menu Borders Title
         $wp_customize->add_setting(
             'tertiary_header_menu_borders_title',
@@ -1442,7 +1442,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'settings' => 'tertiary_header_menu_borders_title',
             )
         ));
-        
+
         //Tertiary Header Menu Border Color
         $wp_customize->add_setting(
             'tertiary_header_menu_border_color',
@@ -1461,7 +1461,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 )
             )
         );
-        
+
         //Tertiary Header Menu Border Style
         $wp_customize->add_setting(
             'tertiary_header_menu_border_style',
@@ -1484,8 +1484,8 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 ),
             )
         );
-        
-        
+
+
         //Tertiary Header Menu Border Top
         $wp_customize->add_setting(
             'tertiary_header_menu_border_top',
@@ -1504,7 +1504,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Border Bottom
         $wp_customize->add_setting(
             'tertiary_header_menu_border_bottom',
@@ -1523,7 +1523,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Border Left
         $wp_customize->add_setting(
             'tertiary_header_menu_border_left',
@@ -1542,7 +1542,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Border Right
         $wp_customize->add_setting(
             'tertiary_header_menu_border_right',
@@ -1561,7 +1561,7 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'step'  => 1,
             ),
         ) );
-        
+
         //Tertiary Header Menu Border Radius
         $wp_customize->add_setting(
             'tertiary_header_menu_border_radius',
@@ -1579,5 +1579,5 @@ $wp_customize->add_panel('header_three', array('title' => __( 'Tertiary Header' 
                 'max'   => 50,
                 'step'  => 2,
             ),
-        ) ); 
+        ) );
 ?>

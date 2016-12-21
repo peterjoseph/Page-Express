@@ -1,11 +1,11 @@
-/*  
-Theme Name: Object
-Theme URI: www.objecttheme.com
-Version: 0.1
-Description: A multi-purpose and highly customizabe theme for wordpress
+/*
+Theme Name: Page Express
+Theme URI: www.page.express
+Version: 1.0.0
+Description: A multi-purpose and highly customizable framework for wordpress
 Author: Peter Joseph
-Author URI: www.peterjoseph.net
-Tags: Theme, Framework, Object, Object Framework, Developers, Customizable
+Author URI: www.peterajoseph.com
+Tags: Theme, Framework, Page Express, Page Express Framework, Developers, Customizable
 
 */
 
@@ -18,8 +18,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -30,7 +30,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }

@@ -13,7 +13,7 @@ class Theme_Updater {
 	function __construct( $args = array(), $strings = array() ) {
 
 		$args = wp_parse_args( $args, array(
-			'remote_api_url' => 'http://objecttheme.com',
+			'remote_api_url' => 'https://page.express',
 			'request_data' => array(),
 			'theme_slug' => get_template(),
 			'item_name' => '',

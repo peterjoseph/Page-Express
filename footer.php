@@ -1,5 +1,5 @@
 <?php global $lunibar; if($lunibar == TRUE) { ?>
-	
+
 	<div id="lower_unibar">
 		<div id="lower_unibar_content">
 			<?php if ( is_active_sidebar( 'lub' ) ) : ?>
@@ -57,7 +57,7 @@
 	<div id="footer">
 		<div id="footer_content">
 			<div class="footer_copyright">
-				<?php echo get_theme_mod('footer_copyright','Copyright &copy; 2016. All Rights Reserved. Created with Object.') ?>
+				<?php echo get_theme_mod('footer_copyright','Copyright &copy; 2017. All Rights Reserved. Created with Page Express.') ?>
 			</div>
 			<div class="footer_widgets">
 				<?php if ( is_active_sidebar( 'footer_a' ) ) : ?>

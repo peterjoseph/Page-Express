@@ -80,7 +80,7 @@
 		    'c_javascript',
 		    array(
 		        'label' => 'Custom Javascript',
-				'description' => 'Enter your custom javascript code. Object Theme includes JQuery support by default. The code will be inserted above the head tag.',
+				'description' => 'Enter your custom javascript code. Page Express includes JQuery support by default. The code will be inserted above the head tag.',
 		        'section' => 'g_scripts',
 		        'type' => 'textarea',
 		    )

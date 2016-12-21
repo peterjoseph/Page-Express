@@ -6,9 +6,9 @@ if ( !class_exists( 'Theme_Updater_Admin' ) ) {
 $updater = new Theme_Updater_Admin(
 
 	$config = array(
-		'remote_api_url' => 'http://objecttheme.com',
-		'item_name' => 'Object Theme',
-		'theme_slug' => 'object-theme',
+		'remote_api_url' => 'https://page.express',
+		'item_name' => 'Page Express',
+		'theme_slug' => 'page-express',
 		'version' => '1.0.0',
 		'author' => 'Peter Joseph',
 		'download_id' => '',
@@ -16,7 +16,7 @@ $updater = new Theme_Updater_Admin(
 	),
 
 	$strings = array(
-		'theme-license' => __( 'Object Theme License', 'theme-updater' ),
+		'theme-license' => __( 'Page Express License', 'theme-updater' ),
 		'enter-key' => __( 'Enter your license key.', 'theme-updater' ),
 		'license-key' => __( 'License Key', 'theme-updater' ),
 		'license-action' => __( 'License Action', 'theme-updater' ),

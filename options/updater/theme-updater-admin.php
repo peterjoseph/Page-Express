@@ -12,7 +12,7 @@ class Theme_Updater_Admin {
 	function __construct( $config = array(), $strings = array() ) {
 
 		$config = wp_parse_args( $config, array(
-			'remote_api_url' => 'http://objecttheme.com',
+			'remote_api_url' => 'https://page.express',
 			'theme_slug' => get_template(),
 			'item_name' => '',
 			'license' => '',
@@ -75,7 +75,7 @@ class Theme_Updater_Admin {
 
 		add_theme_page(
 			$strings['theme-license'],
-			'OT License',
+			'Page Express License',
 			'manage_options',
 			$this->theme_slug . '-license',
 			array( $this, 'license_page' )
@@ -105,14 +105,14 @@ class Theme_Updater_Admin {
 				<br>
 				<img src="<?php echo get_template_directory_uri (); ?>/options/images/logo.png">
 				<br>
-				<p>Enter your license key to receive future updates and features.<br>If you don't have your license key you can retrieve it by logging in to your <a href="http://www.objecttheme.com/account/">account</a>.</p>
+				<p>Enter your license key to receive future updates and features.<br>If you don't have your license key you can retrieve it by logging in to your <a href="http://www.page.express/account/">account</a>.</p>
 				<form method="post" action="options.php">
 
 					<?php settings_fields( $this->theme_slug . '-license' ); ?>
 
 					<table class="form-table">
 						<tbody>
-							
+
 						<tr valign="top">
 							<th scope="row" valign="top">
 								<input id="<?php echo $this->theme_slug; ?>_license_key" placeholder="License Key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
