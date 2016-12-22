@@ -37,4 +37,8 @@
         return $item_output;
     }
     add_filter( 'walker_nav_menu_start_el', 'menu_description', 10, 4 );
+
+    /** LOAD COMPONENTS */
+    require_once ( get_template_directory() . '/components/shortcodes/shortcodes.php' );
+    require_once ( get_template_directory() . '/components/font-awesome/font-awesome.php' );
  ?>

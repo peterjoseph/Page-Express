@@ -1,0 +1,842 @@
+/* Shortcode Styling */
+
+/**************************************************/
+/**************** Standard Desktop ****************/
+/**************************************************/
+
+/*********** Alert Box **************/
+.oe-alert {
+    padding:0.8rem;
+}
+
+.oe-alert.green {
+    background-color:#BDFFC2;
+    border:1px solid #8FF297;
+    color:#3C9943;
+}
+
+.oe-alert.yellow {
+    background-color:#FCF3C0;
+    border:1px solid #F2DB5A;
+    color:#DB4B0D;
+}
+
+.oe-alert.red {
+    background-color:#FCC0C0;
+    border:1px solid #FAA2A2;
+    color:#8C0000;
+}
+
+.oe-alert.blue {
+    background-color:#D6F3FF;
+    border:1px solid #ACE4FC;
+    color:#104285;
+}
+
+/*********** Header Box **************/
+.oe-header {
+    background-color:#F3F3F3;
+    text-align:center;
+}
+
+.oe-header-text {
+    padding:4rem;
+}
+
+.oe-header.htitle {
+    font-size:3em;
+    color:#333;
+}
+
+.oe-header.subtitle {
+    font-size:1.6em;
+    color:#999999;
+}
+
+.oe-header.content {
+    font-size:1.4em;
+    color:#CCC;
+}
+
+/*********** Centered Box **************/
+.oe-centered-box {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*********** Column Layout **************/
+
+.oe-columns {
+    width:100%;
+}
+
+.oe-columns img {
+    max-width:100%;
+}
+
+.one-half {
+    width:50%;
+    float:left;
+}
+
+.one-third {
+    width:33.3%;
+    float:left;
+}
+
+.two-third {
+    width:66%;
+    float:left;
+}
+
+.one-fourth {
+    width:25%;
+    float:left;
+}
+
+/*********** Small Button **************/
+.oe-button.small {
+    text-align:center;
+    padding: 9px 10px 5px 10px;
+    margin:5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius:2px;
+}
+
+.oe-button.small a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button.small.blue {
+    background-color:#1D62A8;
+    border:1px solid #1B388F;
+    border-bottom:3px solid #1B388F;
+    color:#fff;
+}
+
+.oe-button.small.blue a {
+    color:#fff;
+}
+
+.oe-button.small.blue:hover {
+    background-color:#1869BA;
+    border:1px solid #1E41A8;
+    border-bottom:3px solid #1E41A8;
+}
+
+/* Red */
+.oe-button.small.red {
+    background-color:#B00C14;
+    border:1px solid #822125;
+    border-bottom:3px solid #822125;
+    color:#fff;
+}
+
+.oe-button.small.red a {
+    color:#fff;
+}
+
+.oe-button.small.red:hover {
+    background-color:#BD0B14;
+    border:1px solid #8C2026;
+    border-bottom:3px solid #8C2026;
+}
+
+/* Green */
+.oe-button.small.green {
+    background-color:#45A34B;
+    border:1px solid #136919;
+    border-bottom:3px solid #136919;
+    color:#fff;
+}
+
+.oe-button.small.green a {
+    color:#f3f3f3;
+}
+
+.oe-button.small.green:hover {
+    background-color:#40B348;
+    border:1px solid #12801A;
+    border-bottom:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button.small.yellow {
+    background-color:#FFF247;
+    border:1px solid #E39734;
+    border-bottom:3px solid #E39734;
+    color:#C77100;
+}
+
+.oe-button.small.yellow a {
+    color:#C77100;
+}
+
+.oe-button.small.yellow:hover {
+    background-color:#F2EB88;
+    border:1px solid #F29A27;
+    border-bottom:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button.small.grey {
+    background-color:#F3F3F3;
+    border:1px solid #CCCCCC;
+    border-bottom:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button.small.grey a {
+    color:#333;
+}
+
+.oe-button.small.grey:hover {
+    background-color:#F6F6F6;
+}
+
+/* Black */
+.oe-button.small.black {
+    background-color:#000;
+    border:1px solid #333;
+    border-bottom:3px solid #333;
+    color:#F3F3F3;
+}
+
+.oe-button.small.black a {
+    color:#fff;
+}
+
+.oe-button.small.black:hover {
+    background-color:#121212;
+    border:1px solid #4D4A4A;
+    border-bottom:3px solid #4D4A4A;
+}
+
+/*********** Medium Button **************/
+.oe-button.medium {
+    text-align:center;
+    padding: 20px 24px 16px 24px;
+    margin:5px;
+    font-size:18px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius:2px;
+}
+
+.oe-button.medium a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button.medium.blue {
+    background-color:#1D62A8;
+    border:1px solid #1B388F;
+    border-bottom:3px solid #1B388F;
+    color:#fff;
+}
+
+.oe-button.medium.blue a {
+    color:#fff;
+}
+
+.oe-button.medium.blue:hover {
+    background-color:#1869BA;
+    border:1px solid #1E41A8;
+    border-bottom:3px solid #1E41A8;
+}
+
+/* Red */
+.oe-button.medium.red {
+    background-color:#B00C14;
+    border:1px solid #822125;
+    border-bottom:3px solid #822125;
+    color:#fff;
+}
+
+.oe-button.medium.red a {
+    color:#fff;
+}
+
+.oe-button.medium.red:hover {
+    background-color:#BD0B14;
+    border:1px solid #8C2026;
+    border-bottom:3px solid #8C2026;
+}
+
+/* Green */
+.oe-button.medium.green {
+    background-color:#45A34B;
+    border:1px solid #136919;
+    border-bottom:3px solid #136919;
+    color:#fff;
+}
+
+.oe-button.medium.green a {
+    color:#f3f3f3;
+}
+
+.oe-button.medium.green:hover {
+    background-color:#40B348;
+    border:1px solid #12801A;
+    border-bottom:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button.medium.yellow {
+    background-color:#FFF247;
+    border:1px solid #E39734;
+    border-bottom:3px solid #E39734;
+    color:#C77100;
+}
+
+.oe-button.medium.yellow a {
+    color:#C77100;
+}
+
+.oe-button.medium.yellow:hover {
+    background-color:#F2EB88;
+    border:1px solid #F29A27;
+    border-bottom:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button.medium.grey {
+    background-color:#F3F3F3;
+    border:1px solid #CCCCCC;
+    border-bottom:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button.medium.grey a {
+    color:#333;
+}
+
+.oe-button.medium.grey:hover {
+    background-color:#F6F6F6;
+}
+
+/* Black */
+.oe-button.medium.black {
+    background-color:#000;
+    border:1px solid #333;
+    border-bottom:3px solid #333;
+    color:#F3F3F3;
+}
+
+.oe-button.medium.black a {
+    color:#fff;
+}
+
+.oe-button.medium.black:hover {
+    background-color:#121212;
+    border:1px solid #4D4A4A;
+    border-bottom:3px solid #4D4A4A;
+}
+
+/*********** Large Button **************/
+.oe-button.large {
+    text-align:center;
+    padding: 30px 35px 25px 35px;
+    margin:5px;
+    font-size:24px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius:2px;
+}
+
+.oe-button.large a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button.large.blue {
+    background-color:#1D62A8;
+    border:1px solid #1B388F;
+    border-bottom:3px solid #1B388F;
+    color:#fff;
+}
+
+.oe-button.large.blue a {
+    color:#fff;
+}
+
+.oe-button.large.blue:hover {
+    background-color:#1869BA;
+    border:1px solid #1E41A8;
+    border-bottom:3px solid #1E41A8;
+}
+
+/* Red */
+.oe-button.large.red {
+    background-color:#B00C14;
+    border:1px solid #822125;
+    border-bottom:3px solid #822125;
+    color:#fff;
+}
+
+.oe-button.large.red a {
+    color:#fff;
+}
+
+.oe-button.large.red:hover {
+    background-color:#BD0B14;
+    border:1px solid #8C2026;
+    border-bottom:3px solid #8C2026;
+}
+
+/* Green */
+.oe-button.large.green {
+    background-color:#45A34B;
+    border:1px solid #136919;
+    border-bottom:3px solid #136919;
+    color:#fff;
+}
+
+.oe-button.large.green a {
+    color:#f3f3f3;
+}
+
+.oe-button.large.green:hover {
+    background-color:#40B348;
+    border:1px solid #12801A;
+    border-bottom:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button.large.yellow {
+    background-color:#FFF247;
+    border:1px solid #E39734;
+    border-bottom:3px solid #E39734;
+    color:#C77100;
+}
+
+.oe-button.large.yellow a {
+    color:#C77100;
+}
+
+.oe-button.large.yellow:hover {
+    background-color:#F2EB88;
+    border:1px solid #F29A27;
+    border-bottom:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button.large.grey {
+    background-color:#F3F3F3;
+    border:1px solid #CCCCCC;
+    border-bottom:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button.large.grey a {
+    color:#333;
+}
+
+.oe-button.large.grey:hover {
+    background-color:#F6F6F6;
+}
+
+/* Black */
+.oe-button.large.black {
+    background-color:#000;
+    border:1px solid #333;
+    border-bottom:3px solid #333;
+    color:#F3F3F3;
+}
+
+.oe-button.large.black a {
+    color:#FFF;
+}
+
+.oe-button.large.black:hover {
+    background-color:#121212;
+    border:1px solid #4D4A4A;
+    border-bottom:3px solid #4D4A4A;
+}
+
+
+/*********** Small Button Hollow **************/
+.oe-button-hollow.small {
+    text-align:center;
+    padding: 9px 10px 5px 10px;
+    margin:5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.oe-button-hollow.small a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button-hollow.small.blue {
+    border:3px solid #1E41A8;
+    color:#333;
+}
+
+.oe-button-hollow.small.blue a {
+    color:#333;
+}
+
+.oe-button-hollow.small.blue:hover {
+    border:3px solid #1869BA;
+}
+
+/* Red */
+.oe-button-hollow.small.red {
+    border:3px solid #822125;
+    color:#333;
+}
+
+.oe-button-hollow.small.red a {
+    color:#333;
+}
+
+.oe-button-hollow.small.red:hover {
+    border:3px solid #BD0B14;
+}
+
+/* Green */
+.oe-button-hollow.small.green {
+    border:3px solid #45A34B;
+    color:#333;
+}
+
+.oe-button-hollow.small.green a {
+    color:#333;
+}
+
+.oe-button-hollow.small.green:hover {
+    border:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button-hollow.small.yellow {
+    border:3px solid #F2EB88;
+    color:#333;
+}
+
+.oe-button-hollow.small.yellow a {
+    color:#333;
+}
+
+.oe-button-hollow.small.yellow:hover {
+    border:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button-hollow.small.grey {
+    border:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button-hollow.small.grey a {
+    color:#333;
+}
+
+.oe-button-hollow.small.grey:hover {
+    border:3px solid #DDDDDD;
+}
+
+/* Black */
+.oe-button-hollow.small.black {
+    border:3px solid #000;
+    color:#333;
+}
+
+.oe-button-hollow.small.black a {
+    color:#222;
+}
+
+.oe-button-hollow.small.black:hover {
+    border:3px solid #333;
+}
+
+/*********** Medium Button Hollow **************/
+.oe-button-hollow.medium {
+    text-align:center;
+    padding: 20px 24px 16px 24px;
+    margin:5px;
+    font-size:18px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.oe-button-hollow.medium a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button-hollow.medium.blue {
+    border:3px solid #1E41A8;
+    color:#333;
+}
+
+.oe-button-hollow.medium.blue a {
+    color:#333;
+}
+
+.oe-button-hollow.medium.blue:hover {
+    border:3px solid #1869BA;
+}
+
+/* Red */
+.oe-button-hollow.medium.red {
+    border:3px solid #822125;
+    color:#333;
+}
+
+.oe-button-hollow.medium.red a {
+    color:#333;
+}
+
+.oe-button-hollow.medium.red:hover {
+    border:3px solid #BD0B14;
+}
+
+/* Green */
+.oe-button-hollow.medium.green {
+    border:3px solid #45A34B;
+    color:#333;
+}
+
+.oe-button-hollow.medium.green a {
+    color:#333;
+}
+
+.oe-button-hollow.medium.green:hover {
+    border:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button-hollow.medium.yellow {
+    border:3px solid #F2EB88;
+    color:#333;
+}
+
+.oe-button-hollow.medium.yellow a {
+    color:#333;
+}
+
+.oe-button-hollow.medium.yellow:hover {
+    border:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button-hollow.medium.grey {
+    border:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button-hollow.medium.grey a {
+    color:#333;
+}
+
+.oe-button-hollow.medium.grey:hover {
+    border:3px solid #DDDDDD;
+}
+
+/* Black */
+.oe-button-hollow.medium.black {
+    border:3px solid #000;
+    color:#333;
+}
+
+.oe-button-hollow.medium.black a {
+    color:#222;
+}
+
+.oe-button-hollow.medium.black:hover {
+    border:3px solid #333;
+}
+
+/*********** Large Button Hollow **************/
+.oe-button-hollow.large {
+    text-align:center;
+    padding: 30px 35px 25px 35px;
+    margin:5px;
+    font-size:24px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.oe-button-hollow.large a {
+    text-decoration: none;
+}
+
+/* Blue */
+.oe-button-hollow.large.blue {
+    border:3px solid #1E41A8;
+    color:#333;
+}
+
+.oe-button-hollow.large.blue a {
+    color:#333;
+}
+
+.oe-button-hollow.large.blue:hover {
+    border:3px solid #1869BA;
+}
+
+/* Red */
+.oe-button-hollow.large.red {
+    border:3px solid #822125;
+    color:#333;
+}
+
+.oe-button-hollow.large.red a {
+    color:#333;
+}
+
+.oe-button-hollow.large.red:hover {
+    border:3px solid #BD0B14;
+}
+
+/* Green */
+.oe-button-hollow.large.green {
+    border:3px solid #45A34B;
+    color:#333;
+}
+
+.oe-button-hollow.large.green a {
+    color:#333;
+}
+
+.oe-button-hollow.large.green:hover {
+    border:3px solid #12801A;
+}
+
+/* Yellow */
+.oe-button-hollow.large.yellow {
+    border:3px solid #F2EB88;
+    color:#333;
+}
+
+.oe-button-hollow.large.yellow a {
+    color:#333;
+}
+
+.oe-button-hollow.large.yellow:hover {
+    border:3px solid #F29A27;
+}
+
+/* Grey */
+.oe-button-hollow.large.grey {
+    border:3px solid #CCCCCC;
+    color:#333;
+}
+
+.oe-button-hollow.large.grey a {
+    color:#333;
+}
+
+.oe-button-hollow.large.grey:hover {
+    border:3px solid #DDDDDD;
+}
+
+/* Black */
+.oe-button-hollow.large.black {
+    border:3px solid #000;
+    color:#333;
+}
+
+.oe-button-hollow.large.black a {
+    color:#222;
+}
+
+.oe-button-hollow.large.black:hover {
+    border:3px solid #333;
+}
+
+/**************************************************/
+/************* Responsive BreakPoints *************/
+/**************************************************/
+
+/* Mobile */
+@media only screen and (min-device-width : 50px) and (max-device-width : 450px) {
+
+    /*********** Centered Box **************/
+    .oe-centered-box {
+        width:95%;
+    }
+
+    /*********** Header Box **************/
+    .oe-header-text {
+        padding:2.4rem;
+    }
+
+    .oe-header.htitle {
+        font-size:2.4em;
+    }
+
+    .oe-header.subtitle {
+        font-size:0.9em;
+    }
+
+    .oe-header.content {
+        font-size:0.9em;
+    }
+
+    /*********** Column Layout **************/
+    .one-half {
+        width:100%;
+        float:left;
+    }
+
+    .one-third {
+        width:100%;
+        float:left;
+    }
+
+    .two-third {
+        width:100%;
+        float:left;
+    }
+
+    .one-fourth {
+        width:100%;
+        float:left;
+    }
+
+}
+
+/* Tablets */
+@media only screen and (min-device-width : 450px) and (max-device-width : 900px) {
+
+    /*********** Centered Box **************/
+    .oe-centered-box {
+        width:95%;
+    }
+
+    /*********** Header Box **************/
+    .oe-header-text {
+        padding:3rem;
+    }
+
+    .oe-header.htitle {
+        font-size:2.7em;
+    }
+
+    .oe-header.subtitle {
+        font-size:1.2em;
+    }
+
+    .oe-header.content {
+        font-size:1.2em;
+    }
+
+    /*********** Column Layout **************/
+
+    .one-fourth {
+        width:50%;
+    }
+
+}
