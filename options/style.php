@@ -1363,7 +1363,7 @@ img {
 		font-family:<?php echo get_theme_mod('upper_unibar_vertical_menu_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
 		font-weight:<?php echo get_theme_mod('upper_unibar_vertical_menu_font_weight','normal') ?>;
 		text-decoration:<?php echo get_theme_mod('upper_unibar_vertical_menu_link_decoration','none') ?>;
-		height:<?php echo (get_theme_mod('upper_unibar_vertical_menu_height','25') + get_theme_mod('upper_unibar_widgets_font_size','12')); ?>px;
+		min-height:<?php echo (get_theme_mod('upper_unibar_vertical_menu_height','25') + get_theme_mod('upper_unibar_widgets_font_size','12')); ?>px;
 		line-height:<?php echo (get_theme_mod('upper_unibar_vertical_menu_height','25') + get_theme_mod('upper_unibar_widgets_font_size','12')) ?>px;
 		width:100%;
         display:inline-block;
@@ -1676,7 +1676,7 @@ img {
     font-weight:<?php echo get_theme_mod('left_sidebar_menu_font_weight','normal') ?>;
     font-size:<?php echo get_theme_mod('left_sidebar_widgets_content_font_size','14') ?>px;
     text-decoration:<?php echo get_theme_mod('left_sidebar_menu_link_decoration','none') ?>;
-    height:<?php $lmheight = (get_theme_mod('left_sidebar_menu_height','25') + get_theme_mod('left_sidebar_widgets_content_font_size','14'));
+    min-height:<?php $lmheight = (get_theme_mod('left_sidebar_menu_height','25') + get_theme_mod('left_sidebar_widgets_content_font_size','14'));
       echo $lmheight; ?>px;
     line-height:<?php echo (get_theme_mod('left_sidebar_menu_height','25') + get_theme_mod('left_sidebar_widgets_content_font_size','14')) ?>px;
     padding-left:<?php echo get_theme_mod('left_sidebar_menu_width','15') ?>px;
@@ -1852,7 +1852,7 @@ img {
     font-weight:<?php echo get_theme_mod('right_sidebar_menu_font_weight','normal') ?>;
     font-size:<?php echo get_theme_mod('right_sidebar_widgets_content_font_size','14') ?>px;
     text-decoration:<?php echo get_theme_mod('right_sidebar_menu_link_decoration','none') ?>;
-    height:<?php $lmheight = (get_theme_mod('right_sidebar_menu_height','25') + get_theme_mod('right_sidebar_widgets_content_font_size','14'));
+    min-height:<?php $lmheight = (get_theme_mod('right_sidebar_menu_height','25') + get_theme_mod('right_sidebar_widgets_content_font_size','14'));
       echo $lmheight; ?>px;
     line-height:<?php echo (get_theme_mod('right_sidebar_menu_height','25') + get_theme_mod('right_sidebar_widgets_content_font_size','14')) ?>px;
     padding-left:<?php echo get_theme_mod('right_sidebar_menu_width','15') ?>px;
@@ -2378,7 +2378,7 @@ div.comments_list li {
 		font-family:<?php echo get_theme_mod('lower_unibar_vertical_menu_fonts','Arial,"Helvetica Neue",Helvetica,sans-serif') ?>;
 		font-weight:<?php echo get_theme_mod('lower_unibar_vertical_menu_font_weight','normal') ?>;
 		text-decoration:<?php echo get_theme_mod('lower_unibar_vertical_menu_link_decoration','none') ?>;
-		height:<?php echo (get_theme_mod('lower_unibar_vertical_menu_height','25') + get_theme_mod('lower_unibar_widgets_font_size','12')); ?>px;
+		min-height:<?php echo (get_theme_mod('lower_unibar_vertical_menu_height','25') + get_theme_mod('lower_unibar_widgets_font_size','12')); ?>px;
 		line-height:<?php echo (get_theme_mod('lower_unibar_vertical_menu_height','25') + get_theme_mod('lower_unibar_widgets_font_size','12')) ?>px;
 		width:100%;
         display:inline-block;
@@ -2543,7 +2543,7 @@ div.comments_list li {
     font-weight:<?php echo get_theme_mod('lower_multibar_menu_font_weight','normal') ?>;
     font-size:<?php echo get_theme_mod('lower_multibar_widgets_content_font_size','14') ?>px;
     text-decoration:<?php echo get_theme_mod('lower_multibar_menu_link_decoration','none') ?>;
-    height:<?php $lmheight = (get_theme_mod('lower_multibar_menu_height','25') + get_theme_mod('lower_multibar_widgets_content_font_size','14'));
+    min-height:<?php $lmheight = (get_theme_mod('lower_multibar_menu_height','25') + get_theme_mod('lower_multibar_widgets_content_font_size','14'));
       echo $lmheight; ?>px;
     line-height:<?php echo (get_theme_mod('lower_multibar_menu_height','25') + get_theme_mod('lower_multibar_widgets_content_font_size','14')) ?>px;
     padding-left:<?php echo get_theme_mod('lower_multibar_menu_width','15') ?>px;
