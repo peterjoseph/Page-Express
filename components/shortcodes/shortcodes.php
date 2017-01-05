@@ -1,6 +1,6 @@
 <?php
     //Load CSS Styles
-    wp_register_style( 'extender_css', get_template_directory() . '/components/shortcodes/design.css' );
+    wp_register_style( 'extender_css', get_template_directory_uri() . '/components/shortcodes/design.css' );
     wp_enqueue_style( 'extender_css' );
 
     //Centered Box

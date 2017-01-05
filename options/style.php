@@ -539,7 +539,6 @@ img {
   background-repeat:<?php echo get_theme_mod('primary_header_menu_background_image_repeat','no-repeat') ?>;
   <?php } ?>
   margin: 0px <?php echo get_theme_mod('primary_header_menu_separation','0') ?>px 0px <?php echo get_theme_mod('primary_header_menu_separation','0') ?>px;
-  padding:0px <?php echo get_theme_mod('primary_header_menu_spacing','10') ?>px 0px <?php echo get_theme_mod('primary_header_menu_spacing','10') ?>px;
   <?php if(get_theme_mod('primary_header_menu_border_style','none') != 'none') { ?>
   border-style:<?php echo get_theme_mod('primary_header_menu_border_style','none') ?>;
   border-color:<?php echo get_theme_mod('primary_header_menu_border_color','#444') ?>;

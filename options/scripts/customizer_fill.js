@@ -372,8 +372,8 @@ jQuery(function($){
   //Primary Header Menu Spacing
   wp.customize( 'primary_header_menu_spacing', function( value ) {
       value.bind( function( to ) {
-          $('#primary_header_content').find('#menu li').css('padding-left' , to + 'px' );
-          $('#primary_header_content').find('#menu li').css('padding-right' , to + 'px' );
+          $('#primary_header_content').find('#menu li a').css('padding-left' , to + 'px' );
+          $('#primary_header_content').find('#menu li a').css('padding-right' , to + 'px' );
       } );
   });
 
