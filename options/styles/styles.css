@@ -212,3 +212,21 @@ li#accordion-section-header_one_visibility {
 li#accordion-section-primary_header_margins {
     margin-bottom:20px;
 }
+
+/* Secondary Header */
+li#accordion-section-header_two_visibility {
+    margin-bottom:20px;
+}
+
+li#accordion-section-secondary_header_margins {
+    margin-bottom:20px;
+}
+
+/* Tertiary Header */
+li#accordion-section-header_three_visibility {
+    margin-bottom:20px;
+}
+
+li#accordion-section-tertiary_header_margins {
+    margin-bottom:20px;
+}
