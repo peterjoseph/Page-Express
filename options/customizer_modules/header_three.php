@@ -73,7 +73,7 @@
 		$wp_customize->add_setting(
 			'tertiary_header_type_select',
 			array(
-				'default' => 'Logo & Menu',
+				'default' => 'Menu',
 				'sanitize_callback' => 'pe_sanitize_select',
 			)
 		);
@@ -258,7 +258,7 @@
 		$wp_customize->add_setting(
 			'tertiary_header_content_width_fixed',
 			array(
-				'default' => '1000',
+				'default' => '1024',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'pe_sanitize_range',
 			)
@@ -391,7 +391,7 @@
 		$wp_customize->add_setting(
 			'tertiary_header_background_color',
 			array(
-				'default' => '#FFF',
+				'default' => '#333',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
@@ -703,7 +703,7 @@
 		$wp_customize->add_setting(
 			'tertiary_header_padding_top',
 			array(
-				'default' => '16',
+				'default' => '0',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'pe_sanitize_range',
 			)
@@ -728,7 +728,7 @@
 		$wp_customize->add_setting(
 			'tertiary_header_padding_bottom',
 			array(
-				'default' => '16',
+				'default' => '0',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'pe_sanitize_range',
 			)
@@ -1031,7 +1031,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_logo_title_text_color',
 		array(
-			'default' => '#333',
+			'default' => '#FFF',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1222,7 +1222,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_logo_tagline_text_color',
 		array(
-			'default' => '#333',
+			'default' => '#FFF',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1442,7 +1442,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_menu_spacing',
 		array(
-			'default' => '10',
+			'default' => '15',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'pe_sanitize_range',
 		)
@@ -1494,7 +1494,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_menu_alignment',
 		array(
-			'default' => 'right',
+			'default' => 'left',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'pe_sanitize_select',
 		)
@@ -1538,7 +1538,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_menu_link_color',
 		array(
-			'default' => '#333',
+			'default' => '#FFF',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1844,7 +1844,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_menu_background_color',
 		array(
-			'default' => '#FFF',
+			'default' => '#333',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1882,7 +1882,7 @@
 	$wp_customize->add_setting(
 		'tertiary_header_menu_hover_background_color',
 		array(
-			'default' => '#F4F4F4',
+			'default' => '#444',
 			'transport' => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)

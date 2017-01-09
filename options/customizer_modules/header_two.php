@@ -258,7 +258,7 @@
 		$wp_customize->add_setting(
 			'secondary_header_content_width_fixed',
 			array(
-				'default' => '1000',
+				'default' => '1024',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'pe_sanitize_range',
 			)
