@@ -1,226 +1,270 @@
 <?php
 
-$wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ), 'priority' => 30,) );
+	$wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ), 'priority' => 30,) );
 
-        $wp_customize->add_section('upper_uni_visibility', array('title' => 'Upper Uni-Bar Visibility','panel' => 'upper_unibar','priority' => 30,));
+	$wp_customize->add_section('upper_uni_visibility', array('title' => 'Visibility','panel' => 'upper_unibar','priority' => 30,));
 
-		//Upper Uni-Bar Visibility
-		$wp_customize->add_setting(
-		    'upper_unibar_visibility',
-		    array(
-		        'default' => 'visible',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_visibility',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Upper Uni-Bar Visibility',
-		        'section' => 'upper_uni_visibility',
-		        'choices' => array(
-					'visible' => 'Visible Everywhere',
-		            'hidden' => 'Hidden',
-		            'homepage' => 'Homepage Only',
-		            'page' => 'Pages Only',
-					'posts' => 'Posts Only',
-		        ),
-		    )
-		);
+	/** UPPER UNI-BAR VISIBILITY **/
+	
+	//Upper Uni-Bar Visibility Title
+	$wp_customize->add_setting(
+		'upper_unibar_visibility_title',
+		array(
+			'default' => '',
+						'sanitize_callback' => 'pe_sanitize_header_title',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+		$wp_customize,
+		'upper_unibar_visibility_title',
+		array(
+			'label'	=> __( 'Visibility' ),
+			'section' => 'upper_uni_visibility',
+			'settings' => 'upper_unibar_visibility_title',
+		)
+	));
 
+	//Upper Uni-Bar Visibility
+	$wp_customize->add_setting(
+		'upper_unibar_visibility',
+		array(
+			'default' => 'visible',
+			'sanitize_callback' => 'pe_sanitize_select',
+		)
+	);
+	$wp_customize->add_control(
+		'upper_unibar_visibility',
+		array(
+			'type' => 'select',
+			'section' => 'upper_uni_visibility',
+			'choices' => array(
+				'visible' => 'Visible Everywhere',
+				'hidden' => 'Hidden',
+				'homepage' => 'Homepage Only',
+				'page' => 'Pages Only',
+				'posts' => 'Posts Only',
+			),
+		)
+	);
 
     $wp_customize->add_section('upper_unibar_layout', array('title' => 'Layout','panel' => 'upper_unibar','priority' => 30,));
 
-    //Upper Unibar Grand Layout Title
-		$wp_customize->add_setting(
-		    'upper_unibar_grand_layout_title',
-		    array(
-		        'default' => '',
-		    )
-		);
-		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+    /** UPPER UNI-BAR LAYOUT **/
+	
+	//Upper Unibar Layout Title
+	$wp_customize->add_setting(
+		'upper_unibar_grand_layout_title',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'pe_sanitize_header_title',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
+		$wp_customize,
+		'upper_unibar_grand_layout_title',
+		array(
+			'label'	=> __( 'Layout' ),
+			'section' => 'upper_unibar_layout',
+			'settings' => 'upper_unibar_grand_layout_title',
+		)
+	));
+
+	//Upper Uni-Bar Width % or px
+	$wp_customize->add_setting(
+		'upper_unibar_width_option',
+		array(
+			'default' => 'fluid',
+			'sanitize_callback' => 'pe_sanitize_select',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_button_select(
 			$wp_customize,
-			'upper_unibar_grand_layout_title',
+			'upper_unibar_width_option',
 			array(
-				'label'	=> __( 'Panel Styling' ),
+				'settings'		=> 'upper_unibar_width_option',
+				'label' => 'Uni-Bar Width',
 				'section' => 'upper_unibar_layout',
-				'settings' => 'upper_unibar_grand_layout_title',
+				'description'	=> __( 'Assign fixed or fluid width to Uni-Bar' ),
+				'choices' => array(
+					'fixed' => 'Fixed',
+					'fluid' => 'Fluid',
+				),
 			)
-		));
+		)
+	);
 
-		//Upper Uni-bar Layout Title
-		$wp_customize->add_setting(
-		    'upper_unibar_layout_title',
-		    array(
-		        'default' => '',
-		    )
-		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+	//Upper Uni-Bar Width Fixed
+	$wp_customize->add_setting(
+		'upper_unibar_width_fixed',
+		array(
+			'default' => '1100',
+			'sanitize_callback' => 'pe_sanitize_range',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_range(
 			$wp_customize,
-			'upper_unibar_layout_title',
+			'upper_unibar_width_fixed', 
 			array(
-				'label'	=> __( 'Layout' ),
-				'section' => 'upper_unibar_layout',
-				'settings' => 'upper_unibar_layout_title',
+				'settings'    => 'upper_unibar_width_fixed',
+				'section'     => 'upper_unibar_layout',
+				'type' => __(' pixels'),
+				'input_attrs' => array(
+					'min'   => 800,
+					'max'   => 1400,
+					'step'  => 2,
+				),
 			)
-		));
+		)
+	);
 
-		//Upper Uni-Bar Width % or px
-		$wp_customize->add_setting(
-		    'upper_unibar_width_option',
-		    array(
-		        'default' => 'fluid',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_width_option',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Uni-Bar Width (Fixed or Flexible)',
-		        'section' => 'upper_unibar_layout',
-		        'choices' => array(
-					'fixed' => 'Fixed',
-		            'fluid' => 'Fluid',
-		        ),
-		    )
-		);
+	//Upper Uni-Bar Width Fluid
+	$wp_customize->add_setting(
+		'upper_unibar_width_fluid',
+		array(
+			'default' => '100',
+			'sanitize_callback' => 'pe_sanitize_range',
+		)
+	);
+	$wp_customize->add_control( 
+		new WP_range(
+			$wp_customize,
+			'upper_unibar_width_fluid', 
+			array(
+				'section'     => 'upper_unibar_layout',
+				'settings'    => 'upper_unibar_width_fluid',
+				'type' => __(" percent"),
+				'input_attrs' => array(
+					'min'   => 50,
+					'max'   => 100,
+					'step'  => 2,
+				),
+			)
+		) 
+	);
 
-        //Upper Uni-Bar Width Fixed
-		$wp_customize->add_setting(
-		    'upper_unibar_width_fixed',
-		    array(
-		        'default' => '1100',
-		    )
-		);
-		$wp_customize->add_control( 'upper_unibar_width_fixed', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_layout',
-			'label'       => 'Width [Fixed]',
-			'input_attrs' => array(
-				'min'   => 800,
-				'max'   => 1400,
-				'step'  => 2,
-			),
-		) );
-
-        //Upper Uni-Bar Width Fluid
-		$wp_customize->add_setting(
-		    'upper_unibar_width_fluid',
-		    array(
-		        'default' => '100',
-		    )
-		);
-		$wp_customize->add_control( 'upper_unibar_width_fluid', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_layout',
-			'label'       => 'Width [Fluid]',
-			'input_attrs' => array(
-				'min'   => 50,
-				'max'   => 100,
-				'step'  => 2,
-			),
-		) );
-
-		//Upper Uni-bar Alignment
-		$wp_customize->add_setting(
-		    'upper_unibar_alignment',
-		    array(
-		        'default' => 'center',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_alignment',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Uni-Bar Alignment',
-		        'section' => 'upper_unibar_layout',
-		        'choices' => array(
-					'center' => 'Center',
+	//Upper Uni-bar Alignment
+	$wp_customize->add_setting(
+		'upper_unibar_alignment',
+		array(
+			'default' => 'center',
+			'sanitize_callback' => 'pe_sanitize_select',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_button_select(
+			$wp_customize,
+			'upper_unibar_alignment',
+			array(
+				'settings'    => 'upper_unibar_alignment',
+				'section'     => 'upper_unibar_layout',
+				'label' => 'Uni-Bar Alignment',
+				'description'	=> __( 'Change alignment of Uni-Bar relative to rest of page' ),
+				'choices' => array(
 					'left' => 'Left',
-					'right' => 'Right',
-		        ),
-		    )
-		);
-
-		//Upper Uni-Bar Content Width % or px
-		$wp_customize->add_setting(
-		    'upper_unibar_content_width_option',
-		    array(
-		        'default' => 'fluid',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_content_width_option',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Content Width (Fixed or Flexible)',
-		        'section' => 'upper_unibar_layout',
-		        'choices' => array(
-					'fixed' => 'Fixed',
-		            'fluid' => 'Fluid',
-		        ),
-		    )
-		);
-
-        //Upper Uni-Bar Content Width Fixed
-		$wp_customize->add_setting(
-		    'upper_unibar_content_width_fixed',
-		    array(
-		        'default' => '1000',
-		    )
-		);
-		$wp_customize->add_control( 'upper_unibar_content_width_fixed', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_layout',
-			'label'       => 'Width [Fixed]',
-			'input_attrs' => array(
-				'min'   => 800,
-				'max'   => 1400,
-				'step'  => 2,
-			),
-		) );
-
-        //Upper Uni-Bar Content Width Fluid
-		$wp_customize->add_setting(
-		    'upper_unibar_content_width_fluid',
-		    array(
-		        'default' => '100',
-		    )
-		);
-		$wp_customize->add_control( 'upper_unibar_content_width_fluid', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_layout',
-			'label'       => 'Width [Fluid]',
-			'input_attrs' => array(
-				'min'   => 50,
-				'max'   => 100,
-				'step'  => 2,
-			),
-		) );
-
-		//Upper Uni-bar Content Alignment
-		$wp_customize->add_setting(
-		    'upper_unibar_content_alignment',
-		    array(
-		        'default' => 'center',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_content_alignment',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Content Alignment',
-		        'section' => 'upper_unibar_layout',
-		        'choices' => array(
 					'center' => 'Center',
-					'left' => 'Left',
 					'right' => 'Right',
-		        ),
-		    )
-		);
+				),
+			)
+		)
+	);
+
+	//Line Space
+	$wp_customize->add_setting(
+		'upper_unibar_layout_space_one',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'pe_sanitize_line_space',
+		)
+	);
+	$wp_customize->add_control( new WP_Line_Space(
+		$wp_customize,
+		'upper_unibar_layout_space_one',
+		array(
+			'section' => 'upper_unibar_layout',
+			'settings' => 'upper_unibar_layout_space_one',
+		)
+	));
+
+	//Upper Uni-Bar Content Width % or px
+	$wp_customize->add_setting(
+		'upper_unibar_content_width_option',
+		array(
+			'default' => 'fluid',
+		)
+	);
+	$wp_customize->add_control(
+		'upper_unibar_content_width_option',
+		array(
+			'type' => 'select',
+			'label' => 'Content Width (Fixed or Flexible)',
+			'section' => 'upper_unibar_layout',
+			'choices' => array(
+				'fixed' => 'Fixed',
+				'fluid' => 'Fluid',
+			),
+		)
+	);
+
+	//Upper Uni-Bar Content Width Fixed
+	$wp_customize->add_setting(
+		'upper_unibar_content_width_fixed',
+		array(
+			'default' => '1000',
+		)
+	);
+	$wp_customize->add_control( 'upper_unibar_content_width_fixed', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'upper_unibar_layout',
+		'label'       => 'Width [Fixed]',
+		'input_attrs' => array(
+			'min'   => 800,
+			'max'   => 1400,
+			'step'  => 2,
+		),
+	) );
+
+	//Upper Uni-Bar Content Width Fluid
+	$wp_customize->add_setting(
+		'upper_unibar_content_width_fluid',
+		array(
+			'default' => '100',
+		)
+	);
+	$wp_customize->add_control( 'upper_unibar_content_width_fluid', array(
+		'type'        => 'range',
+		'priority'    => 10,
+		'section'     => 'upper_unibar_layout',
+		'label'       => 'Width [Fluid]',
+		'input_attrs' => array(
+			'min'   => 50,
+			'max'   => 100,
+			'step'  => 2,
+		),
+	) );
+
+	//Upper Uni-bar Content Alignment
+	$wp_customize->add_setting(
+		'upper_unibar_content_alignment',
+		array(
+			'default' => 'center',
+		)
+	);
+	$wp_customize->add_control(
+		'upper_unibar_content_alignment',
+		array(
+			'type' => 'select',
+			'label' => 'Content Alignment',
+			'section' => 'upper_unibar_layout',
+			'choices' => array(
+				'center' => 'Center',
+				'left' => 'Left',
+				'right' => 'Right',
+			),
+		)
+	);
 
         $wp_customize->add_section('upper_unibar_background', array('title' => 'Background','panel' => 'upper_unibar','priority' => 30,));
 
@@ -517,7 +561,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 			),
 		) );
 
-        $wp_customize->add_section('upper_unibar_padding', array('title' => 'Padding','panel' => 'upper_unibar','priority' => 30,));
+        $wp_customize->add_section('upper_unibar_padding', array('title' => 'Inner Spacing','panel' => 'upper_unibar','priority' => 30,));
 
         //Upper Uni-bar Padding Title
 		$wp_customize->add_setting(
@@ -612,7 +656,7 @@ $wp_customize->add_panel('upper_unibar', array('title' => __( 'Upper Uni-Bar' ),
 			),
 		) );
 
-        $wp_customize->add_section('upper_unibar_margins', array('title' => 'Margins','panel' => 'upper_unibar','priority' => 30,));
+        $wp_customize->add_section('upper_unibar_margins', array('title' => 'Outer Spacing','panel' => 'upper_unibar','priority' => 30,));
 
         //Upper Uni-bar Margins Title
 		$wp_customize->add_setting(

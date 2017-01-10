@@ -29,7 +29,7 @@
 		    'primary_header_visibility',
 		    array(
 		        'default' => 'visible',
-						'sanitize_callback' => 'pe_sanitize_select',
+				'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
