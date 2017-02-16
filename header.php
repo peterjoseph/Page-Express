@@ -15,7 +15,7 @@ if ( $paged >= 2 || $page >= 2 )
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<style><?php include (get_template_directory().'/options/style.php'); include (get_template_directory().'/options/responsive.php'); echo get_theme_mod('sitewide_css') ?></style>
+<style><?php // include (get_template_directory().'/options/style.php'); include (get_template_directory().'/options/responsive.php'); echo get_theme_mod('sitewide_css') ?></style>
 <?php if(get_theme_mod('c_javascript')) { ?>
   <script type="text/javascript"><?php echo get_theme_mod('c_javascript') ?></script>
 <?php } ?>
@@ -32,7 +32,15 @@ if ( $paged >= 2 || $page >= 2 )
         wp_enqueue_script( 'eqcss', get_template_directory_uri() . '/scripts/EQCSS.min.js', array() );
     }
     add_action( 'wp_enqueue_scripts', 'eqcss_load' );
+	// function tether_load() {
+    //     wp_enqueue_script( 'tether', get_template_directory_uri() . '/scripts/tether.min.js', array() );
+    // }
+    // add_action( 'wp_enqueue_scripts', 'tether_load' );
 ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
 
 <?php wp_head();?>
 </head>
