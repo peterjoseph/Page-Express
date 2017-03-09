@@ -293,7 +293,7 @@
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
 			$wp_customize,
 			'upper_unibar_background_title',
 			array(
@@ -305,100 +305,128 @@
 
 		//Upper Uni-bar Background Visibility
 		$wp_customize->add_setting(
-			'upper_unibar_background_visible'
+			'upper_unibar_background_visible',
+			array(
+				'sanitize_callback' => 'pe_sanitize_checkbox',
+			)
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_background_visible',
-		    array(
-		        'type' => 'checkbox',
-		        'label' => 'Disable Uni-bar Background',
+			'upper_unibar_background_visible',
+			array(
+				'type' => 'checkbox',
+				'label' => 'Disable Uni-bar Background',
 				'section' => 'upper_unibar_background',
-		        'settings' => 'upper_unibar_background_visible',
-		    )
+				'description'	=> __( 'Remove background and make Uni-Bar transparent' ),
+				'settings' => 'upper_unibar_background_visible',
+			)
 		);
+
+		//Line Space
+		$wp_customize->add_setting(
+			'upper_unibar_layout_space_two',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_line_space',
+			)
+		);
+		$wp_customize->add_control( new WP_Line_Space(
+			$wp_customize,
+			'upper_unibar_layout_space_two',
+			array(
+				'section' => 'upper_unibar_background',
+				'settings' => 'upper_unibar_layout_space_two',
+			)
+		));
 
 		//Upper Uni-bar Background Color
 		$wp_customize->add_setting(
-		    'upper_unibar_background_color',
-		    array(
-		        'default' => '#FFF',
-		    )
+			'upper_unibar_background_color',
+			array(
+				'default' => '#FFF',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
 		);
 		$wp_customize->add_control(
-		    new WP_Customize_Color_Control(
-		        $wp_customize,
-		        'upper_unibar_background_color',
-		        array(
-		            'label' => 'Background Color',
-		            'section' => 'upper_unibar_background',
-		            'settings' => 'upper_unibar_background_color',
-		        )
-		    )
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'upper_unibar_background_color',
+				array(
+					'label' => 'Background Color',
+					'section' => 'upper_unibar_background',
+					'settings' => 'upper_unibar_background_color',
+				)
+			)
 		);
 
 		//Upper Uni-bar Background Image
-		$wp_customize->add_setting( 'upper_unibar_background_image' );
+		$wp_customize->add_setting( 'upper_unibar_background_image',
+			array(
+				'sanitize_callback' => 'pe_sanitize_image',
+			)
+		);
 		$wp_customize->add_control(
-		    new WP_Customize_Image_Control(
-		        $wp_customize,
-		        'upper_unibar_background_image',
-		        array(
-		            'label' => 'Background Image',
-		            'section' => 'upper_unibar_background',
-		            'settings' => 'upper_unibar_background_image'
-		        )
-		    )
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'upper_unibar_background_image',
+				array(
+					'label' => 'Background Image',
+					'section' => 'upper_unibar_background',
+					'settings' => 'upper_unibar_background_image'
+				)
+			)
 		);
 
 		//Upper Uni-bar Background Image position
 		$wp_customize->add_setting(
-		    'upper_unibar_background_image_position',
-		    array(
-		        'default' => 'initial',
-		    )
+			'upper_unibar_background_image_position',
+			array(
+				'default' => 'left top',
+				'sanitize_callback' => 'pe_sanitize_select',
+			)
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_background_image_position',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Background Image Position',
-		        'section' => 'upper_unibar_background',
-		        'choices' => array(
-					'initial' => 'Initial',
-		            'left top' => 'Top Left',
-		            'left center' => 'Center Left',
-		            'left bottom' => 'Bottom Left',
-		            'right top' => 'Top Right',
+			'upper_unibar_background_image_position',
+			array(
+				'type' => 'select',
+				'label' => 'Background Image Position',
+				'description'	=> __( 'Assign background image starting position in Uni-Bar' ),
+				'section' => 'upper_unibar_background',
+				'choices' => array(
+					'left top' => 'Top Left',
+					'left center' => 'Center Left',
+					'left bottom' => 'Bottom Left',
+					'right top' => 'Top Right',
 					'right center' => 'Center Right',
 					'right bottom' => 'Bottom Right',
 					'center top' => 'Top Center',
 					'center center' => 'Center Center',
 					'center bottom' => 'Bottom Center',
-		        ),
-		    )
+				),
+			)
 		);
 
 		//Upper Uni-bar Background Image repeat
 		$wp_customize->add_setting(
-		    'upper_unibar_background_image_repeat',
-		    array(
-		        'default' => 'no-repeat',
-		    )
+			'upper_unibar_background_image_repeat',
+			array(
+				'default' => 'no-repeat',
+				'sanitize_callback' => 'pe_sanitize_select',
+			)
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_background_image_repeat',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Background Image Repetition',
-		        'section' => 'upper_unibar_background',
-		        'choices' => array(
+			'upper_unibar_background_image_repeat',
+			array(
+				'type' => 'select',
+				'label' => 'Background Image Repetition',
+				'section' => 'upper_unibar_background',
+				'description'	=> __( 'Control background image repetition in Uni-Bar' ),
+				'choices' => array(
 					'no-repeat' => 'No Repeat',
-		            'repeat' => 'Repeat',
-		            'repeat-x' => 'Repeat X',
-		            'repeat-y' => 'Repeat Y',
-					'initial' => 'Initial',
-		        ),
-		    )
+					'repeat' => 'Repeat',
+					'repeat-x' => 'Repeat Horizontally',
+					'repeat-y' => 'Repeat Vertically',
+				),
+			)
 		);
 
 		//Upper Uni-bar Background Image Type
@@ -406,6 +434,7 @@
 		    'upper_unibar_background_image_type',
 		    array(
 		        'default' => 'initial',
+				'sanitize_callback' => 'pe_sanitize_select',
 		    )
 		);
 		$wp_customize->add_control(
@@ -414,9 +443,10 @@
 		        'type' => 'select',
 		        'label' => 'Background Image Type',
 		        'section' => 'upper_unibar_background',
+				'description'	=> __( 'Position background image in Uni-Bar' ),
 		        'choices' => array(
 					'initial' => 'Repeat the background image',
-		            'contain' => 'Stretch the image in the browser',
+		            'contain' => 'Stretch the image to fit inside',
 					'cover' => 'Scale the image (Some content may be cut off)',
 		        ),
 		    )
