@@ -461,7 +461,7 @@
 		        'default' => '',
 		    )
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
 			$wp_customize,
 			'upper_unibar_border_title',
 			array(
@@ -471,158 +471,187 @@
 			)
 		));
 
-		//Upper Uni-bar Border Color
-		$wp_customize->add_setting(
-		    'upper_unibar_border_color',
-		    array(
-		        'default' => '#CCC',
-		    )
-		);
-		$wp_customize->add_control(
-		    new WP_Customize_Color_Control(
-		        $wp_customize,
-		        'upper_unibar_border_color',
-		        array(
-		            'label' => 'Border Color',
-		            'section' => 'upper_unibar_borders',
-		            'settings' => 'upper_unibar_border_color',
-		        )
-		    )
-		);
-
 		//Upper Uni-bar Border Style
 		$wp_customize->add_setting(
-		    'upper_unibar_border_style',
-		    array(
-		        'default' => 'solid',
-		    )
+        'upper_unibar_border_style',
+        array(
+            'default' => 'none',
+			'sanitize_callback' => 'pe_sanitize_select',
+			)
 		);
 		$wp_customize->add_control(
-		    'upper_unibar_border_style',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Border Style',
-		        'section' => 'upper_unibar_borders',
-		        'choices' => array(
+			'upper_unibar_border_style',
+			array(
+				'type' => 'select',
+				'label' => 'Border',
+				'section' => 'upper_unibar_borders',
+				'description'	=> __( 'Select border style to display around Uni-Bar' ),
+				'choices' => array(
+					'none' => 'None',
 					'dotted' => 'Dotted',
 					'dashed' => 'Dashed',
 					'solid' => 'Solid',
 					'double' => 'Double',
 					'groove' => 'Groove',
-		        ),
-		    )
+				),
+			)
 		);
 
+		//Upper Uni-bar Border Color
+		$wp_customize->add_setting(
+			'upper_unibar_border_color',
+			array(
+				'default' => '#CCC',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'upper_unibar_border_color',
+				array(
+					'label' => 'Border Color',
+					'section' => 'upper_unibar_borders',
+					'settings' => 'upper_unibar_border_color',
+				)
+			)
+		);
 
 		//Upper Uni-bar Border Top
 		$wp_customize->add_setting(
-		    'upper_unibar_border_top',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_border_top',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_border_top', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_borders',
-			'label'       => 'Top Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'upper_unibar_border_top', array(
+					'priority'    => 10,
+					'section'     => 'upper_unibar_borders',
+					'label'       => 'Top Border',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Upper Uni-bar Border Bottom
 		$wp_customize->add_setting(
-		    'upper_unibar_border_bottom',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_border_bottom',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_border_bottom', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_borders',
-			'label'       => 'Bottom Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'upper_unibar_border_bottom', array(
+					'priority'    => 10,
+					'section'     => 'upper_unibar_borders',
+					'label'       => 'Bottom Border',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Upper Uni-bar Border Left
 		$wp_customize->add_setting(
-		    'upper_unibar_border_left',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_border_left',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_border_left', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_borders',
-			'label'       => 'Left Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'upper_unibar_border_left', array(
+					'priority'    => 10,
+					'section'     => 'upper_unibar_borders',
+					'label'       => 'Left Border',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Upper Uni-bar Border Right
 		$wp_customize->add_setting(
-		    'upper_unibar_border_right',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_border_right',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_border_right', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_borders',
-			'label'       => 'Right Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'upper_unibar_border_right', array(
+					'priority'    => 10,
+					'section'     => 'upper_unibar_borders',
+					'label'       => 'Right Border',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
 		//Upper Uni-bar Border Radius
 		$wp_customize->add_setting(
-		    'upper_unibar_border_radius',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_border_radius',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_border_radius', array(
-			'type'        => 'range',
-			'priority'    => 10,
-			'section'     => 'upper_unibar_borders',
-			'label'       => 'Rounded Border',
-			'input_attrs' => array(
-				'min'   => 0,
-				'max'   => 50,
-				'step'  => 1,
-			),
-		) );
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize,
+				'upper_unibar_border_radius', array(
+					'priority'    => 10,
+					'section'     => 'upper_unibar_borders',
+					'label'       => 'Border Rounding',
+					'type' => __(" pixels"),
+					'input_attrs' => array(
+						'min'   => 0,
+						'max'   => 50,
+						'step'  => 1,
+					),
+				)
+			) );
 
         $wp_customize->add_section('upper_unibar_padding', array('title' => 'Inner Spacing','panel' => 'upper_unibar','priority' => 30,));
 
         //Upper Uni-bar Padding Title
 		$wp_customize->add_setting(
-		    'upper_unibar_padding_title',
-		    array(
-		        'default' => '',
-		    )
+			'upper_unibar_padding_title',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_header_title',
+			)
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
 			$wp_customize,
 			'upper_unibar_padding_title',
 			array(
-				'label'	=> __( 'Padding' ),
+				'label'	=> __( 'Inner Spacing' ),
 				'section' => 'upper_unibar_padding',
 				'settings' => 'upper_unibar_padding_title',
 			)
@@ -630,94 +659,115 @@
 
 		//Upper Uni-bar Padding Top
 		$wp_customize->add_setting(
-		    'upper_unibar_padding_top',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_padding_top',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_padding_top', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_padding_top', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_padding',
-			'label'       => 'Top Padding',
+			'label'       => 'Top Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Upper Uni-bar Padding Bottom
 		$wp_customize->add_setting(
-		    'upper_unibar_padding_bottom',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_padding_bottom',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_padding_bottom', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_padding_bottom', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_padding',
-			'label'       => 'Bottom Padding',
+			'label'       => 'Bottom Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Upper Uni-bar Padding Left
 		$wp_customize->add_setting(
-		    'upper_unibar_padding_left',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_padding_left',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_padding_left', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_padding_left', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_padding',
-			'label'       => 'Left padding',
+			'label'       => 'Left Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
 		//Upper Uni-bar Padding Right
 		$wp_customize->add_setting(
-		    'upper_unibar_padding_right',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_padding_right',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_padding_right', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_padding_right', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_padding',
-			'label'       => 'Right Padding',
+			'label'       => 'Right Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 2,
 			),
+			)
 		) );
 
         $wp_customize->add_section('upper_unibar_margins', array('title' => 'Outer Spacing','panel' => 'upper_unibar','priority' => 30,));
 
         //Upper Uni-bar Margins Title
 		$wp_customize->add_setting(
-		    'upper_unibar_margins_title',
-		    array(
-		        'default' => '',
-		    )
+			'upper_unibar_margins_title',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'pe_sanitize_header_title',
+			)
 		);
-		$wp_customize->add_control( new WP_Customize_Title_Area(
+		$wp_customize->add_control( new WP_Customize_Grand_Title_Area(
 			$wp_customize,
 			'upper_unibar_margins_title',
 			array(
-				'label'	=> __( 'Margins' ),
+				'label'	=> __( 'Outer Spacing' ),
 				'section' => 'upper_unibar_margins',
 				'settings' => 'upper_unibar_margins_title',
 			)
@@ -725,40 +775,50 @@
 
 		//Upper Uni-bar Margin Top
 		$wp_customize->add_setting(
-		    'upper_unibar_margin_top',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_margin_top',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_margin_top', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_margin_top', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_margins',
-			'label'       => 'Top Margin',
+			'label'       => 'Top Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 1,
 			),
+			)
 		) );
 
 		//Upper Uni-bar Margin Bottom
 		$wp_customize->add_setting(
-		    'upper_unibar_margin_bottom',
-		    array(
-		        'default' => '0',
-		    )
+			'upper_unibar_margin_bottom',
+			array(
+				'default' => '0',
+				'sanitize_callback' => 'pe_sanitize_range',
+			)
 		);
-		$wp_customize->add_control( 'upper_unibar_margin_bottom', array(
+		$wp_customize->add_control(
+			new WP_range(
+				$wp_customize, 'upper_unibar_margin_bottom', array(
 			'type'        => 'range',
 			'priority'    => 10,
 			'section'     => 'upper_unibar_margins',
-			'label'       => 'Bottom Margin',
+			'label'       => 'Bottom Spacing',
+			'type' => __(" pixels"),
 			'input_attrs' => array(
 				'min'   => 0,
 				'max'   => 50,
 				'step'  => 1,
 			),
+			)
 		) );
 
 
