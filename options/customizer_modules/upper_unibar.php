@@ -842,45 +842,47 @@
 			)
 		));
 
-
-        //Upper Uni-bar Menu Type
+		//Upper Uni-bar Menu Layout Title
 		$wp_customize->add_setting(
-		    'upper_unibar_menu_type',
-		    array(
-		        'default' => 'horizontal',
-		    )
-		);
-		$wp_customize->add_control(
-		    'upper_unibar_menu_type',
-		    array(
-		        'type' => 'select',
-		        'label' => 'Menu Type',
-		        'section' => 'upper_unibar_menu_styling',
-		        'choices' => array(
-					'horizontal' => 'Horizontal',
-					'vertical' => 'Vertical',
-		        ),
-		    )
-		);
-
-
-		//Upper Uni-bar Vertical Menu Layout Title
-		$wp_customize->add_setting(
-		    'upper_unibar_vertical_menu_layout',
+		    'upper_unibar_menu_layout_title',
 		    array(
 		        'default' => '',
 		    )
 		);
 		$wp_customize->add_control( new WP_Customize_Title_Area(
 			$wp_customize,
-			'upper_unibar_vertical_menu_layout',
+			'upper_unibar_menu_layout_title',
 			array(
-				'label'	=> __( 'Vertical Layout' ),
+				'label'	=> __( 'Layout' ),
 				'section' => 'upper_unibar_menu_styling',
-				'settings' => 'upper_unibar_vertical_menu_layout',
+				'settings' => 'upper_unibar_menu_layout_title',
 			)
 		));
 
+        //Upper Uni-bar Menu Type
+		$wp_customize->add_setting(
+			'upper_unibar_menu_type',
+			array(
+				'default' => 'horizontal',
+				'sanitize_callback' => 'pe_sanitize_select',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_button_select(
+				$wp_customize,
+				'upper_unibar_menu_type',
+				array(
+					'settings'		=> 'upper_unibar_menu_type',
+					'section'		=> 'upper_unibar_menu_styling',
+					'label'			=> __( 'Menu Type'),
+					'description'	=> __( 'Display a Vertical or Horizontal Menu' ),
+					'choices'		=> array(
+						'horizontal' => 'Horizontal',
+						'vertical' => 'Vertical',
+					)
+				)
+			)
+		);
 
 		//Upper Uni-bar Vertical Menu Height
 		$wp_customize->add_setting(
